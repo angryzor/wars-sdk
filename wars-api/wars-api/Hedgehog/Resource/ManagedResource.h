@@ -32,7 +32,7 @@ namespace hh::fnd {
         size_t size;
         File* structContainingFileData;
 
-        ManagedResource(csl::fnd::IAllocator* pAllocator);
+        DEFAULT_CREATE_FUNC(ManagedResource);
 
         inline const char* GetName() const;
 

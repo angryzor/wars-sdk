@@ -1,10 +1,18 @@
 #pragma once
 
 #define GOCOMPONENT_CLASS_DECLARATION(ClassName) private:\
-		static const hh::game::GOComponentClass* instance;\
+		static const hh::game::GOComponentClass componentClass;\
 		static ClassName* Create(csl::fnd::IAllocator* allocator);\
 	public:\
 		static const hh::game::GOComponentClass* GetClass();
+
+#define GOCOMPONENT_CLASS_DECLARATION_INLINE_GETCLASS(ClassName) private:\
+		static const hh::game::GOComponentClass componentClass;\
+		static ClassName* Create(csl::fnd::IAllocator* allocator);\
+	public:\
+		inline static const hh::game::GOComponentClass* GetClass() {\
+			return &RESOLVE_STATIC_VARIABLE(componentClass);\
+		}
 
 namespace hh::game
 {
@@ -97,6 +105,7 @@ namespace hh::game
 		}
 
 		void SetNameHash(const char* name);
+		void SetOwner(GameObject* owner);
 		void SetUpdateFlag(hh::fnd::UpdatingPhase updatingPhase, bool enabled);
 		void SetUpdatePriority(hh::fnd::UpdatingPhase updatingPhase, uint8_t priority);
 		fnd::Message* SendMessageToGameObject(const fnd::Handle<GameObject>& handle, fnd::Message& message);

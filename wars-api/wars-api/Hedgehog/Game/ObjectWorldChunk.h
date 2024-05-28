@@ -33,7 +33,6 @@ namespace hh::game {
 
         typedef bool (*ObjectAttribute)(const GameObjectClass* gameObjectClass, int* attributeFlags);
 
-        uint64_t unk1;
         GameManager* gameManager;
         csl::ut::Bitset<Flag> flags;
         csl::ut::MoveArray<ObjectWorldChunkListener*> listeners;
@@ -46,7 +45,7 @@ namespace hh::game {
         csl::ut::PointerMap<GameObjectClass*, csl::ut::MoveArray<GameObject*>*> objectsByClass;
         csl::ut::MoveArray<void*> unk11;
     public:
-        ObjectWorldChunk(csl::fnd::IAllocator* allocator, GameManager* gameManager);
+        CREATE_FUNC(ObjectWorldChunk, GameManager* gameManager);
 		virtual void GameObjectRemovedCallback(GameManager* gameManager, GameObject* gameObject);
         void AddLayer(ObjectWorldChunkLayer* layer);
         inline void RemoveLayer(ObjectWorldChunkLayer* layer);
@@ -68,6 +67,7 @@ namespace hh::game {
         GameObject* Spawn(const ObjectData* objectData);
         GameObject* SpawnByObjectId(ObjectId id);
         GameObject* SpawnByObjectId(ObjectId id, ObjectAttribute filter);
+        void SpawnAll(ObjectAttribute filter);
         GameObject* SpawnByIndex(int index, ObjectAttribute filter);
         GameObject* SpawnByAttribute(ObjectAttribute filter);
 

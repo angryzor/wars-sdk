@@ -10,9 +10,9 @@ namespace hh::game {
         ObjectWorldChunk* chunk;
         ResObjectWorld* resource;
     public:
-        ObjectWorldChunkLayer(csl::fnd::IAllocator* allocator, ResObjectWorld* resource);
+        CREATE_FUNC(ObjectWorldChunkLayer, ResObjectWorld* resource);
         static inline ObjectWorldChunkLayer* Create(csl::fnd::IAllocator* allocator, ResObjectWorld* resource) {
-            return new (allocator) ObjectWorldChunkLayer(allocator, resource);
+            return new (allocator) ObjectWorldChunkLayer(resource);
         }
         void SetObjectWorldChunk(ObjectWorldChunk* chunk);
         const char* GetName() const;

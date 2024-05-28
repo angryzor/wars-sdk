@@ -7,7 +7,7 @@ namespace hh::game
 	public:
 		inline static size_t hash(ObjectId key)
 		{
-			return key.objectId ^ key.groupId;
+			return key.id * 0x9E3779B1;
 		}
 
 		inline static bool compare(ObjectId key, ObjectId other)

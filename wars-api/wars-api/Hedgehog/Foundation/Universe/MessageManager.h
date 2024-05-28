@@ -12,7 +12,7 @@ namespace hh::fnd {
         void AddObject(Messenger* messenger);
         void RemoveObject(Messenger* messenger);
         void Dispatch();
-        static HandleManager* handleManager;
+        // static HandleManager* handleManager;
         static Messenger* GetMessengerByHandle(const Handle<Messenger>& messenger);
     };
 }

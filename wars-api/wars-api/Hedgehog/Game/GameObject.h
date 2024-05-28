@@ -61,11 +61,6 @@ namespace hh::game
 	class WorldObjectStatus;
 	class GameObject : public fnd::RefByHandleObject, public fnd::Messenger
 	{
-		class Unk1 {
-			GameObject* pGameObject;
-			csl::ut::MoveArray<GOComponent*> componentsToAdd;
-		};
-
 		struct Unk2 {
 			int64_t unk31;
 			int64_t unk32;
@@ -99,9 +94,8 @@ namespace hh::game
 		csl::ut::InplaceMoveArray<hh::fnd::Property, 2> properties;
 		csl::ut::MoveArray<GameObjectListener*> listeners;
 		uint32_t componentsMessageMask{};
-		csl::ut::MoveArray<GOComponent*> componentsByUpdatingPhase[3];
+		csl::ut::LinkList<GOComponent> componentsByUpdatingPhase[3];
 		csl::ut::MoveArray<fnd::Handle<GameObject>> children;
-		Unk1 deferredComponentAdditions;
 
 		WorldObjectStatus* status;
 		GameObjectClass* objectClass;
@@ -110,7 +104,6 @@ namespace hh::game
 		Unk2 unk72;
 		
 	public:
-		virtual void* GetRuntimeTypeInfo() override;
 		virtual bool ProcessMessage(fnd::Message& message) override;
 		virtual bool ReceiveMessage(fnd::Message& message) override;
 		virtual void AddCallback(GameManager* gameManager) {}

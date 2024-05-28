@@ -2,11 +2,10 @@
 
 namespace hh::game {
     struct ObjectId {
-        uint64_t objectId;
-        uint64_t groupId;
+        uint32_t id;
 
         inline bool operator==(const ObjectId& other) const {
-            return objectId == other.objectId && groupId == other.groupId;
+            return id == other.id;
         }
 
         inline bool operator!=(const ObjectId& other) const {

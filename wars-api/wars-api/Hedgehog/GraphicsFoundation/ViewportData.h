@@ -24,5 +24,8 @@ namespace hh::gfnd {
         ViewportData& operator=(const ViewportData& other);
         void SetDimensions(const ViewportDimensions& other);
         void SetPerspectiveProjectionMatrix(float fov, float aspectRatio, float nearClip, float farClip);
+        inline csl::math::Matrix44 GetInverseViewMatrix() {
+            return { viewMatrix.inverse() };
+        }
     };
 }

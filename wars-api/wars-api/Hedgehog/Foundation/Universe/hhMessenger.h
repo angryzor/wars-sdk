@@ -29,7 +29,7 @@ namespace hh::fnd
 
 		Messenger();
 
-		virtual void* GetRuntimeTypeInfo();
+		virtual ~Messenger();
 		virtual bool ProcessMessage(Message& message) { return !fUnk3(); }
 		virtual bool fUnk3() { return false; }
 		virtual bool ReceiveMessage(Message& message);

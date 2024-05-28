@@ -18,9 +18,16 @@ namespace csl::ut
 		Elem* m_pElements{};
 		size_t m_Length{};
 		size_t m_Capacity{};
+		size_t m_HashMask{};
 		fnd::IAllocator* m_pAllocator{};
+		size_t m_OpDummy{};
 		
 	protected:
+		bool isUninitialized()
+		{
+			return m_Capacity & csl::ut::SIGN_BIT;
+		}
+
 		size_t CalcResize(size_t capacity)
 		{
 			size_t result;
@@ -39,7 +46,7 @@ namespace csl::ut
 
 		void ReleaseMemory()
 		{
-			if (!(m_Capacity & csl::ut::SIGN_BIT) && m_pAllocator && m_pElements)
+			if (!isUninitialized() && m_pAllocator && m_pElements)
 			{
 				m_pAllocator->Free(m_pElements);
 			}
@@ -50,12 +57,23 @@ namespace csl::ut
 			return m_Capacity & ~csl::ut::SIGN_BIT;
 		}
 
+		size_t GetHashMask() const
+		{
+			return m_HashMask;
+		}
+
+		size_t GetHashCapacity() const
+		{
+			return GetHashMask() + 1;
+		}
+
 		void ResizeTbl(size_t capacity)
 		{
 			size_t oldCap = GetCapacity();
 			Elem* oldElements = m_pElements;
 
 			m_Capacity = capacity;
+			m_HashMask = capacity - 1;
 			m_Length = 0;
 
 			m_pElements = AllocateMemory(capacity);
@@ -74,7 +92,7 @@ namespace csl::ut
 					}
 				}
 
-				if (m_pAllocator)
+				if (!isUninitialized() && m_pAllocator)
 					m_pAllocator->Free(oldElements);
 			}
 		}
@@ -94,7 +112,7 @@ namespace csl::ut
 
 		HashMap(const HashMap& other) : HashMap{ other.m_pAllocator }
 		{
-			if (!(other.m_Capacity & csl::ut::SIGN_BIT)) {
+			if (!other.isUninitialized()) {
 				reserve(other.m_Capacity);
 
 				for (auto i = other.begin(); i != other.end(); i++)
@@ -107,9 +125,11 @@ namespace csl::ut
 			m_pElements = other.m_pElements;
 			m_Length = other.m_Length;
 			m_Capacity = other.m_Capacity;
+			m_HashMask = other.m_HaskMask;
 			other.m_pElements = nullptr;
 			other.m_Length = 0;
 			other.m_Capacity = csl::ut::SIGN_BIT;
+			other.m_HashMask = 0;
 		}
 
 		void reserve(size_t capacity)
@@ -117,11 +137,15 @@ namespace csl::ut
 			Reserve(capacity);
 		}
 
+		size_t size() {
+			return m_Length;
+		}
+
 		~HashMap()
 		{
-			if (!(m_Capacity & csl::ut::SIGN_BIT))
+			if (!isUninitialized())
 			{
-				for (size_t i = 0; i < GetCapacity(); i++)
+				for (size_t i = 0; i < GetHashCapacity(); i++)
 				{
 					const Elem& pElem = m_pElements[i];
 					if (pElem.m_Hash != INVALID_KEY)
@@ -132,30 +156,31 @@ namespace csl::ut
 			ReleaseMemory();
 			m_Length = 0;
 			m_Capacity = 0;
+			m_HashMask = 0;
 			m_pElements = nullptr;
 		}
 		
 	protected:
 		size_t GetBegin() const
 		{
-			for (size_t i = 0; i < GetCapacity() - 1; i++)
+			for (size_t i = 0; i < GetHashCapacity(); i++)
 			{
 				if (m_pElements[i].m_Hash != INVALID_KEY)
 					return i;
 			}
 			
-			return GetCapacity();
+			return GetHashCapacity();
 		}
 
 		size_t GetNext(size_t idx) const
 		{
-			for (size_t i = idx + 1; i < GetCapacity() - 1; i++)
+			for (size_t i = idx + 1; i < GetHashCapacity(); i++)
 			{
 				if (m_pElements[i].m_Hash != INVALID_KEY)
 					return i;
 			}
 
-			return GetCapacity();
+			return GetHashCapacity();
 		}
 		
 	public:
@@ -198,13 +223,13 @@ namespace csl::ut
 
 		iterator end() const
 		{
-			return iterator{ this, GetCapacity() };
+			return iterator{ this, GetHashCapacity() };
 		}
 
 		void clear()
 		{
 			m_Length = 0;
-			for (size_t i = 0; i < GetCapacity(); ++i)
+			for (size_t i = 0; i < GetHashCapacity(); ++i)
 			{
 				auto& element = m_pElements[i];
 				
@@ -215,22 +240,22 @@ namespace csl::ut
 			}
 		}
 
-		iterator Insert(TKey key, TValue value)
+		void Insert(TKey key, TValue value)
 		{
 			size_t hash = TOp::hash(key) & 0x7FFFFFFFFFFFFFFF;
 			if (m_Length || GetCapacity())
 			{
-				if (2 * m_Length >= GetCapacity())
+				if (2 * m_Length > GetHashMask())
 				{
-					ResizeTbl(2 * GetCapacity());
+					ResizeTbl(2 * GetHashCapacity());
 				}
 			}
 			else
 			{
-				ResizeTbl(CalcResize(GetCapacity()));
+				ResizeTbl(CalcResize(GetHashCapacity()));
 			}
 
-			size_t idx = hash & (GetCapacity() - 1);
+			size_t idx = hash & GetHashMask();
 			Elem* pElem = &m_pElements[idx];
 
 			if (pElem->m_Hash == INVALID_KEY)
@@ -243,7 +268,7 @@ namespace csl::ut
 			{
 				while (pElem->m_Hash != hash || pElem->m_Key != key)
 				{
-					idx = (GetCapacity() - 1) & (idx + 1);
+					idx = (idx + 1) & GetHashMask();
 					pElem = &m_pElements[idx];
 
 					if (pElem->m_Hash == INVALID_KEY)
@@ -257,8 +282,6 @@ namespace csl::ut
 			}
 
 			new (&pElem->m_Value) TValue(value);
-
-			return { this, idx };
 		}
 
 		TValue& GetValueOrFallback(const TKey& key, TValue&& fallback) const {
@@ -276,7 +299,7 @@ namespace csl::ut
 				return end();
 			
 			const size_t hash = TOp::hash(key) & 0x7FFFFFFFFFFFFFFF;
-			size_t idx = hash & (GetCapacity() - 1);
+			size_t idx = hash & GetHashMask();
 			const Elem* pElem = &m_pElements[idx];
 			
 			if (pElem->m_Hash == INVALID_KEY)
@@ -284,7 +307,7 @@ namespace csl::ut
 			
 			while (pElem->m_Hash != hash || !TOp::compare(key, pElem->m_Key))
 			{
-				idx = (GetCapacity() - 1) & (idx + 1);
+				idx = (idx + 1) & GetHashMask();
 				pElem = &m_pElements[idx];
 
 				if (pElem->m_Hash == INVALID_KEY)
@@ -306,16 +329,7 @@ namespace csl::ut
 		
 		void Erase(const TKey& key)
 		{
-			auto result = Find(key);
-
-			if (result == end())
-				return;
-
-			Elem* pElem = &m_pElements[result.m_CurIdx];
-			pElem->m_Hash = INVALID_KEY;
-			m_Length--;
-
-			pElem->m_Value.~TValue();
+			Erase(Find(key));
 		}
 
 		void Erase(const iterator& iter)

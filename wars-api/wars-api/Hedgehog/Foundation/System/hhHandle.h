@@ -2,19 +2,13 @@
 
 namespace hh::fnd
 {
-	class HandleManager;
 	class HandleBase
 	{
 	protected:
 		uint32_t handle;
 
-		void Set(const RefByHandleObject* pObj)
-		{
-			if (pObj)
-			{
-				handle = pObj->handle;
-			}
-		}
+		void Set(const RefByHandleObject* pObj);
+		RefByHandleObject* Get(HandleManagerBase* handleManager) const;
 		
 	public:
 		HandleBase()
@@ -26,9 +20,6 @@ namespace hh::fnd
 		{
 			Set(pObj);
 		}
-
-        // TODO: fix
-		RefByHandleObject* Get(HandleManager* handleManager) const;
 
 		bool operator==(const RefByHandleObject* pObj)
 		{
@@ -54,7 +45,7 @@ namespace hh::fnd
 	};
 
     //hh::fnd::Handle<hh::fnd::Messenger,hh::fnd::HandleManager<hh::fnd::Messenger>>
-	template<class T>
+	template<typename T, typename M = HandleManager<T>>
 	class Handle : public HandleBase
 	{
 	public:
@@ -68,31 +59,32 @@ namespace hh::fnd
 			
 		}
 
-		T* Get(HandleManager* handleManager) const
-		{
-			return reinterpret_cast<T*>(HandleBase::Get(handleManager));
-		}
 
-		Handle<T>& operator=(T* pObj)
+		Handle<T, M>& operator=(T* pObj)
 		{
 			Set(pObj);
 			return *this;
 		}
 
-		Handle<T>& operator=(const Handle<T>& hObj)
+		Handle<T, M>& operator=(const Handle<T, M>& hObj)
 		{
 			handle = hObj.handle;
 			return *this;
 		}
 
+		T* operator*() const
+		{
+			return reinterpret_cast<T*>(HandleBase::Get(RESOLVE_STATIC_VARIABLE(HandleManager<T>::instance)));
+		}
+
 		operator T*() const
 		{
-			return Get();
+			return operator*();
 		}
 
 		T* operator->() const
 		{
-			return Get();
+			return operator*();
 		}
 	};
 }

@@ -127,7 +127,6 @@ namespace hh::game
 		csl::ut::FixedArray<GameObjectLayer*, 32> gameObjectLayers{};
 		csl::ut::MoveArray<GameObject*> objects{ pAllocator };
 		csl::ut::MoveArray<GameService*> services{ pAllocator };
-		csl::ut::PointerMap<GameServiceClass*, GameService*> servicesByClass{ pAllocator };
 		csl::ut::MoveArray<GameObject*> shutdownObjects;
 		csl::ut::MoveArray<GameManagerListener*> managerListeners{ pAllocator };
 		// not sure if this is a layer listener or a gameobject listener, but 0x20 is called when object added to layer
@@ -138,7 +137,7 @@ namespace hh::game
 		csl::ut::MoveArray<GamePauseListener*> gamePauseListeners{ pAllocator };
 		csl::ut::MoveArray<GameStepListener*> gameStepListeners{ pAllocator };
 		csl::ut::MoveArray<GameUpdateListener*> gameUpdateListeners{ pAllocator };
-		// csl::ut::MoveArray<void*> unk49{ pAllocator };
+		csl::ut::MoveArray<void*> unk49{ pAllocator };
 		uint32_t unk50; // See GameManagerCallbackUtil::FirePostShutdownObject
 		uint32_t unk50b;
 		uint32_t unk51;
@@ -236,7 +235,7 @@ namespace hh::game
 
 		void RegisterService(GameService* service);
 		void UnregisterService(GameService* service);
-		void AddGameObject(GameObject* object, fnd::WorldPosition* transform, GameObject* parent, const WorldObjectCInfo& cInfo);
+		void AddGameObject(GameObject* object, fnd::WorldPosition* transform, GameObject* parent);
 		void AddGameObject(GameObject* object, const char* name, bool copyName, fnd::WorldPosition* transform, GameObject* parent);
 		inline void RemoveGameObject(GameObject* object) {
 			gameObjectLayers[object->layer]->RemoveObject(object);

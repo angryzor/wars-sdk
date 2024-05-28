@@ -32,7 +32,7 @@ namespace hh::game
 
 		GameService();
 
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo();
 		virtual void OnAddedToGame() {}
 		virtual void OnRemovedFromGame() {}
 	};

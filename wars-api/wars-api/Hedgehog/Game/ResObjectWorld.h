@@ -31,7 +31,7 @@ namespace hh::game {
         };
         csl::ut::Bitset<Flag> flags;
         const char* gameObjectClass;
-        csl::ut::VariableString name;
+        const char* name;
         ObjectId id;
         ObjectId parentID;
         ObjectTransformData transform;
@@ -40,16 +40,15 @@ namespace hh::game {
         void* spawnerData;
 
         ObjectData(csl::fnd::IAllocator* allocator, const GameObjectClass* gameObjectClass, ObjectId id, const char* name, ObjectData* parent, const ObjectTransformData& localTransform)
-            : name{ name, allocator }
+            : name{ name }
             , gameObjectClass{ gameObjectClass->name }
             , localTransform { localTransform }
             , componentData{ allocator }
             , id{ id } {
             if (parent) {
                 parentID = parent->id;
-                // transform = Eigen::
             } else {
-                parentID = { 0, 0 };
+                parentID = { 0 };
                 transform = localTransform;
             }
 
