@@ -5,8 +5,6 @@ namespace hh::game {
     public:
         virtual ~FreeCameraListener() = default;
         virtual void FCL_UnkFunc1();
-        virtual void FCL_UnkFunc2();
-        virtual void FCL_UnkFunc3();
     };
 
     class FreeCameraControllerBase;
@@ -17,12 +15,9 @@ namespace hh::game {
             uint32_t internalPlayerInputIndex;
             uint32_t inputPriority;
             bool captureInput;
-            const char unk3[64];
-            bool unk4;
         };
 
     private:
-        CreateInfo createInfo;
         fnd::Reference<GameManager> gameManager;
         fnd::Reference<CameraManager> cameraManager;
         fnd::Reference<InputManager> inputManager;
@@ -30,12 +25,14 @@ namespace hh::game {
         fnd::Reference<CameraComponent> cameraComponent;
         fnd::Reference<InputComponent> inputComponent;
         fnd::Reference<FreeCameraControllerBase> controller;
+        uint64_t unk1;
+        CreateInfo createInfo;
+        uint8_t unk2;
         csl::ut::MoveArray<void*> unk8;
-        gfnd::ViewportData viewportData;
 
     public:
-        FreeCamera(csl::fnd::IAllocator* allocator, const CreateInfo& createInfo);
-        void Initialize(csl::fnd::IAllocator* allocator);
+        FreeCamera(const CreateInfo& createInfo);
+        // void Initialize(csl::fnd::IAllocator* allocator);
         bool HasCamera();
 		virtual void GameServiceRemovedCallback(GameService* gameService) override;
 		virtual void PostGameUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) override;
@@ -49,40 +46,27 @@ namespace hh::game {
         }
     };
 
-    class FreeCameraUnk2 {
-        csl::math::Vector4 unk1;
-        csl::math::Vector4 unk2;
-        csl::math::Vector3 unk3;
-        csl::math::Vector4 unk5;
-        uint32_t unk6;
-        csl::math::Vector4 unk7;
+    // class FreeCameraUnk2 {
+    //     csl::math::Vector4 unk1;
+    //     csl::math::Vector4 unk2;
+    //     csl::math::Vector3 unk3;
+    //     csl::math::Vector4 unk5;
+    //     uint32_t unk6;
+    //     csl::math::Vector4 unk7;
 
-        FreeCameraUnk2(csl::fnd::IAllocator* allocator);
-    };
+    //     FreeCameraUnk2(csl::fnd::IAllocator* allocator);
+    // };
 
-    class FreeCameraControllerBase : public fnd::ReferencedObject {
-        FreeCamera* camera;
-    public:
-        FreeCameraControllerBase(csl::fnd::IAllocator* allocator);
-        virtual uint64_t UnkFunc1() = 0;
-        virtual uint64_t UnkFunc2() = 0;
-        virtual uint64_t UnkFunc3() = 0;
-        virtual uint64_t UnkFunc4() = 0;
-        virtual uint64_t UnkFunc5() = 0;
-        virtual uint64_t UnkFunc6() = 0;
-        virtual uint64_t UnkFunc7() = 0;
-        virtual uint64_t UnkFunc8() = 0;
-        virtual uint64_t UnkFunc9() = 0;
-        virtual uint64_t UnkFunc10() = 0;
-        virtual uint64_t UnkFunc11() = 0;
-        virtual uint64_t UnkFunc12() = 0;
-        virtual uint64_t UnkFunc13() = 0;
-    };
+    // class FreeCameraControllerBase : public fnd::ReferencedObject {
+    //     FreeCamera* camera;
+    // public:
+    //     FreeCameraControllerBase(csl::fnd::IAllocator* allocator);
+    // };
 
-    class PadFreeCameraController : public fnd::ReferencedObject, public FreeCameraListener {
+    class FreeCameraController : public fnd::ReferencedObject, public FreeCameraListener {
         void* unk1;
         gfnd::ViewportData viewportData;
-        FreeCameraUnk2 unk3;
+        // FreeCameraUnk2 unk3;
         float unk4;
         float unk5;
         float unk6;
@@ -95,69 +79,56 @@ namespace hh::game {
         float unk13;
         uint16_t unk14;
     public:
-        PadFreeCameraController(csl::fnd::IAllocator* allocator);
+        FreeCameraController();
     };
     
-    class UnkPadFreeCameraController : public PadFreeCameraController {
-        uint64_t unk101; // set from unk6 on defaultcontroller
-        csl::math::Vector4 unk102;
-    public:
-        UnkPadFreeCameraController(csl::fnd::IAllocator* allocator);
-    };
+    // class UnkPadFreeCameraController : public PadFreeCameraController {
+    //     uint64_t unk101; // set from unk6 on defaultcontroller
+    //     csl::math::Vector4 unk102;
+    // public:
+    //     UnkPadFreeCameraController(csl::fnd::IAllocator* allocator);
+    // };
 
-    class ArcBallCameraController : public fnd::ReferencedObject {
-    public:
-        struct CreateInfo {
-            uint32_t resX;
-            uint32_t resY;
-            float unk1;
-            csl::math::Vector4 unk2;
-            float unk3;
-            float unk4;
-            float unk5;
-            uint32_t axisMonitorOffset;
-            uint32_t actionMonitorOffset;
-        };
-    private:
-        CreateInfo createInfo;
-        fnd::Reference<InputComponent> inputComponent; // set in ctor
-        uint32_t unk3;
-        float unk4;
-        float unk5;
-        float unk6;
-        float unk7;
-        csl::math::Matrix44 unk8;
-        uint32_t unk9;
-        char unk10;
+    // class ArcBallCameraController : public fnd::ReferencedObject {
+    // public:
+    //     struct CreateInfo {
+    //         uint32_t resX;
+    //         uint32_t resY;
+    //         float unk1;
+    //         csl::math::Vector4 unk2;
+    //         float unk3;
+    //         float unk4;
+    //         float unk5;
+    //         uint32_t axisMonitorOffset;
+    //         uint32_t actionMonitorOffset;
+    //     };
+    // private:
+    //     CreateInfo createInfo;
+    //     fnd::Reference<InputComponent> inputComponent; // set in ctor
+    //     uint32_t unk3;
+    //     float unk4;
+    //     float unk5;
+    //     float unk6;
+    //     float unk7;
+    //     csl::math::Matrix44 unk8;
+    //     uint32_t unk9;
+    //     char unk10;
 
-    public:
-        ArcBallCameraController(csl::fnd::IAllocator* allocator, const CreateInfo& createInfo, InputComponent* inputComponent);
-    };
+    // public:
+    //     ArcBallCameraController(csl::fnd::IAllocator* allocator, const CreateInfo& createInfo, InputComponent* inputComponent);
+    // };
 
-    class DefaultFreeCameraController : public FreeCameraControllerBase {
-        fnd::Reference<UnkPadFreeCameraController> padController;
-        fnd::Reference<ArcBallCameraController> arcBallController;
-        bool unk4;
-        bool unk5; // comes from unk4 on freeCamera createinfo
-        uint64_t unk6;
-    public:
-        DefaultFreeCameraController(csl::fnd::IAllocator* allocator);
-        virtual uint64_t UnkFunc1() override;
-        virtual uint64_t UnkFunc2() override;
-        virtual uint64_t UnkFunc3() override { return false; }
-        virtual uint64_t UnkFunc4() override { return true; }
-        virtual uint64_t UnkFunc5() override;
-        virtual uint64_t UnkFunc6() override;
-        virtual uint64_t UnkFunc7() override {}
-        virtual uint64_t UnkFunc8() override;
-        virtual uint64_t UnkFunc9() override;
-        virtual uint64_t UnkFunc10() override;
-        virtual uint64_t UnkFunc11() override;
-        virtual uint64_t UnkFunc12() override;
-        virtual uint64_t UnkFunc13() override;
-    };
+    // class DefaultFreeCameraController : public FreeCameraControllerBase {
+    //     fnd::Reference<UnkPadFreeCameraController> padController;
+    //     fnd::Reference<ArcBallCameraController> arcBallController;
+    //     bool unk4;
+    //     bool unk5; // comes from unk4 on freeCamera createinfo
+    //     uint64_t unk6;
+    // public:
+    //     DefaultFreeCameraController(csl::fnd::IAllocator* allocator);
+    // };
 
-    class DebugCameraManager : public fnd::BaseObject, public csl::fnd::Singleton<DebugCameraManager>, public FreeCameraListener {
+    class DebugCameraManager : public fnd::ReferencedObject, public csl::fnd::Singleton<DebugCameraManager>, public FreeCameraListener {
     public:
         struct DebugCameraInitInfo {
             uint32_t inputPriority;
@@ -168,12 +139,16 @@ namespace hh::game {
 
     private:
         fnd::Reference<FreeCamera> camera;
-        csl::ut::MoveArray<void*> maybeListeners;
+        csl::ut::MoveArray<void*> maybeListeners{ GetAllocator() };
         uint64_t unk2;
         char unk3;
     public:
         bool isActive;
-        static DebugCameraManager* Create();
+        virtual void FCL_UnkFunc1() override;
+        DebugCameraManager() : fnd::ReferencedObject{} {}
+        static DebugCameraManager* Create() {
+            return new (hh::fnd::MemoryRouter::GetModuleAllocator()) DebugCameraManager();
+        }
         void ActivateDebugCamera(const DebugCameraInitInfo& initInfo);
         void DeactivateDebugCamera();
         inline FreeCamera* GetCamera() {

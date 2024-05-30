@@ -1,13 +1,14 @@
 #pragma once
 
 namespace hh::gfx {
-    class GOCVisualTransformed : public GOCVisual, public fnd::HFrame::Listener {
+    class GOCVisualTransformed : public GOCVisual, public fnd::HFrameListener {
     public:
         struct SetupInfo {
             fnd::HFrame* frame;
             uint8_t unk1;
         };
 
+        game::GOCTransform* gocTransform;
         fnd::Reference<fnd::HFrame> frame1;
         fnd::Reference<fnd::HFrame> frame2;
         csl::math::Transform localTransform;
@@ -23,7 +24,8 @@ namespace hh::gfx {
         csl::geom::Aabb* pTransformedAabb;
         csl::geom::Aabb aabb;
         csl::geom::Aabb transformedAabb;
-        GOCVisualTransformed(csl::fnd::IAllocator* allocator);
+
+        DEFAULT_CREATE_FUNC(GOCVisualTransformed);
 		virtual void* GetRuntimeTypeInfo() override;
 		virtual void Update(fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;

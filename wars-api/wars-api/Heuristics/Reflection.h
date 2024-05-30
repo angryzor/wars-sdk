@@ -11,7 +11,9 @@ namespace heur::rfl {
         static void Finish(DecoBlurParam* pInstance);
         static void Clean(DecoBlurParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoGradationParam {
         enum class Orientation : int8_t {
             ORIENTATION_NONE = 0,
@@ -35,7 +37,9 @@ namespace heur::rfl {
         static void Finish(DecoGradationParam* pInstance);
         static void Clean(DecoGradationParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoRimParam {
         csl::ut::Color<uint8_t> color;
         int32_t thickness;
@@ -49,7 +53,9 @@ namespace heur::rfl {
         static void Finish(DecoRimParam* pInstance);
         static void Clean(DecoRimParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoPassParam {
         DecoRimParam rim;
         DecoGradationParam gradation;
@@ -62,7 +68,9 @@ namespace heur::rfl {
         static void Finish(DecoPassParam* pInstance);
         static void Clean(DecoPassParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoTechParam {
         enum class DecoLayerBlendOp : int8_t {
             DECO_LAYER_BLEND_OP_BLEND = 0,
@@ -83,7 +91,9 @@ namespace heur::rfl {
         static void Finish(DecoTechParam* pInstance);
         static void Clean(DecoTechParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoTechParams {
         DecoTechParam params[256];
 
@@ -94,7 +104,9 @@ namespace heur::rfl {
         static void Finish(DecoTechParams* pInstance);
         static void Clean(DecoTechParams* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DecoConfigParam {
         csl::ut::Color<uint8_t> clientColor;
         uint8_t windowAlpha;
@@ -108,7 +120,9 @@ namespace heur::rfl {
         static void Finish(DecoConfigParam* pInstance);
         static void Clean(DecoConfigParam* pInstance);
     };
+}
 
+namespace hh {
     struct FxBloomParameter {
         enum class GlareType : int8_t {
             GLARE_DISABLE = 0,
@@ -144,7 +158,9 @@ namespace heur::rfl {
         static void Finish(FxBloomParameter* pInstance);
         static void Clean(FxBloomParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxColorContrastParameter {
         enum class LutIndex : int32_t {
             LUT_INDEX_DEFAULT = 0,
@@ -181,7 +197,9 @@ namespace heur::rfl {
         static void Finish(FxColorContrastParameter* pInstance);
         static void Clean(FxColorContrastParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxDOFParameter {
         bool enable;
         bool useFocusLookAt;
@@ -209,7 +227,9 @@ namespace heur::rfl {
         static void Finish(FxDOFParameter* pInstance);
         static void Clean(FxDOFParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxExposureParameter {
         float exposureValue;
 
@@ -220,7 +240,9 @@ namespace heur::rfl {
         static void Finish(FxExposureParameter* pInstance);
         static void Clean(FxExposureParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxToneMapParameter {
         float middleGray;
         float lumMax;
@@ -234,7 +256,9 @@ namespace heur::rfl {
         static void Finish(FxToneMapParameter* pInstance);
         static void Clean(FxToneMapParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxShadowMapParameter {
         enum class ShadowFilter : int8_t {
             SHADOW_FILTER_POINT = 0,
@@ -306,7 +330,9 @@ namespace heur::rfl {
         static void Finish(FxShadowMapParameter* pInstance);
         static void Clean(FxShadowMapParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxLightFieldParameter {
         enum class ScalingType : int8_t {
             SCALING_PHOTOSHOP_FILETER = 2,
@@ -357,7 +383,9 @@ namespace heur::rfl {
         static void Finish(FxLightFieldParameter* pInstance);
         static void Clean(FxLightFieldParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxLightScatteringParameter {
         bool enable;
         csl::math::Vector3 color;
@@ -376,7 +404,9 @@ namespace heur::rfl {
         static void Finish(FxLightScatteringParameter* pInstance);
         static void Clean(FxLightScatteringParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxOcclusionCapsuleParameter {
         bool enable;
         bool enableOcclusion;
@@ -402,7 +432,9 @@ namespace heur::rfl {
         static void Finish(FxOcclusionCapsuleParameter* pInstance);
         static void Clean(FxOcclusionCapsuleParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxRLRParameter {
         bool enable;
         float num;
@@ -421,7 +453,9 @@ namespace heur::rfl {
         static void Finish(FxRLRParameter* pInstance);
         static void Clean(FxRLRParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxGodrayParameter {
         bool enable;
         csl::math::Matrix34 box;
@@ -435,7 +469,9 @@ namespace heur::rfl {
         static void Finish(FxGodrayParameter* pInstance);
         static void Clean(FxGodrayParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxScreenSpaceGodrayParameter {
         bool enable;
         float num;
@@ -453,7 +489,9 @@ namespace heur::rfl {
         static void Finish(FxScreenSpaceGodrayParameter* pInstance);
         static void Clean(FxScreenSpaceGodrayParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxEffectParameter {
         float lightFieldColorCoefficient;
         csl::math::Vector3 shadowColor;
@@ -469,7 +507,9 @@ namespace heur::rfl {
         static void Finish(FxEffectParameter* pInstance);
         static void Clean(FxEffectParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxDebugScreenOption {
         enum class ViewMode : int8_t {
             VIEWMODE_RGB = 0,
@@ -521,7 +561,9 @@ namespace heur::rfl {
         static void Finish(FxDebugScreenOption* pInstance);
         static void Clean(FxDebugScreenOption* pInstance);
     };
+}
 
+namespace hh {
     struct FxRenderOption {
         enum class DebugViewType : int8_t {
             DEBUG_VIEW_DEFAULT = 0,
@@ -629,7 +671,9 @@ namespace heur::rfl {
         static void Finish(FxRenderOption* pInstance);
         static void Clean(FxRenderOption* pInstance);
     };
+}
 
+namespace hh {
     struct FxHDROption {
         bool enable;
         uint8_t padding;
@@ -641,7 +685,9 @@ namespace heur::rfl {
         static void Finish(FxHDROption* pInstance);
         static void Clean(FxHDROption* pInstance);
     };
+}
 
+namespace hh {
     struct FxSGGIParameter {
         float sgStartSmoothness;
         float sgEndSmoothness;
@@ -653,7 +699,9 @@ namespace heur::rfl {
         static void Finish(FxSGGIParameter* pInstance);
         static void Clean(FxSGGIParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxSSAOParameter {
         bool enable;
         float intensity;
@@ -672,7 +720,9 @@ namespace heur::rfl {
         static void Finish(FxSSAOParameter* pInstance);
         static void Clean(FxSSAOParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxSHLightFieldParameter {
         enum class DebugDrawType : int8_t {
             NONE = 0,
@@ -691,7 +741,9 @@ namespace heur::rfl {
         static void Finish(FxSHLightFieldParameter* pInstance);
         static void Clean(FxSHLightFieldParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxScreenBlurParameter {
         enum class BlurType : int8_t {
             BLURTYPE_PREV_SURFACE = 0,
@@ -721,7 +773,9 @@ namespace heur::rfl {
         static void Finish(FxScreenBlurParameter* pInstance);
         static void Clean(FxScreenBlurParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxHeatHazeParameter {
         bool enable;
         float speed;
@@ -739,7 +793,9 @@ namespace heur::rfl {
         static void Finish(FxHeatHazeParameter* pInstance);
         static void Clean(FxHeatHazeParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxSceneEnvironmentParameter {
         float wind_rotation_y;
         float wind_strength;
@@ -763,7 +819,9 @@ namespace heur::rfl {
         static void Finish(FxSceneEnvironmentParameter* pInstance);
         static void Clean(FxSceneEnvironmentParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxTAAParameter {
         float blendRatio;
         float sharpnessPower;
@@ -775,7 +833,9 @@ namespace heur::rfl {
         static void Finish(FxTAAParameter* pInstance);
         static void Clean(FxTAAParameter* pInstance);
     };
+}
 
+namespace hh {
     struct NeedleFxParameter {
         enum class ToneMapType : int8_t {
             TONEMAPTYPE_MANUAL_EXPOSURE = 0,
@@ -819,7 +879,9 @@ namespace heur::rfl {
         static void Finish(NeedleFxParameter* pInstance);
         static void Clean(NeedleFxParameter* pInstance);
     };
+}
 
+namespace hh {
     struct FxRenderTargetSetting {
         enum class BloomRenderTargetSize : int8_t {
             RTSIZE_ONE_FOURTH = 0,
@@ -845,7 +907,9 @@ namespace heur::rfl {
         static void Finish(FxRenderTargetSetting* pInstance);
         static void Clean(FxRenderTargetSetting* pInstance);
     };
+}
 
+namespace hh {
     struct FxAntiAliasing {
         enum class AntiAliasingType : int8_t {
             AATYPE_NONE = 0,
@@ -863,7 +927,9 @@ namespace heur::rfl {
         static void Finish(FxAntiAliasing* pInstance);
         static void Clean(FxAntiAliasing* pInstance);
     };
+}
 
+namespace hh {
     struct NeedleFxSceneConfig {
         FxRenderTargetSetting rendertarget;
         FxAntiAliasing antialiasing;
@@ -875,7 +941,9 @@ namespace heur::rfl {
         static void Finish(NeedleFxSceneConfig* pInstance);
         static void Clean(NeedleFxSceneConfig* pInstance);
     };
+}
 
+namespace hh {
     struct StageCommonParameter {
         float deadline;
 
@@ -886,7 +954,9 @@ namespace heur::rfl {
         static void Finish(StageCommonParameter* pInstance);
         static void Clean(StageCommonParameter* pInstance);
     };
+}
 
+namespace hh {
     struct StageCameraParameter {
         float zNear;
         float zFar;
@@ -899,7 +969,9 @@ namespace heur::rfl {
         static void Finish(StageCameraParameter* pInstance);
         static void Clean(StageCameraParameter* pInstance);
     };
+}
 
+namespace hh {
     struct StageConfig {
         StageCommonParameter common;
         StageCameraParameter camera;
@@ -911,7 +983,9 @@ namespace heur::rfl {
         static void Finish(StageConfig* pInstance);
         static void Clean(StageConfig* pInstance);
     };
+}
 
+namespace hh {
     struct NeedleFxSceneData {
         NeedleFxSceneConfig config;
         NeedleFxParameter items[16];
@@ -924,7 +998,9 @@ namespace heur::rfl {
         static void Finish(NeedleFxSceneData* pInstance);
         static void Clean(NeedleFxSceneData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SwayParamNode {
         bool enable;
         float gravity;
@@ -946,7 +1022,9 @@ namespace heur::rfl {
         static void Finish(SwayParamNode* pInstance);
         static void Clean(SwayParamNode* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SwayParamIndivisual {
         csl::ut::VariableString idName;
         SwayParamNode nodeParam[16];
@@ -958,7 +1036,9 @@ namespace heur::rfl {
         static void Finish(SwayParamIndivisual* pInstance);
         static void Clean(SwayParamIndivisual* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GravityFieldSpawner {
         int8_t prio;
         bool defaultON;
@@ -971,7 +1051,9 @@ namespace heur::rfl {
         static void Finish(GravityFieldSpawner* pInstance);
         static void Clean(GravityFieldSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldConcaveBoxSpawner : GravityFieldSpawner {
         float x;
         float y;
@@ -984,7 +1066,9 @@ namespace heur::rfl {
         static void Finish(GFieldConcaveBoxSpawner* pInstance);
         static void Clean(GFieldConcaveBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldConstantSpawner : GravityFieldSpawner {
         float x;
         float y;
@@ -997,7 +1081,9 @@ namespace heur::rfl {
         static void Finish(GFieldConstantSpawner* pInstance);
         static void Clean(GFieldConstantSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldCylinderSplineSpawner : GravityFieldSpawner {
         float radius;
         uint32_t path;
@@ -1009,7 +1095,9 @@ namespace heur::rfl {
         static void Finish(GFieldCylinderSplineSpawner* pInstance);
         static void Clean(GFieldCylinderSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldFaceSplineSpawner : GFieldCylinderSplineSpawner {
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -1019,7 +1107,9 @@ namespace heur::rfl {
         static void Finish(GFieldFaceSplineSpawner* pInstance);
         static void Clean(GFieldFaceSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldHemisphereSpawner : GravityFieldSpawner {
         enum class Type : int8_t {
             TYPE_OUTER = 0,
@@ -1037,7 +1127,9 @@ namespace heur::rfl {
         static void Finish(GFieldHemisphereSpawner* pInstance);
         static void Clean(GFieldHemisphereSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldInsideCylinderSplineSpawner : GFieldCylinderSplineSpawner {
         float innerRadius;
 
@@ -1048,7 +1140,9 @@ namespace heur::rfl {
         static void Finish(GFieldInsideCylinderSplineSpawner* pInstance);
         static void Clean(GFieldInsideCylinderSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldInsidePrismSplineSpawner : GFieldCylinderSplineSpawner {
         float innerRadius;
         int8_t divide;
@@ -1060,7 +1154,9 @@ namespace heur::rfl {
         static void Finish(GFieldInsidePrismSplineSpawner* pInstance);
         static void Clean(GFieldInsidePrismSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldOutsideCylinderSplineSpawner : GFieldCylinderSplineSpawner {
         float innerRadius;
 
@@ -1071,7 +1167,9 @@ namespace heur::rfl {
         static void Finish(GFieldOutsideCylinderSplineSpawner* pInstance);
         static void Clean(GFieldOutsideCylinderSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldOutsidePrismSplineSpawner : GFieldCylinderSplineSpawner {
         float innerRadius;
         int8_t divide;
@@ -1083,7 +1181,9 @@ namespace heur::rfl {
         static void Finish(GFieldOutsidePrismSplineSpawner* pInstance);
         static void Clean(GFieldOutsidePrismSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldSphereSpawner : GravityFieldSpawner {
         float radius;
         float innerRadius;
@@ -1095,7 +1195,9 @@ namespace heur::rfl {
         static void Finish(GFieldSphereSpawner* pInstance);
         static void Clean(GFieldSphereSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GFieldSvSplineSpawner : GravityFieldSpawner {
         uint32_t path;
         float x;
@@ -1110,7 +1212,9 @@ namespace heur::rfl {
         static void Finish(GFieldSvSplineSpawner* pInstance);
         static void Clean(GFieldSvSplineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossBigZavokSpawner {
         int32_t dummy;
 
@@ -1121,7 +1225,9 @@ namespace heur::rfl {
         static void Finish(BossBigZavokSpawner* pInstance);
         static void Clean(BossBigZavokSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossEggDragoonSpawner {
         uint32_t PathId;
         hh::game::ObjectId MoveLimitMobileA;
@@ -1142,7 +1248,9 @@ namespace heur::rfl {
         static void Finish(BossEggDragoonSpawner* pInstance);
         static void Clean(BossEggDragoonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggpawnSpawner {
         enum class ShotType : int8_t {
             SHOT_BOTH_HANDS = 0,
@@ -1180,7 +1288,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggpawnSpawner* pInstance);
         static void Clean(EnemyEggpawnSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboSpawner {
         uint32_t PathID;
         csl::math::Vector3 DebrisOffsetPos;
@@ -1211,7 +1321,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboSpawner* pInstance);
         static void Clean(BossFinalDeathEggRoboSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboLastSpawner {
         uint32_t PathID;
         hh::game::ObjectId BoxSky;
@@ -1225,7 +1337,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboLastSpawner* pInstance);
         static void Clean(BossFinalDeathEggRoboLastSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite1stLayerParameter {
         uint32_t areaNo;
 
@@ -1236,7 +1350,9 @@ namespace heur::rfl {
         static void Finish(Infinite1stLayerParameter* pInstance);
         static void Clean(Infinite1stLayerParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite1stAttackPattern {
         enum class AttackType : int8_t {
             TYPE_NONE = 0,
@@ -1256,7 +1372,9 @@ namespace heur::rfl {
         static void Finish(Infinite1stAttackPattern* pInstance);
         static void Clean(Infinite1stAttackPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite1stSpawner {
         uint32_t pathID;
         uint32_t airPathID;
@@ -1275,7 +1393,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite1stSpawner* pInstance);
         static void Clean(BossInfinite1stSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite2ndLayerParameter {
         uint32_t areaNo;
 
@@ -1286,7 +1406,9 @@ namespace heur::rfl {
         static void Finish(Infinite2ndLayerParameter* pInstance);
         static void Clean(Infinite2ndLayerParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite2ndSpawner {
         uint32_t pathID;
         uint32_t enableLayerNo;
@@ -1300,7 +1422,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite2ndSpawner* pInstance);
         static void Clean(BossInfinite2ndSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfiniteCannonLSpawner {
         float appearRange;
         float phase;
@@ -1314,7 +1438,9 @@ namespace heur::rfl {
         static void Finish(ObjInfiniteCannonLSpawner* pInstance);
         static void Clean(ObjInfiniteCannonLSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfiniteCannonSSpawner {
         float appearRange;
         float phase;
@@ -1328,7 +1454,9 @@ namespace heur::rfl {
         static void Finish(ObjInfiniteCannonSSpawner* pInstance);
         static void Clean(ObjInfiniteCannonSSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfiniteEggpawnGeneratorSpawner {
         uint32_t pathID;
         float interval;
@@ -1341,7 +1469,9 @@ namespace heur::rfl {
         static void Finish(ObjInfiniteEggpawnGeneratorSpawner* pInstance);
         static void Clean(ObjInfiniteEggpawnGeneratorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3stLayerParameter {
         uint32_t areaNo;
 
@@ -1352,7 +1482,9 @@ namespace heur::rfl {
         static void Finish(Infinite3stLayerParameter* pInstance);
         static void Clean(Infinite3stLayerParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite3rdSpawner {
         uint32_t pathID;
         uint32_t groundPathID;
@@ -1365,7 +1497,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite3rdSpawner* pInstance);
         static void Clean(BossInfinite3rdSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossQueenBeetonSpawner {
         enum class Event : int8_t {
             EVENT_ON = 0,
@@ -1390,7 +1524,9 @@ namespace heur::rfl {
         static void Finish(BossQueenBeetonSpawner* pInstance);
         static void Clean(BossQueenBeetonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAzimuthOffsetDisableVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -1416,7 +1552,9 @@ namespace heur::rfl {
         static void Finish(ObjAzimuthOffsetDisableVolumeSpawner* pInstance);
         static void Clean(ObjAzimuthOffsetDisableVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraSpawner {
         bool IsCameraView;
 
@@ -1427,7 +1565,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraSpawner* pInstance);
         static void Clean(ObjCameraSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCamera2DSpawner : ObjCameraSpawner {
         float FovY;
         float BaseSpacePathPosition;
@@ -1449,7 +1589,9 @@ namespace heur::rfl {
         static void Finish(ObjCamera2DSpawner* pInstance);
         static void Clean(ObjCamera2DSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCamera3DSpawner : ObjCameraSpawner {
         float Fovy;
         float Distance;
@@ -1464,7 +1606,9 @@ namespace heur::rfl {
         static void Finish(ObjCamera3DSpawner* pInstance);
         static void Clean(ObjCamera3DSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraClassicSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1483,7 +1627,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraClassicSpawner* pInstance);
         static void Clean(ObjCameraClassicSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct VolumeTriggerSpawner {
         enum class Shape : int8_t {
             SHAPE_BOX = 0,
@@ -1519,7 +1665,9 @@ namespace heur::rfl {
         static void Finish(VolumeTriggerSpawner* pInstance);
         static void Clean(VolumeTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraClassicChangeParamVolumeSpawner : VolumeTriggerSpawner {
         hh::game::ObjectId target;
         int32_t priority;
@@ -1532,7 +1680,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraClassicChangeParamVolumeSpawner* pInstance);
         static void Clean(ObjCameraClassicChangeParamVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraClassicLimitSpawner : ObjCameraSpawner {
         uint32_t pathId;
         hh::game::ObjectId limitPointA;
@@ -1554,7 +1704,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraClassicLimitSpawner* pInstance);
         static void Clean(ObjCameraClassicLimitSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraCylindricalInnerSpawner : ObjCameraSpawner {
         float fovy;
         int32_t gravityPathID;
@@ -1572,7 +1724,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraCylindricalInnerSpawner* pInstance);
         static void Clean(ObjCameraCylindricalInnerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraCylindricalOuterSpawner : ObjCameraSpawner {
         int32_t gravityPathID;
         float pitch;
@@ -1586,7 +1740,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraCylindricalOuterSpawner* pInstance);
         static void Clean(ObjCameraCylindricalOuterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraDoubleBoostSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1609,7 +1765,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraDoubleBoostSpawner* pInstance);
         static void Clean(ObjCameraDoubleBoostSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraFixSpawner : ObjCameraSpawner {
         enum class TargetType : int8_t {
             TARGETTYPE_ABS_COORD = 0,
@@ -1630,7 +1788,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraFixSpawner* pInstance);
         static void Clean(ObjCameraFixSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraFollowSpawner : ObjCameraSpawner {
         enum class FollowType : int8_t {
             FOLLOWTYPE_INTELLIGENT = 0,
@@ -1654,7 +1814,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraFollowSpawner* pInstance);
         static void Clean(ObjCameraFollowSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraPanSpawner : ObjCameraSpawner {
         enum class PositionMode : int8_t {
             POS_MODE_FIX = 0,
@@ -1678,7 +1840,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraPanSpawner* pInstance);
         static void Clean(ObjCameraPanSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraPanVerticalSpawner : ObjCameraSpawner {
         enum class PositionMode : int8_t {
             POS_MODE_FIX = 0,
@@ -1701,7 +1865,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraPanVerticalSpawner* pInstance);
         static void Clean(ObjCameraPanVerticalSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraParallelSpawner : ObjCameraSpawner {
         float Fovy;
         float ZRot;
@@ -1723,7 +1889,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraParallelSpawner* pInstance);
         static void Clean(ObjCameraParallelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraPointSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1738,7 +1906,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraPointSpawner* pInstance);
         static void Clean(ObjCameraPointSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraRailSpawner : ObjCameraSpawner {
         float fovy;
         uint32_t pathID;
@@ -1753,7 +1923,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraRailSpawner* pInstance);
         static void Clean(ObjCameraRailSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraRailAnimationSpawner : ObjCameraSpawner {
         enum class UpDirectionType : int8_t {
             UPDIR_Y_UP = 0,
@@ -1785,7 +1957,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraRailAnimationSpawner* pInstance);
         static void Clean(ObjCameraRailAnimationSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraRailForwardViewSpawner : ObjCameraSpawner {
         enum class PlayerOffsetType : int8_t {
             PLAYER_OFFSET_NORMAL = 0,
@@ -1820,7 +1994,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraRailForwardViewSpawner* pInstance);
         static void Clean(ObjCameraRailForwardViewSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraRailLookSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1837,7 +2013,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraRailLookSpawner* pInstance);
         static void Clean(ObjCameraRailLookSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraRailSideViewSpawner : ObjCameraSpawner {
         enum class ORIENTATION_MODE : int8_t {
             ORIENTATION_GRAVITY = 0,
@@ -1869,7 +2047,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraRailSideViewSpawner* pInstance);
         static void Clean(ObjCameraRailSideViewSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraShakeTriggerSpawner {
         enum class Type : int8_t {
             TYPE_ONESHOT = 0,
@@ -1910,7 +2090,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraShakeTriggerSpawner* pInstance);
         static void Clean(ObjCameraShakeTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraSliderSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1928,7 +2110,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraSliderSpawner* pInstance);
         static void Clean(ObjCameraSliderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraSubVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -1955,7 +2139,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraSubVolumeSpawner* pInstance);
         static void Clean(ObjCameraSubVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraVerticalSpawner : ObjCameraSpawner {
         float fovy;
         float distance;
@@ -1970,7 +2156,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraVerticalSpawner* pInstance);
         static void Clean(ObjCameraVerticalSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraVolumeSpawner {
         enum class InterpolateType : int8_t {
             INTERPOLATE_RELATIVE = 0,
@@ -2021,7 +2209,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraVolumeSpawner* pInstance);
         static void Clean(ObjCameraVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDefaultCameraSettingSpawner {
         hh::game::ObjectId cameraObjectID;
 
@@ -2032,7 +2222,9 @@ namespace heur::rfl {
         static void Finish(ObjDefaultCameraSettingSpawner* pInstance);
         static void Clean(ObjDefaultCameraSettingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFarChangeVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -2054,7 +2246,9 @@ namespace heur::rfl {
         static void Finish(ObjFarChangeVolumeSpawner* pInstance);
         static void Clean(ObjFarChangeVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AutorunTriggerSpawner {
         enum class ActionType : int8_t {
             ACT_START = 0,
@@ -2082,7 +2276,9 @@ namespace heur::rfl {
         static void Finish(AutorunTriggerSpawner* pInstance);
         static void Clean(AutorunTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBallLaunchTriggerSpawner {
         float width;
         float height;
@@ -2098,7 +2294,9 @@ namespace heur::rfl {
         static void Finish(ObjBallLaunchTriggerSpawner* pInstance);
         static void Clean(ObjBallLaunchTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBallMoveTriggerSpawner {
         csl::math::Vector2 size;
 
@@ -2109,7 +2307,9 @@ namespace heur::rfl {
         static void Finish(ObjBallMoveTriggerSpawner* pInstance);
         static void Clean(ObjBallMoveTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBoosterSpawner {
         enum class Event : int8_t {
             EVENT_ON = 0,
@@ -2138,7 +2338,9 @@ namespace heur::rfl {
         static void Finish(ObjBoosterSpawner* pInstance);
         static void Clean(ObjBoosterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBubbleGeneratorSpawner {
         float vanishHeight;
         bool isEventDriven;
@@ -2150,7 +2352,9 @@ namespace heur::rfl {
         static void Finish(ObjBubbleGeneratorSpawner* pInstance);
         static void Clean(ObjBubbleGeneratorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCaptionVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -2172,7 +2376,9 @@ namespace heur::rfl {
         static void Finish(ObjCaptionVolumeSpawner* pInstance);
         static void Clean(ObjCaptionVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCautionVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -2221,7 +2427,9 @@ namespace heur::rfl {
         static void Finish(ObjCautionVolumeSpawner* pInstance);
         static void Clean(ObjCautionVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjChainFloorSpawner {
         enum class FloorSize : int8_t {
             SIZE_A = 0,
@@ -2257,7 +2465,9 @@ namespace heur::rfl {
         static void Finish(ObjChainFloorSpawner* pInstance);
         static void Clean(ObjChainFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicItemBoxSpawner {
         enum class ItemType : int8_t {
             ITEMTYPE_TENRINGS = 0,
@@ -2281,7 +2491,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicItemBoxSpawner* pInstance);
         static void Clean(ObjClassicItemBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicSpringSpawner {
         enum class MotionType : int8_t {
             MOTION_VERTICAL = 0,
@@ -2307,7 +2519,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicSpringSpawner* pInstance);
         static void Clean(ObjClassicSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjectEventData {
         enum class Event : int8_t {
             EVENT_ON = 0,
@@ -2325,7 +2539,9 @@ namespace heur::rfl {
         static void Finish(ObjectEventData* pInstance);
         static void Clean(ObjectEventData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicLinkedSpringSpawner {
         int32_t placeNum;
         float interval;
@@ -2342,7 +2558,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicLinkedSpringSpawner* pInstance);
         static void Clean(ObjClassicLinkedSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicPointMarkerSpawner {
         float Dummy;
 
@@ -2353,7 +2571,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicPointMarkerSpawner* pInstance);
         static void Clean(ObjClassicPointMarkerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicPopupSpringSpawner {
         enum class MotionType : int8_t {
             MOTION_VERTICAL = 0,
@@ -2379,7 +2599,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicPopupSpringSpawner* pInstance);
         static void Clean(ObjClassicPopupSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCorrectPathVolumeSpawner {
         enum class CorrectType : int8_t {
             ALWAYS = 0,
@@ -2398,7 +2620,9 @@ namespace heur::rfl {
         static void Finish(ObjCorrectPathVolumeSpawner* pInstance);
         static void Clean(ObjCorrectPathVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCorrectPathVolume2Spawner {
         csl::math::Vector3 size;
         uint32_t pathID;
@@ -2415,7 +2639,9 @@ namespace heur::rfl {
         static void Finish(ObjCorrectPathVolume2Spawner* pInstance);
         static void Clean(ObjCorrectPathVolume2Spawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDashPanelSpawner {
         enum class Event : int8_t {
             EVENT_ON = 0,
@@ -2445,7 +2671,9 @@ namespace heur::rfl {
         static void Finish(ObjDashPanelSpawner* pInstance);
         static void Clean(ObjDashPanelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDashRingSpawner {
         enum class DashRingType : int8_t {
             TYPE_DASH_RING = 0,
@@ -2472,7 +2700,9 @@ namespace heur::rfl {
         static void Finish(ObjDashRingSpawner* pInstance);
         static void Clean(ObjDashRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDebugNoteSpawner {
         enum class ColorType : int8_t {
             TYPE_WHITE = 0,
@@ -2493,7 +2723,9 @@ namespace heur::rfl {
         static void Finish(ObjDebugNoteSpawner* pInstance);
         static void Clean(ObjDebugNoteSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDimensionShiftVolumeSpawner : VolumeTriggerSpawner {
         int32_t pathNo;
 
@@ -2504,7 +2736,9 @@ namespace heur::rfl {
         static void Finish(ObjDimensionShiftVolumeSpawner* pInstance);
         static void Clean(ObjDimensionShiftVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDimensionVolumeSpawner {
         enum class DimensionType : int8_t {
             DIM_2D = 0,
@@ -2543,7 +2777,9 @@ namespace heur::rfl {
         static void Finish(ObjDimensionVolumeSpawner* pInstance);
         static void Clean(ObjDimensionVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDisableQuickStepCheckVolumeSpawner : VolumeTriggerSpawner {
         int32_t dummy;
 
@@ -2554,7 +2790,9 @@ namespace heur::rfl {
         static void Finish(ObjDisableQuickStepCheckVolumeSpawner* pInstance);
         static void Clean(ObjDisableQuickStepCheckVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDivingVolumeSpawner {
         enum class BasePoint : int8_t {
             BASE_CENTER = 0,
@@ -2576,7 +2814,9 @@ namespace heur::rfl {
         static void Finish(ObjDivingVolumeSpawner* pInstance);
         static void Clean(ObjDivingVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDoubleBoostSpawner {
         uint32_t pathID;
         float autorunSpeed;
@@ -2588,7 +2828,9 @@ namespace heur::rfl {
         static void Finish(ObjDoubleBoostSpawner* pInstance);
         static void Clean(ObjDoubleBoostSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDoubleBoostTriggerSpawner : ObjDoubleBoostSpawner {
         enum class ActionType : int8_t {
             ACT_START = 0,
@@ -2607,7 +2849,9 @@ namespace heur::rfl {
         static void Finish(ObjDoubleBoostTriggerSpawner* pInstance);
         static void Clean(ObjDoubleBoostTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDoubleBoostVolumeSpawner : ObjDoubleBoostSpawner {
         enum class BasePoint : int8_t {
             BASE_CENTER = 0,
@@ -2625,7 +2869,9 @@ namespace heur::rfl {
         static void Finish(ObjDoubleBoostVolumeSpawner* pInstance);
         static void Clean(ObjDoubleBoostVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEventSetterSpawner {
         enum class TriggerType : int8_t {
             TRIGERTYPE_DEAD = 0,
@@ -2667,7 +2913,9 @@ namespace heur::rfl {
         static void Finish(ObjEventSetterSpawner* pInstance);
         static void Clean(ObjEventSetterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFallDeadTriggerSpawner {
         enum class DrivenType : int8_t {
             DRIVE_RANGE = 0,
@@ -2685,7 +2933,9 @@ namespace heur::rfl {
         static void Finish(ObjFallDeadTriggerSpawner* pInstance);
         static void Clean(ObjFallDeadTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFanSpawner {
         enum class Type : int8_t {
             TYPE_ON = 0,
@@ -2707,7 +2957,9 @@ namespace heur::rfl {
         static void Finish(ObjFanSpawner* pInstance);
         static void Clean(ObjFanSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlowEffectVolumeBaseSpawner {
         enum class EffectType : int8_t {
             EFFECTTYPE_FIRE_DUST = 0,
@@ -2728,7 +2980,9 @@ namespace heur::rfl {
         static void Finish(ObjFlowEffectVolumeBaseSpawner* pInstance);
         static void Clean(ObjFlowEffectVolumeBaseSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlowEffectVolumeBroadAreaSpawner : ObjFlowEffectVolumeBaseSpawner {
         float zOffset;
 
@@ -2739,7 +2993,9 @@ namespace heur::rfl {
         static void Finish(ObjFlowEffectVolumeBroadAreaSpawner* pInstance);
         static void Clean(ObjFlowEffectVolumeBroadAreaSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlowEffectVolumeLocalAreaSpawner : ObjFlowEffectVolumeBaseSpawner {
         enum class Shape : int8_t {
             SHAPE_BOX = 0,
@@ -2760,7 +3016,9 @@ namespace heur::rfl {
         static void Finish(ObjFlowEffectVolumeLocalAreaSpawner* pInstance);
         static void Clean(ObjFlowEffectVolumeLocalAreaSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFootStepSpawner {
         enum class MoveType : int8_t {
             MOVE_PATH = 0,
@@ -2791,7 +3049,9 @@ namespace heur::rfl {
         static void Finish(ObjFootStepSpawner* pInstance);
         static void Clean(ObjFootStepSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGadgetVolumeSpawner {
         csl::math::Vector3 size;
         bool enable;
@@ -2807,7 +3067,9 @@ namespace heur::rfl {
         static void Finish(ObjGadgetVolumeSpawner* pInstance);
         static void Clean(ObjGadgetVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGismoSpawner {
         csl::ut::VariableString name;
         float scale;
@@ -2821,7 +3083,9 @@ namespace heur::rfl {
         static void Finish(ObjGismoSpawner* pInstance);
         static void Clean(ObjGismoSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGoalCharacterSpawner {
         enum class MotionType : int8_t {
             TYPE_A = 0,
@@ -2838,7 +3102,9 @@ namespace heur::rfl {
         static void Finish(ObjGoalCharacterSpawner* pInstance);
         static void Clean(ObjGoalCharacterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGoalPlateSpawner : VolumeTriggerSpawner {
         hh::game::ObjectId camera;
         uint32_t cameraPriority;
@@ -2852,7 +3118,9 @@ namespace heur::rfl {
         static void Finish(ObjGoalPlateSpawner* pInstance);
         static void Clean(ObjGoalPlateSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGoalTriggerSpawner : VolumeTriggerSpawner {
         enum class GoalActionType : int8_t {
             GOALACTIONTYPE_STOP = 0,
@@ -2898,7 +3166,9 @@ namespace heur::rfl {
         static void Finish(ObjGoalTriggerSpawner* pInstance);
         static void Clean(ObjGoalTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGodraySpawner {
         csl::math::Vector3 color;
         csl::math::Vector3 size;
@@ -2912,7 +3182,9 @@ namespace heur::rfl {
         static void Finish(ObjGodraySpawner* pInstance);
         static void Clean(ObjGodraySpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGrindBoosterSpawner {
         float ocTime;
         float speed;
@@ -2929,7 +3201,9 @@ namespace heur::rfl {
         static void Finish(ObjGrindBoosterSpawner* pInstance);
         static void Clean(ObjGrindBoosterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGrindThornSpawner {
         bool reverse;
 
@@ -2940,7 +3214,9 @@ namespace heur::rfl {
         static void Finish(ObjGrindThornSpawner* pInstance);
         static void Clean(ObjGrindThornSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHintRingSpawner {
         csl::ut::VariableString sheetID;
         csl::ut::VariableString cellID;
@@ -2952,7 +3228,9 @@ namespace heur::rfl {
         static void Finish(ObjHintRingSpawner* pInstance);
         static void Clean(ObjHintRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHomingVolumeSpawner {
         csl::math::Vector3 size;
         bool enable;
@@ -2965,7 +3243,9 @@ namespace heur::rfl {
         static void Finish(ObjHomingVolumeSpawner* pInstance);
         static void Clean(ObjHomingVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjIBLChangeVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -2987,7 +3267,9 @@ namespace heur::rfl {
         static void Finish(ObjIBLChangeVolumeSpawner* pInstance);
         static void Clean(ObjIBLChangeVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjIronBoxSpawner {
         int32_t BoxNumX;
         int32_t BoxNumY;
@@ -3001,7 +3283,9 @@ namespace heur::rfl {
         static void Finish(ObjIronBoxSpawner* pInstance);
         static void Clean(ObjIronBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjJumpBoardSpawner {
         enum class DrawType : int8_t {
             DRAW_NORMAL = 0,
@@ -3033,7 +3317,9 @@ namespace heur::rfl {
         static void Finish(ObjJumpBoardSpawner* pInstance);
         static void Clean(ObjJumpBoardSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjJumpBoardPathSpawner {
         enum class SizeType : int8_t {
             SIZE_S = 0,
@@ -3069,7 +3355,9 @@ namespace heur::rfl {
         static void Finish(ObjJumpBoardPathSpawner* pInstance);
         static void Clean(ObjJumpBoardPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjJumpPanelSpawner {
         float ImpulseSpeedOnNormal;
         float OutOfControl;
@@ -3082,7 +3370,9 @@ namespace heur::rfl {
         static void Finish(ObjJumpPanelSpawner* pInstance);
         static void Clean(ObjJumpPanelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct NormalSpringParameter {
         float velocity;
         float outOfControl;
@@ -3095,7 +3385,9 @@ namespace heur::rfl {
         static void Finish(NormalSpringParameter* pInstance);
         static void Clean(NormalSpringParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PathSpringParameter {
         float velocity;
         float beginAngle;
@@ -3111,7 +3403,9 @@ namespace heur::rfl {
         static void Finish(PathSpringParameter* pInstance);
         static void Clean(PathSpringParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLinkedSpringSpawner {
         enum class PlaceType : int8_t {
             LINE = 0,
@@ -3143,7 +3437,9 @@ namespace heur::rfl {
         static void Finish(ObjLinkedSpringSpawner* pInstance);
         static void Clean(ObjLinkedSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLocatorSpawner {
         int32_t dummy;
 
@@ -3154,7 +3450,9 @@ namespace heur::rfl {
         static void Finish(ObjLocatorSpawner* pInstance);
         static void Clean(ObjLocatorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLoopAreaVolumeSpawner {
         float width;
         float height;
@@ -3168,7 +3466,9 @@ namespace heur::rfl {
         static void Finish(ObjLoopAreaVolumeSpawner* pInstance);
         static void Clean(ObjLoopAreaVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjNormalFloorSpawner {
         enum class SizeType : int8_t {
             SIZE_SMALL = 0,
@@ -3228,7 +3528,9 @@ namespace heur::rfl {
         static void Finish(ObjNormalFloorSpawner* pInstance);
         static void Clean(ObjNormalFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjNumberRingSpawner {
         enum class NumberType : int8_t {
             NUMBER_5 = 0,
@@ -3248,7 +3550,9 @@ namespace heur::rfl {
         static void Finish(ObjNumberRingSpawner* pInstance);
         static void Clean(ObjNumberRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjNumberRingManagerSpawner {
         csl::ut::MoveArray32<uint32_t> rings;
         ObjectEventData event0;
@@ -3262,7 +3566,9 @@ namespace heur::rfl {
         static void Finish(ObjNumberRingManagerSpawner* pInstance);
         static void Clean(ObjNumberRingManagerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjObjectLayerTriggerSpawner : VolumeTriggerSpawner {
         csl::ut::VariableString layerName;
         bool enabled;
@@ -3274,7 +3580,9 @@ namespace heur::rfl {
         static void Finish(ObjObjectLayerTriggerSpawner* pInstance);
         static void Clean(ObjObjectLayerTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjOutOfControlTriggerSpawner {
         csl::math::Vector2 size;
         float outOfControlTime;
@@ -3287,7 +3595,9 @@ namespace heur::rfl {
         static void Finish(ObjOutOfControlTriggerSpawner* pInstance);
         static void Clean(ObjOutOfControlTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjOutOfControlVolumeSpawner {
         csl::math::Vector3 size;
         bool releaseByGround;
@@ -3299,7 +3609,9 @@ namespace heur::rfl {
         static void Finish(ObjOutOfControlVolumeSpawner* pInstance);
         static void Clean(ObjOutOfControlVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPathSpeedControlCollisionSpawner {
         enum class TurnType : int8_t {
             TURN_LEFT = 0,
@@ -3322,7 +3634,9 @@ namespace heur::rfl {
         static void Finish(ObjPathSpeedControlCollisionSpawner* pInstance);
         static void Clean(ObjPathSpeedControlCollisionSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPipeMoveTriggerSpawner {
         enum class SpeedType : int8_t {
             SPEED_FIX = 0,
@@ -3346,7 +3660,9 @@ namespace heur::rfl {
         static void Finish(ObjPipeMoveTriggerSpawner* pInstance);
         static void Clean(ObjPipeMoveTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MoveParameter {
         enum class MoveType : int8_t {
             MOVE_NONE = 0,
@@ -3365,7 +3681,9 @@ namespace heur::rfl {
         static void Finish(MoveParameter* pInstance);
         static void Clean(MoveParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPointLightSpawner {
         float colorR;
         float colorG;
@@ -3382,7 +3700,9 @@ namespace heur::rfl {
         static void Finish(ObjPointLightSpawner* pInstance);
         static void Clean(ObjPointLightSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPointMarkerSpawner {
         enum class ViewType : int8_t {
             FORWARDVIEW = 0,
@@ -3401,7 +3721,9 @@ namespace heur::rfl {
         static void Finish(ObjPointMarkerSpawner* pInstance);
         static void Clean(ObjPointMarkerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPopupSpringSpawner {
         float FirstSpeed;
         float OutOfControl;
@@ -3415,7 +3737,9 @@ namespace heur::rfl {
         static void Finish(ObjPopupSpringSpawner* pInstance);
         static void Clean(ObjPopupSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPulleySpawner {
         uint32_t pathID;
         float startPosition1D;
@@ -3435,7 +3759,9 @@ namespace heur::rfl {
         static void Finish(ObjPulleySpawner* pInstance);
         static void Clean(ObjPulleySpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPulleyColumnSpawner {
         uint32_t height;
 
@@ -3446,7 +3772,9 @@ namespace heur::rfl {
         static void Finish(ObjPulleyColumnSpawner* pInstance);
         static void Clean(ObjPulleyColumnSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPulley2Spawner {
         enum class ColumnType : int8_t {
             COLUMN_TYPE_SHORT = 0,
@@ -3472,7 +3800,9 @@ namespace heur::rfl {
         static void Finish(ObjPulley2Spawner* pInstance);
         static void Clean(ObjPulley2Spawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPulley2NodeSpawner {
         enum class ColumnType : int8_t {
             COLUMN_TYPE_SHORT = 0,
@@ -3489,7 +3819,9 @@ namespace heur::rfl {
         static void Finish(ObjPulley2NodeSpawner* pInstance);
         static void Clean(ObjPulley2NodeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjQuickStepSpawner {
         enum class ModeType : int8_t {
             MODE_NORMAL = 0,
@@ -3516,7 +3848,9 @@ namespace heur::rfl {
         static void Finish(ObjQuickStepSpawner* pInstance);
         static void Clean(ObjQuickStepSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjQuickStepTriggerSpawner : ObjQuickStepSpawner {
         enum class ActionType : int8_t {
             ACT_START = 0,
@@ -3534,7 +3868,9 @@ namespace heur::rfl {
         static void Finish(ObjQuickStepTriggerSpawner* pInstance);
         static void Clean(ObjQuickStepTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjQuickStepVolumeSpawner : ObjQuickStepSpawner {
         enum class BasePoint : int8_t {
             BASE_CENTER = 0,
@@ -3551,7 +3887,9 @@ namespace heur::rfl {
         static void Finish(ObjQuickStepVolumeSpawner* pInstance);
         static void Clean(ObjQuickStepVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRedRingSpawner {
         enum class Event : int8_t {
             EVENT_NONE = 0,
@@ -3576,7 +3914,9 @@ namespace heur::rfl {
         static void Finish(ObjRedRingSpawner* pInstance);
         static void Clean(ObjRedRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjReleaseBoxSpawner {
         enum class Direction : int8_t {
             DIR_FRONT = 0,
@@ -3594,7 +3934,9 @@ namespace heur::rfl {
         static void Finish(ObjReleaseBoxSpawner* pInstance);
         static void Clean(ObjReleaseBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRestrictControlVolumeSpawner : VolumeTriggerSpawner {
         enum class ControlType : int8_t {
             RESTRICT_AXIS = 0,
@@ -3609,7 +3951,9 @@ namespace heur::rfl {
         static void Finish(ObjRestrictControlVolumeSpawner* pInstance);
         static void Clean(ObjRestrictControlVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRingSpawner {
         enum class EventType : int8_t {
             EVENT_NONE = 0,
@@ -3633,7 +3977,9 @@ namespace heur::rfl {
         static void Finish(ObjRingSpawner* pInstance);
         static void Clean(ObjRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSceneChangeVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -3661,7 +4007,9 @@ namespace heur::rfl {
         static void Finish(ObjSceneChangeVolumeSpawner* pInstance);
         static void Clean(ObjSceneChangeVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleBaseSoundParam {
         csl::ut::VariableString name;
         bool is3D;
@@ -3674,7 +4022,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleBaseSoundParam* pInstance);
         static void Clean(ObjSetParticleBaseSoundParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleBaseRumbleParam {
         csl::ut::VariableString name;
 
@@ -3685,7 +4035,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleBaseRumbleParam* pInstance);
         static void Clean(ObjSetParticleBaseRumbleParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleBaseSpawner {
         csl::ut::VariableString effectName;
         float scale;
@@ -3703,7 +4055,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleBaseSpawner* pInstance);
         static void Clean(ObjSetParticleBaseSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleSpawner : ObjSetParticleBaseSpawner {
         enum class TriggerType : int8_t {
             RANGE = 0,
@@ -3720,7 +4074,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleSpawner* pInstance);
         static void Clean(ObjSetParticleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleVolumeSpawner : ObjSetParticleBaseSpawner {
         enum class Shape : int8_t {
             SHAPE_BOX = 0,
@@ -3755,7 +4111,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleVolumeSpawner* pInstance);
         static void Clean(ObjSetParticleVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetParticleExtentSpawner {
         enum class Shape : int8_t {
             SHAPE_SPHERE = 0,
@@ -3802,7 +4160,9 @@ namespace heur::rfl {
         static void Finish(ObjSetParticleExtentSpawner* pInstance);
         static void Clean(ObjSetParticleExtentSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathNodeSpawner {
         enum class LineType : int8_t {
             LINETYPE_SNS = 0,
@@ -3819,7 +4179,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathNodeSpawner* pInstance);
         static void Clean(ObjSetPathNodeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3846,7 +4208,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathSpawner* pInstance);
         static void Clean(ObjSetPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathLoopSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3870,7 +4234,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathLoopSpawner* pInstance);
         static void Clean(ObjSetPathLoopSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathSpiralSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3900,7 +4266,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathSpiralSpawner* pInstance);
         static void Clean(ObjSetPathSpiralSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathLineSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3919,7 +4287,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathLineSpawner* pInstance);
         static void Clean(ObjSetPathLineSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathCircleSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3946,7 +4316,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathCircleSpawner* pInstance);
         static void Clean(ObjSetPathCircleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetPathPolygonSpawner {
         enum class PathType : int8_t {
             OBJ_PATH = 0,
@@ -3980,7 +4352,9 @@ namespace heur::rfl {
         static void Finish(ObjSetPathPolygonSpawner* pInstance);
         static void Clean(ObjSetPathPolygonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSetRigidBodySpawner {
         enum class ActionType : int8_t {
             ACT_TERRAIN = 0,
@@ -3998,7 +4372,9 @@ namespace heur::rfl {
         static void Finish(ObjSetRigidBodySpawner* pInstance);
         static void Clean(ObjSetRigidBodySpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSliderParamTriggerSpawner {
         csl::math::Vector2 size;
         float speed;
@@ -4010,7 +4386,9 @@ namespace heur::rfl {
         static void Finish(ObjSliderParamTriggerSpawner* pInstance);
         static void Clean(ObjSliderParamTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSliderTriggerSpawner {
         enum class ActionType : int8_t {
             ACT_BEGIN = 0,
@@ -4028,7 +4406,9 @@ namespace heur::rfl {
         static void Finish(ObjSliderTriggerSpawner* pInstance);
         static void Clean(ObjSliderTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpiralVolumeSpawner {
         csl::math::Vector3 size;
         uint32_t pathUID;
@@ -4040,7 +4420,9 @@ namespace heur::rfl {
         static void Finish(ObjSpiralVolumeSpawner* pInstance);
         static void Clean(ObjSpiralVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpotLightSpawner {
         float colorR;
         float colorG;
@@ -4056,7 +4438,9 @@ namespace heur::rfl {
         static void Finish(ObjSpotLightSpawner* pInstance);
         static void Clean(ObjSpotLightSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpringSpawner {
         float FirstSpeed;
         float OutOfControl;
@@ -4075,7 +4459,9 @@ namespace heur::rfl {
         static void Finish(ObjSpringSpawner* pInstance);
         static void Clean(ObjSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpringPoleSpawner {
         float speedMin;
         float speedMax;
@@ -4087,7 +4473,9 @@ namespace heur::rfl {
         static void Finish(ObjSpringPoleSpawner* pInstance);
         static void Clean(ObjSpringPoleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjStartPositionSpawner {
         enum class StartType : int8_t {
             STAND = 0,
@@ -4107,7 +4495,9 @@ namespace heur::rfl {
         static void Finish(ObjStartPositionSpawner* pInstance);
         static void Clean(ObjStartPositionSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSuperRingSpawner {
         enum class EventType : int8_t {
             EVENT_NONE = 0,
@@ -4130,7 +4520,9 @@ namespace heur::rfl {
         static void Finish(ObjSuperRingSpawner* pInstance);
         static void Clean(ObjSuperRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSuperSonicDisallowVolumeSpawner : VolumeTriggerSpawner {
         bool allowWhenLeave;
         bool initial;
@@ -4143,7 +4535,9 @@ namespace heur::rfl {
         static void Finish(ObjSuperSonicDisallowVolumeSpawner* pInstance);
         static void Clean(ObjSuperSonicDisallowVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSwitchVolumeSpawner {
         enum class Event : int8_t {
             EVENT_ON = 0,
@@ -4197,7 +4591,9 @@ namespace heur::rfl {
         static void Finish(ObjSwitchVolumeSpawner* pInstance);
         static void Clean(ObjSwitchVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTerrainBlockSpawner {
         enum class Block : int8_t {
             BLOCK_BOX = 0,
@@ -4257,7 +4653,9 @@ namespace heur::rfl {
         static void Finish(ObjTerrainBlockSpawner* pInstance);
         static void Clean(ObjTerrainBlockSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Point {
         float z;
         float y;
@@ -4269,7 +4667,9 @@ namespace heur::rfl {
         static void Finish(Point* pInstance);
         static void Clean(Point* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTerrainBlocksSpawner {
         enum class Layer : int8_t {
             LAYER_LAND = 0,
@@ -4312,7 +4712,9 @@ namespace heur::rfl {
         static void Finish(ObjTerrainBlocksSpawner* pInstance);
         static void Clean(ObjTerrainBlocksSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTerrainPathSpawner {
         enum class WallType : int8_t {
             WALL_NONE = 0,
@@ -4350,7 +4752,9 @@ namespace heur::rfl {
         static void Finish(ObjTerrainPathSpawner* pInstance);
         static void Clean(ObjTerrainPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTerrainPathCylinderSpawner {
         uint32_t pathID;
         float radius;
@@ -4364,7 +4768,9 @@ namespace heur::rfl {
         static void Finish(ObjTerrainPathCylinderSpawner* pInstance);
         static void Clean(ObjTerrainPathCylinderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornSpawner {
         enum class MoveType : int8_t {
             TYPE_APPEAR = 0,
@@ -4388,7 +4794,9 @@ namespace heur::rfl {
         static void Finish(ObjThornSpawner* pInstance);
         static void Clean(ObjThornSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornBallMoveParam {
         enum class Direction : int8_t {
             DIR_HORIZONTAL = 0,
@@ -4407,7 +4815,9 @@ namespace heur::rfl {
         static void Finish(ObjThornBallMoveParam* pInstance);
         static void Clean(ObjThornBallMoveParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornBallRollingParam {
         enum class Direction : int8_t {
             DIR_HORIZONTAL = 0,
@@ -4426,7 +4836,9 @@ namespace heur::rfl {
         static void Finish(ObjThornBallRollingParam* pInstance);
         static void Clean(ObjThornBallRollingParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornBallAppearParam {
         float time;
         float distance;
@@ -4438,7 +4850,9 @@ namespace heur::rfl {
         static void Finish(ObjThornBallAppearParam* pInstance);
         static void Clean(ObjThornBallAppearParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTornBallPendulumParam {
         enum class EffectType : int8_t {
             EFFECTTYPE_DEFAULT = 0,
@@ -4462,7 +4876,9 @@ namespace heur::rfl {
         static void Finish(ObjTornBallPendulumParam* pInstance);
         static void Clean(ObjTornBallPendulumParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTornBallTumbleParam {
         enum class EffectType : int8_t {
             EFFECTTYPE_DEFAULT = 0,
@@ -4483,7 +4899,9 @@ namespace heur::rfl {
         static void Finish(ObjTornBallTumbleParam* pInstance);
         static void Clean(ObjTornBallTumbleParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornBallSpawner {
         enum class Type : int8_t {
             TYPE_NORMAL = 0,
@@ -4510,7 +4928,9 @@ namespace heur::rfl {
         static void Finish(ObjThornBallSpawner* pInstance);
         static void Clean(ObjThornBallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjThornCylinderSpawner {
         enum class Type : int8_t {
             TYPE_SHORT = 0,
@@ -4528,7 +4948,9 @@ namespace heur::rfl {
         static void Finish(ObjThornCylinderSpawner* pInstance);
         static void Clean(ObjThornCylinderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTreadGrassVolumeSpawner : VolumeTriggerSpawner {
         int32_t dummy;
 
@@ -4539,7 +4961,9 @@ namespace heur::rfl {
         static void Finish(ObjTreadGrassVolumeSpawner* pInstance);
         static void Clean(ObjTreadGrassVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTreadGrassSettingSpawner {
         int32_t dummy;
 
@@ -4550,7 +4974,9 @@ namespace heur::rfl {
         static void Finish(ObjTreadGrassSettingSpawner* pInstance);
         static void Clean(ObjTreadGrassSettingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjUpReelSpawner {
         float length;
         float upSpeedMax;
@@ -4569,7 +4995,9 @@ namespace heur::rfl {
         static void Finish(ObjUpReelSpawner* pInstance);
         static void Clean(ObjUpReelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVoidVolumeSpawner {
         csl::math::Vector3 size;
 
@@ -4580,7 +5008,9 @@ namespace heur::rfl {
         static void Finish(ObjVoidVolumeSpawner* pInstance);
         static void Clean(ObjVoidVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWallRunEventTriggerSpawner {
         enum class ActionType : int8_t {
             ACT_BEGIN = 0,
@@ -4597,7 +5027,9 @@ namespace heur::rfl {
         static void Finish(ObjWallRunEventTriggerSpawner* pInstance);
         static void Clean(ObjWallRunEventTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWallRunEventVolumeSpawner {
         csl::math::Vector3 size;
 
@@ -4608,7 +5040,9 @@ namespace heur::rfl {
         static void Finish(ObjWallRunEventVolumeSpawner* pInstance);
         static void Clean(ObjWallRunEventVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWarpTriggerSpawner {
         enum class StatusType : int8_t {
             RESET = 0,
@@ -4626,7 +5060,9 @@ namespace heur::rfl {
         static void Finish(ObjWarpTriggerSpawner* pInstance);
         static void Clean(ObjWarpTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWaterVolumeSpawner {
         csl::math::Vector3 size;
 
@@ -4637,7 +5073,9 @@ namespace heur::rfl {
         static void Finish(ObjWaterVolumeSpawner* pInstance);
         static void Clean(ObjWaterVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWideSpringSpawner {
         float FirstSpeed;
         float OutOfControl;
@@ -4653,7 +5091,9 @@ namespace heur::rfl {
         static void Finish(ObjWideSpringSpawner* pInstance);
         static void Clean(ObjWideSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireDriftSpawner {
         csl::math::Vector2 size;
         uint32_t pathID;
@@ -4668,7 +5108,9 @@ namespace heur::rfl {
         static void Finish(ObjWireDriftSpawner* pInstance);
         static void Clean(ObjWireDriftSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireGiantSwingSpawner {
         float radius;
         float rotateSpeed;
@@ -4690,7 +5132,9 @@ namespace heur::rfl {
         static void Finish(ObjWireGiantSwingSpawner* pInstance);
         static void Clean(ObjWireGiantSwingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireLauncherSpawner {
         enum class OffsetType : int8_t {
             FIX = 0,
@@ -4714,7 +5158,9 @@ namespace heur::rfl {
         static void Finish(ObjWireLauncherSpawner* pInstance);
         static void Clean(ObjWireLauncherSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTargetSpawner {
         float trapezeRadius;
         float maxSpeed;
@@ -4736,7 +5182,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTargetSpawner* pInstance);
         static void Clean(ObjWireTargetSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTargetPathSpawner {
         enum class MotionType : int8_t {
             MOTION_TRAPEZE = 0,
@@ -4782,7 +5230,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTargetPathSpawner* pInstance);
         static void Clean(ObjWireTargetPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTargetPathTriggerSpawner {
         enum class MotionType : int8_t {
             MOTION_TRAPEZE = 0,
@@ -4830,7 +5280,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTargetPathTriggerSpawner* pInstance);
         static void Clean(ObjWireTargetPathTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTrackSpawner {
         csl::math::Vector2 size;
         float speed;
@@ -4847,7 +5299,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTrackSpawner* pInstance);
         static void Clean(ObjWireTrackSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTurnSpawner {
         enum class TurnDirection : int8_t {
             TURN_LEFT = 0,
@@ -4874,7 +5328,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTurnSpawner* pInstance);
         static void Clean(ObjWireTurnSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWireTurnPathSpawner {
         enum class TurnDirection : int8_t {
             TURN_LEFT = 0,
@@ -4895,7 +5351,9 @@ namespace heur::rfl {
         static void Finish(ObjWireTurnPathSpawner* pInstance);
         static void Clean(ObjWireTurnPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWispCapsuleSpawner {
         enum class ItemType : int8_t {
             GADGET_WHISP = 0,
@@ -4934,7 +5392,9 @@ namespace heur::rfl {
         static void Finish(ObjWispCapsuleSpawner* pInstance);
         static void Clean(ObjWispCapsuleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWoodBoxSpawner {
         int32_t dummy;
 
@@ -4945,7 +5405,9 @@ namespace heur::rfl {
         static void Finish(ObjWoodBoxSpawner* pInstance);
         static void Clean(ObjWoodBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjYellowMoonRingSpawner {
         bool separateTranslucent;
 
@@ -4956,7 +5418,9 @@ namespace heur::rfl {
         static void Finish(ObjYellowMoonRingSpawner* pInstance);
         static void Clean(ObjYellowMoonRingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjYellowMoonRingManagerSpawner {
         float blinkTime0;
         float blinkTime1;
@@ -4974,7 +5438,9 @@ namespace heur::rfl {
         static void Finish(ObjYellowMoonRingManagerSpawner* pInstance);
         static void Clean(ObjYellowMoonRingManagerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyBatabataSpawner {
         float velocity;
         float searchDistance;
@@ -4987,7 +5453,9 @@ namespace heur::rfl {
         static void Finish(EnemyBatabataSpawner* pInstance);
         static void Clean(EnemyBatabataSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyBeetonSpawner {
         float SerchLength;
         float SerchMoveSpeed;
@@ -5017,7 +5485,9 @@ namespace heur::rfl {
         static void Finish(EnemyBeetonSpawner* pInstance);
         static void Clean(EnemyBeetonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyBeetonDollSpawner {
         csl::ut::MoveArray32<uint32_t> positionList;
 
@@ -5028,7 +5498,9 @@ namespace heur::rfl {
         static void Finish(EnemyBeetonDollSpawner* pInstance);
         static void Clean(EnemyBeetonDollSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyBeetonDollPointSpawner {
         int32_t dummy;
 
@@ -5039,7 +5511,9 @@ namespace heur::rfl {
         static void Finish(EnemyBeetonDollPointSpawner* pInstance);
         static void Clean(EnemyBeetonDollPointSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEggChaserBeginAttackVolumeSpawner {
         csl::math::Vector3 size;
 
@@ -5050,7 +5524,9 @@ namespace heur::rfl {
         static void Finish(ObjEggChaserBeginAttackVolumeSpawner* pInstance);
         static void Clean(ObjEggChaserBeginAttackVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggChaserSpawner {
         enum class AttackType : int8_t {
             ATTACK_TYPE_TIME = 0,
@@ -5080,7 +5556,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggChaserSpawner* pInstance);
         static void Clean(EnemyEggChaserSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEggpawnReturnCollisionSpawner {
         csl::math::Vector3 size;
         bool isDebug;
@@ -5093,7 +5571,9 @@ namespace heur::rfl {
         static void Finish(ObjEggpawnReturnCollisionSpawner* pInstance);
         static void Clean(ObjEggpawnReturnCollisionSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggpawnDollSpawner {
         csl::ut::MoveArray32<uint32_t> positionList;
 
@@ -5104,7 +5584,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggpawnDollSpawner* pInstance);
         static void Clean(EnemyEggpawnDollSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggpawnDollPointSpawner {
         int32_t dummy;
 
@@ -5115,7 +5597,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggpawnDollPointSpawner* pInstance);
         static void Clean(EnemyEggpawnDollPointSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggTankSpawner {
         enum class MoveType : int32_t {
             MOVE_NONE = 0,
@@ -5144,7 +5628,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggTankSpawner* pInstance);
         static void Clean(EnemyEggTankSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggWalkerSpawner {
         enum class JumpType : int8_t {
             JUMP_QUICK = 0,
@@ -5179,7 +5665,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggWalkerSpawner* pInstance);
         static void Clean(EnemyEggWalkerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyMetalSonicSpawner {
         uint32_t pathID;
         hh::game::ObjectId doubleBoostCameraTarget;
@@ -5192,7 +5680,9 @@ namespace heur::rfl {
         static void Finish(EnemyMetalSonicSpawner* pInstance);
         static void Clean(EnemyMetalSonicSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTestBridgeSpawner {
         float dummy;
 
@@ -5203,7 +5693,9 @@ namespace heur::rfl {
         static void Finish(ObjTestBridgeSpawner* pInstance);
         static void Clean(ObjTestBridgeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicBattleSpawner {
         uint32_t pathID;
         float quickstepWidth;
@@ -5234,7 +5726,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicBattleSpawner* pInstance);
         static void Clean(MetalSonicBattleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyMotoraSpawner {
         float SerachDistance;
         float Speed;
@@ -5253,7 +5747,9 @@ namespace heur::rfl {
         static void Finish(EnemyMotoraSpawner* pInstance);
         static void Clean(EnemyMotoraSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SliderMotoraDiveParameter {
         uint32_t divePathID;
         float diveSpeed;
@@ -5267,7 +5763,9 @@ namespace heur::rfl {
         static void Finish(SliderMotoraDiveParameter* pInstance);
         static void Clean(SliderMotoraDiveParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemySliderMotoraDiveManagerSpawner {
         uint32_t pathID;
         float radius;
@@ -5288,7 +5786,9 @@ namespace heur::rfl {
         static void Finish(EnemySliderMotoraDiveManagerSpawner* pInstance);
         static void Clean(EnemySliderMotoraDiveManagerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SliderMotoraGroupParameter {
         uint32_t num;
         float toNextGroupTime;
@@ -5304,7 +5804,9 @@ namespace heur::rfl {
         static void Finish(SliderMotoraGroupParameter* pInstance);
         static void Clean(SliderMotoraGroupParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemySliderMotoraGroupManagerSpawner {
         uint32_t pathID;
         float radius;
@@ -5324,7 +5826,9 @@ namespace heur::rfl {
         static void Finish(EnemySliderMotoraGroupManagerSpawner* pInstance);
         static void Clean(EnemySliderMotoraGroupManagerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemySliderMotoraManagerSpawner {
         uint32_t pathID;
         float radius;
@@ -5355,7 +5859,9 @@ namespace heur::rfl {
         static void Finish(EnemySliderMotoraManagerSpawner* pInstance);
         static void Clean(EnemySliderMotoraManagerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyNarlSpawner {
         enum class NarlType : int8_t {
             TYPE_SHOT = 0,
@@ -5385,7 +5891,9 @@ namespace heur::rfl {
         static void Finish(EnemyNarlSpawner* pInstance);
         static void Clean(EnemyNarlSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyPotosSpawner {
         enum class StartType : int8_t {
             TYPE_IN_SEARCH_BOX = 0,
@@ -5409,7 +5917,9 @@ namespace heur::rfl {
         static void Finish(EnemyPotosSpawner* pInstance);
         static void Clean(EnemyPotosSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyValKeenSpawner {
         enum class AttackType : int8_t {
             ATK_NORMAL = 0,
@@ -5449,7 +5959,9 @@ namespace heur::rfl {
         static void Finish(EnemyValKeenSpawner* pInstance);
         static void Clean(EnemyValKeenSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ChangeAisacInfo {
         csl::ut::VariableString aisacName;
         float targetAisacValue;
@@ -5462,7 +5974,9 @@ namespace heur::rfl {
         static void Finish(ChangeAisacInfo* pInstance);
         static void Clean(ChangeAisacInfo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjChangeAisacVolumeSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -5490,7 +6004,9 @@ namespace heur::rfl {
         static void Finish(ObjChangeAisacVolumeSpawner* pInstance);
         static void Clean(ObjChangeAisacVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjChangeBGMTriggerSpawner {
         csl::ut::VariableString cueName;
         float fadeOutTime;
@@ -5506,7 +6022,9 @@ namespace heur::rfl {
         static void Finish(ObjChangeBGMTriggerSpawner* pInstance);
         static void Clean(ObjChangeBGMTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjChangeGlobalAmbSoundCollisionSpawner {
         csl::ut::VariableString ambSEName;
         float fadeTime;
@@ -5521,7 +6039,9 @@ namespace heur::rfl {
         static void Finish(ObjChangeGlobalAmbSoundCollisionSpawner* pInstance);
         static void Clean(ObjChangeGlobalAmbSoundCollisionSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjChangeGlobalAmbSoundPlaneSpawner {
         csl::ut::VariableString ambSEName;
         float fadeTime;
@@ -5533,7 +6053,9 @@ namespace heur::rfl {
         static void Finish(ObjChangeGlobalAmbSoundPlaneSpawner* pInstance);
         static void Clean(ObjChangeGlobalAmbSoundPlaneSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSoundSourceSpawner {
         enum class PlayMode : int8_t {
             PLAYMODE_LOOP = 0,
@@ -5556,7 +6078,9 @@ namespace heur::rfl {
         static void Finish(ObjSoundSourceSpawner* pInstance);
         static void Clean(ObjSoundSourceSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjOneShotSoundTriggerSpawner {
         enum class SoundPositionType : int8_t {
             SOUND_POS_CENTER = 0,
@@ -5592,7 +6116,9 @@ namespace heur::rfl {
         static void Finish(ObjOneShotSoundTriggerSpawner* pInstance);
         static void Clean(ObjOneShotSoundTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPathSoundSourceSpawner : ObjSoundSourceSpawner {
         uint32_t pathID;
 
@@ -5603,7 +6129,9 @@ namespace heur::rfl {
         static void Finish(ObjPathSoundSourceSpawner* pInstance);
         static void Clean(ObjPathSoundSourceSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPointSoundSourceSpawner : ObjSoundSourceSpawner {
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -5613,7 +6141,9 @@ namespace heur::rfl {
         static void Finish(ObjPointSoundSourceSpawner* pInstance);
         static void Clean(ObjPointSoundSourceSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBalloon2Spawner {
         enum class Dimension : int8_t {
             DIM_SV = 0,
@@ -5634,7 +6164,9 @@ namespace heur::rfl {
         static void Finish(ObjBalloon2Spawner* pInstance);
         static void Clean(ObjBalloon2Spawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyGalagaBeeGeneratorSpawner {
         enum class HomingDirection : int8_t {
             Forward = 0,
@@ -5662,7 +6194,9 @@ namespace heur::rfl {
         static void Finish(EnemyGalagaBeeGeneratorSpawner* pInstance);
         static void Clean(EnemyGalagaBeeGeneratorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGoldenMotoraSpawner {
         enum class RingType : int8_t {
             TYPE_NORMAL = 0,
@@ -5691,7 +6225,9 @@ namespace heur::rfl {
         static void Finish(ObjGoldenMotoraSpawner* pInstance);
         static void Clean(ObjGoldenMotoraSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRotateThornBallSpawner {
         enum class RotateType : int8_t {
             TYPE_RIGHT = 0,
@@ -5729,7 +6265,9 @@ namespace heur::rfl {
         static void Finish(ObjRotateThornBallSpawner* pInstance);
         static void Clean(ObjRotateThornBallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSliderThornBallBuilderSpawner {
         enum class BuildeType : int8_t {
             BUILDE_NONE = 0,
@@ -5761,7 +6299,9 @@ namespace heur::rfl {
         static void Finish(ObjSliderThornBallBuilderSpawner* pInstance);
         static void Clean(ObjSliderThornBallBuilderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtronInfernoSpawner {
         float angle;
         float radius;
@@ -5781,7 +6321,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtronInfernoSpawner* pInstance);
         static void Clean(ObjVirtronInfernoSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtronKillerSpawner {
         enum class SizeType : int8_t {
             TYPE_LARGE = 0,
@@ -5813,7 +6355,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtronKillerSpawner* pInstance);
         static void Clean(ObjVirtronKillerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBalloonSpawner {
         enum class Color : int8_t {
             COLOR_BLUE = 0,
@@ -5844,7 +6388,9 @@ namespace heur::rfl {
         static void Finish(ObjBalloonSpawner* pInstance);
         static void Clean(ObjBalloonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBombBlockSpawner {
         enum class ModelType : int8_t {
             DEFAULT = 0,
@@ -5867,7 +6413,9 @@ namespace heur::rfl {
         static void Finish(ObjBombBlockSpawner* pInstance);
         static void Clean(ObjBombBlockSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlameSpawner {
         enum class LengthType : int8_t {
             LENGTH_2M = 0,
@@ -5905,7 +6453,9 @@ namespace heur::rfl {
         static void Finish(ObjFlameSpawner* pInstance);
         static void Clean(ObjFlameSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlyingPodSpawner {
         enum class ThrowType : int8_t {
             THROWTYPE_TOPLAYER = 0,
@@ -5931,7 +6481,9 @@ namespace heur::rfl {
         static void Finish(ObjFlyingPodSpawner* pInstance);
         static void Clean(ObjFlyingPodSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPlasmaCannonSpawner {
         enum class BarrageType : int8_t {
             BARRAGE_ONE_ROLL = 0,
@@ -5956,7 +6508,9 @@ namespace heur::rfl {
         static void Finish(ObjPlasmaCannonSpawner* pInstance);
         static void Clean(ObjPlasmaCannonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjReproductionBlockSpawner {
         enum class BasePoint : int8_t {
             BASE_BOTTOM = 0,
@@ -5973,7 +6527,9 @@ namespace heur::rfl {
         static void Finish(ObjReproductionBlockSpawner* pInstance);
         static void Clean(ObjReproductionBlockSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpinLaserSpawner {
         enum class SpinType : int8_t {
             SPINTYPE_CLOCK = 0,
@@ -6000,7 +6556,9 @@ namespace heur::rfl {
         static void Finish(ObjSpinLaserSpawner* pInstance);
         static void Clean(ObjSpinLaserSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTimePeriodLightFloorSpawner {
         enum class FloorType : int8_t {
             FLOORTYPE_2x3 = 0,
@@ -6029,7 +6587,9 @@ namespace heur::rfl {
         static void Finish(ObjTimePeriodLightFloorSpawner* pInstance);
         static void Clean(ObjTimePeriodLightFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBombEventSpawner {
         enum class Scene : int8_t {
             SCENE_ALL = 0,
@@ -6071,7 +6631,9 @@ namespace heur::rfl {
         static void Finish(ObjBombEventSpawner* pInstance);
         static void Clean(ObjBombEventSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableBridgeSpawner {
         int32_t dummy;
 
@@ -6082,7 +6644,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableBridgeSpawner* pInstance);
         static void Clean(ObjBreakableBridgeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableRoadBarricadeSpawner {
         uint32_t dummy;
 
@@ -6093,7 +6657,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableRoadBarricadeSpawner* pInstance);
         static void Clean(ObjBreakableRoadBarricadeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableRoadConeSpawner {
         uint32_t dummy;
 
@@ -6104,7 +6670,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableRoadConeSpawner* pInstance);
         static void Clean(ObjBreakableRoadConeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableWallSpawner {
         int32_t dummy;
 
@@ -6115,7 +6683,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableWallSpawner* pInstance);
         static void Clean(ObjBreakableWallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableWoodBoxSpawner {
         uint32_t dummy;
 
@@ -6126,7 +6696,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableWoodBoxSpawner* pInstance);
         static void Clean(ObjBreakableWoodBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDeathEggRoboSpawner {
         uint32_t pathID;
         float initialSpeed;
@@ -6146,7 +6718,9 @@ namespace heur::rfl {
         static void Finish(ObjDeathEggRoboSpawner* pInstance);
         static void Clean(ObjDeathEggRoboSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDeathEggRoboBGMStopColSpawner {
         float height;
         float wide;
@@ -6159,7 +6733,9 @@ namespace heur::rfl {
         static void Finish(ObjDeathEggRoboBGMStopColSpawner* pInstance);
         static void Clean(ObjDeathEggRoboBGMStopColSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDeathEggRoboFarSpawner {
         float startTime;
 
@@ -6170,7 +6746,9 @@ namespace heur::rfl {
         static void Finish(ObjDeathEggRoboFarSpawner* pInstance);
         static void Clean(ObjDeathEggRoboFarSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAuraTrainSpawner {
         enum class PoleType : int8_t {
             POLETYPE_LEFT = 0,
@@ -6189,7 +6767,9 @@ namespace heur::rfl {
         static void Finish(ObjAuraTrainSpawner* pInstance);
         static void Clean(ObjAuraTrainSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBeehiveSpawner {
         enum class Color : int8_t {
             COLOR_A = 0,
@@ -6213,7 +6793,9 @@ namespace heur::rfl {
         static void Finish(ObjBeehiveSpawner* pInstance);
         static void Clean(ObjBeehiveSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBeltConveyorSpawner {
         enum class Rotatedir : int8_t {
             ROTATEDIR_CLOCK = 0,
@@ -6231,7 +6813,9 @@ namespace heur::rfl {
         static void Finish(ObjBeltConveyorSpawner* pInstance);
         static void Clean(ObjBeltConveyorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBeltConveyorMoveSpawner {
         enum class Rotatedir : int8_t {
             ROTATEDIR_CLOCK = 0,
@@ -6264,7 +6848,9 @@ namespace heur::rfl {
         static void Finish(ObjBeltConveyorMoveSpawner* pInstance);
         static void Clean(ObjBeltConveyorMoveSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCupFootingSpawner {
         enum class MoveType : int8_t {
             MOVETYPE_LEFT_TO_TOP = 0,
@@ -6289,7 +6875,9 @@ namespace heur::rfl {
         static void Finish(ObjCupFootingSpawner* pInstance);
         static void Clean(ObjCupFootingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDamageHeaterSpawner {
         uint32_t segmentNum;
 
@@ -6300,7 +6888,9 @@ namespace heur::rfl {
         static void Finish(ObjDamageHeaterSpawner* pInstance);
         static void Clean(ObjDamageHeaterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDownCeilingSpawner {
         enum class SizeType : int8_t {
             SIZE_SMALL = 0,
@@ -6325,7 +6915,9 @@ namespace heur::rfl {
         static void Finish(ObjDownCeilingSpawner* pInstance);
         static void Clean(ObjDownCeilingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDownCeilingAppearVolumeSpawner {
         enum class Type : int8_t {
             TYPE_APPEAR = 0,
@@ -6343,7 +6935,9 @@ namespace heur::rfl {
         static void Finish(ObjDownCeilingAppearVolumeSpawner* pInstance);
         static void Clean(ObjDownCeilingAppearVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDownLiftSpawner {
         float startTimeLag;
         float distance;
@@ -6356,7 +6950,9 @@ namespace heur::rfl {
         static void Finish(ObjDownLiftSpawner* pInstance);
         static void Clean(ObjDownLiftSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjElevatorSpawner {
         bool isLoop;
         csl::math::Vector3 moveVector;
@@ -6369,7 +6965,9 @@ namespace heur::rfl {
         static void Finish(ObjElevatorSpawner* pInstance);
         static void Clean(ObjElevatorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInductionLaserTurretSpawner {
         csl::math::Vector3 searchBoxExtents;
         csl::math::Vector3 searchBoxOffset;
@@ -6390,7 +6988,9 @@ namespace heur::rfl {
         static void Finish(ObjInductionLaserTurretSpawner* pInstance);
         static void Clean(ObjInductionLaserTurretSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLaserFootingSpawner {
         uint32_t pathId;
         float lightingTime;
@@ -6405,7 +7005,9 @@ namespace heur::rfl {
         static void Finish(ObjLaserFootingSpawner* pInstance);
         static void Clean(ObjLaserFootingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraLimitedPanSpawner : ObjCameraSpawner {
         enum class PositionMode : int8_t {
             POS_MODE_FIX = 0,
@@ -6427,7 +7029,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraLimitedPanSpawner* pInstance);
         static void Clean(ObjCameraLimitedPanSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRotBlocksSpawner {
         enum class MoveType : int8_t {
             AROUND = 0,
@@ -6448,7 +7052,9 @@ namespace heur::rfl {
         static void Finish(ObjRotBlocksSpawner* pInstance);
         static void Clean(ObjRotBlocksSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjClassicRotBlocksSpawner {
         enum class MoveType : int8_t {
             MOVE_VERTICAL = 0,
@@ -6474,7 +7080,9 @@ namespace heur::rfl {
         static void Finish(ObjClassicRotBlocksSpawner* pInstance);
         static void Clean(ObjClassicRotBlocksSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShutterSpawner {
         float slideTime;
         float fastSlideDistance;
@@ -6487,7 +7095,9 @@ namespace heur::rfl {
         static void Finish(ObjShutterSpawner* pInstance);
         static void Clean(ObjShutterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjStairsBlocksSpringSpawner {
         bool eventDriven;
         bool isClockWise;
@@ -6503,7 +7113,9 @@ namespace heur::rfl {
         static void Finish(ObjStairsBlocksSpringSpawner* pInstance);
         static void Clean(ObjStairsBlocksSpringSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWallCannonSpawner {
         float chargeTime;
         float waitTime;
@@ -6519,7 +7131,9 @@ namespace heur::rfl {
         static void Finish(ObjWallCannonSpawner* pInstance);
         static void Clean(ObjWallCannonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBigFanSpawner {
         enum class RotationType : int8_t {
             CLOCK_ROTATION = 0,
@@ -6544,7 +7158,9 @@ namespace heur::rfl {
         static void Finish(ObjBigFanSpawner* pInstance);
         static void Clean(ObjBigFanSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCircleDoorSpawner {
         float openDistance;
         float closeDistance;
@@ -6557,7 +7173,9 @@ namespace heur::rfl {
         static void Finish(ObjCircleDoorSpawner* pInstance);
         static void Clean(ObjCircleDoorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCraneFookSpawner {
         int32_t pathId;
         float startPos;
@@ -6579,7 +7197,9 @@ namespace heur::rfl {
         static void Finish(ObjCraneFookSpawner* pInstance);
         static void Clean(ObjCraneFookSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPipeCoverSpawner {
         float dummy;
 
@@ -6590,7 +7210,9 @@ namespace heur::rfl {
         static void Finish(ObjPipeCoverSpawner* pInstance);
         static void Clean(ObjPipeCoverSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPipeExitSpawner {
         enum class SpringType : int8_t {
             SPRINGTYPE_YELLOW = 0,
@@ -6609,7 +7231,9 @@ namespace heur::rfl {
         static void Finish(ObjPipeExitSpawner* pInstance);
         static void Clean(ObjPipeExitSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSprayWaterColliderSpawner {
         csl::math::Vector3 colliderHalfExtents;
         csl::math::Vector3 offset;
@@ -6621,7 +7245,9 @@ namespace heur::rfl {
         static void Finish(ObjSprayWaterColliderSpawner* pInstance);
         static void Clean(ObjSprayWaterColliderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTrainSceneSpawner {
         csl::math::Vector3 playerPositionOnSuccess;
         csl::math::Vector3 playerPositionOnFailed;
@@ -6633,7 +7259,9 @@ namespace heur::rfl {
         static void Finish(ObjTrainSceneSpawner* pInstance);
         static void Clean(ObjTrainSceneSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjUpWaterLevelSpawner {
         float upSpeed;
         float maxSizeX;
@@ -6648,7 +7276,9 @@ namespace heur::rfl {
         static void Finish(ObjUpWaterLevelSpawner* pInstance);
         static void Clean(ObjUpWaterLevelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWaterFallSpawner {
         enum class TimeType : int8_t {
             TIME_LOCAL = 0,
@@ -6683,7 +7313,9 @@ namespace heur::rfl {
         static void Finish(ObjWaterFallSpawner* pInstance);
         static void Clean(ObjWaterFallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWaterWheelFloorSpawner {
         enum class FloorSize : int8_t {
             SIZE_A = 0,
@@ -6711,7 +7343,9 @@ namespace heur::rfl {
         static void Finish(ObjWaterWheelFloorSpawner* pInstance);
         static void Clean(ObjWaterWheelFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDeathEggRoboNearSpawner {
         float accele;
         float decele;
@@ -6727,7 +7361,9 @@ namespace heur::rfl {
         static void Finish(ObjDeathEggRoboNearSpawner* pInstance);
         static void Clean(ObjDeathEggRoboNearSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAutoFlipperSpawner {
         float impluse;
         float outOfControlTime;
@@ -6740,7 +7376,9 @@ namespace heur::rfl {
         static void Finish(ObjAutoFlipperSpawner* pInstance);
         static void Clean(ObjAutoFlipperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBigSnakeSpawner {
         csl::math::Vector3 playerPositionOnSuccess;
         csl::math::Vector3 playerPositionOnFail;
@@ -6752,7 +7390,9 @@ namespace heur::rfl {
         static void Finish(ObjBigSnakeSpawner* pInstance);
         static void Clean(ObjBigSnakeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBomberSpawner {
         enum class MoveType : int8_t {
             MOVE_ONCE = 0,
@@ -6774,7 +7414,9 @@ namespace heur::rfl {
         static void Finish(ObjBomberSpawner* pInstance);
         static void Clean(ObjBomberSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBrambleThornSpawner {
         enum class Type : int8_t {
             TYPE_FV_A = 0,
@@ -6794,7 +7436,9 @@ namespace heur::rfl {
         static void Finish(ObjBrambleThornSpawner* pInstance);
         static void Clean(ObjBrambleThornSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBumperSpawner {
         float impluse;
 
@@ -6805,7 +7449,9 @@ namespace heur::rfl {
         static void Finish(ObjBumperSpawner* pInstance);
         static void Clean(ObjBumperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCasinoPocketSpawner {
         enum class BehaviorType : int8_t {
             SCORE = 0,
@@ -6839,7 +7485,9 @@ namespace heur::rfl {
         static void Finish(ObjCasinoPocketSpawner* pInstance);
         static void Clean(ObjCasinoPocketSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCasinoSlotSpawner {
         int32_t cashJackpot;
         int32_t cashSonic;
@@ -6859,7 +7507,9 @@ namespace heur::rfl {
         static void Finish(ObjCasinoSlotSpawner* pInstance);
         static void Clean(ObjCasinoSlotSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlipperSpawner {
         float firstSpeed;
         float outOfControlTime;
@@ -6874,7 +7524,9 @@ namespace heur::rfl {
         static void Finish(ObjFlipperSpawner* pInstance);
         static void Clean(ObjFlipperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHexagonBumperSpawner {
         float moveSpeed;
         csl::math::Vector3 destination;
@@ -6889,7 +7541,9 @@ namespace heur::rfl {
         static void Finish(ObjHexagonBumperSpawner* pInstance);
         static void Clean(ObjHexagonBumperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMiniIronBallBarSpawner {
         enum class RotateDir : int8_t {
             ROTATEDIR_CLOCK = 0,
@@ -6921,7 +7575,9 @@ namespace heur::rfl {
         static void Finish(ObjMiniIronBallBarSpawner* pInstance);
         static void Clean(ObjMiniIronBallBarSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMoveRingBuilderSpawner {
         enum class RingType : int8_t {
             RING_NORMAL = 0,
@@ -6961,7 +7617,9 @@ namespace heur::rfl {
         static void Finish(ObjMoveRingBuilderSpawner* pInstance);
         static void Clean(ObjMoveRingBuilderSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjObstacleWallSpawner {
         int32_t maxHealthPoint;
 
@@ -6972,7 +7630,9 @@ namespace heur::rfl {
         static void Finish(ObjObstacleWallSpawner* pInstance);
         static void Clean(ObjObstacleWallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPlungerSpawner {
         float minImpulse;
         float maxImpulse;
@@ -6986,7 +7646,9 @@ namespace heur::rfl {
         static void Finish(ObjPlungerSpawner* pInstance);
         static void Clean(ObjPlungerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSelfBreakWallSpawner {
         float toBreakTime;
 
@@ -6997,7 +7659,9 @@ namespace heur::rfl {
         static void Finish(ObjSelfBreakWallSpawner* pInstance);
         static void Clean(ObjSelfBreakWallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSlingshotSpawner {
         float impluse;
         float angle;
@@ -7014,7 +7678,9 @@ namespace heur::rfl {
         static void Finish(ObjSlingshotSpawner* pInstance);
         static void Clean(ObjSlingshotSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSnakeRoadSpawner {
         int32_t dummy;
 
@@ -7025,7 +7691,9 @@ namespace heur::rfl {
         static void Finish(ObjSnakeRoadSpawner* pInstance);
         static void Clean(ObjSnakeRoadSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSpringBigSpawner {
         uint32_t pathUID;
         float speed;
@@ -7038,7 +7706,9 @@ namespace heur::rfl {
         static void Finish(ObjSpringBigSpawner* pInstance);
         static void Clean(ObjSpringBigSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTorrentWallSpawner {
         int32_t maxHealthPoint;
 
@@ -7049,7 +7719,9 @@ namespace heur::rfl {
         static void Finish(ObjTorrentWallSpawner* pInstance);
         static void Clean(ObjTorrentWallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTriangleBumperSpawner {
         enum class ShapeType : int8_t {
             SHAPE_TYPE_CORNER = 0,
@@ -7072,7 +7744,9 @@ namespace heur::rfl {
         static void Finish(ObjTriangleBumperSpawner* pInstance);
         static void Clean(ObjTriangleBumperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVanishBumperSpawner {
         float impluse;
         float outOfControlTime;
@@ -7084,7 +7758,9 @@ namespace heur::rfl {
         static void Finish(ObjVanishBumperSpawner* pInstance);
         static void Clean(ObjVanishBumperSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtualRealityThornSpawner {
         enum class MoveType : int8_t {
             TYPE_APPEAR = 0,
@@ -7109,7 +7785,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtualRealityThornSpawner* pInstance);
         static void Clean(ObjVirtualRealityThornSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtualRealityThornBallSpawner {
         enum class Direction : int8_t {
             TYPE_RIGHT = 0,
@@ -7128,7 +7806,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtualRealityThornBallSpawner* pInstance);
         static void Clean(ObjVirtualRealityThornBallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBossStageFloorSpawner {
         enum class FrontDir : int8_t {
             FRONTDIR_LEFT = 0,
@@ -7145,7 +7825,9 @@ namespace heur::rfl {
         static void Finish(ObjBossStageFloorSpawner* pInstance);
         static void Clean(ObjBossStageFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableArchSpawner {
         int32_t dummy;
 
@@ -7156,7 +7838,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableArchSpawner* pInstance);
         static void Clean(ObjBreakableArchSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakCliffSpawner {
         enum class FrontDir : int8_t {
             FRONTDIR_LEFT = 0,
@@ -7176,7 +7860,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakCliffSpawner* pInstance);
         static void Clean(ObjBreakCliffSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFloatingFloorSpawner {
         enum class SizeType : int8_t {
             SIZE_3M = 0,
@@ -7214,7 +7900,9 @@ namespace heur::rfl {
         static void Finish(ObjFloatingFloorSpawner* pInstance);
         static void Clean(ObjFloatingFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGCLegSpawner {
         enum class EffectType : int8_t {
             TYPE_GROUND_A = 0,
@@ -7235,7 +7923,9 @@ namespace heur::rfl {
         static void Finish(ObjGCLegSpawner* pInstance);
         static void Clean(ObjGCLegSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGCLegEventSwitchVolumeSpawner {
         csl::ut::MoveArray32<uint32_t> targets;
         csl::math::Vector3 size;
@@ -7247,7 +7937,9 @@ namespace heur::rfl {
         static void Finish(ObjGCLegEventSwitchVolumeSpawner* pInstance);
         static void Clean(ObjGCLegEventSwitchVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGearFootingSpawner {
         enum class TimeType : int8_t {
             TIME_LOCAL = 0,
@@ -7309,7 +8001,9 @@ namespace heur::rfl {
         static void Finish(ObjGearFootingSpawner* pInstance);
         static void Clean(ObjGearFootingSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBrokenGiantCrabSpawner {
         float scale;
 
@@ -7320,7 +8014,9 @@ namespace heur::rfl {
         static void Finish(ObjBrokenGiantCrabSpawner* pInstance);
         static void Clean(ObjBrokenGiantCrabSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGiantCrabSpawner {
         uint32_t pathID;
         uint32_t goalPathID;
@@ -7339,7 +8035,9 @@ namespace heur::rfl {
         static void Finish(ObjGiantCrabSpawner* pInstance);
         static void Clean(ObjGiantCrabSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ChangeMotionData {
         enum class MotionType : int8_t {
             TYPE_IDLE = 0,
@@ -7366,7 +8064,9 @@ namespace heur::rfl {
         static void Finish(ChangeMotionData* pInstance);
         static void Clean(ChangeMotionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGiantCrabFarSpawner {
         uint32_t pathID;
         float speedRatio;
@@ -7383,7 +8083,9 @@ namespace heur::rfl {
         static void Finish(ObjGiantCrabFarSpawner* pInstance);
         static void Clean(ObjGiantCrabFarSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHangingFloorSpawner {
         enum class SizeType : int8_t {
             SIZE_3M = 0,
@@ -7420,7 +8122,9 @@ namespace heur::rfl {
         static void Finish(ObjHangingFloorSpawner* pInstance);
         static void Clean(ObjHangingFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfraredLaserSpawner {
         float speed;
         float phase;
@@ -7437,7 +8141,9 @@ namespace heur::rfl {
         static void Finish(ObjInfraredLaserSpawner* pInstance);
         static void Clean(ObjInfraredLaserSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfraredLaserWallSpawner {
         enum class LaserOrder : int8_t {
             LEFT_TO_RIGHT = 0,
@@ -7469,7 +8175,9 @@ namespace heur::rfl {
         static void Finish(ObjInfraredLaserWallSpawner* pInstance);
         static void Clean(ObjInfraredLaserWallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPalmTreeSpawner {
         enum class TreeType : int8_t {
             TREE_A01 = 0,
@@ -7505,7 +8213,9 @@ namespace heur::rfl {
         static void Finish(ObjPalmTreeSpawner* pInstance);
         static void Clean(ObjPalmTreeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRockSpawner {
         int32_t dummy;
 
@@ -7516,7 +8226,9 @@ namespace heur::rfl {
         static void Finish(ObjRockSpawner* pInstance);
         static void Clean(ObjRockSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSandWormSpawner {
         float speed;
         uint32_t curlNum;
@@ -7532,7 +8244,9 @@ namespace heur::rfl {
         static void Finish(ObjSandWormSpawner* pInstance);
         static void Clean(ObjSandWormSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSVShiftingSandSpawner {
         enum class Slidetype : int8_t {
             TYPE_SLOPE = 0,
@@ -7549,7 +8263,9 @@ namespace heur::rfl {
         static void Finish(ObjSVShiftingSandSpawner* pInstance);
         static void Clean(ObjSVShiftingSandSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BreakParam {
         float toSignTime;
         float signTime;
@@ -7562,7 +8278,9 @@ namespace heur::rfl {
         static void Finish(BreakParam* pInstance);
         static void Clean(BreakParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWoodBridgeSpawner {
         enum class SizeType : int8_t {
             SIZETYPE_SMALL = 0,
@@ -7583,7 +8301,9 @@ namespace heur::rfl {
         static void Finish(ObjWoodBridgeSpawner* pInstance);
         static void Clean(ObjWoodBridgeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAirCarSpawner {
         uint32_t pathId;
         float speed;
@@ -7597,7 +8317,9 @@ namespace heur::rfl {
         static void Finish(ObjAirCarSpawner* pInstance);
         static void Clean(ObjAirCarSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBoxRoadSpawner {
         int32_t pathID;
 
@@ -7608,7 +8330,9 @@ namespace heur::rfl {
         static void Finish(ObjBoxRoadSpawner* pInstance);
         static void Clean(ObjBoxRoadSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBreakableTerrainSpawner {
         enum class EffectType : int8_t {
             EFFECT_TYPE_01 = 0,
@@ -7626,7 +8350,9 @@ namespace heur::rfl {
         static void Finish(ObjBreakableTerrainSpawner* pInstance);
         static void Clean(ObjBreakableTerrainSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ContinuousShakeStatus {
         float m_magnitude;
         int32_t m_freq;
@@ -7639,7 +8365,9 @@ namespace heur::rfl {
         static void Finish(ContinuousShakeStatus* pInstance);
         static void Clean(ContinuousShakeStatus* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PeriodicShakeStatus : ContinuousShakeStatus {
         float m_shakeTime;
         float m_cycleTime;
@@ -7651,7 +8379,9 @@ namespace heur::rfl {
         static void Finish(PeriodicShakeStatus* pInstance);
         static void Clean(PeriodicShakeStatus* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCameraShakeTriggerW6TrainSpawner {
         ContinuousShakeStatus continuousShakeStatus;
         PeriodicShakeStatus periodicShakeStatus;
@@ -7666,7 +8396,9 @@ namespace heur::rfl {
         static void Finish(ObjCameraShakeTriggerW6TrainSpawner* pInstance);
         static void Clean(ObjCameraShakeTriggerW6TrainSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFallBlockSpawner {
         enum class FallType : int8_t {
             TYPE_LINEAR = 0,
@@ -7692,7 +8424,9 @@ namespace heur::rfl {
         static void Finish(ObjFallBlockSpawner* pInstance);
         static void Clean(ObjFallBlockSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGolemSpawner {
         enum class MotionType : int8_t {
             MOTION_IDLE_00 = 0,
@@ -7710,7 +8444,9 @@ namespace heur::rfl {
         static void Finish(ObjGolemSpawner* pInstance);
         static void Clean(ObjGolemSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGolemTailSpawner {
         enum class BehaviorType : int8_t {
             BEHAVIOR_IDLE = 0,
@@ -7729,7 +8465,9 @@ namespace heur::rfl {
         static void Finish(ObjGolemTailSpawner* pInstance);
         static void Clean(ObjGolemTailSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGridSpawner {
         int32_t dummy;
 
@@ -7740,7 +8478,9 @@ namespace heur::rfl {
         static void Finish(ObjGridSpawner* pInstance);
         static void Clean(ObjGridSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHugeRobotSpawner {
         enum class MotionType : int8_t {
             TYPE_DESTROY_A = 0,
@@ -7758,7 +8498,9 @@ namespace heur::rfl {
         static void Finish(ObjHugeRobotSpawner* pInstance);
         static void Clean(ObjHugeRobotSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjImaginarySpaceVolumeSpawner {
         enum class StateType : int8_t {
             DEFAULTSTATE_ON = 0,
@@ -7791,7 +8533,9 @@ namespace heur::rfl {
         static void Finish(ObjImaginarySpaceVolumeSpawner* pInstance);
         static void Clean(ObjImaginarySpaceVolumeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjInfiniteSpawner {
         enum class ActionType : int8_t {
             PLAY_FIRST = 0,
@@ -7820,7 +8564,9 @@ namespace heur::rfl {
         static void Finish(ObjInfiniteSpawner* pInstance);
         static void Clean(ObjInfiniteSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShowTimeEffectSpawner {
         enum class SlowType : int8_t {
             SLOW_ALL = 0,
@@ -7839,7 +8585,9 @@ namespace heur::rfl {
         static void Finish(ObjShowTimeEffectSpawner* pInstance);
         static void Clean(ObjShowTimeEffectSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjJetFighterSpawner {
         enum class FormationType : int8_t {
             FORMATION_1_JET = 0,
@@ -7866,7 +8614,9 @@ namespace heur::rfl {
         static void Finish(ObjJetFighterSpawner* pInstance);
         static void Clean(ObjJetFighterSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjJetFighterSceneSpawner {
         uint32_t pathID;
         float apperSpeed;
@@ -7893,7 +8643,9 @@ namespace heur::rfl {
         static void Finish(ObjJetFighterSceneSpawner* pInstance);
         static void Clean(ObjJetFighterSceneSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLaserTurretSpawner {
         enum class FireType : int8_t {
             TYPE_SAME_TIME = 0,
@@ -7928,7 +8680,9 @@ namespace heur::rfl {
         static void Finish(ObjLaserTurretSpawner* pInstance);
         static void Clean(ObjLaserTurretSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMissileTurretSpawner {
         enum class MissileType : int8_t {
             TYPE_STRAIGHT = 0,
@@ -7949,7 +8703,9 @@ namespace heur::rfl {
         static void Finish(ObjMissileTurretSpawner* pInstance);
         static void Clean(ObjMissileTurretSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMoveLiftSpawner {
         float startTimeLag;
         float distance;
@@ -7965,7 +8721,9 @@ namespace heur::rfl {
         static void Finish(ObjMoveLiftSpawner* pInstance);
         static void Clean(ObjMoveLiftSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShadowHandSpawner {
         enum class StartType : int8_t {
             TYPE_EVENT = 0,
@@ -7984,7 +8742,9 @@ namespace heur::rfl {
         static void Finish(ObjShadowHandSpawner* pInstance);
         static void Clean(ObjShadowHandSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWhiteOutTriggerSpawner : VolumeTriggerSpawner {
         enum class FadeType : int8_t {
             TYPE_WHITE_OUT = 0,
@@ -8001,7 +8761,9 @@ namespace heur::rfl {
         static void Finish(ObjWhiteOutTriggerSpawner* pInstance);
         static void Clean(ObjWhiteOutTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjArtificalSunSpawner {
         int32_t dummy;
 
@@ -8012,7 +8774,9 @@ namespace heur::rfl {
         static void Finish(ObjArtificalSunSpawner* pInstance);
         static void Clean(ObjArtificalSunSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAutoScrollSpawner {
         hh::game::ObjectId EndPoint;
         uint32_t PathId;
@@ -8036,7 +8800,9 @@ namespace heur::rfl {
         static void Finish(ObjAutoScrollSpawner* pInstance);
         static void Clean(ObjAutoScrollSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBigCrankSpawner {
         enum class ActionType : int8_t {
             ACT_UP = 0,
@@ -8055,7 +8821,9 @@ namespace heur::rfl {
         static void Finish(ObjBigCrankSpawner* pInstance);
         static void Clean(ObjBigCrankSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBigGearSpawner {
         enum class TimeType : int8_t {
             TIME_LOCAL = 0,
@@ -8083,7 +8851,9 @@ namespace heur::rfl {
         static void Finish(ObjBigGearSpawner* pInstance);
         static void Clean(ObjBigGearSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBigGearShaftSpawner {
         int32_t dummy;
 
@@ -8094,7 +8864,9 @@ namespace heur::rfl {
         static void Finish(ObjBigGearShaftSpawner* pInstance);
         static void Clean(ObjBigGearShaftSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBoxSkySpawner {
         int32_t dummy;
 
@@ -8105,7 +8877,9 @@ namespace heur::rfl {
         static void Finish(ObjBoxSkySpawner* pInstance);
         static void Clean(ObjBoxSkySpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCrawlingBallSpawner {
         enum class MovePathType : int8_t {
             PATH_SELF = 0,
@@ -8145,7 +8919,9 @@ namespace heur::rfl {
         static void Finish(ObjCrawlingBallSpawner* pInstance);
         static void Clean(ObjCrawlingBallSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDisappearFloorSpawner {
         uint32_t PathId;
         uint32_t setNum;
@@ -8160,7 +8936,9 @@ namespace heur::rfl {
         static void Finish(ObjDisappearFloorSpawner* pInstance);
         static void Clean(ObjDisappearFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CannonParameter {
         float cannonDistance;
         float appearDistanceFront;
@@ -8177,7 +8955,9 @@ namespace heur::rfl {
         static void Finish(CannonParameter* pInstance);
         static void Clean(CannonParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjDoubleSpiralSpawner {
         uint32_t pathId;
         float radius;
@@ -8192,7 +8972,9 @@ namespace heur::rfl {
         static void Finish(ObjDoubleSpiralSpawner* pInstance);
         static void Clean(ObjDoubleSpiralSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEventEffectSpawner {
         csl::ut::VariableString name;
         float delay;
@@ -8206,7 +8988,9 @@ namespace heur::rfl {
         static void Finish(ObjEventEffectSpawner* pInstance);
         static void Clean(ObjEventEffectSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjExplosionSpawner {
         enum class ExpType : int8_t {
             EXP_1 = 0,
@@ -8237,7 +9021,9 @@ namespace heur::rfl {
         static void Finish(ObjExplosionSpawner* pInstance);
         static void Clean(ObjExplosionSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjExplosionMissileSpawner {
         enum class ActionType : int8_t {
             ACT_LOOP = 0,
@@ -8269,7 +9055,9 @@ namespace heur::rfl {
         static void Finish(ObjExplosionMissileSpawner* pInstance);
         static void Clean(ObjExplosionMissileSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHeatPipeSpawner {
         enum class ActionType : int8_t {
             ACT_LOOP = 0,
@@ -8297,7 +9085,9 @@ namespace heur::rfl {
         static void Finish(ObjHeatPipeSpawner* pInstance);
         static void Clean(ObjHeatPipeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHexagonFloorSpawner {
         uint32_t rowNum;
         uint32_t columnNum;
@@ -8311,7 +9101,9 @@ namespace heur::rfl {
         static void Finish(ObjHexagonFloorSpawner* pInstance);
         static void Clean(ObjHexagonFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLaserCannonSpawner {
         uint32_t pathId;
         hh::game::ObjectId endPoint;
@@ -8328,7 +9120,9 @@ namespace heur::rfl {
         static void Finish(ObjLaserCannonSpawner* pInstance);
         static void Clean(ObjLaserCannonSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjLaserFenceSpawner {
         enum class ActionType : int8_t {
             ACT_LOOP = 0,
@@ -8358,7 +9152,9 @@ namespace heur::rfl {
         static void Finish(ObjLaserFenceSpawner* pInstance);
         static void Clean(ObjLaserFenceSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPlayerChaseExpSpawner {
         enum class ExpType : int8_t {
             EXP_01 = 0,
@@ -8379,7 +9175,9 @@ namespace heur::rfl {
         static void Finish(ObjPlayerChaseExpSpawner* pInstance);
         static void Clean(ObjPlayerChaseExpSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CoreParameter {
         enum class BEventType : int8_t {
             EVENT_NONE = 0,
@@ -8401,7 +9199,9 @@ namespace heur::rfl {
         static void Finish(CoreParameter* pInstance);
         static void Clean(CoreParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPowerReactorSpawner {
         uint32_t PathId;
         csl::math::Vector3 CoreOffset;
@@ -8418,7 +9218,9 @@ namespace heur::rfl {
         static void Finish(ObjPowerReactorSpawner* pInstance);
         static void Clean(ObjPowerReactorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjResearchMissilePodSpawner {
         enum class TimeType : int8_t {
             TIME_LOCAL = 0,
@@ -8446,7 +9248,9 @@ namespace heur::rfl {
         static void Finish(ObjResearchMissilePodSpawner* pInstance);
         static void Clean(ObjResearchMissilePodSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRotationFloorSpawner {
         float phase;
         bool isReverse;
@@ -8458,7 +9262,9 @@ namespace heur::rfl {
         static void Finish(ObjRotationFloorSpawner* pInstance);
         static void Clean(ObjRotationFloorSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShockPanelSpawner {
         enum class ActionType : int8_t {
             ACT_LOOP = 0,
@@ -8487,7 +9293,9 @@ namespace heur::rfl {
         static void Finish(ObjShockPanelSpawner* pInstance);
         static void Clean(ObjShockPanelSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWhiteOutGoalTriggerSpawner : VolumeTriggerSpawner {
         float goalTime;
         float fadeOutTime;
@@ -8499,7 +9307,9 @@ namespace heur::rfl {
         static void Finish(ObjWhiteOutGoalTriggerSpawner* pInstance);
         static void Clean(ObjWhiteOutGoalTriggerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AnimatorTestSpawner {
         int32_t dummy;
 
@@ -8510,7 +9320,9 @@ namespace heur::rfl {
         static void Finish(AnimatorTestSpawner* pInstance);
         static void Clean(AnimatorTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBulletHoleTestSpawner {
         float scale;
 
@@ -8521,7 +9333,9 @@ namespace heur::rfl {
         static void Finish(ObjBulletHoleTestSpawner* pInstance);
         static void Clean(ObjBulletHoleTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CharacterRbTestSpawner {
         float speed;
         float gravity;
@@ -8534,7 +9348,9 @@ namespace heur::rfl {
         static void Finish(CharacterRbTestSpawner* pInstance);
         static void Clean(CharacterRbTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjColliderTestSpawner {
         enum class LayerType : int8_t {
             NONE_GROUP = 0,
@@ -8566,7 +9382,9 @@ namespace heur::rfl {
         static void Finish(ObjColliderTestSpawner* pInstance);
         static void Clean(ObjColliderTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeData {
         enum class SexType : int8_t {
             MALE = 0,
@@ -8614,7 +9432,9 @@ namespace heur::rfl {
         static void Finish(CustomizeData* pInstance);
         static void Clean(CustomizeData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCustomizeDollSpawner {
         CustomizeData customizeData;
 
@@ -8625,7 +9445,9 @@ namespace heur::rfl {
         static void Finish(ObjCustomizeDollSpawner* pInstance);
         static void Clean(ObjCustomizeDollSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjCustomizeTestSpawner {
         csl::ut::VariableString modelName;
         csl::ut::VariableString srcTextureName;
@@ -8639,7 +9461,9 @@ namespace heur::rfl {
         static void Finish(ObjCustomizeTestSpawner* pInstance);
         static void Clean(ObjCustomizeTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEasingTestSpawner {
         enum class EasingType : int8_t {
             EASE_IN = 0,
@@ -8694,7 +9518,9 @@ namespace heur::rfl {
         static void Finish(ObjEasingTestSpawner* pInstance);
         static void Clean(ObjEasingTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MoveParam {
         enum class MoveType : int8_t {
             MOVE_NONE = 0,
@@ -8714,7 +9540,9 @@ namespace heur::rfl {
         static void Finish(MoveParam* pInstance);
         static void Clean(MoveParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjEffectTestSpawner {
         csl::ut::VariableString name;
         float cycle;
@@ -8728,7 +9556,9 @@ namespace heur::rfl {
         static void Finish(ObjEffectTestSpawner* pInstance);
         static void Clean(ObjEffectTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct TestObjFloorRotateSpawner {
         enum class AxisType : int8_t {
             AXIS_TYPE_X = 0,
@@ -8748,7 +9578,9 @@ namespace heur::rfl {
         static void Finish(TestObjFloorRotateSpawner* pInstance);
         static void Clean(TestObjFloorRotateSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct TestObjFloorSeesawSpawner {
         enum class AxisType : int8_t {
             AXIS_TYPE_X = 0,
@@ -8769,7 +9601,9 @@ namespace heur::rfl {
         static void Finish(TestObjFloorSeesawSpawner* pInstance);
         static void Clean(TestObjFloorSeesawSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFxParamChangerSpawner {
         enum class TypeInterpolate : int8_t {
             LINEAR = 0,
@@ -8788,7 +9622,9 @@ namespace heur::rfl {
         static void Finish(ObjFxParamChangerSpawner* pInstance);
         static void Clean(ObjFxParamChangerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHmdVisualizerSpawner {
         enum class SrcType : int8_t {
             SRC_TYPE_DEVICE = 0,
@@ -8810,7 +9646,9 @@ namespace heur::rfl {
         static void Finish(ObjHmdVisualizerSpawner* pInstance);
         static void Clean(ObjHmdVisualizerSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHomingTargetTestSpawner {
         bool isRepeatTarget;
 
@@ -8821,7 +9659,9 @@ namespace heur::rfl {
         static void Finish(ObjHomingTargetTestSpawner* pInstance);
         static void Clean(ObjHomingTargetTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMasterPoseTestSpawner {
         int32_t dummy;
 
@@ -8832,7 +9672,9 @@ namespace heur::rfl {
         static void Finish(ObjMasterPoseTestSpawner* pInstance);
         static void Clean(ObjMasterPoseTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMirageAnimationTestSpawner {
         csl::ut::VariableString modelName;
         csl::ut::VariableString animTexSrtName;
@@ -8847,7 +9689,9 @@ namespace heur::rfl {
         static void Finish(ObjMirageAnimationTestSpawner* pInstance);
         static void Clean(ObjMirageAnimationTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct OverlapTestSpawner {
         enum class LayerType : int8_t {
             NONE_GROUP = 0,
@@ -8872,7 +9716,9 @@ namespace heur::rfl {
         static void Finish(OverlapTestSpawner* pInstance);
         static void Clean(OverlapTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPassPlaneTestSpawner {
         csl::math::Vector3 size;
 
@@ -8883,7 +9729,9 @@ namespace heur::rfl {
         static void Finish(ObjPassPlaneTestSpawner* pInstance);
         static void Clean(ObjPassPlaneTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjRaycastTestSpawner {
         enum class LayerType : int8_t {
             NONE_GROUP = 0,
@@ -8910,7 +9758,9 @@ namespace heur::rfl {
         static void Finish(ObjRaycastTestSpawner* pInstance);
         static void Clean(ObjRaycastTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct TestObjRollFloorBoxSpawner {
         enum class AxisType : int8_t {
             AXIS_TYPE_X = 0,
@@ -8931,7 +9781,9 @@ namespace heur::rfl {
         static void Finish(TestObjRollFloorBoxSpawner* pInstance);
         static void Clean(TestObjRollFloorBoxSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct TestObjRollFloorCapsuleSpawner {
         float radius;
         float omega;
@@ -8945,7 +9797,9 @@ namespace heur::rfl {
         static void Finish(TestObjRollFloorCapsuleSpawner* pInstance);
         static void Clean(TestObjRollFloorCapsuleSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSampleShapeSpawner {
         enum class Shape : int8_t {
             SHAPE_BOX = 0,
@@ -8983,7 +9837,9 @@ namespace heur::rfl {
         static void Finish(ObjSampleShapeSpawner* pInstance);
         static void Clean(ObjSampleShapeSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSceneTestSpawner {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -9006,7 +9862,9 @@ namespace heur::rfl {
         static void Finish(ObjSceneTestSpawner* pInstance);
         static void Clean(ObjSceneTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSearchPathSpawner {
         enum class PathType : int8_t {
             PATH_ALL = 0,
@@ -9033,7 +9891,9 @@ namespace heur::rfl {
         static void Finish(ObjSearchPathSpawner* pInstance);
         static void Clean(ObjSearchPathSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShadingReferenceSpawner {
         float dummy;
 
@@ -9044,7 +9904,9 @@ namespace heur::rfl {
         static void Finish(ObjShadingReferenceSpawner* pInstance);
         static void Clean(ObjShadingReferenceSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjShadowCameraTestSpawner {
         float nearPlane;
         float farPlane;
@@ -9058,7 +9920,9 @@ namespace heur::rfl {
         static void Finish(ObjShadowCameraTestSpawner* pInstance);
         static void Clean(ObjShadowCameraTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjSwayTestSpawner {
         float speed;
 
@@ -9069,7 +9933,9 @@ namespace heur::rfl {
         static void Finish(ObjSwayTestSpawner* pInstance);
         static void Clean(ObjSwayTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SweepTestSpawner {
         enum class LayerType : int8_t {
             NONE_GROUP = 0,
@@ -9095,7 +9961,9 @@ namespace heur::rfl {
         static void Finish(SweepTestSpawner* pInstance);
         static void Clean(SweepTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTargetTestSpawner {
         enum class ShapeType : int8_t {
             SPHERE = 0,
@@ -9138,7 +10006,9 @@ namespace heur::rfl {
         static void Finish(ObjTargetTestSpawner* pInstance);
         static void Clean(ObjTargetTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct TinyFsmTestSpawner {
         int32_t dummy;
 
@@ -9149,7 +10019,9 @@ namespace heur::rfl {
         static void Finish(TinyFsmTestSpawner* pInstance);
         static void Clean(TinyFsmTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjUserModelMaterialTestSpawner {
         csl::math::Vector3 albedo;
         float reflectance;
@@ -9162,7 +10034,9 @@ namespace heur::rfl {
         static void Finish(ObjUserModelMaterialTestSpawner* pInstance);
         static void Clean(ObjUserModelMaterialTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjUserModelShaderTestSpawner {
         csl::ut::VariableString texturePack;
         csl::ut::VariableString texture;
@@ -9176,7 +10050,9 @@ namespace heur::rfl {
         static void Finish(ObjUserModelShaderTestSpawner* pInstance);
         static void Clean(ObjUserModelShaderTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjUserModelTestSpawner {
         enum class RenderPresetType : int8_t {
             RENDER_PRESET_OPAQUE = 0,
@@ -9213,7 +10089,9 @@ namespace heur::rfl {
         static void Finish(ObjUserModelTestSpawner* pInstance);
         static void Clean(ObjUserModelTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVibrationTestSpawner : VolumeTriggerSpawner {
         enum class RumbleType : int8_t {
             RUMBLE_AUTO = 0,
@@ -9236,7 +10114,9 @@ namespace heur::rfl {
         static void Finish(ObjVibrationTestSpawner* pInstance);
         static void Clean(ObjVibrationTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtronTestSpawner {
         int32_t dummy;
 
@@ -9247,7 +10127,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtronTestSpawner* pInstance);
         static void Clean(ObjVirtronTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWallJumpTestSpawner {
         csl::math::Vector3 size;
 
@@ -9258,7 +10140,9 @@ namespace heur::rfl {
         static void Finish(ObjWallJumpTestSpawner* pInstance);
         static void Clean(ObjWallJumpTestSpawner* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AddDatabaseInfo {
         uint8_t recordNo;
         uint8_t numRecords;
@@ -9270,7 +10154,9 @@ namespace heur::rfl {
         static void Finish(AddDatabaseInfo* pInstance);
         static void Clean(AddDatabaseInfo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ContentParameter {
         AddDatabaseInfo databases[11];
         int8_t numEvents;
@@ -9284,7 +10170,9 @@ namespace heur::rfl {
         static void Finish(ContentParameter* pInstance);
         static void Clean(ContentParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Record {
         uint8_t no;
 
@@ -9295,7 +10183,9 @@ namespace heur::rfl {
         static void Finish(Record* pInstance);
         static void Clean(Record* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeRecordBase : Record {
         enum class SexExclusiveType : int8_t {
             EXCLU_COMMON = 0,
@@ -9335,7 +10225,9 @@ namespace heur::rfl {
         static void Finish(CustomizeRecordBase* pInstance);
         static void Clean(CustomizeRecordBase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeBodyPartRecord : CustomizeRecordBase {
         bool invisibles[11];
 
@@ -9346,7 +10238,9 @@ namespace heur::rfl {
         static void Finish(CustomizeBodyPartRecord* pInstance);
         static void Clean(CustomizeBodyPartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeBodyPartRecordBaseTable {
         CustomizeBodyPartRecord data[144];
 
@@ -9357,7 +10251,9 @@ namespace heur::rfl {
         static void Finish(CustomizeBodyPartRecordBaseTable* pInstance);
         static void Clean(CustomizeBodyPartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeBodyPartRecordTable {
         CustomizeBodyPartRecord data[255];
 
@@ -9368,7 +10264,9 @@ namespace heur::rfl {
         static void Finish(CustomizeBodyPartRecordTable* pInstance);
         static void Clean(CustomizeBodyPartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeFacePartRecord : CustomizeRecordBase {
         enum class ConstrainType : int8_t {
             CONSTRAIN_NONE = 0,
@@ -9387,7 +10285,9 @@ namespace heur::rfl {
         static void Finish(CustomizeFacePartRecord* pInstance);
         static void Clean(CustomizeFacePartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeFacePartRecordBaseTable {
         CustomizeFacePartRecord data[30];
 
@@ -9398,7 +10298,9 @@ namespace heur::rfl {
         static void Finish(CustomizeFacePartRecordBaseTable* pInstance);
         static void Clean(CustomizeFacePartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeFacePartRecordTable {
         CustomizeFacePartRecord data[128];
 
@@ -9409,7 +10311,9 @@ namespace heur::rfl {
         static void Finish(CustomizeFacePartRecordTable* pInstance);
         static void Clean(CustomizeFacePartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlassPartRecord : CustomizeRecordBase {
         bool flags[4];
         uint8_t numUvAnims;
@@ -9422,7 +10326,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlassPartRecord* pInstance);
         static void Clean(CustomizeGlassPartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlassPartRecordBaseTable {
         CustomizeGlassPartRecord data[69];
 
@@ -9433,7 +10339,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlassPartRecordBaseTable* pInstance);
         static void Clean(CustomizeGlassPartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlassPartRecordTable {
         CustomizeGlassPartRecord data[128];
 
@@ -9444,7 +10352,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlassPartRecordTable* pInstance);
         static void Clean(CustomizeGlassPartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlovePartRecord : CustomizeRecordBase {
         bool flags[1];
         uint8_t numUvAnims;
@@ -9457,7 +10367,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlovePartRecord* pInstance);
         static void Clean(CustomizeGlovePartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlovePartRecordBaseTable {
         CustomizeGlovePartRecord data[108];
 
@@ -9468,7 +10380,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlovePartRecordBaseTable* pInstance);
         static void Clean(CustomizeGlovePartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeGlovePartRecordTable {
         CustomizeGlovePartRecord data[255];
 
@@ -9479,7 +10393,9 @@ namespace heur::rfl {
         static void Finish(CustomizeGlovePartRecordTable* pInstance);
         static void Clean(CustomizeGlovePartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeHeadPartRecord : CustomizeRecordBase {
         bool invisibles[11];
         uint8_t numUvAnims;
@@ -9491,7 +10407,9 @@ namespace heur::rfl {
         static void Finish(CustomizeHeadPartRecord* pInstance);
         static void Clean(CustomizeHeadPartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeHeadPartRecordBaseTable {
         CustomizeHeadPartRecord data[93];
 
@@ -9502,7 +10420,9 @@ namespace heur::rfl {
         static void Finish(CustomizeHeadPartRecordBaseTable* pInstance);
         static void Clean(CustomizeHeadPartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeHeadPartRecordTable {
         CustomizeHeadPartRecord data[255];
 
@@ -9513,7 +10433,9 @@ namespace heur::rfl {
         static void Finish(CustomizeHeadPartRecordTable* pInstance);
         static void Clean(CustomizeHeadPartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizePatternRecord : CustomizeRecordBase {
         bool flags[1];
 
@@ -9524,7 +10446,9 @@ namespace heur::rfl {
         static void Finish(CustomizePatternRecord* pInstance);
         static void Clean(CustomizePatternRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizePatternRecordBaseTable {
         CustomizePatternRecord data[151];
 
@@ -9535,7 +10459,9 @@ namespace heur::rfl {
         static void Finish(CustomizePatternRecordBaseTable* pInstance);
         static void Clean(CustomizePatternRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizePatternRecordTable {
         CustomizePatternRecord data[255];
 
@@ -9546,7 +10472,9 @@ namespace heur::rfl {
         static void Finish(CustomizePatternRecordTable* pInstance);
         static void Clean(CustomizePatternRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeShoesPartRecord : CustomizeRecordBase {
         uint8_t numMaterialAnims;
 
@@ -9557,7 +10485,9 @@ namespace heur::rfl {
         static void Finish(CustomizeShoesPartRecord* pInstance);
         static void Clean(CustomizeShoesPartRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeShoesPartRecordBaseTable {
         CustomizeShoesPartRecord data[159];
 
@@ -9568,7 +10498,9 @@ namespace heur::rfl {
         static void Finish(CustomizeShoesPartRecordBaseTable* pInstance);
         static void Clean(CustomizeShoesPartRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeShoesPartRecordTable {
         CustomizeShoesPartRecord data[255];
 
@@ -9579,7 +10511,9 @@ namespace heur::rfl {
         static void Finish(CustomizeShoesPartRecordTable* pInstance);
         static void Clean(CustomizeShoesPartRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventMovieRecord : Record {
         enum class DataType : int8_t {
             DATA_TYPE_SCENE = 0,
@@ -9604,7 +10538,9 @@ namespace heur::rfl {
         static void Finish(EventMovieRecord* pInstance);
         static void Clean(EventMovieRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventMovieRecordBaseTable {
         EventMovieRecord data[31];
 
@@ -9615,7 +10551,9 @@ namespace heur::rfl {
         static void Finish(EventMovieRecordBaseTable* pInstance);
         static void Clean(EventMovieRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventMovieRecordTable {
         EventMovieRecord data[128];
 
@@ -9626,7 +10564,9 @@ namespace heur::rfl {
         static void Finish(EventMovieRecordTable* pInstance);
         static void Clean(EventMovieRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetRecord : Record {
         enum class GadgetType : int8_t {
             GADGET_NONE = -1,
@@ -9681,7 +10621,9 @@ namespace heur::rfl {
         static void Finish(GadgetRecord* pInstance);
         static void Clean(GadgetRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetRecordBaseTable {
         GadgetRecord data[200];
 
@@ -9692,7 +10634,9 @@ namespace heur::rfl {
         static void Finish(GadgetRecordBaseTable* pInstance);
         static void Clean(GadgetRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetRecordTable {
         GadgetRecord data[255];
 
@@ -9703,7 +10647,9 @@ namespace heur::rfl {
         static void Finish(GadgetRecordTable* pInstance);
         static void Clean(GadgetRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GameScoreRecord : Record {
         enum class GameScoreType : int8_t {
             GAMESCORE_NONE = -1,
@@ -9787,7 +10733,9 @@ namespace heur::rfl {
         static void Finish(GameScoreRecord* pInstance);
         static void Clean(GameScoreRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GameScoreRecordBaseTable {
         GameScoreRecord data[70];
 
@@ -9798,7 +10746,9 @@ namespace heur::rfl {
         static void Finish(GameScoreRecordBaseTable* pInstance);
         static void Clean(GameScoreRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GameScoreRecordTable {
         GameScoreRecord data[128];
 
@@ -9809,7 +10759,9 @@ namespace heur::rfl {
         static void Finish(GameScoreRecordTable* pInstance);
         static void Clean(GameScoreRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageScoreRecord : Record {
         uint32_t timeMax;
         uint32_t timeDeduct;
@@ -9824,7 +10776,9 @@ namespace heur::rfl {
         static void Finish(StageScoreRecord* pInstance);
         static void Clean(StageScoreRecord* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageScoreRecordBaseTable {
         StageScoreRecord data[70];
 
@@ -9835,7 +10789,9 @@ namespace heur::rfl {
         static void Finish(StageScoreRecordBaseTable* pInstance);
         static void Clean(StageScoreRecordBaseTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageScoreRecordTable {
         StageScoreRecord data[128];
 
@@ -9846,7 +10802,9 @@ namespace heur::rfl {
         static void Finish(StageScoreRecordTable* pInstance);
         static void Clean(StageScoreRecordTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventMovieCaption {
         csl::ut::VariableString label;
         int32_t beginFrame;
@@ -9859,7 +10817,9 @@ namespace heur::rfl {
         static void Finish(EventMovieCaption* pInstance);
         static void Clean(EventMovieCaption* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventMovieCaptionTable {
         EventMovieCaption captions[30];
 
@@ -9870,7 +10830,9 @@ namespace heur::rfl {
         static void Finish(EventMovieCaptionTable* pInstance);
         static void Clean(EventMovieCaptionTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct OnceCreditParameter {
         enum class ColumnType : int16_t {
             COLUMN_ONE = 0,
@@ -9906,7 +10868,9 @@ namespace heur::rfl {
         static void Finish(OnceCreditParameter* pInstance);
         static void Clean(OnceCreditParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct OnceCutParameter {
         uint8_t worldNo;
         uint16_t cutNo;
@@ -9920,7 +10884,9 @@ namespace heur::rfl {
         static void Finish(OnceCutParameter* pInstance);
         static void Clean(OnceCutParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct VrStageCameraParameter {
         bool useFovSetting;
         float fovY;
@@ -9934,7 +10900,9 @@ namespace heur::rfl {
         static void Finish(VrStageCameraParameter* pInstance);
         static void Clean(VrStageCameraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct VrStageFpsParameter {
         csl::math::Vector3 eyeOffset;
         float distance;
@@ -9948,7 +10916,9 @@ namespace heur::rfl {
         static void Finish(VrStageFpsParameter* pInstance);
         static void Clean(VrStageFpsParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct VrStageTitleParameter {
         csl::math::Vector3 eye;
         csl::math::Vector3 lookat;
@@ -9962,7 +10932,9 @@ namespace heur::rfl {
         static void Finish(VrStageTitleParameter* pInstance);
         static void Clean(VrStageTitleParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EffectParameters {
         float localLightIntensityScale;
         int8_t dropPriority;
@@ -9974,7 +10946,9 @@ namespace heur::rfl {
         static void Finish(EffectParameters* pInstance);
         static void Clean(EffectParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct LerpNode {
         float distance;
         float noiseTextureScrollSpeed;
@@ -9989,7 +10963,9 @@ namespace heur::rfl {
         static void Finish(LerpNode* pInstance);
         static void Clean(LerpNode* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AuraEffectLerpParameter {
         bool enable;
         LerpNode node[2];
@@ -10001,7 +10977,9 @@ namespace heur::rfl {
         static void Finish(AuraEffectLerpParameter* pInstance);
         static void Clean(AuraEffectLerpParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AuraEffectParameter {
         bool enable;
         float noiseTextureScrollSpeed;
@@ -10016,7 +10994,9 @@ namespace heur::rfl {
         static void Finish(AuraEffectParameter* pInstance);
         static void Clean(AuraEffectParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GraphicsParameters {
         AuraEffectLerpParameter aura;
         EffectParameters effect;
@@ -10028,7 +11008,9 @@ namespace heur::rfl {
         static void Finish(GraphicsParameters* pInstance);
         static void Clean(GraphicsParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ExpLevelData {
         uint32_t nextLevelNecessaryPoint[29];
 
@@ -10039,7 +11021,9 @@ namespace heur::rfl {
         static void Finish(ExpLevelData* pInstance);
         static void Clean(ExpLevelData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ExpStageData {
         float stageCoefficient[70];
 
@@ -10050,7 +11034,9 @@ namespace heur::rfl {
         static void Finish(ExpStageData* pInstance);
         static void Clean(ExpStageData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MaxScoreData {
         uint32_t total;
         uint32_t grind;
@@ -10067,7 +11053,9 @@ namespace heur::rfl {
         static void Finish(MaxScoreData* pInstance);
         static void Clean(MaxScoreData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MissionDataBase {
         int16_t missionID;
         int32_t prevMissionID;
@@ -10081,7 +11069,9 @@ namespace heur::rfl {
         static void Finish(MissionDataBase* pInstance);
         static void Clean(MissionDataBase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MissionDataSingle : MissionDataBase {
         enum class EventID : int16_t {
             EVENT_NONE = 0,
@@ -10160,7 +11150,9 @@ namespace heur::rfl {
         static void Finish(MissionDataSingle* pInstance);
         static void Clean(MissionDataSingle* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageClearMissionDataSingle : MissionDataBase {
         int32_t stageNo;
 
@@ -10171,7 +11163,9 @@ namespace heur::rfl {
         static void Finish(StageClearMissionDataSingle* pInstance);
         static void Clean(StageClearMissionDataSingle* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageMissionDataSingle : MissionDataBase {
         int32_t clearValue;
         int32_t stageNo;
@@ -10183,7 +11177,9 @@ namespace heur::rfl {
         static void Finish(StageMissionDataSingle* pInstance);
         static void Clean(StageMissionDataSingle* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ValueMissionDataSingle : MissionDataBase {
         int32_t clearValue;
 
@@ -10194,7 +11190,9 @@ namespace heur::rfl {
         static void Finish(ValueMissionDataSingle* pInstance);
         static void Clean(ValueMissionDataSingle* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllMissionData {
         MissionDataSingle m_dailyMission[20];
         MissionDataSingle m_sonicChallenge[30];
@@ -10219,7 +11217,9 @@ namespace heur::rfl {
         static void Finish(AllMissionData* pInstance);
         static void Clean(AllMissionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DailyMissionParameter {
         float bonusValue[10];
 
@@ -10230,7 +11230,9 @@ namespace heur::rfl {
         static void Finish(DailyMissionParameter* pInstance);
         static void Clean(DailyMissionParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MissionTextLabel {
         enum class EventID : int16_t {
             EVENT_NONE = 0,
@@ -10308,7 +11310,9 @@ namespace heur::rfl {
         static void Finish(MissionTextLabel* pInstance);
         static void Clean(MissionTextLabel* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MissionTextLabels {
         MissionTextLabel labelList[62];
 
@@ -10319,7 +11323,9 @@ namespace heur::rfl {
         static void Finish(MissionTextLabels* pInstance);
         static void Clean(MissionTextLabels* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct NetBuddyData {
         uint8_t dummy;
         uint8_t pad[3];
@@ -10332,7 +11338,9 @@ namespace heur::rfl {
         static void Finish(NetBuddyData* pInstance);
         static void Clean(NetBuddyData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlatformData {
         uint8_t data[16];
 
@@ -10343,7 +11351,9 @@ namespace heur::rfl {
         static void Finish(PlatformData* pInstance);
         static void Clean(PlatformData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FriendData {
         int8_t name[80];
         uint16_t country;
@@ -10358,7 +11368,9 @@ namespace heur::rfl {
         static void Finish(FriendData* pInstance);
         static void Clean(FriendData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossBigZavokParameter {
         bool battleCheck;
         int32_t maxHealthPoint;
@@ -10398,7 +11410,9 @@ namespace heur::rfl {
         static void Finish(BossBigZavokParameter* pInstance);
         static void Clean(BossBigZavokParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossEggDragoonParameter {
         uint32_t firstHalfHealthPoint;
         uint32_t latterHalfHealthPoint;
@@ -10419,7 +11433,9 @@ namespace heur::rfl {
         static void Finish(BossEggDragoonParameter* pInstance);
         static void Clean(BossEggDragoonParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StoneData {
         int32_t use;
         float distance;
@@ -10434,7 +11450,9 @@ namespace heur::rfl {
         static void Finish(StoneData* pInstance);
         static void Clean(StoneData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StonePattern {
         StoneData stoneData[10];
 
@@ -10445,7 +11463,9 @@ namespace heur::rfl {
         static void Finish(StonePattern* pInstance);
         static void Clean(StonePattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossEggDragoonStoneAttackParameter {
         StonePattern stonePattern[10];
 
@@ -10456,7 +11476,9 @@ namespace heur::rfl {
         static void Finish(BossEggDragoonStoneAttackParameter* pInstance);
         static void Clean(BossEggDragoonStoneAttackParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DebrisParam {
         int32_t use;
         float distance;
@@ -10471,7 +11493,9 @@ namespace heur::rfl {
         static void Finish(DebrisParam* pInstance);
         static void Clean(DebrisParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DebrisPattern {
         DebrisParam debrisParam[10];
 
@@ -10482,7 +11506,9 @@ namespace heur::rfl {
         static void Finish(DebrisPattern* pInstance);
         static void Clean(DebrisPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboDebrisAttackParameter {
         DebrisPattern debrisPattern[10];
 
@@ -10493,7 +11519,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboDebrisAttackParameter* pInstance);
         static void Clean(BossFinalDeathEggRoboDebrisAttackParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDENormalDamageParameter {
         float homingDamage;
         float boostDamage;
@@ -10508,7 +11536,9 @@ namespace heur::rfl {
         static void Finish(FDENormalDamageParameter* pInstance);
         static void Clean(FDENormalDamageParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDEGadgetDamageParameter {
         float asteroidDamage;
         float drillDamage;
@@ -10525,7 +11555,9 @@ namespace heur::rfl {
         static void Finish(FDEGadgetDamageParameter* pInstance);
         static void Clean(FDEGadgetDamageParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stLaserPattern {
         uint32_t shotNum;
         float shotAngle;
@@ -10538,7 +11570,9 @@ namespace heur::rfl {
         static void Finish(FDE1stLaserPattern* pInstance);
         static void Clean(FDE1stLaserPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stLaser {
         FDE1stLaserPattern laserPattern[3];
 
@@ -10549,7 +11583,9 @@ namespace heur::rfl {
         static void Finish(FDE1stLaser* pInstance);
         static void Clean(FDE1stLaser* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stMissilePattern {
         uint32_t shotNum;
         float shotAnimRate;
@@ -10564,7 +11600,9 @@ namespace heur::rfl {
         static void Finish(FDE1stMissilePattern* pInstance);
         static void Clean(FDE1stMissilePattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stMissile {
         FDE1stMissilePattern missilePattern[3];
 
@@ -10575,7 +11613,9 @@ namespace heur::rfl {
         static void Finish(FDE1stMissile* pInstance);
         static void Clean(FDE1stMissile* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stDebrisWave {
         uint32_t debrisNum;
         bool isUse;
@@ -10592,7 +11632,9 @@ namespace heur::rfl {
         static void Finish(FDE1stDebrisWave* pInstance);
         static void Clean(FDE1stDebrisWave* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stDebrisPattern {
         FDE1stDebrisWave debrisWave[3];
 
@@ -10603,7 +11645,9 @@ namespace heur::rfl {
         static void Finish(FDE1stDebrisPattern* pInstance);
         static void Clean(FDE1stDebrisPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stDebris {
         FDE1stDebrisPattern debrisPattern[3];
 
@@ -10614,7 +11658,9 @@ namespace heur::rfl {
         static void Finish(FDE1stDebris* pInstance);
         static void Clean(FDE1stDebris* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1stState {
         enum class FDE1stStatePatternType : int8_t {
             SPT_1ST_NONE = 0,
@@ -10634,7 +11680,9 @@ namespace heur::rfl {
         static void Finish(FDE1stState* pInstance);
         static void Clean(FDE1stState* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE1st {
         float boosAttackLv2HpRate;
         float boosAttackLv3HpRate;
@@ -10651,7 +11699,9 @@ namespace heur::rfl {
         static void Finish(FDE1st* pInstance);
         static void Clean(FDE1st* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndImpact {
         float readyTimeR;
         float readyTimeL;
@@ -10679,7 +11729,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndImpact* pInstance);
         static void Clean(FDE2ndImpact* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndLaserAttackLvPattern {
         float shotTime;
         float readyTime;
@@ -10692,7 +11744,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndLaserAttackLvPattern* pInstance);
         static void Clean(FDE2ndLaserAttackLvPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndLaser {
         FDE2ndLaserAttackLvPattern laserPattern[3];
 
@@ -10703,7 +11757,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndLaser* pInstance);
         static void Clean(FDE2ndLaser* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndMissileAttackLvPattern {
         uint32_t shotNum;
         uint32_t attackNum;
@@ -10719,7 +11775,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndMissileAttackLvPattern* pInstance);
         static void Clean(FDE2ndMissileAttackLvPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndMissile {
         FDE2ndMissileAttackLvPattern missilePattern[3];
 
@@ -10730,7 +11788,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndMissile* pInstance);
         static void Clean(FDE2ndMissile* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2ndState {
         enum class FDE2ndStatePatternType : int8_t {
             SPT_2ND_NONE = 0,
@@ -10752,7 +11812,9 @@ namespace heur::rfl {
         static void Finish(FDE2ndState* pInstance);
         static void Clean(FDE2ndState* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FDE2nd {
         float boosAttackLv2HpRate;
         float boosAttackLv3HpRate;
@@ -10768,7 +11830,9 @@ namespace heur::rfl {
         static void Finish(FDE2nd* pInstance);
         static void Clean(FDE2nd* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboParameter {
         uint32_t battle1stHealthPoint;
         uint32_t battle2ndHealthPoint;
@@ -10788,7 +11852,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboParameter* pInstance);
         static void Clean(BossFinalDeathEggRoboParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RocketAttackLvPattern {
         float aimTime;
         float reAimTime;
@@ -10807,7 +11873,9 @@ namespace heur::rfl {
         static void Finish(RocketAttackLvPattern* pInstance);
         static void Clean(RocketAttackLvPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RocketParam {
         float changeDelay;
         RocketAttackLvPattern rocketPattern[3];
@@ -10819,7 +11887,9 @@ namespace heur::rfl {
         static void Finish(RocketParam* pInstance);
         static void Clean(RocketParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct LaserAttackLvPattern {
         uint32_t attackNum;
         float motionSpeedRate;
@@ -10834,7 +11904,9 @@ namespace heur::rfl {
         static void Finish(LaserAttackLvPattern* pInstance);
         static void Clean(LaserAttackLvPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct LaserParam {
         float changeDelay;
         LaserAttackLvPattern laserPattern[3];
@@ -10846,7 +11918,9 @@ namespace heur::rfl {
         static void Finish(LaserParam* pInstance);
         static void Clean(LaserParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PillarAttackLvPattern {
         uint32_t attackLine;
         float moveAreaWidth;
@@ -10867,7 +11941,9 @@ namespace heur::rfl {
         static void Finish(PillarAttackLvPattern* pInstance);
         static void Clean(PillarAttackLvPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PillarParam {
         PillarAttackLvPattern pillerPattern[3];
 
@@ -10878,7 +11954,9 @@ namespace heur::rfl {
         static void Finish(PillarParam* pInstance);
         static void Clean(PillarParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StateParam {
         enum class StatePatternType : int8_t {
             SPT_NONE = 0,
@@ -10901,7 +11979,9 @@ namespace heur::rfl {
         static void Finish(StateParam* pInstance);
         static void Clean(StateParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AttackParam {
         float boosAttackLv2HpRate;
         float boosAttackLv3HpRate;
@@ -10917,7 +11997,9 @@ namespace heur::rfl {
         static void Finish(AttackParam* pInstance);
         static void Clean(AttackParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BombLandingParameter {
         float phase;
         csl::math::Vector3 landingPos;
@@ -10929,7 +12011,9 @@ namespace heur::rfl {
         static void Finish(BombLandingParameter* pInstance);
         static void Clean(BombLandingParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BombLandingPattrnParameter {
         bool isUse;
         float shotSpeed;
@@ -10942,7 +12026,9 @@ namespace heur::rfl {
         static void Finish(BombLandingPattrnParameter* pInstance);
         static void Clean(BombLandingPattrnParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BombPositionParameter {
         bool isUse;
         float phase;
@@ -10955,7 +12041,9 @@ namespace heur::rfl {
         static void Finish(BombPositionParameter* pInstance);
         static void Clean(BombPositionParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BombPositionListParameter {
         float shotReadyTime;
         BombPositionParameter BombPosition[50];
@@ -10967,7 +12055,9 @@ namespace heur::rfl {
         static void Finish(BombPositionListParameter* pInstance);
         static void Clean(BombPositionListParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboLastBombParameter {
         BombPositionListParameter bombPositionListParam;
         BombLandingPattrnParameter bombLandingPattrnParam[6];
@@ -10980,7 +12070,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboLastBombParameter* pInstance);
         static void Clean(BossFinalDeathEggRoboLastBombParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DebrisBlock {
         enum class DebrisType : int8_t {
             DPT_NONE = 0,
@@ -10998,7 +12090,9 @@ namespace heur::rfl {
         static void Finish(DebrisBlock* pInstance);
         static void Clean(DebrisBlock* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DebrisBlockPattern {
         DebrisBlock debrisParam[5];
         float delay;
@@ -11012,7 +12106,9 @@ namespace heur::rfl {
         static void Finish(DebrisBlockPattern* pInstance);
         static void Clean(DebrisBlockPattern* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageParam {
         uint32_t singleHAMax;
         uint32_t singleHADamage;
@@ -11044,7 +12140,9 @@ namespace heur::rfl {
         static void Finish(StageParam* pInstance);
         static void Clean(StageParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossFinalDeathEggRoboLastParameter {
         uint32_t battleHealthPoint;
         float boosHpGaugeTime;
@@ -11058,7 +12156,9 @@ namespace heur::rfl {
         static void Finish(BossFinalDeathEggRoboLastParameter* pInstance);
         static void Clean(BossFinalDeathEggRoboLastParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct InfiniteHomingCameraParameter {
         float fovy;
         float minDistanceToTarget;
@@ -11075,7 +12175,9 @@ namespace heur::rfl {
         static void Finish(InfiniteHomingCameraParameter* pInstance);
         static void Clean(InfiniteHomingCameraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct InfiniteCopyParameter {
         csl::math::Vector3 pos;
 
@@ -11086,7 +12188,9 @@ namespace heur::rfl {
         static void Finish(InfiniteCopyParameter* pInstance);
         static void Clean(InfiniteCopyParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite1stParameter {
         float modelScale;
         float hp;
@@ -11216,7 +12320,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite1stParameter* pInstance);
         static void Clean(BossInfinite1stParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite2ndParameter {
         float modelScale;
         float hp;
@@ -11288,7 +12394,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite2ndParameter* pInstance);
         static void Clean(BossInfinite2ndParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite2ndPillarData {
         float width;
         float pathPos;
@@ -11301,7 +12409,9 @@ namespace heur::rfl {
         static void Finish(Infinite2ndPillarData* pInstance);
         static void Clean(Infinite2ndPillarData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossInfinite2ndPillarParameter {
         Infinite2ndPillarData pillarData[30];
         Infinite2ndPillarData pillarData2[30];
@@ -11313,7 +12423,9 @@ namespace heur::rfl {
         static void Finish(BossInfinite2ndPillarParameter* pInstance);
         static void Clean(BossInfinite2ndPillarParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdDoubleBoostParameter {
         float playerSpeed;
 
@@ -11324,7 +12436,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdDoubleBoostParameter* pInstance);
         static void Clean(Infinite3rdDoubleBoostParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamAvoid {
         float speedMax;
         float accele;
@@ -11340,7 +12454,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamAvoid* pInstance);
         static void Clean(Infinite3rdParamAvoid* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamAvoidEvnet {
         float waitRandomTime;
         float apartTime;
@@ -11357,7 +12473,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamAvoidEvnet* pInstance);
         static void Clean(Infinite3rdParamAvoidEvnet* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamCameraShakeBoost {
         float time;
         float magnitude;
@@ -11371,7 +12489,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamCameraShakeBoost* pInstance);
         static void Clean(Infinite3rdParamCameraShakeBoost* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamChase {
         float baseMinDistance;
         float baseMaxDistance;
@@ -11388,7 +12508,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamChase* pInstance);
         static void Clean(Infinite3rdParamChase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamCommon {
         int32_t lifepoint;
         int32_t angryLifepoint;
@@ -11405,7 +12527,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamCommon* pInstance);
         static void Clean(Infinite3rdParamCommon* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamCrossType {
         float distance;
         int32_t numRows;
@@ -11423,7 +12547,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamCrossType* pInstance);
         static void Clean(Infinite3rdParamCrossType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamCross {
         Infinite3rdParamChase beforeChase;
         Infinite3rdParamChase afterChase;
@@ -11447,7 +12573,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamCross* pInstance);
         static void Clean(Infinite3rdParamCross* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamDamage {
         Infinite3rdParamChase chase;
         float homingDamagePoint;
@@ -11475,7 +12603,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamDamage* pInstance);
         static void Clean(Infinite3rdParamDamage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamDamageCamera {
         float easeTimeEnter;
         float easeTimeLeave;
@@ -11495,7 +12625,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamDamageCamera* pInstance);
         static void Clean(Infinite3rdParamDamageCamera* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamDashAtack {
         float endWait;
         float endWarpWait;
@@ -11518,7 +12650,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamDashAtack* pInstance);
         static void Clean(Infinite3rdParamDashAtack* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamEntryEvnet {
         float waitTime;
         float waitRandomTime;
@@ -11536,7 +12670,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamEntryEvnet* pInstance);
         static void Clean(Infinite3rdParamEntryEvnet* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamSeqUnit {
         enum class ActionType : int8_t {
             ACT_FLY = 0,
@@ -11561,7 +12697,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamSeqUnit* pInstance);
         static void Clean(Infinite3rdParamSeqUnit* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamSeq {
         Infinite3rdParamSeqUnit before[10];
         Infinite3rdParamSeqUnit after[10];
@@ -11573,7 +12711,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamSeq* pInstance);
         static void Clean(Infinite3rdParamSeq* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamShieldType {
         float openedDistance;
         int32_t numShields;
@@ -11594,7 +12734,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamShieldType* pInstance);
         static void Clean(Infinite3rdParamShieldType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamShield {
         Infinite3rdParamChase beforeChase;
         Infinite3rdParamChase afterChase;
@@ -11608,7 +12750,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamShield* pInstance);
         static void Clean(Infinite3rdParamShield* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamSpawnType {
         enum class SpawnType : int8_t {
             SPAWN_PAWN = 0,
@@ -11632,7 +12776,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamSpawnType* pInstance);
         static void Clean(Infinite3rdParamSpawnType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamSpawn {
         Infinite3rdParamChase chase;
         Infinite3rdParamSpawnType types0[10];
@@ -11655,7 +12801,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamSpawn* pInstance);
         static void Clean(Infinite3rdParamSpawn* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParamVirtualReality {
         float time;
 
@@ -11666,7 +12814,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParamVirtualReality* pInstance);
         static void Clean(Infinite3rdParamVirtualReality* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Infinite3rdParmaWarp {
         float changeStateTime;
         float endDistance;
@@ -11686,7 +12836,9 @@ namespace heur::rfl {
         static void Finish(Infinite3rdParmaWarp* pInstance);
         static void Clean(Infinite3rdParmaWarp* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BeehiveSummonParam {
         enum class ObjectType : int8_t {
             OBJ_NONE = 0,
@@ -11710,7 +12862,9 @@ namespace heur::rfl {
         static void Finish(BeehiveSummonParam* pInstance);
         static void Clean(BeehiveSummonParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BeehiveSummonTable {
         enum class QueenActionType : int8_t {
             QUEEN_ACTION_LASER = 0,
@@ -11727,7 +12881,9 @@ namespace heur::rfl {
         static void Finish(BeehiveSummonTable* pInstance);
         static void Clean(BeehiveSummonTable* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossLockonCameraParameter {
         float fovy;
         float minDistanceToTarget;
@@ -11746,7 +12902,9 @@ namespace heur::rfl {
         static void Finish(BossLockonCameraParameter* pInstance);
         static void Clean(BossLockonCameraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BossQueenBeetonParameter {
         bool battleCheck;
         bool debugDraw;
@@ -11809,7 +12967,9 @@ namespace heur::rfl {
         static void Finish(BossQueenBeetonParameter* pInstance);
         static void Clean(BossQueenBeetonParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVirtronWaveParameter {
         float maxDistance;
         float speed;
@@ -11822,7 +12982,9 @@ namespace heur::rfl {
         static void Finish(ObjVirtronWaveParameter* pInstance);
         static void Clean(ObjVirtronWaveParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PhysicsParam {
         float mass;
         float friction;
@@ -11839,7 +13001,9 @@ namespace heur::rfl {
         static void Finish(PhysicsParam* pInstance);
         static void Clean(PhysicsParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MotionData {
         csl::ut::VariableString motionName;
         bool syncFrame;
@@ -11852,7 +13016,9 @@ namespace heur::rfl {
         static void Finish(MotionData* pInstance);
         static void Clean(MotionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MirageAnimData {
         csl::ut::VariableString texSrtAnimName0;
         csl::ut::VariableString texSrtAnimName1;
@@ -11871,7 +13037,9 @@ namespace heur::rfl {
         static void Finish(MirageAnimData* pInstance);
         static void Clean(MirageAnimData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ProgramMotionData {
         enum class MotionType : int8_t {
             MOTION_SWING = 0,
@@ -11892,7 +13060,9 @@ namespace heur::rfl {
         static void Finish(ProgramMotionData* pInstance);
         static void Clean(ProgramMotionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EffectData {
         csl::ut::VariableString effectName;
         bool linkMotionStop;
@@ -11904,7 +13074,9 @@ namespace heur::rfl {
         static void Finish(EffectData* pInstance);
         static void Clean(EffectData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SoundData {
         csl::ut::VariableString cueName;
 
@@ -11915,7 +13087,9 @@ namespace heur::rfl {
         static void Finish(SoundData* pInstance);
         static void Clean(SoundData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DebrisData {
         float gravity;
         float lifeTime;
@@ -11930,7 +13104,9 @@ namespace heur::rfl {
         static void Finish(DebrisData* pInstance);
         static void Clean(DebrisData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct KillData {
         enum class KillType : int8_t {
             KILL_TYPE_NOT_KILL = 0,
@@ -11951,7 +13127,9 @@ namespace heur::rfl {
         static void Finish(KillData* pInstance);
         static void Clean(KillData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ReactionData {
         MotionData motionData;
         MirageAnimData mirageAnimData;
@@ -11967,7 +13145,9 @@ namespace heur::rfl {
         static void Finish(ReactionData* pInstance);
         static void Clean(ReactionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ConfigData {
         enum class ShapeType : int8_t {
             SHAPE_BOX = 0,
@@ -12028,7 +13208,9 @@ namespace heur::rfl {
         static void Finish(ConfigData* pInstance);
         static void Clean(ConfigData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyParameterBase {
         float addBoostEnergy;
         float addDoubleBoostEnergy;
@@ -12048,7 +13230,9 @@ namespace heur::rfl {
         static void Finish(EnemyParameterBase* pInstance);
         static void Clean(EnemyParameterBase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyBeetonParameter : EnemyParameterBase {
         float shotSpeedFV;
         float shotSpeedSV;
@@ -12063,7 +13247,9 @@ namespace heur::rfl {
         static void Finish(EnemyBeetonParameter* pInstance);
         static void Clean(EnemyBeetonParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggChaserParameter : EnemyParameterBase {
         float laserSpeed;
         float laserLength;
@@ -12076,7 +13262,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggChaserParameter* pInstance);
         static void Clean(EnemyEggChaserParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggpawnParameter : EnemyParameterBase {
         float shotSpeedFV;
         float shotSpeedSV;
@@ -12115,7 +13303,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggpawnParameter* pInstance);
         static void Clean(EnemyEggpawnParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggTankParameter : EnemyParameterBase {
         csl::math::Vector3 respawnOffset;
         float respawnTime;
@@ -12130,7 +13320,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggTankParameter* pInstance);
         static void Clean(EnemyEggTankParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyEggWalkerParameter : EnemyParameterBase {
         float shotSpeedFV;
         float shotSpeedSV;
@@ -12148,7 +13340,9 @@ namespace heur::rfl {
         static void Finish(EnemyEggWalkerParameter* pInstance);
         static void Clean(EnemyEggWalkerParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicDoubleBoostParameter {
         float playerSpeed;
 
@@ -12159,7 +13353,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicDoubleBoostParameter* pInstance);
         static void Clean(MetalSonicDoubleBoostParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamAvoid {
         float speedMax;
         float accele;
@@ -12175,7 +13371,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamAvoid* pInstance);
         static void Clean(MetalSonicParamAvoid* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamCameraShakeBoost {
         float time;
         float magnitude;
@@ -12189,7 +13387,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamCameraShakeBoost* pInstance);
         static void Clean(MetalSonicParamCameraShakeBoost* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamChase {
         float baseMinDistance;
         float baseMaxDistance;
@@ -12206,7 +13406,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamChase* pInstance);
         static void Clean(MetalSonicParamChase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamCommon {
         int32_t lifepoint;
         int32_t angryLifepoint;
@@ -12224,7 +13426,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamCommon* pInstance);
         static void Clean(MetalSonicParamCommon* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamDamage {
         MetalSonicParamChase chase;
         float homingDamagePoint;
@@ -12252,7 +13456,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamDamage* pInstance);
         static void Clean(MetalSonicParamDamage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamDamageCamera {
         float easeTimeEnter;
         float easeTimeLeave;
@@ -12272,7 +13478,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamDamageCamera* pInstance);
         static void Clean(MetalSonicParamDamageCamera* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamDamageEffect {
         float middleDiffScale;
         float middleWaitTime;
@@ -12288,7 +13496,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamDamageEffect* pInstance);
         static void Clean(MetalSonicParamDamageEffect* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamDashAtack {
         float endWait;
         float endWarpWait;
@@ -12311,7 +13521,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamDashAtack* pInstance);
         static void Clean(MetalSonicParamDashAtack* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamDeadEvent {
         float voxelScaleMin;
         float voxelScaleMax;
@@ -12326,7 +13538,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamDeadEvent* pInstance);
         static void Clean(MetalSonicParamDeadEvent* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamElectroType {
         float distance;
         int32_t numRows;
@@ -12342,7 +13556,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamElectroType* pInstance);
         static void Clean(MetalSonicParamElectroType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamElectro {
         MetalSonicParamChase beforeChase;
         MetalSonicParamChase afterChase;
@@ -12364,7 +13580,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamElectro* pInstance);
         static void Clean(MetalSonicParamElectro* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamEntryEvnet {
         float radiusMin;
         float radiusMax;
@@ -12383,7 +13601,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamEntryEvnet* pInstance);
         static void Clean(MetalSonicParamEntryEvnet* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamSeqUnit {
         enum class ActionType : int8_t {
             ACT_FLY = 0,
@@ -12408,7 +13628,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamSeqUnit* pInstance);
         static void Clean(MetalSonicParamSeqUnit* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamSeq {
         MetalSonicParamSeqUnit before[10];
         MetalSonicParamSeqUnit after[10];
@@ -12420,7 +13642,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamSeq* pInstance);
         static void Clean(MetalSonicParamSeq* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamShieldType {
         float openedDistance;
         int32_t numShields;
@@ -12441,7 +13665,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamShieldType* pInstance);
         static void Clean(MetalSonicParamShieldType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamShield {
         MetalSonicParamChase beforeChase;
         MetalSonicParamChase afterChase;
@@ -12455,7 +13681,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamShield* pInstance);
         static void Clean(MetalSonicParamShield* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamSpawnType {
         enum class SpawnType : int8_t {
             SPAWN_PAWN = 0,
@@ -12479,7 +13707,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamSpawnType* pInstance);
         static void Clean(MetalSonicParamSpawnType* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParamSpawn {
         MetalSonicParamChase chase;
         MetalSonicParamSpawnType types0[10];
@@ -12502,7 +13732,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParamSpawn* pInstance);
         static void Clean(MetalSonicParamSpawn* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MetalSonicParmaWarp {
         float changeStateTime;
         float endDistance;
@@ -12522,7 +13754,9 @@ namespace heur::rfl {
         static void Finish(MetalSonicParmaWarp* pInstance);
         static void Clean(MetalSonicParmaWarp* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ShotSetData {
         enum class ErectricAttackType : int8_t {
             TYPE_POLE = 0,
@@ -12558,7 +13792,9 @@ namespace heur::rfl {
         static void Finish(ShotSetData* pInstance);
         static void Clean(ShotSetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMetalSonicElectricAttackParameter {
         float endTime;
         float depthOffset;
@@ -12571,7 +13807,9 @@ namespace heur::rfl {
         static void Finish(ObjMetalSonicElectricAttackParameter* pInstance);
         static void Clean(ObjMetalSonicElectricAttackParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjMetalSonicParameter {
         MetalSonicParamCommon common;
         MetalSonicParamSeq seq;
@@ -12596,7 +13834,9 @@ namespace heur::rfl {
         static void Finish(ObjMetalSonicParameter* pInstance);
         static void Clean(ObjMetalSonicParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyMotoraParameter : EnemyParameterBase {
         float threadGrassRadius;
         float threadGrassTime;
@@ -12608,7 +13848,9 @@ namespace heur::rfl {
         static void Finish(EnemyMotoraParameter* pInstance);
         static void Clean(EnemyMotoraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyNarlParameter : EnemyParameterBase {
         float hatchAnimTime;
         float leanAngle;
@@ -12637,7 +13879,9 @@ namespace heur::rfl {
         static void Finish(EnemyNarlParameter* pInstance);
         static void Clean(EnemyNarlParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyPotosParameter : EnemyParameterBase {
         float bombFallSpeedMax;
         float scaleFV;
@@ -12650,7 +13894,9 @@ namespace heur::rfl {
         static void Finish(EnemyPotosParameter* pInstance);
         static void Clean(EnemyPotosParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyValKeenParameter : EnemyParameterBase {
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -12660,7 +13906,9 @@ namespace heur::rfl {
         static void Finish(EnemyValKeenParameter* pInstance);
         static void Clean(EnemyValKeenParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyGalagaBeeParameter : EnemyParameterBase {
 
         static const hh::fnd::RflTypeInfo typeInfo;
@@ -12670,7 +13918,9 @@ namespace heur::rfl {
         static void Finish(EnemyGalagaBeeParameter* pInstance);
         static void Clean(EnemyGalagaBeeParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjFlameCollisionParameter {
         csl::math::Vector3 collision02MSize;
         csl::math::Vector3 collision04MSize;
@@ -12685,7 +13935,9 @@ namespace heur::rfl {
         static void Finish(ObjFlameCollisionParameter* pInstance);
         static void Clean(ObjFlameCollisionParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjAuraTrainParameter {
         float frontDistance;
         float effectInterval;
@@ -12697,7 +13949,9 @@ namespace heur::rfl {
         static void Finish(ObjAuraTrainParameter* pInstance);
         static void Clean(ObjAuraTrainParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjWaterFallRflParameter {
         float foretasteTime;
         float bigEffectStartCountTime;
@@ -12713,7 +13967,9 @@ namespace heur::rfl {
         static void Finish(ObjWaterFallRflParameter* pInstance);
         static void Clean(ObjWaterFallRflParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBumperParameter {
         float lightColorR;
         float lightColorG;
@@ -12729,7 +13985,9 @@ namespace heur::rfl {
         static void Finish(ObjBumperParameter* pInstance);
         static void Clean(ObjBumperParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjHexagonBumperParameter {
         float lightColorR;
         float lightColorG;
@@ -12745,7 +14003,9 @@ namespace heur::rfl {
         static void Finish(ObjHexagonBumperParameter* pInstance);
         static void Clean(ObjHexagonBumperParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjTriangleBumperParameter {
         float lightColorR;
         float lightColorG;
@@ -12761,7 +14021,9 @@ namespace heur::rfl {
         static void Finish(ObjTriangleBumperParameter* pInstance);
         static void Clean(ObjTriangleBumperParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjVanishBumperParameter {
         float lightColorR;
         float lightColorG;
@@ -12777,7 +14039,9 @@ namespace heur::rfl {
         static void Finish(ObjVanishBumperParameter* pInstance);
         static void Clean(ObjVanishBumperParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GiantCrabDebrisData {
         bool sniper;
         bool left;
@@ -12792,7 +14056,9 @@ namespace heur::rfl {
         static void Finish(GiantCrabDebrisData* pInstance);
         static void Clean(GiantCrabDebrisData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGiantCrabDebrisParameter {
         uint32_t debrisUseWaveNum;
         GiantCrabDebrisData debrisData[30];
@@ -12804,7 +14070,9 @@ namespace heur::rfl {
         static void Finish(ObjGiantCrabDebrisParameter* pInstance);
         static void Clean(ObjGiantCrabDebrisParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjGiantCrabParameter {
         bool enableDebris;
         float approachDistance;
@@ -12844,7 +14112,9 @@ namespace heur::rfl {
         static void Finish(ObjGiantCrabParameter* pInstance);
         static void Clean(ObjGiantCrabParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjBoxRoadParameter {
         enum class EaseType : int8_t {
             NONE = 0,
@@ -12877,7 +14147,9 @@ namespace heur::rfl {
         static void Finish(ObjBoxRoadParameter* pInstance);
         static void Clean(ObjBoxRoadParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PRCoreNormalDamageParameter {
         float homingDamage;
         float boostDamage;
@@ -12891,7 +14163,9 @@ namespace heur::rfl {
         static void Finish(PRCoreNormalDamageParameter* pInstance);
         static void Clean(PRCoreNormalDamageParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PRCoreGadgetDamageParameter {
         float asteroidDamage;
         float drillDamage;
@@ -12908,7 +14182,9 @@ namespace heur::rfl {
         static void Finish(PRCoreGadgetDamageParameter* pInstance);
         static void Clean(PRCoreGadgetDamageParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PRLaserParameter {
         bool isUse;
         float phase;
@@ -12920,7 +14196,9 @@ namespace heur::rfl {
         static void Finish(PRLaserParameter* pInstance);
         static void Clean(PRLaserParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PRLaserWaveParameter {
         float rotationSpeed;
         float rotationSpeedChangeTime;
@@ -12937,7 +14215,9 @@ namespace heur::rfl {
         static void Finish(PRLaserWaveParameter* pInstance);
         static void Clean(PRLaserWaveParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ObjPowerReactorParameter {
         uint32_t coreHp;
         PRCoreNormalDamageParameter coreNormalDamageParam;
@@ -12951,7 +14231,9 @@ namespace heur::rfl {
         static void Finish(ObjPowerReactorParameter* pInstance);
         static void Clean(ObjPowerReactorParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RadioData {
         enum class CharaType : int8_t {
             CHARATYPE_NONE = -1,
@@ -13009,7 +14291,9 @@ namespace heur::rfl {
         static void Finish(RadioData* pInstance);
         static void Clean(RadioData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Data {
         enum class Type : int8_t {
             TYPE_CAPTION = 0,
@@ -13030,7 +14314,9 @@ namespace heur::rfl {
         static void Finish(Data* pInstance);
         static void Clean(Data* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Discussion {
         Data datas[20];
         bool isForcePlay;
@@ -13042,7 +14328,9 @@ namespace heur::rfl {
         static void Finish(Discussion* pInstance);
         static void Clean(Discussion* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CaptionParameter {
         Discussion discussions[10];
 
@@ -13053,7 +14341,9 @@ namespace heur::rfl {
         static void Finish(CaptionParameter* pInstance);
         static void Clean(CaptionParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DressUpPreset {
         bool available;
         uint8_t pad[3];
@@ -13066,7 +14356,9 @@ namespace heur::rfl {
         static void Finish(DressUpPreset* pInstance);
         static void Clean(DressUpPreset* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllDressUpPresets {
         DressUpPreset presetCommon[128];
         DressUpPreset presetMen[128];
@@ -13079,7 +14371,9 @@ namespace heur::rfl {
         static void Finish(AllDressUpPresets* pInstance);
         static void Clean(AllDressUpPresets* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWire {
         float shootSpeed;
         float speed;
@@ -13091,7 +14385,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWire* pInstance);
         static void Clean(PlayerParamWire* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWireBoost {
         float shootSpeed;
         float speed;
@@ -13107,7 +14403,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWireBoost* pInstance);
         static void Clean(PlayerParamWireBoost* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWeaponBurst {
         int32_t numRotate;
         float rotateTime;
@@ -13122,7 +14420,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWeaponBurst* pInstance);
         static void Clean(PlayerParamWeaponBurst* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BuddyModePackage {
         PlayerParamWire wire;
         PlayerParamWireBoost wireboost;
@@ -13135,7 +14435,9 @@ namespace heur::rfl {
         static void Finish(BuddyModePackage* pInstance);
         static void Clean(BuddyModePackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWireDrift {
         float acceleForce;
         float deceleForce;
@@ -13151,7 +14453,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWireDrift* pInstance);
         static void Clean(PlayerParamWireDrift* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ReduceDamage {
         int32_t numRestRings;
 
@@ -13162,7 +14466,9 @@ namespace heur::rfl {
         static void Finish(ReduceDamage* pInstance);
         static void Clean(ReduceDamage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RingInvincible {
         int32_t numRings;
         float time;
@@ -13174,7 +14480,9 @@ namespace heur::rfl {
         static void Finish(RingInvincible* pInstance);
         static void Clean(RingInvincible* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RingBonus {
         int32_t numRings;
 
@@ -13185,7 +14493,9 @@ namespace heur::rfl {
         static void Finish(RingBonus* pInstance);
         static void Clean(RingBonus* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RingCollector {
         float radius;
 
@@ -13196,7 +14506,9 @@ namespace heur::rfl {
         static void Finish(RingCollector* pInstance);
         static void Clean(RingCollector* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PowerRestart {
         int32_t numRings;
 
@@ -13207,7 +14519,9 @@ namespace heur::rfl {
         static void Finish(PowerRestart* pInstance);
         static void Clean(PowerRestart* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct LandingDash {
         float speedSV;
         float speedFV;
@@ -13219,7 +14533,9 @@ namespace heur::rfl {
         static void Finish(LandingDash* pInstance);
         static void Clean(LandingDash* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CancelDash {
         float speedSV;
         float speedFV;
@@ -13231,7 +14547,9 @@ namespace heur::rfl {
         static void Finish(CancelDash* pInstance);
         static void Clean(CancelDash* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Skimmer {
         float rate;
 
@@ -13242,7 +14560,9 @@ namespace heur::rfl {
         static void Finish(Skimmer* pInstance);
         static void Clean(Skimmer* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RingUp {
         int32_t numRings;
 
@@ -13253,7 +14573,9 @@ namespace heur::rfl {
         static void Finish(RingUp* pInstance);
         static void Clean(RingUp* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct HTurbo {
         float speed;
 
@@ -13264,7 +14586,9 @@ namespace heur::rfl {
         static void Finish(HTurbo* pInstance);
         static void Clean(HTurbo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ChainRing {
         float time;
         int32_t rateRing;
@@ -13281,7 +14605,9 @@ namespace heur::rfl {
         static void Finish(ChainRing* pInstance);
         static void Clean(ChainRing* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EnemyCombo {
         float time;
         int32_t rate;
@@ -13293,7 +14619,9 @@ namespace heur::rfl {
         static void Finish(EnemyCombo* pInstance);
         static void Clean(EnemyCombo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DamageInvincible {
         float time;
 
@@ -13304,7 +14632,9 @@ namespace heur::rfl {
         static void Finish(DamageInvincible* pInstance);
         static void Clean(DamageInvincible* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct HStability {
         float time;
 
@@ -13315,7 +14645,9 @@ namespace heur::rfl {
         static void Finish(HStability* pInstance);
         static void Clean(HStability* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamGadgetSkill {
         ReduceDamage reduceDamage;
         RingInvincible ringInvicible;
@@ -13339,7 +14671,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamGadgetSkill* pInstance);
         static void Clean(PlayerParamGadgetSkill* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BuddyPackage {
         PlayerParamWireDrift wiredrift;
         PlayerParamGadgetSkill skill;
@@ -13351,7 +14685,9 @@ namespace heur::rfl {
         static void Finish(BuddyPackage* pInstance);
         static void Clean(BuddyPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamCommon {
         float noDamageTime;
         float damagedInitialSpeed;
@@ -13369,7 +14705,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamCommon* pInstance);
         static void Clean(PlayerParamCommon* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSpeed {
         float maxSpeed;
         float maxSpeedDash;
@@ -13402,7 +14740,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSpeed* pInstance);
         static void Clean(PlayerParamSpeed* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamRotation {
         float pitchRollSpeedMinDiff;
         float pitchRollSpeedMaxDiff;
@@ -13417,7 +14757,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamRotation* pInstance);
         static void Clean(PlayerParamRotation* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamRunning {
         float speedMinJog;
         float speedMinRun;
@@ -13433,7 +14775,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamRunning* pInstance);
         static void Clean(PlayerParamRunning* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamBrake {
         float enableSpeed;
         float initialSpeedRatio;
@@ -13452,7 +14796,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamBrake* pInstance);
         static void Clean(PlayerParamBrake* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamJump {
         float shortReleaseTime;
         float longPressTime;
@@ -13469,7 +14815,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamJump* pInstance);
         static void Clean(PlayerParamJump* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamJumpSpeed {
         float acceleForce;
         float deceleForce;
@@ -13487,7 +14835,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamJumpSpeed* pInstance);
         static void Clean(PlayerParamJumpSpeed* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamDoubleJump {
         float initialSpeed;
         float limitSpeedMin;
@@ -13500,7 +14850,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamDoubleJump* pInstance);
         static void Clean(PlayerParamDoubleJump* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSliding {
         float minSpeed;
         float deceleForce;
@@ -13522,7 +14874,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSliding* pInstance);
         static void Clean(PlayerParamSliding* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamStomping {
         float initialSpeed;
         float airDrag;
@@ -13537,7 +14891,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamStomping* pInstance);
         static void Clean(PlayerParamStomping* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWallJump {
         float gravitySize;
         float minTime;
@@ -13556,7 +14912,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWallJump* pInstance);
         static void Clean(PlayerParamWallJump* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamGrind {
         float acceleForce;
         float deceleForce;
@@ -13570,7 +14928,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamGrind* pInstance);
         static void Clean(PlayerParamGrind* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamFallSlope {
         float maxAcceleForce;
         float acceleForce;
@@ -13585,7 +14945,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamFallSlope* pInstance);
         static void Clean(PlayerParamFallSlope* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSpinAttack {
         float jumpForce;
         float jumpAddForce;
@@ -13603,7 +14965,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSpinAttack* pInstance);
         static void Clean(PlayerParamSpinAttack* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamHomingAttack {
         float speed;
         float bounceVertSpeed;
@@ -13623,7 +14987,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamHomingAttack* pInstance);
         static void Clean(PlayerParamHomingAttack* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamQuickStep {
         float acceleForce;
         float acceleSideForce;
@@ -13637,7 +15003,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamQuickStep* pInstance);
         static void Clean(PlayerParamQuickStep* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SpeedParam {
         float maxVertSpeed;
         float acceleVertForce;
@@ -13651,7 +15019,9 @@ namespace heur::rfl {
         static void Finish(SpeedParam* pInstance);
         static void Clean(SpeedParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamDiving {
         SpeedParam normal;
         SpeedParam fast;
@@ -13668,7 +15038,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamDiving* pInstance);
         static void Clean(PlayerParamDiving* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamBallMove {
         float maxSpeed;
         float slidePower;
@@ -13684,7 +15056,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamBallMove* pInstance);
         static void Clean(PlayerParamBallMove* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamPinBall {
         float acceleForce;
         float deceleForce;
@@ -13698,7 +15072,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamPinBall* pInstance);
         static void Clean(PlayerParamPinBall* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSpinDash {
         float maxDistance;
         float baseSpeed;
@@ -13718,7 +15094,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSpinDash* pInstance);
         static void Clean(PlayerParamSpinDash* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamFan {
         float danperV;
         float danperH;
@@ -13733,7 +15111,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamFan* pInstance);
         static void Clean(PlayerParamFan* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CommonModePackage {
         PlayerParamCommon common;
         PlayerParamSpeed speed;
@@ -13764,7 +15144,9 @@ namespace heur::rfl {
         static void Finish(CommonModePackage* pInstance);
         static void Clean(CommonModePackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamInput {
         float preInputTime;
 
@@ -13775,7 +15157,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamInput* pInstance);
         static void Clean(PlayerParamInput* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamAutorun {
         float initialSideSpeed;
         float acceleSideForce;
@@ -13789,7 +15173,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamAutorun* pInstance);
         static void Clean(PlayerParamAutorun* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSlider {
         float frontAccel;
         float frontBrake;
@@ -13808,7 +15194,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSlider* pInstance);
         static void Clean(PlayerParamSlider* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSideStep {
         float speed;
         float stepSpeed;
@@ -13824,7 +15212,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSideStep* pInstance);
         static void Clean(PlayerParamSideStep* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWaterAct {
         float resistRate;
         float breatheBrake;
@@ -13838,7 +15228,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWaterAct* pInstance);
         static void Clean(PlayerParamWaterAct* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CommonPackage {
         PlayerParamInput input;
         PlayerParamAutorun autorun;
@@ -13853,7 +15245,9 @@ namespace heur::rfl {
         static void Finish(CommonPackage* pInstance);
         static void Clean(CommonPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamDoubleBoost {
         float speed;
         float acceleForce;
@@ -13888,7 +15282,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamDoubleBoost* pInstance);
         static void Clean(PlayerParamDoubleBoost* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CommonParameterPackage {
         PlayerParamAutorun autorun;
         PlayerParamDoubleBoost doubleboost;
@@ -13903,7 +15299,9 @@ namespace heur::rfl {
         static void Finish(CommonParameterPackage* pInstance);
         static void Clean(CommonParameterPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetAsteroidFV {
         float radius;
         float height;
@@ -13921,7 +15319,9 @@ namespace heur::rfl {
         static void Finish(GadgetAsteroidFV* pInstance);
         static void Clean(GadgetAsteroidFV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetAsteroidSV {
         float radius;
         float height;
@@ -13939,7 +15339,9 @@ namespace heur::rfl {
         static void Finish(GadgetAsteroidSV* pInstance);
         static void Clean(GadgetAsteroidSV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetBaseParameter {
         float activeTime;
         float decreaseTime;
@@ -13951,7 +15353,9 @@ namespace heur::rfl {
         static void Finish(GadgetBaseParameter* pInstance);
         static void Clean(GadgetBaseParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetAsteroidParameter : GadgetBaseParameter {
         float maxFallSpeed;
         float hoverTime;
@@ -13968,7 +15372,9 @@ namespace heur::rfl {
         static void Finish(GadgetAsteroidParameter* pInstance);
         static void Clean(GadgetAsteroidParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetBurstNormal {
         float continueTime;
         float speedFV;
@@ -13985,7 +15391,9 @@ namespace heur::rfl {
         static void Finish(GadgetBurstNormal* pInstance);
         static void Clean(GadgetBurstNormal* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetBurstSpecial {
         float decreaseTime;
         float outOfControlTime;
@@ -14002,7 +15410,9 @@ namespace heur::rfl {
         static void Finish(GadgetBurstSpecial* pInstance);
         static void Clean(GadgetBurstSpecial* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetBurstParameter : GadgetBaseParameter {
         GadgetBurstNormal normal;
         GadgetBurstSpecial special;
@@ -14014,7 +15424,9 @@ namespace heur::rfl {
         static void Finish(GadgetBurstParameter* pInstance);
         static void Clean(GadgetBurstParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetCommonParameter {
         int32_t startType;
 
@@ -14025,7 +15437,9 @@ namespace heur::rfl {
         static void Finish(GadgetCommonParameter* pInstance);
         static void Clean(GadgetCommonParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetCubeAir {
         float airDamageRadiusFV;
         float airDamageRadiusSV;
@@ -14037,7 +15451,9 @@ namespace heur::rfl {
         static void Finish(GadgetCubeAir* pInstance);
         static void Clean(GadgetCubeAir* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetCubeNormal {
         float decreaseTime;
         float startBurstRadiusFV;
@@ -14055,7 +15471,9 @@ namespace heur::rfl {
         static void Finish(GadgetCubeNormal* pInstance);
         static void Clean(GadgetCubeNormal* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetCubeSpecial {
         float decreaseTime;
         float createCubeSizeFV;
@@ -14086,7 +15504,9 @@ namespace heur::rfl {
         static void Finish(GadgetCubeSpecial* pInstance);
         static void Clean(GadgetCubeSpecial* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetCubeParameter : GadgetBaseParameter {
         float attackDamageRadiusFV;
         float attackDamageRadiusSV;
@@ -14101,7 +15521,9 @@ namespace heur::rfl {
         static void Finish(GadgetCubeParameter* pInstance);
         static void Clean(GadgetCubeParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillBoostFV {
         float speed;
         float accel;
@@ -14126,7 +15548,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillBoostFV* pInstance);
         static void Clean(GadgetDrillBoostFV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillBoostSV {
         float speed;
         float accel;
@@ -14150,7 +15574,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillBoostSV* pInstance);
         static void Clean(GadgetDrillBoostSV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillDash {
         float chargeKeepTime;
         float shiftDownTime;
@@ -14166,7 +15592,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillDash* pInstance);
         static void Clean(GadgetDrillDash* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillDashFV {
         float speed1;
         float speed2;
@@ -14219,7 +15647,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillDashFV* pInstance);
         static void Clean(GadgetDrillDashFV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillDashSV {
         float speed1;
         float speed2;
@@ -14270,7 +15700,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillDashSV* pInstance);
         static void Clean(GadgetDrillDashSV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetDrillParameter : GadgetBaseParameter {
         GadgetDrillDash dash;
         GadgetDrillDashFV dashFV;
@@ -14285,7 +15717,9 @@ namespace heur::rfl {
         static void Finish(GadgetDrillParameter* pInstance);
         static void Clean(GadgetDrillParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetFloatingBaseParameter {
         float gravitySizeFV;
         float absoluteTimeFV;
@@ -14313,7 +15747,9 @@ namespace heur::rfl {
         static void Finish(GadgetFloatingBaseParameter* pInstance);
         static void Clean(GadgetFloatingBaseParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetHoverAttackFV {
         float radius;
         float offsetHeight;
@@ -14334,7 +15770,9 @@ namespace heur::rfl {
         static void Finish(GadgetHoverAttackFV* pInstance);
         static void Clean(GadgetHoverAttackFV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetHoverAttackSV {
         float radius;
         float offsetHeight;
@@ -14351,7 +15789,9 @@ namespace heur::rfl {
         static void Finish(GadgetHoverAttackSV* pInstance);
         static void Clean(GadgetHoverAttackSV* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GagetHoverJump : GadgetFloatingBaseParameter {
         float initialSpeedFV;
         float floatingTimeFV;
@@ -14367,7 +15807,9 @@ namespace heur::rfl {
         static void Finish(GagetHoverJump* pInstance);
         static void Clean(GagetHoverJump* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetHoverRescue {
         float initialSpeed;
         float acceleForce;
@@ -14381,7 +15823,9 @@ namespace heur::rfl {
         static void Finish(GadgetHoverRescue* pInstance);
         static void Clean(GadgetHoverRescue* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetHoverParameter : GadgetBaseParameter {
         float attackDecreaseTime;
         float shootingInterval;
@@ -14400,7 +15844,9 @@ namespace heur::rfl {
         static void Finish(GadgetHoverParameter* pInstance);
         static void Clean(GadgetHoverParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetLightningCharge {
         float decreaseTime;
         float chargeTime;
@@ -14433,7 +15879,9 @@ namespace heur::rfl {
         static void Finish(GadgetLightningCharge* pInstance);
         static void Clean(GadgetLightningCharge* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetLightningNormal {
         float decreaseTime;
         float moveTimeFV;
@@ -14452,7 +15900,9 @@ namespace heur::rfl {
         static void Finish(GadgetLightningNormal* pInstance);
         static void Clean(GadgetLightningNormal* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetLightningParameter : GadgetBaseParameter {
         GadgetLightningNormal normal;
         GadgetLightningCharge charge;
@@ -14464,7 +15914,9 @@ namespace heur::rfl {
         static void Finish(GadgetLightningParameter* pInstance);
         static void Clean(GadgetLightningParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetVoidNormal {
         float decreaseTime;
         float ballRadiusFV;
@@ -14487,7 +15939,9 @@ namespace heur::rfl {
         static void Finish(GadgetVoidNormal* pInstance);
         static void Clean(GadgetVoidNormal* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetVoidSpecial {
         float decreaseTime;
         float moveLengthFV;
@@ -14508,7 +15962,9 @@ namespace heur::rfl {
         static void Finish(GadgetVoidSpecial* pInstance);
         static void Clean(GadgetVoidSpecial* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetVoidRescueFloat : GadgetFloatingBaseParameter {
         float activeTimeFV;
         float activeTimeSV;
@@ -14520,7 +15976,9 @@ namespace heur::rfl {
         static void Finish(GadgetVoidRescueFloat* pInstance);
         static void Clean(GadgetVoidRescueFloat* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetVoidParameter : GadgetBaseParameter {
         GadgetVoidNormal normal;
         GadgetVoidSpecial special;
@@ -14533,7 +15991,9 @@ namespace heur::rfl {
         static void Finish(GadgetVoidParameter* pInstance);
         static void Clean(GadgetVoidParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GadgetParameters {
         GadgetCommonParameter common;
         GadgetBurstParameter burst;
@@ -14551,7 +16011,9 @@ namespace heur::rfl {
         static void Finish(GadgetParameters* pInstance);
         static void Clean(GadgetParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamWallRun {
         float speed;
 
@@ -14562,7 +16024,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamWallRun* pInstance);
         static void Clean(PlayerParamWallRun* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamClimbWall {
         float hangApproachSpeed;
         float hangApproachMinTime;
@@ -14575,7 +16039,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamClimbWall* pInstance);
         static void Clean(PlayerParamClimbWall* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamCancelStep {
         float initialFrontSpeed;
         float initialUpSpeed;
@@ -14589,7 +16055,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamCancelStep* pInstance);
         static void Clean(PlayerParamCancelStep* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamBoost {
         float decreaseFirst;
         float decreaseRate;
@@ -14611,7 +16079,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamBoost* pInstance);
         static void Clean(PlayerParamBoost* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ParameterPackage {
         PlayerParamCommon common;
         PlayerParamSpeed speed;
@@ -14649,7 +16119,9 @@ namespace heur::rfl {
         static void Finish(ParameterPackage* pInstance);
         static void Clean(ParameterPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerBuddyParameters {
         BuddyPackage common;
         BuddyModePackage forwardView;
@@ -14664,7 +16136,9 @@ namespace heur::rfl {
         static void Finish(PlayerBuddyParameters* pInstance);
         static void Clean(PlayerBuddyParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerCommonParameters {
         CommonPackage common;
         CommonModePackage forwardView;
@@ -14679,7 +16153,9 @@ namespace heur::rfl {
         static void Finish(PlayerCommonParameters* pInstance);
         static void Clean(PlayerCommonParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParameters {
         CommonParameterPackage common;
         ParameterPackage forwardView;
@@ -14694,7 +16170,9 @@ namespace heur::rfl {
         static void Finish(PlayerParameters* pInstance);
         static void Clean(PlayerParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerParamSuperSonic {
         float speedRatio;
         float speedRatioBoost;
@@ -14710,7 +16188,9 @@ namespace heur::rfl {
         static void Finish(PlayerParamSuperSonic* pInstance);
         static void Clean(PlayerParamSuperSonic* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicPackage {
         int32_t dummy;
 
@@ -14721,7 +16201,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicPackage* pInstance);
         static void Clean(SonicClassicPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicParamBase {
         float brakeForce;
         float startForce;
@@ -14745,7 +16227,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicParamBase* pInstance);
         static void Clean(SonicClassicParamBase* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicParamBrake {
         float maxLowBrakeSpeed;
         float initialSpeedRatio;
@@ -14764,7 +16248,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicParamBrake* pInstance);
         static void Clean(SonicClassicParamBrake* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicParamSpinDash {
         float chargeTime0;
         float chargeTime1;
@@ -14798,7 +16284,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicParamSpinDash* pInstance);
         static void Clean(SonicClassicParamSpinDash* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicParamPinBall {
         float maxSpeedAir;
         float brake;
@@ -14810,7 +16298,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicParamPinBall* pInstance);
         static void Clean(SonicClassicParamPinBall* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicParamBarrier {
         float effectOffsetNormal_X;
         float effectOffsetNormal_Y;
@@ -14829,7 +16319,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicParamBarrier* pInstance);
         static void Clean(SonicClassicParamBarrier* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicClassicModePackage {
         SonicClassicParamBase base;
         SonicClassicParamBrake brake;
@@ -14844,7 +16336,9 @@ namespace heur::rfl {
         static void Finish(SonicClassicModePackage* pInstance);
         static void Clean(SonicClassicModePackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerSonicClassicParameters {
         SonicClassicPackage common;
         SonicClassicModePackage forwardView;
@@ -14859,7 +16353,9 @@ namespace heur::rfl {
         static void Finish(PlayerSonicClassicParameters* pInstance);
         static void Clean(PlayerSonicClassicParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicPackage {
         PlayerParamDoubleBoost doubleboost;
 
@@ -14870,7 +16366,9 @@ namespace heur::rfl {
         static void Finish(SonicPackage* pInstance);
         static void Clean(SonicPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SonicModePackage {
         PlayerParamBoost boost;
         PlayerParamWallRun wallRun;
@@ -14884,7 +16382,9 @@ namespace heur::rfl {
         static void Finish(SonicModePackage* pInstance);
         static void Clean(SonicModePackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerSonicParameters {
         SonicPackage common;
         SonicModePackage forwardView;
@@ -14899,7 +16399,9 @@ namespace heur::rfl {
         static void Finish(PlayerSonicParameters* pInstance);
         static void Clean(PlayerSonicParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SuperSonicPackage {
         PlayerParamSuperSonic superSonic;
 
@@ -14910,7 +16412,9 @@ namespace heur::rfl {
         static void Finish(SuperSonicPackage* pInstance);
         static void Clean(SuperSonicPackage* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayerSuperSonicParameters {
         SuperSonicPackage common;
 
@@ -14921,7 +16425,9 @@ namespace heur::rfl {
         static void Finish(PlayerSuperSonicParameters* pInstance);
         static void Clean(PlayerSuperSonicParameters* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CapsuleParam {
         enum class NodeType : int8_t {
             Head = 0,
@@ -14964,7 +16470,9 @@ namespace heur::rfl {
         static void Finish(CapsuleParam* pInstance);
         static void Clean(CapsuleParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct OcclusionCapsuleParameter {
         CapsuleParam capsules[16];
 
@@ -14975,7 +16483,9 @@ namespace heur::rfl {
         static void Finish(OcclusionCapsuleParameter* pInstance);
         static void Clean(OcclusionCapsuleParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SosParameter {
         uint32_t generateMinute;
         uint32_t fluctuation;
@@ -14988,7 +16498,9 @@ namespace heur::rfl {
         static void Finish(SosParameter* pInstance);
         static void Clean(SosParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BGMTransitionInfo {
         float fadeOutTime;
         float playDelayTime;
@@ -15001,7 +16513,9 @@ namespace heur::rfl {
         static void Finish(BGMTransitionInfo* pInstance);
         static void Clean(BGMTransitionInfo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct EventBGMInfo {
         BGMTransitionInfo begin;
         BGMTransitionInfo end;
@@ -15013,7 +16527,9 @@ namespace heur::rfl {
         static void Finish(EventBGMInfo* pInstance);
         static void Clean(EventBGMInfo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageSoundParameter {
         BGMTransitionInfo pauseMenuIn;
         BGMTransitionInfo pauseMenuOut;
@@ -15039,7 +16555,9 @@ namespace heur::rfl {
         static void Finish(StageSoundParameter* pInstance);
         static void Clean(StageSoundParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct QTEParameter {
         enum class InterpolateType : int8_t {
             LINEAR = 0,
@@ -15072,7 +16590,9 @@ namespace heur::rfl {
         static void Finish(QTEParameter* pInstance);
         static void Clean(QTEParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIGameCockpitParameter {
         QTEParameter doubleBoostQte;
 
@@ -15083,7 +16603,9 @@ namespace heur::rfl {
         static void Finish(UIGameCockpitParameter* pInstance);
         static void Clean(UIGameCockpitParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CharaMakeParameter {
         float cameraMinDistance;
         float cameraMaxDistance;
@@ -15107,7 +16629,9 @@ namespace heur::rfl {
         static void Finish(CharaMakeParameter* pInstance);
         static void Clean(CharaMakeParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MyBuddyCameraParam {
         csl::math::Vector3 position;
         csl::math::Vector3 target;
@@ -15120,7 +16644,9 @@ namespace heur::rfl {
         static void Finish(MyBuddyCameraParam* pInstance);
         static void Clean(MyBuddyCameraParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DiscussData {
         csl::ut::VariableString memo;
         csl::ut::VariableString openingId;
@@ -15133,7 +16659,9 @@ namespace heur::rfl {
         static void Finish(DiscussData* pInstance);
         static void Clean(DiscussData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CameraData {
         float cameraPosX;
         float cameraPosY;
@@ -15151,7 +16679,9 @@ namespace heur::rfl {
         static void Finish(CameraData* pInstance);
         static void Clean(CameraData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CameraTargetData {
         float x;
         float y;
@@ -15164,7 +16694,9 @@ namespace heur::rfl {
         static void Finish(CameraTargetData* pInstance);
         static void Clean(CameraTargetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct LightParam {
         float lightDirX;
         float lightDirY;
@@ -15180,7 +16712,9 @@ namespace heur::rfl {
         static void Finish(LightParam* pInstance);
         static void Clean(LightParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MiscData {
         float prisonRotateRatio;
         float toDeathEggScreenPosX;
@@ -15195,7 +16729,9 @@ namespace heur::rfl {
         static void Finish(MiscData* pInstance);
         static void Clean(MiscData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PositionParam {
         float posX;
         float posY;
@@ -15208,7 +16744,9 @@ namespace heur::rfl {
         static void Finish(PositionParam* pInstance);
         static void Clean(PositionParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlanetCursorParam {
         float ratioX;
         float ratioY;
@@ -15227,7 +16765,9 @@ namespace heur::rfl {
         static void Finish(PlanetCursorParam* pInstance);
         static void Clean(PlanetCursorParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlanetRotateParam {
         float m_rotateXMin;
         float m_rotateXMax;
@@ -15244,7 +16784,9 @@ namespace heur::rfl {
         static void Finish(PlanetRotateParam* pInstance);
         static void Clean(PlanetRotateParam* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct WorldMapCameraParameter {
         PositionParam m_earthPos;
         CameraData m_earthCameraParam;
@@ -15266,7 +16808,9 @@ namespace heur::rfl {
         static void Finish(WorldMapCameraParameter* pInstance);
         static void Clean(WorldMapCameraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageDetailBuddyCameraParameter {
         MyBuddyCameraParam mainCamera;
         MyBuddyCameraParam halfToneCamera;
@@ -15278,7 +16822,9 @@ namespace heur::rfl {
         static void Finish(StageDetailBuddyCameraParameter* pInstance);
         static void Clean(StageDetailBuddyCameraParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageDetailSosEvent {
         float effectTime;
         float addValue1;
@@ -15293,7 +16839,9 @@ namespace heur::rfl {
         static void Finish(StageDetailSosEvent* pInstance);
         static void Clean(StageDetailSosEvent* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageDetailParameter {
         bool skipTransceiverEffectWhenFriendExists;
         uint8_t pad[3];
@@ -15308,7 +16856,9 @@ namespace heur::rfl {
         static void Finish(StageDetailParameter* pInstance);
         static void Clean(StageDetailParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct WorldMapDiscussParameter {
         DiscussData discussDatas[50];
 
@@ -15319,7 +16869,9 @@ namespace heur::rfl {
         static void Finish(WorldMapDiscussParameter* pInstance);
         static void Clean(WorldMapDiscussParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct WorldMapTutorialParameter {
         float naviButtonScale;
 
@@ -15330,7 +16882,9 @@ namespace heur::rfl {
         static void Finish(WorldMapTutorialParameter* pInstance);
         static void Clean(WorldMapTutorialParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIRadioParameter {
         float cameraPosX;
         float cameraPosY;
@@ -15353,7 +16907,9 @@ namespace heur::rfl {
         static void Finish(UIRadioParameter* pInstance);
         static void Clean(UIRadioParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIResultSingleModelPosition {
         csl::math::Vector3 cameraPosition;
         csl::math::Vector3 cameraTarget;
@@ -15367,7 +16923,9 @@ namespace heur::rfl {
         static void Finish(UIResultSingleModelPosition* pInstance);
         static void Clean(UIResultSingleModelPosition* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIResultTagModelPosition {
         csl::math::Vector3 cameraPosition;
         csl::math::Vector3 cameraTarget;
@@ -15383,7 +16941,9 @@ namespace heur::rfl {
         static void Finish(UIResultTagModelPosition* pInstance);
         static void Clean(UIResultTagModelPosition* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIResultTrioModelPosition {
         csl::math::Vector3 cameraPosition;
         csl::math::Vector3 cameraTarget;
@@ -15401,7 +16961,9 @@ namespace heur::rfl {
         static void Finish(UIResultTrioModelPosition* pInstance);
         static void Clean(UIResultTrioModelPosition* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UIResultMenuParameter {
         float cameraMinDistance;
         float cameraMaxDistance;
@@ -15431,7 +16993,9 @@ namespace heur::rfl {
         static void Finish(UIResultMenuParameter* pInstance);
         static void Clean(UIResultMenuParameter* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ExtraStageUnlockData {
         int32_t stageNo;
         int32_t missionID;
@@ -15443,7 +17007,9 @@ namespace heur::rfl {
         static void Finish(ExtraStageUnlockData* pInstance);
         static void Clean(ExtraStageUnlockData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageStats {
         enum class RankType : int8_t {
             RANK_S = 0,
@@ -15472,7 +17038,9 @@ namespace heur::rfl {
         static void Finish(StageStats* pInstance);
         static void Clean(StageStats* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct Summary : StageStats {
         csl::ut::VariableString name;
 
@@ -15483,7 +17051,9 @@ namespace heur::rfl {
         static void Finish(Summary* pInstance);
         static void Clean(Summary* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct UserSummary : StageStats {
         csl::ut::MoveArray<Summary> summary;
 
@@ -15494,7 +17064,9 @@ namespace heur::rfl {
         static void Finish(UserSummary* pInstance);
         static void Clean(UserSummary* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllSummary {
         csl::ut::MoveArray<UserSummary> userSummary;
 
@@ -15505,7 +17077,9 @@ namespace heur::rfl {
         static void Finish(AllSummary* pInstance);
         static void Clean(AllSummary* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayLog {
         enum class PlayType : int8_t {
             PLAY_NONE = 0,
@@ -15534,7 +17108,9 @@ namespace heur::rfl {
         static void Finish(PlayLog* pInstance);
         static void Clean(PlayLog* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StageStatsAll {
         csl::ut::MoveArray<StageStats> stageStats;
 
@@ -15545,7 +17121,9 @@ namespace heur::rfl {
         static void Finish(StageStatsAll* pInstance);
         static void Clean(StageStatsAll* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StagePlayData {
         enum class GadgetType : int8_t {
             GADGET_NONE = -1,
@@ -15640,7 +17218,9 @@ namespace heur::rfl {
         static void Finish(StagePlayData* pInstance);
         static void Clean(StagePlayData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct PlayStats {
         StageStatsAll stageStatsAll;
         csl::ut::MoveArray<StagePlayData> stagePlays;
@@ -15652,7 +17232,9 @@ namespace heur::rfl {
         static void Finish(PlayStats* pInstance);
         static void Clean(PlayStats* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ActStageData {
         int8_t rank;
         uint8_t correct;
@@ -15669,7 +17251,9 @@ namespace heur::rfl {
         static void Finish(ActStageData* pInstance);
         static void Clean(ActStageData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct BuddyData {
         CustomizeData customize;
 
@@ -15680,7 +17264,9 @@ namespace heur::rfl {
         static void Finish(BuddyData* pInstance);
         static void Clean(BuddyData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ClosetData {
         bool registered;
         CustomizeData customize;
@@ -15692,7 +17278,9 @@ namespace heur::rfl {
         static void Finish(ClosetData* pInstance);
         static void Clean(ClosetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct RaceData {
         uint8_t level;
         uint32_t experiencePoint;
@@ -15704,7 +17292,9 @@ namespace heur::rfl {
         static void Finish(RaceData* pInstance);
         static void Clean(RaceData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllBuddyData {
         BuddyData buddy[15];
         ClosetData closet[15];
@@ -15719,7 +17309,9 @@ namespace heur::rfl {
         static void Finish(AllBuddyData* pInstance);
         static void Clean(AllBuddyData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllFriendData {
         FriendData selectedFriend;
         FriendData stockedFriends[31];
@@ -15731,7 +17323,9 @@ namespace heur::rfl {
         static void Finish(AllFriendData* pInstance);
         static void Clean(AllFriendData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AllStageData {
         ActStageData actStages[70];
 
@@ -15742,7 +17336,9 @@ namespace heur::rfl {
         static void Finish(AllStageData* pInstance);
         static void Clean(AllStageData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct AudioSettingsData {
         enum class AudioOutput : int8_t {
             Mono = 0,
@@ -15767,7 +17363,9 @@ namespace heur::rfl {
         static void Finish(AudioSettingsData* pInstance);
         static void Clean(AudioSettingsData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ChallengeMissionData {
         uint16_t sosMissionClearCount;
 
@@ -15778,7 +17376,9 @@ namespace heur::rfl {
         static void Finish(ChallengeMissionData* pInstance);
         static void Clean(ChallengeMissionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct KeybindingInfo {
         int32_t m_simpleInputID;
         int32_t m_eKeysButtonIDs[2];
@@ -15790,7 +17390,9 @@ namespace heur::rfl {
         static void Finish(KeybindingInfo* pInstance);
         static void Clean(KeybindingInfo* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct KeybindingData {
         KeybindingInfo m_keybindings[12];
 
@@ -15801,7 +17403,9 @@ namespace heur::rfl {
         static void Finish(KeybindingData* pInstance);
         static void Clean(KeybindingData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct ConfigInfoData {
         enum class VoiceLanguageType : int8_t {
             VOICE_LANGUAGE_ENGLISH = 0,
@@ -15850,7 +17454,9 @@ namespace heur::rfl {
         static void Finish(ConfigInfoData* pInstance);
         static void Clean(ConfigInfoData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct CustomizeFlagSetData {
         uint32_t bitFlags[256];
 
@@ -15861,7 +17467,9 @@ namespace heur::rfl {
         static void Finish(CustomizeFlagSetData* pInstance);
         static void Clean(CustomizeFlagSetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct DailyMissionData {
         int32_t missionID[3];
         bool cleared[3];
@@ -15880,7 +17488,9 @@ namespace heur::rfl {
         static void Finish(DailyMissionData* pInstance);
         static void Clean(DailyMissionData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct FlagSetData {
         uint8_t byteFlags[16];
         uint32_t bitFlags[64];
@@ -15892,7 +17502,9 @@ namespace heur::rfl {
         static void Finish(FlagSetData* pInstance);
         static void Clean(FlagSetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GameInfoData {
         uint32_t totalTime;
         uint8_t lastPlayStageNo;
@@ -15906,7 +17518,9 @@ namespace heur::rfl {
         static void Finish(GameInfoData* pInstance);
         static void Clean(GameInfoData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct MissionFlagSetData {
         uint32_t bitFlags[128];
 
@@ -15917,7 +17531,9 @@ namespace heur::rfl {
         static void Finish(MissionFlagSetData* pInstance);
         static void Clean(MissionFlagSetData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StatValue {
         int32_t value;
         bool assigned;
@@ -15929,7 +17545,9 @@ namespace heur::rfl {
         static void Finish(StatValue* pInstance);
         static void Clean(StatValue* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct StatsContainerData {
         StatValue stats[3393];
 
@@ -15940,7 +17558,9 @@ namespace heur::rfl {
         static void Finish(StatsContainerData* pInstance);
         static void Clean(StatsContainerData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct GameData {
         GameInfoData info;
         FlagSetData flagSet;
@@ -15961,7 +17581,9 @@ namespace heur::rfl {
         static void Finish(GameData* pInstance);
         static void Clean(GameData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SystemData {
         enum class StatusType : int8_t {
             STATUS_ZERO_FILL = 0,
@@ -15983,7 +17605,9 @@ namespace heur::rfl {
         static void Finish(SystemData* pInstance);
         static void Clean(SystemData* pInstance);
     };
+}
 
+namespace heur::rfl {
     struct SaveDataType {
         SystemData system;
         GameData game;
@@ -15995,5 +17619,5 @@ namespace heur::rfl {
         static void Finish(SaveDataType* pInstance);
         static void Clean(SaveDataType* pInstance);
     };
-
 }
+

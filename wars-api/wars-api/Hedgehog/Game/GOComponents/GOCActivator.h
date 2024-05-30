@@ -1,7 +1,7 @@
 #pragma once
 
 namespace hh::game {
-    class GOCActivator : public hh::game::GOComponent, public hh::fnd::HFrame::Listener {
+    class GOCActivator : public hh::game::GOComponent, public hh::fnd::HFrameListener {
         float range;
         float distance;
         bool unk101;

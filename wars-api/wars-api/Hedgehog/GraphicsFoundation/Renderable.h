@@ -18,8 +18,7 @@ namespace hh::gfnd {
         uint16_t unk5;
         const char* name;
         uint32_t unk6;
-        uint64_t unk7;
-        Renderable(csl::fnd::IAllocator* pAllocator);
+        Renderable();
 
         void SetUnk4(bool unkParam);
         void SetUnk5(uint16_t unkParam);

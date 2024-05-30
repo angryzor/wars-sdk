@@ -5,11 +5,12 @@ namespace hh::gfnd {
         static GraphicsGeometryNeedle* MyCreate(void* unused, csl::fnd::IAllocator* allocator);
     public:
         GraphicsGeometryNeedle(csl::fnd::IAllocator* allocator);
-        virtual bool Initialize(DrawContext* drawContext, const fnd::Geometry& geometry);
-        virtual bool InitializeEdge(DrawContext* drawContext, const fnd::Geometry& geometry);
-        virtual bool InitializeWire(DrawContext* drawContext, const fnd::WireGeometry& geometry);
-        virtual bool InitializeByCopying(DrawContext* drawContext, const GraphicsGeometry* geometry);
-        virtual int64_t SetColor(const csl::ut::Color<uint8_t>& color);
-        virtual int64_t Render(DrawContext* drawContext, const csl::math::Matrix34& transform);
+        virtual bool Initialize(DrawContext* drawContext, const fnd::Geometry& geometry, const csl::math::Matrix34& transform) override;
+        virtual bool InitializeEdge(DrawContext* drawContext, const fnd::Geometry& geometry, const csl::math::Matrix34& transform) override;
+        virtual bool InitializeWire(DrawContext* drawContext, const fnd::WireGeometry& geometry, const csl::math::Matrix34& transform) override;
+        virtual bool InitializeByCopying(DrawContext* drawContext, const GraphicsGeometry* geometry, const csl::math::Matrix34& transform) override;
+        virtual void SetColor(const csl::ut::Color<uint8_t>& color) override;
+        virtual void SetTransform(const csl::math::Matrix34& worldMatrix) override;
+        virtual void Render(DrawContext* drawContext) override;
     };
 }

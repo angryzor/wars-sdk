@@ -112,15 +112,8 @@ namespace csl::math
 			*(Vector3*)col(column).data() = data;
 		}
 
-		Vector3& GetTransVector() const
-		{
-			return reinterpret_cast<Vector3&>(GetColumn(3));
-		}
-
-		void SetTransVector(const Vector3& translation)
-		{
-			SetColumn(3, translation);
-		}
+		Vector3 GetTransVector() const;
+		void SetTransVector(const Vector3& vec);
 	};
 	
 	class alignas(16) Quaternion : public Eigen::Quaternionf
@@ -204,6 +197,7 @@ namespace csl::math
 		static Matrix44 CreatePerspectiveProjectionMatrix(float fov, float aspectRatio, float nearClip, float farClip);
 
 	};
+	Matrix34 Matrix34Multiply(const Matrix34& x, const Matrix34& y);
 
 	class Sphere
 	{

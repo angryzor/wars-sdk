@@ -49,7 +49,7 @@ namespace hh::physics {
         virtual void GOCCL_UnkFunc3(GOCCollider* collider) {}
     };
 
-    class GOCCollider : public game::GOComponent, public fnd::HFrame::Listener {
+    class GOCCollider : public game::GOComponent, public fnd::HFrameListener {
     public:
         struct SetupInfo {
             enum class Flag : uint8_t {

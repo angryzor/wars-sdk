@@ -88,7 +88,7 @@ namespace hh::fnd
 
 	class alignas(8) ReferencedObject : public BaseObject
 	{
-		uint32_t sizeAndInitialized{};
+		uint32_t sizeAndInitialized;
 		volatile long RefCount{};
 
 	private:
@@ -96,7 +96,7 @@ namespace hh::fnd
 		void Free();
 	
 	protected:
-		csl::fnd::IAllocator* pAllocator{};
+		csl::fnd::IAllocator* pAllocator;
 		
 	public:
 		ReferencedObject();

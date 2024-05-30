@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef AddJob
+#undef AddJob
+#endif
+
 #ifndef EXPORTING_TYPES
 #include "cslib/csl/math/math.h"
 #include <functional>
@@ -24,6 +28,7 @@
 #include "cslib/csl/ut/Pair.h"
 #include "cslib/csl/ut/String.h"
 #include "cslib/csl/ut/VariableString.h"
+#include "cslib/csl/ut/Enum.h"
 
 #include "cslib/csl/fnd/Singleton.h"
 #include "cslib/csl/fnd/Mutex.h"
@@ -233,16 +238,16 @@
 #include "Hedgehog/HID/ActiveDeviceManager.h"
 #include "Hedgehog/HID/InputMap.h"
 
-#include "Hedgehog/HID/InputDevices/Keyboard.h"
-#include "Hedgehog/HID/InputDevices/KeyboardWin32.h"
+// #include "Hedgehog/HID/InputDevices/Keyboard.h"
+// #include "Hedgehog/HID/InputDevices/KeyboardWin32.h"
 #include "Hedgehog/HID/InputDevices/Mouse.h"
 #include "Hedgehog/HID/InputDevices/MouseWin32.h"
-#include "Hedgehog/HID/InputDevices/Gamepad.h"
-#include "Hedgehog/HID/InputDevices/GamepadSteam.h"
-#include "Hedgehog/HID/InputDevices/Pointing.h"
-#include "Hedgehog/HID/InputDevices/PointingWin32.h"
-#include "Hedgehog/HID/InputDevices/Vibration.h"
-#include "Hedgehog/HID/InputDevices/VibrationWin32.h"
+// #include "Hedgehog/HID/InputDevices/Gamepad.h"
+// #include "Hedgehog/HID/InputDevices/GamepadSteam.h"
+// #include "Hedgehog/HID/InputDevices/Pointing.h"
+// #include "Hedgehog/HID/InputDevices/PointingWin32.h"
+// #include "Hedgehog/HID/InputDevices/Vibration.h"
+// #include "Hedgehog/HID/InputDevices/VibrationWin32.h"
 
 #include "Hedgehog/HID/DeviceManager.h"
 #include "Hedgehog/HID/DeviceManagerWin32.h"
@@ -275,6 +280,7 @@
 #include "Hedgehog/Game/ObjectWorldChunk.def.h"
 #include "Hedgehog/Game/ObjectWorldExtension.h"
 #include "Hedgehog/Game/ObjectWorld.h"
+#include "Hedgehog/Game/FreeCamera.h"
 
 #include "Hedgehog/Game/GOComponents/GOCInput.h"
 #include "Hedgehog/Game/GOComponents/GOCTransform.h"
@@ -297,6 +303,7 @@
 #include "Hedgehog/Graphics/GOCVisualTransformed.h"
 #include "Hedgehog/Graphics/GOCVisualModel.h"
 #include "Hedgehog/Graphics/GOCVisualDebugDraw.h"
+#include "Hedgehog/Graphics/GOCOcclusionCapsule.h"
 #include "Hedgehog/Graphics/VisualManager.h"
 #include "Hedgehog/Graphics/VisibilityManager.h"
 #include "Hedgehog/Graphics/FxParamEditor.h"
@@ -304,10 +311,10 @@
 #include "Hedgehog/Physics/ShapeHolder.h"
 #include "Hedgehog/Physics/EventQueue.h"
 #include "Hedgehog/Physics/GOCCollider.h"
-// #include "Hedgehog/Physics/GOCSphereCollider.h"
-// #include "Hedgehog/Physics/GOCBoxCollider.h"
-// #include "Hedgehog/Physics/GOCCapsuleCollider.h"
-// #include "Hedgehog/Physics/GOCCylinderCollider.h"
+#include "Hedgehog/Physics/GOCSphereCollider.h"
+#include "Hedgehog/Physics/GOCBoxCollider.h"
+#include "Hedgehog/Physics/GOCCapsuleCollider.h"
+#include "Hedgehog/Physics/GOCCylinderCollider.h"
 #include "Hedgehog/Physics/PhysicsWorld.h"
 #include "Hedgehog/Physics/PhysicsWorldHavok.h"
 // #include "Hedgehog/Physics/PhysicsViewerContext.h"
@@ -318,3 +325,4 @@
 // #include "Application/Player/PlayerParameterService.h"
 #include "Application/Player/GOCPlayerParameter.h"
 // #include "Application/Player/GOCPlayerKinematicParams.h"
+#include "Application/Graphics/FxParamManager.h"

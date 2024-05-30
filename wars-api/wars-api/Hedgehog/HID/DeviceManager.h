@@ -1,6 +1,7 @@
 #pragma once
 
 namespace hh::hid {
+    class Keyboard;
     class DeviceManager : public fnd::BaseObject {
         csl::ut::MoveArray<InputDevice*> inputDevices;
         csl::ut::MoveArray<void*> unk2;

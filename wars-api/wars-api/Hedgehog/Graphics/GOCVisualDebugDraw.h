@@ -7,20 +7,19 @@ namespace hh::gfx {
             void* unk1;
             uint16_t unk2;
             fnd::Geometry* geometry;
-            uint64_t unk3;
-            uint64_t unk4;
             csl::ut::Color<uint8_t> color;
-            uint8_t unk6;
         };
 
+        void* unk201;
+        uint32_t unk202;
+
     public:
-        inline GOCVisualDebugDraw(csl::fnd::IAllocator* allocator) : GOCVisualTransformed{ allocator } {
-            gocEventMask.m_dummy = 5;
-        }
+        inline GOCVisualDebugDraw();
         void Setup(const SetupInfo& setupInfo);
 
 		virtual void* GetRuntimeTypeInfo() override;
-        virtual void OnGOCVisualEvent(GOCVisualEvent unkParam1, unsigned int unkParam2, void* unkParam3) override {}
+		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
+        virtual void OnGOCVisualEvent(GOCVisualEvent unkParam1, unsigned int unkParam2, void* unkParam3) override;
         
         GOCOMPONENT_CLASS_DECLARATION(GOCVisualDebugDraw)
     };

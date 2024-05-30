@@ -16,9 +16,7 @@ namespace hh::fw {
         static Application* instance;
         CREATE_FUNC(Application, FrameworkEnvironment* frameworkEnvironment);
 
-        inline static Application* GetInstance() {
-            return RESOLVE_STATIC_VARIABLE(instance);
-        }
+        inline static Application* GetInstance();
 
         void AddListener(ApplicationListener* listener);
         void RemoveListener(ApplicationListener* listener);

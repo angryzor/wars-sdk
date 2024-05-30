@@ -7,6 +7,15 @@
 	public:\
 		static const hh::game::GameServiceClass* GetClass();
 
+#define GAMESERVICE_CLASS_DECLARATION_INLINE_GETCLASS(ClassName) private:\
+		static const hh::game::GameServiceClass gameServiceClass;\
+		ClassName();\
+		static hh::game::GameService* Create(csl::fnd::IAllocator* allocator);\
+	public:\
+		inline static const hh::game::GameServiceClass* GetClass() {\
+			return &RESOLVE_STATIC_VARIABLE(gameServiceClass);\
+		}
+
 namespace hh::game
 {
 	class GameManager;
@@ -35,5 +44,6 @@ namespace hh::game
 		virtual void* GetRuntimeTypeInfo();
 		virtual void OnAddedToGame() {}
 		virtual void OnRemovedFromGame() {}
+		virtual uint64_t GameService_UnkFunc1() {};
 	};
 }

@@ -31,14 +31,13 @@ namespace hh::game {
         char internalPlayerInputIndex;
         char objectLayer;
         char priority;
-        bool unk4; // GOCInput's unk103
     public:
         csl::ut::Bitset<Flags> flags;
     private:
         InputManager* inputManager_; // This is set in RegisterInputComponent and used in GOCInput's OnGOCEvent and in SetUnk5Flag1, but I don't know why this is a separate pointer.
         InputManager* inputManager;
         InternalPlayerInput* internalPlayerInput;
-        csl::ut::VariableString objectName;
+        csl::ut::VariableString componentName;
         csl::ut::InplaceMoveArray<InputListener*, 2> inputListeners;
     public:
         csl::ut::MoveArray<InputMonitor<uint16_t>> actionMonitors;

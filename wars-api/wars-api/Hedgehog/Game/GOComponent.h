@@ -2,13 +2,13 @@
 
 #define GOCOMPONENT_CLASS_DECLARATION(ClassName) private:\
 		static const hh::game::GOComponentClass componentClass;\
-		static ClassName* Create(csl::fnd::IAllocator* allocator);\
+		static hh::game::GOComponent* Create(csl::fnd::IAllocator* allocator);\
 	public:\
 		static const hh::game::GOComponentClass* GetClass();
 
 #define GOCOMPONENT_CLASS_DECLARATION_INLINE_GETCLASS(ClassName) private:\
 		static const hh::game::GOComponentClass componentClass;\
-		static ClassName* Create(csl::fnd::IAllocator* allocator);\
+		static hh::game::GOComponent* Create(csl::fnd::IAllocator* allocator);\
 	public:\
 		inline static const hh::game::GOComponentClass* GetClass() {\
 			return &RESOLVE_STATIC_VARIABLE(componentClass);\

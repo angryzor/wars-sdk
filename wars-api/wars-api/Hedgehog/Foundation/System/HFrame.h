@@ -26,14 +26,14 @@ namespace hh::fnd {
     //     csl::math::Vector4 unk17;
     //     HFrame(csl::fnd::IAllocator* allocator);
     // };
+    class HFrame;
+    class HFrameListener {
+    public:
+        virtual ~HFrameListener() = default;
+        virtual void HFrameUpdatedCallback(const HFrame* frame, bool unkParam);
+    };
     class HFrame : public ReferencedObject {
     public:
-        class Listener {
-        public:
-            virtual ~Listener() = default;
-            virtual void HFrameUpdatedCallback(const HFrame* frame, bool unkParam);
-        };
-
         enum class Flag : uint32_t {
             DIRTY = 1,
             CHILD_DIRTY = 2,
@@ -52,15 +52,15 @@ namespace hh::fnd {
         hh::game::GOCTransform* gocTransform;
         Flag flags;
         csl::ut::LinkList<HFrame> children;//{ offsetof(HFrame, linkListNode) };
-        csl::ut::InplaceMoveArray<Listener*, 10> listeners;
+        csl::ut::InplaceMoveArray<HFrameListener*, 10> listeners;
         csl::math::Transform fullTransform;
         csl::math::Transform localTransform;
         DEFAULT_CREATE_FUNC(HFrame);
     
         void AddChild(HFrame* child);
         void RemoveChild(HFrame* child);
-        void AddListener(Listener* child);
-        void RemoveListener(Listener* child);
+        void AddListener(HFrameListener* child);
+        void RemoveListener(HFrameListener* child);
         void SetHierarchyRoot(HFrame* frame);
         void SetLocalTransform(const csl::math::Transform& transform);
         void SetLocalTranslation(const csl::math::Vector3& position);
