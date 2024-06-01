@@ -1,26 +1,18 @@
 #pragma once
 
 namespace hh::fnd {
-    class ResourceManager : public fnd::BaseObject, public ResourceManagerRelatedUnk1Listener, public csl::fnd::Singleton<ResourceManager> {
+    class ResourceManager : public fnd::ReferencedObject, public csl::fnd::Singleton<ResourceManager> {
         csl::ut::MoveArray<DynamicResourceContainer*> resourceContainers;
-        ResourceLoader::Unk2 unk2;
+        csl::ut::MoveArray<void*> unk4; // probably managedResources
         csl::ut::PointerMap<const ResourceTypeInfo*, uint32_t> resourceContainerIndexByTypeInfo;
-        ResourceManagerRelatedUnk1 unk4;
         csl::ut::MoveArray<void*> unk5; // probably managedResources
-        csl::ut::MoveArray<void*> unk6;
         uint64_t unk7;
         uint64_t unk8;
-        SimpleResourceContainer* simpleContainer;
-        csl::ut::MoveArray<ManagedResource*> unk10;
-        csl::fnd::Mutex mutex;
 
     public:
         ManagedResource* GetResource(const char* name, const hh::fnd::ResourceTypeInfo* resourceTypeInfo);
         ResourceManager();
         void Setup();
-
-        virtual void RMRU1L_UnkFunc1(uint64_t unkParam1, uint64_t unkParam2) override;
-        virtual void RMRU1L_UnkFunc2(uint64_t unkParam1, uint64_t unkParam2) override;
 
         const csl::ut::MoveArray<ManagedResource*>& GetResourcesByTypeInfo(const ResourceTypeInfo* typeInfo);
         csl::ut::MoveArray<DynamicResourceContainer*>& GetResourceContainers() {

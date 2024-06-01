@@ -6,6 +6,7 @@ namespace hh::gfx {
         needle::MaterialResource* resource;
         // needle::MaterialResourceReference* resourceReference;
         void* resourceReference;
+        csl::ut::MoveArray<void*> unk101;
 
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override;

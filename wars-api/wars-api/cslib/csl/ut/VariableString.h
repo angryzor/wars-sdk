@@ -31,7 +31,11 @@ namespace csl::ut
 		}
 
 		VariableString(const VariableString& other);
-		VariableString(VariableString&& other);
+		inline VariableString(VariableString&& other) : m_pStr{ other.m_pStr }, m_pAllocator{ other.m_pAllocator }
+		{
+			other.m_pStr = nullptr;
+			other.m_pAllocator = GetAllocator();
+		}
 		
 		~VariableString();
 

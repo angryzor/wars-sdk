@@ -46,15 +46,9 @@ namespace hh::gfnd {
         virtual void SetUnk2(int a2, int a3, unsigned int* a4);
 
         inline void DrawSphereFixed(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color) {
-            Eigen::Affine3f transformA;
-            Eigen::Affine3f transformB;
-
-            transformA.fromPositionOrientationScale(Eigen::Vector3f{ 0, 0, 0 }, Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()), Eigen::Vector3f{ 1, 1, 1 });
-            transformB.fromPositionOrientationScale(Eigen::Vector3f{ 0, 0, 0 }, Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()), Eigen::Vector3f{ 1, 1, 1 });
-
             DrawCircle({ transform }, radius, color);
-            DrawCircle({ transform * transformA.matrix() }, radius, color);
-            DrawCircle({ transform * transformB.matrix() }, radius, color);
+            DrawCircle({ transform * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()) }, radius, color);
+            DrawCircle({ transform * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()) }, radius, color);
         }
     };
 }

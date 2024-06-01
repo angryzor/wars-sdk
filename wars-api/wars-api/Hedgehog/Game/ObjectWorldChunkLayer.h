@@ -24,13 +24,6 @@ namespace hh::game {
 
         // inline void AddObjectData(const hh::game::GameObjectClass& objClass, const char* name, )
 
-        inline void RemoveObjectData(ObjectData* objData) {
-            if (chunk)
-                chunk->RemoveWorldObjectStatus(objData);
-            if (resource) {
-                resource->RemoveObject(objData);
-                TerminateObjectData(GetAllocator(), objData);
-            }
-        }
+        inline void RemoveObjectData(ObjectData* objData);
     };
 }

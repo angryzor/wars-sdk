@@ -14,7 +14,6 @@ namespace hh::game {
         ObjectData* objectData;
         csl::ut::Bitset<Flag> flags;
         uint32_t state;
-        int spawnPriority;
         virtual ~WorldObjectStatus() = default;
 
         inline bool IsStarted() {

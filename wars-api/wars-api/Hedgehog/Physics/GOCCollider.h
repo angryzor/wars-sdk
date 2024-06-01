@@ -110,6 +110,9 @@ namespace hh::physics {
         void RemoveListener(GOCColliderListener* listener);
         void SetEnabled(bool enabled);
 
+        inline const csl::math::Matrix34& GetWorldTransform() const { return worldTransform; };
+        inline const csl::math::Matrix34& GetLocalTransform() const { return localTransform; };
+
         GOCOMPONENT_CLASS_DECLARATION(GOCCollider);
     };
 }

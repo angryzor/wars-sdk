@@ -34,6 +34,11 @@ namespace hh::game
 		static void FireObjectRemovedFromLayer(GameObject* gameObject, int layer);
 	};
 
+	struct GameObjectClassAttribute {
+		const char* name;
+		void* value;
+	};
+
 	class GameObjectClass {
 	public:
 		const char* name{};
@@ -45,16 +50,16 @@ namespace hh::game
 		uint64_t unk16{};
 		uint64_t unk17{};
 		uint32_t attributeCount{};
-		const hh::fnd::RflClassMember::Value* attributes{};
+		const GameObjectClassAttribute* attributes{};
 		const hh::fnd::RflClass* spawnerDataRflClass{};
 	private:
 		GameObject* Create(csl::fnd::IAllocator* pAllocator) const;
 	public:
-		GameObjectClass(const char* name, const char* scopedName, size_t objectSize, GameObject* (*instantiator)(csl::fnd::IAllocator* allocator), uint32_t attributeCount, const hh::fnd::RflClassMember::Value* attributes, const hh::fnd::RflClass* spawnerDataRflClass)
+		GameObjectClass(const char* name, const char* scopedName, size_t objectSize, GameObject* (*instantiator)(csl::fnd::IAllocator* allocator), uint32_t attributeCount, const GameObjectClassAttribute* attributes, const hh::fnd::RflClass* spawnerDataRflClass)
 			: name{ name }, scopedName{ scopedName }, objectSize{ objectSize }, instantiator{ instantiator }, attributeCount{ attributeCount }, attributes{ attributes }, spawnerDataRflClass{ spawnerDataRflClass } {}
 		template<typename T>
 		T* Create(csl::fnd::IAllocator* pAllocator) const { return static_cast<T*>(Create(pAllocator)); }
-		const fnd::RflClassMember::Value* GetAttribute(const char* name) const;
+		const void* GetAttributeValue(const char* name) const;
 		// const fnd::RflClassMember::Value* GetAttributeValue(const char* name) const;
     };
 

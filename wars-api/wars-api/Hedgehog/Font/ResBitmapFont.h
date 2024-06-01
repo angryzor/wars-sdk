@@ -13,9 +13,11 @@ namespace hh::font {
     class ResBitmapFont : public fnd::ManagedResource {
         BFNT_ROOT* binaryData;
     public:
-        static const fnd::ResourceTypeInfo* GetTypeInfo();
         virtual void Load(void* data, size_t size);
         virtual void Unload();
         virtual void Resolve(fnd::ResourceResolver& resolver);
+        virtual void Reload(void* data, size_t size) {}
+
+        MANAGED_RESOURCE_CLASS_DECLARATION(ResBitmapFont)
     };
 }

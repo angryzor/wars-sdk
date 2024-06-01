@@ -7,8 +7,10 @@ namespace hh::game {
         uint64_t size;
         void* data;
 
-        ComponentData(csl::fnd::IAllocator* allocator, const GOComponentRegistry::GOComponentRegistryItem* gocRegItem, void* data) : type{ gocRegItem->name }, size{ gocRegItem->rflClass->GetSizeInBytes() }, data{ data } {
-        }
+        template<typename T>
+        ComponentData(const char* type, T* data) : type{ type }, size{ sizeof(T) }, data{ data } {}
+        // ComponentData(csl::fnd::IAllocator* allocator, const GOComponentRegistry::GOComponentRegistryItem* gocRegItem, void* data) : type{ gocRegItem->name }, size{ gocRegItem->rflClass->GetSizeInBytes() }, data{ data } {
+        // }
     };
 
     struct ObjectTransformData {
@@ -56,6 +58,10 @@ namespace hh::game {
         }
 
         ComponentData* GetComponentDataByType(const char* type);
+
+        inline const char* GetName() {
+            return name;
+        }
     };
 
     struct ObjectWorldData {

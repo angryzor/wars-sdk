@@ -250,6 +250,8 @@ namespace hh::game
 		void AddGameObjectListener(GameObjectListener* listener);
 		void RemoveGameObjectListener(GameObjectListener* listener);
 		void ReloadInputSettings(bool unkParam1);
+		void InitShutdownPendingObjects();
+		void FinishShutdownPendingObjects();
 		void ShutdownPendingObjects();
 		void ClearAllGameObjects();
 		fnd::Message* SendMessage(fnd::Message& message);

@@ -24,7 +24,6 @@ namespace hh::game {
     bool GetStatusEternal(const GameObjectClass* gameObjectClass, int* type);
     bool GetStatusExtrinsic(const GameObjectClass* gameObjectClass, int* type);
 
-    class ObjectWorld;
     class ObjectWorldChunkLayer;
     class ObjectWorldChunk : public fnd::ReferencedObject, public GameManagerListener {
         enum class Flag : uint8_t {
@@ -55,7 +54,7 @@ namespace hh::game {
 
         ObjectWorldChunkLayer* GetLayerByName(const char* name) const;
 
-        void AddWorldObjectStatus(ObjectData* objectData, bool enabled, int spawnPriority);
+        void AddWorldObjectStatus(ObjectData* objectData, bool enabled);
         void RemoveWorldObjectStatus(ObjectData* objectData);
 
         void AddListener(ObjectWorldChunkListener* listener);
@@ -67,9 +66,8 @@ namespace hh::game {
         GameObject* Spawn(const ObjectData* objectData);
         GameObject* SpawnByObjectId(ObjectId id);
         GameObject* SpawnByObjectId(ObjectId id, ObjectAttribute filter);
-        void SpawnAll(ObjectAttribute filter);
         GameObject* SpawnByIndex(int index, ObjectAttribute filter);
-        GameObject* SpawnByAttribute(ObjectAttribute filter);
+        void SpawnByAttribute(ObjectAttribute filter);
 
         GameObject* GetGameObjectByObjectId(ObjectId id) const;
         WorldObjectStatus GetWorldObjectStatusByObjectId(ObjectId id) const;
@@ -120,9 +118,7 @@ namespace hh::game {
             gameManager->ShutdownPendingObjects();
         }
 
-        inline void SetEditorStatus(bool status) {
-            flags.set(Flag::EDITOR, status);
-        }
+        inline void SetEditorStatus(bool status);
         inline bool IsStatusEditor() {
             return flags.test(Flag::EDITOR);
         }

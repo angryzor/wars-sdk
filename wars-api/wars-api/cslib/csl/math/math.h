@@ -99,21 +99,29 @@ namespace csl::math
 		}
 	};
 
-	class alignas(16) Matrix34 : public Eigen::Matrix4f
+	class alignas(16) Matrix34 : public Eigen::Affine3f
 	{
 	public:
-		Vector3& GetColumn(uint32_t column) const
-		{
-			return *(Vector3*)col(column).data();
-		}
+		// Vector3& GetColumn(uint32_t column) const
+		// {
+		// 	return *(Vector3*)col(column).data();
+		// }
 
-		void SetColumn(uint32_t column, const Vector3& data)
-		{
-			*(Vector3*)col(column).data() = data;
-		}
+		// void SetColumn(uint32_t column, const Vector3& data)
+		// {
+		// 	*(Vector3*)col(column).data() = data;
+		// }
 
 		Vector3 GetTransVector() const;
 		void SetTransVector(const Vector3& vec);
+
+		inline bool operator==(const csl::math::Matrix34& other) const {
+			return this->matrix() == other.matrix();
+		}
+
+		inline bool operator!=(const csl::math::Matrix34& other) const {
+			return this->matrix() != other.matrix();
+		}
 	};
 	
 	class alignas(16) Quaternion : public Eigen::Quaternionf
@@ -131,7 +139,7 @@ namespace csl::math
 			
 		}
 
-		Quaternion(const Matrix34& matrix) : Eigen::Quaternionf(matrix.topLeftCorner<3, 3>())
+		Quaternion(const Matrix34& matrix) : Eigen::Quaternionf(matrix.rotation())
 		{
 			
 		}

@@ -1,7 +1,7 @@
 #pragma once
 
 namespace hh::game {
-    class GameObjectSystem : public fnd::BaseObject, public csl::fnd::Singleton<GameObjectSystem> {
+    class GameObjectSystem : public fnd::ReferencedObject, public csl::fnd::Singleton<GameObjectSystem> {
         class GOComponentReference {
             const char* name;
             GOComponentClass* componentClass;
@@ -9,10 +9,10 @@ namespace hh::game {
         };
 
     public:
-        csl::fnd::IAllocator* pObjectAllocator;
-        fnd::ThreadSafeTlsfHeapAllocator objectAllocator;
+        // csl::fnd::IAllocator* pObjectAllocator;
+        // fnd::ThreadSafeTlsfHeapAllocator objectAllocator;
+        char pad[0x1C0];
         GameObjectRegistry* gameObjectRegistry;
-        GOComponentRegistry* goComponentRegistry;
 
         GameObjectSystem(csl::fnd::IAllocator* pAllocator);
 

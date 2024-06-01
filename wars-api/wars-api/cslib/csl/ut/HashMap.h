@@ -23,7 +23,7 @@ namespace csl::ut
 		size_t m_OpDummy{};
 		
 	protected:
-		bool isUninitialized()
+		bool isUninitialized() const
 		{
 			return m_Capacity & csl::ut::SIGN_BIT;
 		}
@@ -125,7 +125,7 @@ namespace csl::ut
 			m_pElements = other.m_pElements;
 			m_Length = other.m_Length;
 			m_Capacity = other.m_Capacity;
-			m_HashMask = other.m_HaskMask;
+			m_HashMask = other.m_HashMask;
 			other.m_pElements = nullptr;
 			other.m_Length = 0;
 			other.m_Capacity = csl::ut::SIGN_BIT;
@@ -240,7 +240,7 @@ namespace csl::ut
 			}
 		}
 
-		void Insert(TKey key, TValue value)
+		iterator InsertAndGet(TKey key, TValue value)
 		{
 			size_t hash = TOp::hash(key) & 0x7FFFFFFFFFFFFFFF;
 			if (m_Length || GetCapacity())
@@ -282,6 +282,13 @@ namespace csl::ut
 			}
 
 			new (&pElem->m_Value) TValue(value);
+
+			return { this, idx };
+		}
+
+		void Insert(TKey key, TValue value)
+		{
+			InsertAndGet(key, value);
 		}
 
 		TValue& GetValueOrFallback(const TKey& key, TValue&& fallback) const {

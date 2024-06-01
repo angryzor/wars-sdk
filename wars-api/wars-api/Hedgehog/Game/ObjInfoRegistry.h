@@ -2,12 +2,12 @@
 
 namespace hh::game
 {
-    class ObjInfoRegistry : fnd::BaseObject {
-        static ObjInfoClass* staticObjInfoClasses[430];
+    class ObjInfoRegistry : fnd::ReferencedObject {
+        static ObjInfoClass* staticObjInfoClasses[249];
     public:
         csl::ut::MoveArray<ObjInfoClass*> objInfos;
         csl::ut::StringMap<ObjInfoClass*> objInfosByName;
         static ObjInfoRegistry* instance;
-        ObjInfoRegistry(csl::fnd::IAllocator* pAllocator);
+        DEFAULT_CREATE_FUNC(ObjInfoRegistry);
     };
 }

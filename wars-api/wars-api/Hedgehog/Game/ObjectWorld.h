@@ -8,18 +8,16 @@ namespace hh::game {
         virtual void WorldChunkRemovedCallback(ObjectWorldChunk* chunk) {}
     };
 
-    class ObjectWorld : public GameService, public GameStepListener {
+    class ObjectWorld2 : public GameService {
         csl::ut::MoveArray<ObjectWorldChunk*> worldChunks;
         csl::ut::MoveArray<ObjectWorldListener*> listeners;
         csl::ut::MoveArray<ObjectWorldExtension*> extensions;
-        uint64_t unk104;
         uint8_t unk105; //flags? 0 = LEVEL_STARTED, 1 = EDITOR_STARTED
 
     public:
 		virtual void* GetRuntimeTypeInfo() override;
 		virtual void OnAddedToGame() override;
 		virtual void OnRemovedFromGame() override;
-		virtual void UpdateCallback(GameManager* gameManager, const game::GameStepInfo& gameStepInfo) override;
 
         csl::ut::MoveArray<ObjectWorldChunk*>& GetWorldChunks() const;
         void AddWorldChunk(ObjectWorldChunk* chunk);
@@ -39,6 +37,8 @@ namespace hh::game {
         void EditorStarted();
         void EditorEnded();
 
-        GAMESERVICE_CLASS_DECLARATION(ObjectWorld)
+        GAMESERVICE_CLASS_DECLARATION(ObjectWorld2)
     };
+
+    typedef ObjectWorld2 ObjectWorld;
 }
