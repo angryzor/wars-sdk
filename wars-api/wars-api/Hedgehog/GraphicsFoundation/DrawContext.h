@@ -32,7 +32,7 @@ namespace hh::gfnd {
         virtual void EndDraw2d();
         virtual void UnkFunc8();
         virtual void DrawPrimitive(PrimitiveType primitiveType, const DrawVertex* vertices, const unsigned short* indices, unsigned int count);
-        virtual void DrawSphere(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color);
+        virtual void DrawSphere_(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color);
         virtual void DrawCapsule(const csl::math::Matrix34& transform, float height, float radius, const csl::ut::Color8& color);
         virtual void DrawAABB(const csl::math::Vector3& minPos, const csl::math::Vector3& maxPos, const csl::ut::Color8& color);
         virtual void DrawOBB(const csl::math::Matrix34& transform, const csl::math::Vector3& scale, const csl::ut::Color8& color);
@@ -45,7 +45,8 @@ namespace hh::gfnd {
         virtual void SetCullingMode(unsigned int idx);
         virtual void SetUnk2(int a2, int a3, unsigned int* a4);
 
-        inline void DrawSphereFixed(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color) {
+        // Fixed version because the real version is buggy
+        inline void DrawSphere(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color) {
             DrawCircle({ transform }, radius, color);
             DrawCircle({ transform * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()) }, radius, color);
             DrawCircle({ transform * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(1.5707964, Eigen::Vector3f::UnitZ()) }, radius, color);

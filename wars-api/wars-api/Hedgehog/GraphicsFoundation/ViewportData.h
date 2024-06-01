@@ -9,21 +9,47 @@ namespace hh::gfnd {
     };
 
     struct alignas(16) ViewportData {
+        enum class ProjectionType : uint32_t {
+            PERSPECTIVE_FOV,
+            PERSPECTIVE,
+            ORTHOGONAL,
+        };
+
+        struct FovProjectionParameters {
+            float fov;
+            float aspectRatio;
+            float nearClip;
+            float farClip;
+        };
+
+        struct FrustumProjectionParameters {
+            float top;
+            float bottom;
+            float left;
+            float right;
+            float nearClip;
+            float farClip;
+        };
+
+        union ProjectionParameters {
+            FovProjectionParameters fov;
+            FrustumProjectionParameters frustum;
+        };
+
         csl::math::Matrix44 viewMatrix;
         ViewportDimensions viewportDimensions;
         csl::math::Matrix44 projMatrix;
-        uint32_t unk1;
+        ProjectionType projectionType;
         csl::math::Vector3 lookAtPos;
-        float fov;
-        float aspectRatio;
-        float nearClip;
-        float farClip;
-        uint64_t unk8;
+        ProjectionParameters projectionParameters;
 
         ViewportData();
         ViewportData& operator=(const ViewportData& other);
         void SetDimensions(const ViewportDimensions& other);
         void SetPerspectiveProjectionMatrix(float fov, float aspectRatio, float nearClip, float farClip);
+        void SetPerspectiveProjectionMatrix(float top, float bottom, float left, float right, float nearClip, float farClip);
+        void SetOrthogonalProjectionMatrix(float top, float bottom, float left, float right, float nearClip, float farClip);
+        void GetPerspectiveProjectionParameters(float* fov, float* aspectRatio, float* nearClip, float* farClip);
         inline csl::math::Matrix44 GetInverseViewMatrix() {
             return { viewMatrix.inverse() };
         }

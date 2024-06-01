@@ -3,7 +3,7 @@
 #define GAMEOBJECT_CLASS_DECLARATION(ClassName) private:\
 		static const hh::game::GameObjectClass staticGameObjectClass;\
 		static hh::game::GameObject* Create(csl::fnd::IAllocator* allocator);\
-		ClassName(csl::fnd::IAllocator* allocator);\
+		ClassName();\
 	public:\
 		static const hh::game::GameObjectClass* GetClass();
 
@@ -66,13 +66,6 @@ namespace hh::game
 	class WorldObjectStatus;
 	class GameObject : public fnd::RefByHandleObject, public fnd::Messenger
 	{
-		struct Unk2 {
-			int64_t unk31;
-			int64_t unk32;
-			int64_t unk33;
-			int64_t unk34;
-		};
-
 	public:
 		enum class StatusFlags : char {
 			KILLED,
@@ -104,18 +97,16 @@ namespace hh::game
 
 		WorldObjectStatus* status;
 		GameObjectClass* objectClass;
-		Unk2 unk70;
-		Unk2 unk71;
-		Unk2 unk72;
+		uint64_t unk70;
 		
 	public:
-		virtual bool ProcessMessage(fnd::Message& message) override;
-		virtual bool ReceiveMessage(fnd::Message& message) override;
+		virtual void* GetRuntimeTypeInfo() const;
 		virtual void AddCallback(GameManager* gameManager) {}
 		virtual void RemoveCallback(GameManager* gameManager) {}
 		virtual void Update(fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) {}
 		virtual void UnkFunc9() {}
-		virtual void UnkFunc10() {}
+		virtual bool ProcessMessage(fnd::Message& message) override;
+		virtual bool ReceiveMessage(fnd::Message& message) override;
 
 	private:
 		void SetUpdateFlags(fnd::UpdatingPhase phase);

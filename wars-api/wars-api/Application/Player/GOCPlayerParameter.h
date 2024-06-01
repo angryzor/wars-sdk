@@ -46,8 +46,8 @@ namespace app::player {
         //     return reinterpret_cast<T*>(GetPlayerParameter(rflClass));
         // }
 
-        virtual void* GetRuntimeTypeInfo() override;
-        virtual const char* GetCategory() override;
+        virtual void* GetRuntimeTypeInfo() const override;
+        virtual const char* GetCategory() const override;
 		virtual void OnGOCEvent(hh::game::GOComponent::GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
         GOCOMPONENT_CLASS_DECLARATION_INLINE_GETCLASS(GOCPlayerParameter)

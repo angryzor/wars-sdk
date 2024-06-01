@@ -7,10 +7,9 @@ namespace hh::game {
 	};
 
 	class InternalCameraStack : public fnd::ReferencedObject {
+	public:
 		int id;
 		csl::ut::MoveArray<CameraComponent*> components;
-		volatile uint32_t spinlock;
-	public:
 		InternalCameraStack(csl::fnd::IAllocator* allocator);
 	};
 
@@ -25,13 +24,21 @@ namespace hh::game {
 		void RemoveComponent(CameraComponent* component);
 
 		CameraComponent* GetTopComponent(int viewportId);
-		void GetComponents(int viewportId, csl::ut::MoveArray<CameraComponent*>& components);
+		inline void GetComponents(int viewportId, csl::ut::MoveArray<CameraComponent*>& components) {
+			auto* stack = cameraStacks[viewportId];
+			components.reserve(stack->components.size());
+			
+			for (auto* component : stack->components)
+				components.push_back(component);
+		}
 		void AddComponentToStack(CameraComponent* component);
 		void RemoveComponentFromStack(CameraComponent* component);
 
-		void SetComponentViewportDataUnk6(CameraComponent* component, const csl::math::Vector4& newUnk6);
-		void SetComponentViewMatrix(CameraComponent* component, csl::math::Matrix44& viewMatrix);
+		void SetComponentLookAtPos(CameraComponent* component, const csl::math::Vector3& lookAtPos);
+		void SetComponentViewMatrix(CameraComponent* component, const csl::math::Matrix44& viewMatrix);
 		void SetComponentPerspectiveProjectionMatrix(CameraComponent* component, float fov, float aspectRatio, float nearClip, float farClip);
+		void SetComponentPerspectiveProjectionMatrix(CameraComponent* component, float top, float bottom, float left, float right, float nearClip, float farClip);
+		void SetComponentOrthogonalProjectionMatrix(CameraComponent* component, float top, float bottom, float left, float right, float nearClip, float farClip);
 
 		void AddListener(CameraManagerListener* listener);
 		void RemoveListener(CameraManagerListener* listener);

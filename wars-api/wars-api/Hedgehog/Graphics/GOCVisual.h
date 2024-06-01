@@ -16,8 +16,8 @@ namespace hh::gfx {
         csl::ut::Bitset<Flag> visualFlags;
         uint8_t unk102;
         CREATE_FUNC(GOCVisual, uint8_t unk102Param);
-		virtual void* GetRuntimeTypeInfo() override;
-		virtual const char* GetCategory() override;
+		virtual void* GetRuntimeTypeInfo() const override;
+		virtual const char* GetCategory() const override;
         virtual void OnGOCVisualEvent(GOCVisualEvent event, unsigned int unkParam2, void* unkParam3) = 0;
         void SetVisible(bool visible);
         bool IsVisible() const;

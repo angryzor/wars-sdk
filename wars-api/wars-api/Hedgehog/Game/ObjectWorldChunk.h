@@ -40,7 +40,7 @@ namespace hh::game {
         csl::ut::MoveArray<GameObject*> objects;
         csl::ut::MoveArray<WorldObjectStatus> objectStatuses;
         csl::ut::StringMap<WorldObjectStatus*> objectStatusesByName;
-        hh::game::ObjectMap<int> objectIndicesByObjectId;
+        csl::ut::PointerMap<ObjectData*, int> objectIndicesByObjectData;
         csl::ut::PointerMap<GameObjectClass*, csl::ut::MoveArray<GameObject*>*> objectsByClass;
         csl::ut::MoveArray<void*> unk11;
     public:
@@ -69,6 +69,7 @@ namespace hh::game {
         GameObject* SpawnByIndex(int index, ObjectAttribute filter);
         void SpawnByAttribute(ObjectAttribute filter);
 
+        GameObject* GetGameObject(const ObjectData* objectData) const;
         GameObject* GetGameObjectByObjectId(ObjectId id) const;
         WorldObjectStatus GetWorldObjectStatusByObjectId(ObjectId id) const;
 
@@ -76,8 +77,13 @@ namespace hh::game {
             return objectStatuses;
         }
 
+        inline int GetObjectIndexByObjectData(ObjectData* objData) const {
+            return objectIndicesByObjectData.GetValueOrFallback(objData, -1);
+        }
+
         inline int GetObjectIndexById(ObjectId id) const {
-            return objectIndicesByObjectId.GetValueOrFallback(id, -1);
+            auto* objData = GetWorldObjectStatusByObjectId(id).objectData;
+            return objData == nullptr ? -1 : GetObjectIndexByObjectData(objData);
         }
 
         inline GameObject* GetObjectByIndex(int i) const {
@@ -93,26 +99,8 @@ namespace hh::game {
                 DespawnByIndex(i);
             }
         }
-
-        inline void Despawn(ObjectData* objData) {
-            int idx = GetObjectIndexById(objData->id);
-
-            DespawnByIndex(idx);
-        }
         
-        inline void Restart(bool force) {
-            if (force) {
-                for (int i = 0; i < objects.size(); i++) {
-                    objectStatuses[i].Restart();
-                }
-            }
-            else {
-                for (int i = 0; i < objects.size(); i++) {
-                    if (!objectStatuses[i].IsNoRestart())
-                        objectStatuses[i].Restart();
-                }
-            }
-        }
+        void Restart(bool force);
 
         inline void ShutdownPendingObjects() {
             gameManager->ShutdownPendingObjects();

@@ -44,6 +44,6 @@ namespace hh::game
 		virtual void* GetRuntimeTypeInfo();
 		virtual void OnAddedToGame() {}
 		virtual void OnRemovedFromGame() {}
-		virtual uint64_t GameService_UnkFunc1() {};
+		virtual void Update(const fnd::SUpdateInfo& updateInfo) {}
 	};
 }

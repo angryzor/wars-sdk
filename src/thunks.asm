@@ -115,6 +115,11 @@ PUBLIC ?AddCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z
     mov rax, 0140105960h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@GameObject@game@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GameObject@game@hh@@UEBAPEAXXZ:
+    mov rax, 0140105960h
+    jmp rax
+
 PUBLIC ?Create@SoundSettingsController@services@heur@@CAPEAV123@XZ
 ?Create@SoundSettingsController@services@heur@@CAPEAV123@XZ:
     mov rax, 0140107ca0h
@@ -150,6 +155,11 @@ PUBLIC ?RNR_UnkFunc1@ResourceNameResolver@fnd@hh@@UEAAPEBDPEBD@Z
     mov rax, 014011cff0h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@CameraService@camera@app@@UEAAPEAXXZ
+?GetRuntimeTypeInfo@CameraService@camera@app@@UEAAPEAXXZ:
+    mov rax, 0140124040h
+    jmp rax
+
 PUBLIC ?Create@CameraService@services@heur@@CAPEAV123@XZ
 ?Create@CameraService@services@heur@@CAPEAV123@XZ:
     mov rax, 0140124050h
@@ -165,6 +175,11 @@ PUBLIC ??0PlayerPositionProcessor@CameraService@camera@app@@QEAA@XZ
     mov rax, 01401240c0h
     jmp rax
 
+PUBLIC ?ProcessMessage@CameraService@camera@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@CameraService@camera@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 0140124b80h
+    jmp rax
+
 PUBLIC ??0CameraService@services@heur@@QEAA@XZ
 ??0CameraService@services@heur@@QEAA@XZ:
     mov rax, 0140124bd0h
@@ -173,6 +188,31 @@ PUBLIC ??0CameraService@services@heur@@QEAA@XZ
 PUBLIC ??0CameraService@camera@app@@QEAA@XZ
 ??0CameraService@camera@app@@QEAA@XZ:
     mov rax, 0140124bd0h
+    jmp rax
+
+PUBLIC ??0CameraService@camera@app@@AEAA@XZ
+??0CameraService@camera@app@@AEAA@XZ:
+    mov rax, 0140124bd0h
+    jmp rax
+
+PUBLIC ??_DCameraService@camera@app@@QEAAXXZ
+??_DCameraService@camera@app@@QEAAXXZ:
+    mov rax, 0140124c70h
+    jmp rax
+
+PUBLIC ?Update@CameraService@camera@app@@UEAAXAEBUSUpdateInfo@fnd@hh@@@Z
+?Update@CameraService@camera@app@@UEAAXAEBUSUpdateInfo@fnd@hh@@@Z:
+    mov rax, 0140124dc0h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@CameraService@camera@app@@UEAAXXZ
+?OnAddedToGame@CameraService@camera@app@@UEAAXXZ:
+    mov rax, 0140125120h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@CameraService@camera@app@@UEAAXXZ
+?OnRemovedFromGame@CameraService@camera@app@@UEAAXXZ:
+    mov rax, 0140125150h
     jmp rax
 
 PUBLIC ?Construct@ObjClassicItemBoxSpawner@rfl@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
@@ -1037,6 +1077,31 @@ PUBLIC ?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEAAPEAXXZ
 
 PUBLIC ?GetRuntimeTypeInfo@GOCOcclusionCapsule@gfx@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@GOCOcclusionCapsule@gfx@hh@@UEAAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOComponent@game@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOComponent@game@hh@@UEBAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCTransform@game@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCTransform@game@hh@@UEBAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCOcclusionCapsule@gfx@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCOcclusionCapsule@gfx@hh@@UEBAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCCollider@physics@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCCollider@physics@hh@@UEBAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ:
     mov rax, 014014ece0h
     jmp rax
 
@@ -1933,6 +1998,16 @@ PUBLIC ?Create@StageInfo@level@app@@CAPEAV123@XZ
 PUBLIC ??0StageInfo@level@app@@QEAA@XZ
 ??0StageInfo@level@app@@QEAA@XZ:
     mov rax, 01401a5d50h
+    jmp rax
+
+PUBLIC ??0StageInfo@level@app@@AEAA@XZ
+??0StageInfo@level@app@@AEAA@XZ:
+    mov rax, 01401a5d50h
+    jmp rax
+
+PUBLIC ??_DStageInfo@level@app@@QEAAXXZ
+??_DStageInfo@level@app@@QEAAXXZ:
+    mov rax, 01401a5e10h
     jmp rax
 
 PUBLIC ?Create@ExpManager@level@app@@CAPEAV123@XZ
@@ -15695,6 +15770,11 @@ PUBLIC ?GetCategory@GOCPlayerParameter@player@app@@UEAAPEBDXZ
     mov rax, 0140403900h
     jmp rax
 
+PUBLIC ?GetCategory@GOCPlayerParameter@player@app@@UEBAPEBDXZ
+?GetCategory@GOCPlayerParameter@player@app@@UEBAPEBDXZ:
+    mov rax, 0140403900h
+    jmp rax
+
 PUBLIC ?Create@GOCPlayerParameter@player@app@@CAPEAV123@XZ
 ?Create@GOCPlayerParameter@player@app@@CAPEAV123@XZ:
     mov rax, 0140403910h
@@ -15900,6 +15980,11 @@ PUBLIC ?Create@ShareManager@services@heur@@CAPEAV123@XZ
     mov rax, 01405203f0h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@TerrainManager@trr@app@@UEAAPEAXXZ
+?GetRuntimeTypeInfo@TerrainManager@trr@app@@UEAAPEAXXZ:
+    mov rax, 0140520750h
+    jmp rax
+
 PUBLIC ?Create@TerrainManager@services@heur@@CAPEAV123@XZ
 ?Create@TerrainManager@services@heur@@CAPEAV123@XZ:
     mov rax, 0140520760h
@@ -15910,6 +15995,11 @@ PUBLIC ?Create@TerrainManager@trr@app@@CAPEAV123@XZ
     mov rax, 0140520760h
     jmp rax
 
+PUBLIC ?ProcessMessage@TerrainManager@trr@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@TerrainManager@trr@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 01405207c0h
+    jmp rax
+
 PUBLIC ??0TerrainManager@services@heur@@QEAA@XZ
 ??0TerrainManager@services@heur@@QEAA@XZ:
     mov rax, 0140520820h
@@ -15918,6 +16008,16 @@ PUBLIC ??0TerrainManager@services@heur@@QEAA@XZ
 PUBLIC ??0TerrainManager@trr@app@@QEAA@XZ
 ??0TerrainManager@trr@app@@QEAA@XZ:
     mov rax, 0140520820h
+    jmp rax
+
+PUBLIC ??0TerrainManager@trr@app@@AEAA@XZ
+??0TerrainManager@trr@app@@AEAA@XZ:
+    mov rax, 0140520820h
+    jmp rax
+
+PUBLIC ??_DTerrainManager@trr@app@@QEAAXXZ
+??_DTerrainManager@trr@app@@QEAAXXZ:
+    mov rax, 0140520900h
     jmp rax
 
 PUBLIC ?Construct@QTEParameter@rfl@app@@CAXPEAU123@PEAVIAllocator@fnd@csl@@@Z
@@ -16775,9 +16875,44 @@ PUBLIC ?GetClass@SwayParamIndivisual@rfl@heur@@SAPEBVRflClass@fnd@hh@@XZ
     mov rax, 01405be080h
     jmp rax
 
+PUBLIC ??0CameraPose@camera@app_cmn@@QEAA@XZ
+??0CameraPose@camera@app_cmn@@QEAA@XZ:
+    mov rax, 01405c29e0h
+    jmp rax
+
+PUBLIC ??0FrustumParameter@camera@app_cmn@@QEAA@XZ
+??0FrustumParameter@camera@app_cmn@@QEAA@XZ:
+    mov rax, 01405c2a40h
+    jmp rax
+
+PUBLIC ??0CameraParameter@camera@app_cmn@@QEAA@XZ
+??0CameraParameter@camera@app_cmn@@QEAA@XZ:
+    mov rax, 01405c3050h
+    jmp rax
+
+PUBLIC ?ProcessMessage@CameraFrame@camera@app_cmn@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@CameraFrame@camera@app_cmn@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 01405c3570h
+    jmp rax
+
 PUBLIC ??0CameraFrame@camera@app_cmn@@QEAA@XZ
 ??0CameraFrame@camera@app_cmn@@QEAA@XZ:
     mov rax, 01405c3630h
+    jmp rax
+
+PUBLIC ??0CameraFrame@camera@app_cmn@@AEAA@PEAVIAllocator@fnd@csl@@@Z
+??0CameraFrame@camera@app_cmn@@AEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01405c3630h
+    jmp rax
+
+PUBLIC ?Update@CameraFrame@camera@app_cmn@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z
+?Update@CameraFrame@camera@app_cmn@@UEAAXW4UpdatingPhase@fnd@hh@@AEBUSUpdateInfo@56@@Z:
+    mov rax, 01405c3bd0h
+    jmp rax
+
+PUBLIC ??_DCameraFrame@camera@app_cmn@@QEAAXXZ
+??_DCameraFrame@camera@app_cmn@@QEAAXXZ:
+    mov rax, 01405c4d80h
     jmp rax
 
 PUBLIC ??0ResRflParameter@fnd@app_cmn@@QEAA@XZ
@@ -16865,9 +17000,24 @@ PUBLIC ?Create@GOCHsm@fsm@app_cmn@@CAPEAV123@XZ
     mov rax, 01405cbf30h
     jmp rax
 
+PUBLIC ?OnGOCEvent@GOComponent@game@hh@@UEAAXW4GOCEvent@123@AEAVGameObject@23@PEAX@Z
+?OnGOCEvent@GOComponent@game@hh@@UEAAXW4GOCEvent@123@AEAVGameObject@23@PEAX@Z:
+    mov rax, 01405cc480h
+    jmp rax
+
+PUBLIC ?OnGOCEvent@GOCCamera@camera@app_cmn@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z
+?OnGOCEvent@GOCCamera@camera@app_cmn@@UEAAXW4GOCEvent@GOComponent@game@hh@@AEAVGameObject@67@PEAX@Z:
+    mov rax, 01405cc480h
+    jmp rax
+
 PUBLIC ?Create@GOCCamera@camera@app_cmn@@CAPEAV123@XZ
 ?Create@GOCCamera@camera@app_cmn@@CAPEAV123@XZ:
     mov rax, 01405cc7c0h
+    jmp rax
+
+PUBLIC ?GetCategory@GOCCamera@camera@app_cmn@@UEBAPEBDXZ
+?GetCategory@GOCCamera@camera@app_cmn@@UEBAPEBDXZ:
+    mov rax, 01405cc990h
     jmp rax
 
 PUBLIC ??0GOCMotorOnPath@game@app_cmn@@QEAA@XZ
@@ -17340,6 +17490,11 @@ PUBLIC ?GetCategory@GOCCollider@physics@hh@@UEAAPEBDXZ
     mov rax, 0140647620h
     jmp rax
 
+PUBLIC ?GetCategory@GOCCollider@physics@hh@@UEBAPEBDXZ
+?GetCategory@GOCCollider@physics@hh@@UEBAPEBDXZ:
+    mov rax, 0140647620h
+    jmp rax
+
 PUBLIC ?GetClass@GOCSphereCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ
 ?GetClass@GOCSphereCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ:
     mov rax, 0140647c80h
@@ -17570,8 +17725,18 @@ PUBLIC ?GetCategory@GOCVisual@gfx@hh@@UEAAPEBDXZ
     mov rax, 0140667f20h
     jmp rax
 
+PUBLIC ?GetCategory@GOCVisual@gfx@hh@@UEBAPEBDXZ
+?GetCategory@GOCVisual@gfx@hh@@UEBAPEBDXZ:
+    mov rax, 0140667f20h
+    jmp rax
+
 PUBLIC ?GetRuntimeTypeInfo@GOCVisualModel@gfx@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@GOCVisualModel@gfx@hh@@UEAAPEAXXZ:
+    mov rax, 0140667f30h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCVisualModel@gfx@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCVisualModel@gfx@hh@@UEBAPEAXXZ:
     mov rax, 0140667f30h
     jmp rax
 
@@ -17615,6 +17780,11 @@ PUBLIC ?GetRuntimeTypeInfo@GOCVisualTransformed@gfx@hh@@UEAAPEAXXZ
     mov rax, 0140668960h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@GOCVisualTransformed@gfx@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCVisualTransformed@gfx@hh@@UEBAPEAXXZ:
+    mov rax, 0140668960h
+    jmp rax
+
 PUBLIC ?GetClass@GOCVisual@gfx@hh@@SAPEBVGOComponentClass@game@3@XZ
 ?GetClass@GOCVisual@gfx@hh@@SAPEBVGOComponentClass@game@3@XZ:
     mov rax, 0140668970h
@@ -17632,6 +17802,11 @@ PUBLIC ??0GOCVisual@gfx@hh@@QEAA@E@Z
 
 PUBLIC ?GetRuntimeTypeInfo@GOCVisual@gfx@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@GOCVisual@gfx@hh@@UEAAPEAXXZ:
+    mov rax, 0140668a50h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCVisual@gfx@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCVisual@gfx@hh@@UEBAPEAXXZ:
     mov rax, 0140668a50h
     jmp rax
 
@@ -18570,6 +18745,11 @@ PUBLIC ?GetRuntimeTypeInfo@GOCVisualDebugDraw@gfx@hh@@UEAAPEAXXZ
     mov rax, 0140682fd0h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@GOCVisualDebugDraw@gfx@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCVisualDebugDraw@gfx@hh@@UEBAPEAXXZ:
+    mov rax, 0140682fd0h
+    jmp rax
+
 PUBLIC ?Create@GOCPointLight@gfx@hh@@CAPEAV123@XZ
 ?Create@GOCPointLight@gfx@hh@@CAPEAV123@XZ:
     mov rax, 0140684d30h
@@ -18602,6 +18782,11 @@ PUBLIC ??_DGOCOcclusionCapsule@gfx@hh@@QEAAXXZ
 
 PUBLIC ?GetCategory@GOCOcclusionCapsule@gfx@hh@@UEAAPEBDXZ
 ?GetCategory@GOCOcclusionCapsule@gfx@hh@@UEAAPEBDXZ:
+    mov rax, 01406857e0h
+    jmp rax
+
+PUBLIC ?GetCategory@GOCOcclusionCapsule@gfx@hh@@UEBAPEBDXZ
+?GetCategory@GOCOcclusionCapsule@gfx@hh@@UEBAPEBDXZ:
     mov rax, 01406857e0h
     jmp rax
 
@@ -19110,9 +19295,29 @@ PUBLIC ?RemoveListener@ObjectWorldChunk@game@hh@@QEAAXPEAVObjectWorldChunkListen
     mov rax, 01406cd0d0h
     jmp rax
 
+PUBLIC ?Restart@ObjectWorldChunk@game@hh@@QEAAX_N@Z
+?Restart@ObjectWorldChunk@game@hh@@QEAAX_N@Z:
+    mov rax, 01406cd130h
+    jmp rax
+
+PUBLIC ?GetGameObject@ObjectWorldChunk@game@hh@@QEBAPEAVGameObject@23@PEBUObjectData@23@@Z
+?GetGameObject@ObjectWorldChunk@game@hh@@QEBAPEAVGameObject@23@PEBUObjectData@23@@Z:
+    mov rax, 01406cd1b0h
+    jmp rax
+
 PUBLIC ?GetGameObjectByObjectId@ObjectWorldChunk@game@hh@@QEBAPEAVGameObject@23@UObjectId@23@@Z
 ?GetGameObjectByObjectId@ObjectWorldChunk@game@hh@@QEBAPEAVGameObject@23@UObjectId@23@@Z:
     mov rax, 01406cd1f0h
+    jmp rax
+
+PUBLIC ?SpawnByObjectId@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@UObjectId@23@@Z
+?SpawnByObjectId@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@UObjectId@23@@Z:
+    mov rax, 01406cd2f0h
+    jmp rax
+
+PUBLIC ?Spawn@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@PEBUObjectData@23@@Z
+?Spawn@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@PEBUObjectData@23@@Z:
+    mov rax, 01406cd2f0h
     jmp rax
 
 PUBLIC ?SpawnByObjectId@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@UObjectId@23@P6A_NPEBVGameObjectClass@23@PEAH@Z@Z
@@ -19123,6 +19328,11 @@ PUBLIC ?SpawnByObjectId@ObjectWorldChunk@game@hh@@QEAAPEAVGameObject@23@UObjectI
 PUBLIC ?SpawnByAttribute@ObjectWorldChunk@game@hh@@QEAAXP6A_NPEBVGameObjectClass@23@PEAH@Z@Z
 ?SpawnByAttribute@ObjectWorldChunk@game@hh@@QEAAXP6A_NPEBVGameObjectClass@23@PEAH@Z@Z:
     mov rax, 01406cd400h
+    jmp rax
+
+PUBLIC ?Despawn@ObjectWorldChunk@game@hh@@QEAAXPEBUObjectData@23@@Z
+?Despawn@ObjectWorldChunk@game@hh@@QEAAXPEBUObjectData@23@@Z:
+    mov rax, 01406cd740h
     jmp rax
 
 PUBLIC ?DespawnByIndex@ObjectWorldChunk@game@hh@@QEAAXH@Z
@@ -19255,9 +19465,49 @@ PUBLIC ?GetTopComponent@CameraManager@game@hh@@QEAAPEAVCameraComponent@23@H@Z
     mov rax, 01406d2080h
     jmp rax
 
+PUBLIC ?AddListener@CameraManager@game@hh@@QEAAXPEAVCameraManagerListener@23@@Z
+?AddListener@CameraManager@game@hh@@QEAAXPEAVCameraManagerListener@23@@Z:
+    mov rax, 01406d2180h
+    jmp rax
+
+PUBLIC ?RemoveListener@CameraManager@game@hh@@QEAAXPEAVCameraManagerListener@23@@Z
+?RemoveListener@CameraManager@game@hh@@QEAAXPEAVCameraManagerListener@23@@Z:
+    mov rax, 01406d21d0h
+    jmp rax
+
 PUBLIC ?OnRemovedFromGame@CameraManager@game@hh@@UEAAXXZ
 ?OnRemovedFromGame@CameraManager@game@hh@@UEAAXXZ:
     mov rax, 01406d2250h
+    jmp rax
+
+PUBLIC ?AddComponent@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z
+?AddComponent@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z:
+    mov rax, 01406d23b0h
+    jmp rax
+
+PUBLIC ?RemoveComponent@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z
+?RemoveComponent@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z:
+    mov rax, 01406d2440h
+    jmp rax
+
+PUBLIC ?RemoveComponentFromStack@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z
+?RemoveComponentFromStack@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z:
+    mov rax, 01406d25c0h
+    jmp rax
+
+PUBLIC ?SetComponentViewMatrix@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@AEAVMatrix44@math@csl@@@Z
+?SetComponentViewMatrix@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@AEAVMatrix44@math@csl@@@Z:
+    mov rax, 01406d2730h
+    jmp rax
+
+PUBLIC ?SetComponentLookAtPos@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@AEBVVector3@math@csl@@@Z
+?SetComponentLookAtPos@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@AEBVVector3@math@csl@@@Z:
+    mov rax, 01406d27d0h
+    jmp rax
+
+PUBLIC ?SetComponentPerspectiveProjectionMatrix@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@MMMM@Z
+?SetComponentPerspectiveProjectionMatrix@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@MMMM@Z:
+    mov rax, 01406d2850h
     jmp rax
 
 PUBLIC ?Create@CameraManager@game@hh@@CAPEAV123@XZ
@@ -19670,6 +19920,11 @@ PUBLIC ?AddRenderable@GraphicsContext@gfnd@hh@@QEAAXPEAVRenderable@23@@Z
     mov rax, 0140722880h
     jmp rax
 
+PUBLIC ?GetViewportData@GraphicsContext@gfnd@hh@@QEAAAEAUViewportData@23@H@Z
+?GetViewportData@GraphicsContext@gfnd@hh@@QEAAAEAUViewportData@23@H@Z:
+    mov rax, 01407229e0h
+    jmp rax
+
 PUBLIC ??0ResourceLoader@fnd@hh@@QEAA@XZ
 ??0ResourceLoader@fnd@hh@@QEAA@XZ:
     mov rax, 0140722c90h
@@ -19888,6 +20143,31 @@ PUBLIC ?SetFlag@HFrame@fnd@hh@@QEAAXW4Flag@123@_N@Z
 PUBLIC ?GetFamilyID@HFrame@fnd@hh@@UEAAXXZ
 ?GetFamilyID@HFrame@fnd@hh@@UEAAXXZ:
     mov rax, 014073faf0h
+    jmp rax
+
+PUBLIC ??4ViewportData@gfnd@hh@@QEAAAEAU012@AEBU012@@Z
+??4ViewportData@gfnd@hh@@QEAAAEAU012@AEBU012@@Z:
+    mov rax, 014073fc20h
+    jmp rax
+
+PUBLIC ?SetPerspectiveProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMM@Z
+?SetPerspectiveProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMM@Z:
+    mov rax, 014073fcd0h
+    jmp rax
+
+PUBLIC ?SetPerspectiveProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z
+?SetPerspectiveProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z:
+    mov rax, 014073fd50h
+    jmp rax
+
+PUBLIC ?GetPerspectiveProjectionParameters@ViewportData@gfnd@hh@@QEAAXPEAM000@Z
+?GetPerspectiveProjectionParameters@ViewportData@gfnd@hh@@QEAAXPEAM000@Z:
+    mov rax, 014073ff10h
+    jmp rax
+
+PUBLIC ?SetOrthogonalProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z
+?SetOrthogonalProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z:
+    mov rax, 0140740040h
     jmp rax
 
 PUBLIC ?CreateBox@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@0AEBVQuaternion@56@@Z
@@ -21010,6 +21290,11 @@ PUBLIC ?CreateViewMatrix@Matrix44@math@csl@@SA?AV123@VVector3@23@00@Z
     mov rax, 0140869830h
     jmp rax
 
+PUBLIC ?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z
+?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z:
+    mov rax, 014086b940h
+    jmp rax
+
 PUBLIC ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z
 ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z:
     mov rax, 014086ba40h
@@ -21632,6 +21917,11 @@ PUBLIC ?UnkFunc4@ResModelBase@gfx@hh@@UEAA_KXZ
 
 PUBLIC ?UnkFunc5@ResModelBase@gfx@hh@@UEAA_KXZ
 ?UnkFunc5@ResModelBase@gfx@hh@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ
+?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ:
     mov rax, 0140c25064h
     jmp rax
 
@@ -44260,16 +44550,6 @@ PUBLIC ?gameServiceClass@ContentManagerWin32@content@app@@0VGameServiceClass@gam
     mov rax, 01423c0710h
     jmp rax
 
-PUBLIC ?gameServiceClass@CameraService@services@heur@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@CameraService@services@heur@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01423c0728h
-    jmp rax
-
-PUBLIC ?gameServiceClass@CameraService@camera@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@CameraService@camera@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 01423c0728h
-    jmp rax
-
 PUBLIC ?gameServiceClass@DatabaseService@db@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@DatabaseService@db@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 01423c0758h
@@ -51810,16 +52090,6 @@ PUBLIC ?gameServiceClass@ShareManager@services@heur@@0VGameServiceClass@game@hh@
     mov rax, 014240d630h
     jmp rax
 
-PUBLIC ?gameServiceClass@TerrainManager@services@heur@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@TerrainManager@services@heur@@0VGameServiceClass@game@hh@@B:
-    mov rax, 014240d648h
-    jmp rax
-
-PUBLIC ?gameServiceClass@TerrainManager@trr@app@@0VGameServiceClass@game@hh@@B
-?gameServiceClass@TerrainManager@trr@app@@0VGameServiceClass@game@hh@@B:
-    mov rax, 014240d648h
-    jmp rax
-
 PUBLIC ?rflClass@QTEParameter@rfl@app@@2VRflClass@fnd@hh@@B
 ?rflClass@QTEParameter@rfl@app@@2VRflClass@fnd@hh@@B:
     mov rax, 014240d6b0h
@@ -52520,6 +52790,21 @@ PUBLIC ??_DGameManagerListener@game@hh@@QEAAXXZ
     mov rax, 014287b2b0h
     jmp rax
 
+PUBLIC ?GameServiceAddedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceAddedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 014287d730h
+    jmp rax
+
+PUBLIC ?GameServiceRemovedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceRemovedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 014287f430h
+    jmp rax
+
+PUBLIC ??_DCameraExtension@camera@app_cmn@@QEAAXXZ
+??_DCameraExtension@camera@app_cmn@@QEAAXXZ:
+    mov rax, 01429224c0h
+    jmp rax
+
 PUBLIC ??_DGameStepListener@game@hh@@QEAAXXZ
 ??_DGameStepListener@game@hh@@QEAAXXZ:
     mov rax, 0142964860h
@@ -52905,6 +53190,11 @@ PUBLIC ??_DVibration@hid@hh@@QEAAXXZ
     mov rax, 0142c3d670h
     jmp rax
 
+PUBLIC ??_DStageData@level@app@@QEAAXXZ
+??_DStageData@level@app@@QEAAXXZ:
+    mov rax, 0142cae4c0h
+    jmp rax
+
 PUBLIC ??_DWindow@fw@hh@@QEAAXXZ
 ??_DWindow@fw@hh@@QEAAXXZ:
     mov rax, 0142d62510h
@@ -52940,14 +53230,84 @@ PUBLIC ??_DGOCPlayerParameter@player@app@@QEAAXXZ
     mov rax, 0143c86ae0h
     jmp rax
 
+PUBLIC ?GameServiceAddedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceAddedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 01443defb0h
+    jmp rax
+
+PUBLIC ?GameServiceRemovedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceRemovedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 01443e0de0h
+    jmp rax
+
 PUBLIC ??_DReloaderListener@fnd@hh@@QEAAXXZ
 ??_DReloaderListener@fnd@hh@@QEAAXXZ:
     mov rax, 01443e3b50h
     jmp rax
 
+PUBLIC ?UpdateCallback@TerrainManager@trr@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
+?UpdateCallback@TerrainManager@trr@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
+    mov rax, 01443ecb00h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@TerrainManager@trr@app@@UEAAXXZ
+?OnAddedToGame@TerrainManager@trr@app@@UEAAXXZ:
+    mov rax, 01443eebd0h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@TerrainManager@trr@app@@UEAAXXZ
+?OnRemovedFromGame@TerrainManager@trr@app@@UEAAXXZ:
+    mov rax, 01443efae0h
+    jmp rax
+
+PUBLIC ?AddCallback@CameraFrame@camera@app_cmn@@UEAAXPEAVGameManager@game@hh@@@Z
+?AddCallback@CameraFrame@camera@app_cmn@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 014467b570h
+    jmp rax
+
+PUBLIC ?RemoveCallback@CameraFrame@camera@app_cmn@@UEAAXPEAVGameManager@game@hh@@@Z
+?RemoveCallback@CameraFrame@camera@app_cmn@@UEAAXPEAVGameManager@game@hh@@@Z:
+    mov rax, 014467cbc0h
+    jmp rax
+
+PUBLIC ?fUnk3@CameraFrame@camera@app_cmn@@UEAA_NXZ
+?fUnk3@CameraFrame@camera@app_cmn@@UEAA_NXZ:
+    mov rax, 014467de60h
+    jmp rax
+
+PUBLIC ??_DBlendNode@CameraFrame@camera@app_cmn@@QEAAXXZ
+??_DBlendNode@CameraFrame@camera@app_cmn@@QEAAXXZ:
+    mov rax, 0144682440h
+    jmp rax
+
+PUBLIC ??_DCameraController@camera@app_cmn@@QEAAXXZ
+??_DCameraController@camera@app_cmn@@QEAAXXZ:
+    mov rax, 0144683c60h
+    jmp rax
+
+PUBLIC ??_DCameraInterpolator@camera@app_cmn@@QEAAXXZ
+??_DCameraInterpolator@camera@app_cmn@@QEAAXXZ:
+    mov rax, 0144685870h
+    jmp rax
+
 PUBLIC ??_DResRflParameter@fnd@app_cmn@@QEAAXXZ
 ??_DResRflParameter@fnd@app_cmn@@QEAAXXZ:
     mov rax, 0144688cd0h
+    jmp rax
+
+PUBLIC ??_DMsgPopCameraController@camera@app_cmn@@QEAAXXZ
+??_DMsgPopCameraController@camera@app_cmn@@QEAAXXZ:
+    mov rax, 01446997f0h
+    jmp rax
+
+PUBLIC ??_DMsgPushCameraController@camera@app_cmn@@QEAAXXZ
+??_DMsgPushCameraController@camera@app_cmn@@QEAAXXZ:
+    mov rax, 014469a930h
+    jmp rax
+
+PUBLIC ??_DGOCCamera@camera@app_cmn@@QEAAXXZ
+??_DGOCCamera@camera@app_cmn@@QEAAXXZ:
+    mov rax, 01446d6210h
     jmp rax
 
 PUBLIC ??_DFreeCameraListener@game@hh@@QEAAXXZ
@@ -53380,6 +53740,11 @@ PUBLIC ?GameService_UnkFunc1@GameService@game@hh@@UEAA_KXZ
     mov rax, 014540bac0h
     jmp rax
 
+PUBLIC ?Update@GameService@game@hh@@UEAAXAEBUSUpdateInfo@fnd@3@@Z
+?Update@GameService@game@hh@@UEAAXAEBUSUpdateInfo@fnd@3@@Z:
+    mov rax, 014540bac0h
+    jmp rax
+
 PUBLIC ??_DWorldObjectStatus@game@hh@@QEAAXXZ
 ??_DWorldObjectStatus@game@hh@@QEAAXXZ:
     mov rax, 014540df90h
@@ -53413,6 +53778,11 @@ PUBLIC ??_DObjectWorldChunkLayer@game@hh@@QEAAXXZ
 PUBLIC ??_DObjectWorldChunkListener@game@hh@@QEAAXXZ
 ??_DObjectWorldChunkListener@game@hh@@QEAAXXZ:
     mov rax, 014554c540h
+    jmp rax
+
+PUBLIC ?AddComponentToStack@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z
+?AddComponentToStack@CameraManager@game@hh@@QEAAXPEAVCameraComponent@23@@Z:
+    mov rax, 01455542a0h
     jmp rax
 
 PUBLIC ??_DInternalCameraStack@game@hh@@QEAAXXZ

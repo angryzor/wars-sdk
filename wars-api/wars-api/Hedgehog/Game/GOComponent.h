@@ -74,8 +74,8 @@ namespace hh::game
 		GOComponent();
 		virtual ~GOComponent();
 
-		virtual void* GetRuntimeTypeInfo();
-		virtual const char* GetCategory();
+		virtual void* GetRuntimeTypeInfo() const;
+		virtual const char* GetCategory() const;
 		virtual void Update(hh::fnd::UpdatingPhase phase, const hh::fnd::SUpdateInfo& updateInfo) {}
 		virtual bool ProcessMessage(fnd::Message& msg) { return false; }
 

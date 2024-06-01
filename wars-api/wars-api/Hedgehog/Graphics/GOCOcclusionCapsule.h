@@ -10,8 +10,8 @@ namespace hh::gfx {
         csl::math::Vector3 scale;
         uint32_t unk4;
 
-		virtual void* GetRuntimeTypeInfo() override;
-		virtual const char* GetCategory() override;
+		virtual void* GetRuntimeTypeInfo() const override;
+		virtual const char* GetCategory() const override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         virtual void HFrameUpdatedCallback(const fnd::HFrame* frame, bool unkParam) override;
 

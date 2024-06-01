@@ -21,5 +21,26 @@ namespace hh::gfnd {
         virtual void SetColor(const csl::ut::Color<uint8_t>& color) = 0;
         virtual void SetTransform(const csl::math::Matrix34& transform) = 0;
         virtual void Render(DrawContext* drawContext) = 0;
+
+        inline bool Initialize(DrawContext* drawContext, const fnd::Geometry& geometry) {
+            return Initialize(drawContext, geometry, {});
+        }
+
+        inline bool InitializeEdge(DrawContext* drawContext, const fnd::Geometry& geometry) {
+            return InitializeEdge(drawContext, geometry, {});
+        }
+
+        inline bool InitializeWire(DrawContext* drawContext, const fnd::WireGeometry& geometry) {
+            return InitializeWire(drawContext, geometry, {});
+        }
+
+        inline bool InitializeByCopying(DrawContext* drawContext, const GraphicsGeometry* geometry) {
+            return InitializeByCopying(drawContext, geometry, {});
+        }
+
+        inline void Render(DrawContext* drawContext, const csl::math::Matrix34& transform) {
+            SetTransform(transform);
+            Render(drawContext);
+        }
     };
 }

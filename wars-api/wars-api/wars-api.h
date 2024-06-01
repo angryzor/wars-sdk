@@ -348,7 +348,30 @@
 
 #include "ApplicationCommon/Foundation/ResRflParameter.h"
 
+#include "ApplicationCommon/Camera/Types.h"
+#include "ApplicationCommon/Camera/CameraExtension.h"
+#include "ApplicationCommon/Camera/CameraController.h"
+#include "ApplicationCommon/Camera/CameraInterpolator.h"
+#include "ApplicationCommon/Camera/CameraFrame.h"
+#include "ApplicationCommon/Camera/GOCCamera.h"
+#include "ApplicationCommon/Camera/Messages.h"
+
+#include "Application/Player/CharacterId.h"
 // #include "Application/Player/PlayerParameterService.h"
 #include "Application/Player/GOCPlayerParameter.h"
 // #include "Application/Player/GOCPlayerKinematicParams.h"
 #include "Application/Graphics/FxParamManager.h"
+
+// #include "Application/Level/PlayerInformation.h"
+#include "Application/Level/StageData.h"
+#include "Application/Level/StageInfo.h"
+// #include "Application/Level/LevelInfo.h"
+
+#include "Application/Terrain/TerrainManager.h"
+
+#include "Application/Camera/CameraBridge.h"
+#include "Application/Camera/CameraService.h"
+
+// #include "Application/VolumeTrigger.h"
+// #include "Application/ObjCamera.h"
+// #include "Application/ObjCameraVolume.h"

@@ -100,8 +100,8 @@ namespace hh::physics {
 
         GOCCollider(csl::fnd::IAllocator* allocator);
 
-		virtual void* GetRuntimeTypeInfo() override;
-		virtual const char* GetCategory() override;
+		virtual void* GetRuntimeTypeInfo() const override;
+		virtual const char* GetCategory() const override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;
         virtual void GetShape(ColliShape& shape) const = 0;
 
@@ -110,8 +110,8 @@ namespace hh::physics {
         void RemoveListener(GOCColliderListener* listener);
         void SetEnabled(bool enabled);
 
-        inline const csl::math::Matrix34& GetWorldTransform() const { return worldTransform; };
-        inline const csl::math::Matrix34& GetLocalTransform() const { return localTransform; };
+        inline csl::math::Matrix34 GetWorldTransform() const { return worldTransform; };
+        inline csl::math::Matrix34 GetLocalTransform() const { return localTransform; };
 
         GOCOMPONENT_CLASS_DECLARATION(GOCCollider);
     };

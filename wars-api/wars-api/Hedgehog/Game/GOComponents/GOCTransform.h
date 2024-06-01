@@ -24,7 +24,7 @@ namespace hh::game {
         };
 
         DEFAULT_CREATE_FUNC(GOCTransform);
-		virtual void* GetRuntimeTypeInfo() override;
+		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 
         void Initialize(const Config& config);
