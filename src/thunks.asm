@@ -19055,6 +19055,11 @@ PUBLIC ?GetService@GameManager@game@hh@@QEAAPEAVGameService@23@PEBVGameServiceCl
     mov rax, 01406bc590h
     jmp rax
 
+PUBLIC ?RegisterService@GameManager@game@hh@@QEAAXPEAVGameService@23@@Z
+?RegisterService@GameManager@game@hh@@QEAAXPEAVGameService@23@@Z:
+    mov rax, 01406bc6c0h
+    jmp rax
+
 PUBLIC ?AddListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z
 ?AddListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z:
     mov rax, 01406bcae0h
@@ -19113,6 +19118,21 @@ PUBLIC ?GetClass@InputManager@game@hh@@SAPEBVGameServiceClass@23@XZ
 PUBLIC ??0InputManager@game@hh@@QEAA@XZ
 ??0InputManager@game@hh@@QEAA@XZ:
     mov rax, 01406bec50h
+    jmp rax
+
+PUBLIC ??0InputManager@game@hh@@AEAA@XZ
+??0InputManager@game@hh@@AEAA@XZ:
+    mov rax, 01406bec50h
+    jmp rax
+
+PUBLIC ?RegisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z
+?RegisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z:
+    mov rax, 01406bef20h
+    jmp rax
+
+PUBLIC ?UnregisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z
+?UnregisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z:
+    mov rax, 01406beff0h
     jmp rax
 
 PUBLIC ?Create@InputManager@game@hh@@CAPEAV123@XZ
@@ -20290,8 +20310,18 @@ PUBLIC ?GetInputValue@InputDevice@hid@hh@@UEBAMXZ
     mov rax, 014076e9c0h
     jmp rax
 
+PUBLIC ?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z
+?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z:
+    mov rax, 014076e9c0h
+    jmp rax
+
 PUBLIC ?UnkFunc3@InputDevice@hid@hh@@UEAA?AVVector4@math@csl@@XZ
 ?UnkFunc3@InputDevice@hid@hh@@UEAA?AVVector4@math@csl@@XZ:
+    mov rax, 014076e9d0h
+    jmp rax
+
+PUBLIC ?GetTarget@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@XZ
+?GetTarget@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@XZ:
     mov rax, 014076e9d0h
     jmp rax
 
@@ -20327,6 +20357,11 @@ PUBLIC ?UnkFunc2@Mouse@hid@hh@@UEAAMXZ
 
 PUBLIC ?GetInputValue@Mouse@hid@hh@@UEBAMXZ
 ?GetInputValue@Mouse@hid@hh@@UEBAMXZ:
+    mov rax, 014076ed20h
+    jmp rax
+
+PUBLIC ?GetInputValue@Mouse@hid@hh@@UEBAMI@Z
+?GetInputValue@Mouse@hid@hh@@UEBAMI@Z:
     mov rax, 014076ed20h
     jmp rax
 
@@ -21922,6 +21957,11 @@ PUBLIC ?UnkFunc5@ResModelBase@gfx@hh@@UEAA_KXZ
 
 PUBLIC ?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ
 ?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?DrawSphere_@DrawContext@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z
+?DrawSphere_@DrawContext@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z:
     mov rax, 0140c25064h
     jmp rax
 
@@ -54195,6 +54235,11 @@ PUBLIC ?DrawSphere@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?
     mov rax, 0145ecc8f0h
     jmp rax
 
+PUBLIC ?DrawSphere_@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z
+?DrawSphere_@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z:
+    mov rax, 0145ecc8f0h
+    jmp rax
+
 PUBLIC ?DrawCapsule@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z
 ?DrawCapsule@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z:
     mov rax, 0145ecdcd0h
@@ -54727,6 +54772,11 @@ PUBLIC ?SetViewport@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBUView
 
 PUBLIC ?SetMarker@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBD@Z
 ?SetMarker@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBD@Z:
+    mov rax, 0146390c00h
+    jmp rax
+
+PUBLIC ??_DDisplaySwapDeviceDX11@ImplDX11@needle@hh@@QEAAXXZ
+??_DDisplaySwapDeviceDX11@ImplDX11@needle@hh@@QEAAXXZ:
     mov rax, 0146390c00h
     jmp rax
 

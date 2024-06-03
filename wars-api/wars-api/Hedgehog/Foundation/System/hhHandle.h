@@ -74,7 +74,7 @@ namespace hh::fnd
 
 		T* operator*() const
 		{
-			return reinterpret_cast<T*>(HandleBase::Get(RESOLVE_STATIC_VARIABLE(HandleManager<T>::instance)));
+			return reinterpret_cast<T*>(HandleBase::Get(RESOLVE_STATIC_VARIABLE(M::instance)));
 		}
 
 		operator T*() const

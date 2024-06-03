@@ -5,7 +5,7 @@
 extern "C" void WarsSDK_SetBaseAddress(void* address);
 extern "C" void* WarsSDK_GetAddress(void* address);
 
-namespace WarsSDK {
+namespace warssdk {
 	inline void SetBaseAddress(void* address) {
 		WarsSDK_SetBaseAddress(address);
 	}
@@ -50,6 +50,6 @@ namespace WarsSDK {
 	}
 }
 
-#define RESOLVE_STATIC_VARIABLE(x) (*WarsSDK::GetAddress(&x))
+#define RESOLVE_STATIC_VARIABLE(x) (*warssdk::GetAddress(&x))
 
 #include <wars-api/wars-api.h>

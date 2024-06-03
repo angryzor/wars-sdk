@@ -5625,6 +5625,7 @@
 1406884a0,??_DResourceListener@Impl@RenderingEngineNeedle@gfx@hh@@QEAAXXZ,1
 140689800,?UnkFunc2@RenderingWorld@gfx@hh@@UEAA_KXZ,1
 140689860,?UnkFunc4@RenderingWorld@gfx@hh@@UEAA_KXZ,1
+1406b7820,j_?RegisterService@GameManager@game@hh@@QEAAXPEAVGameService@23@@Z,1
 1406b7884,?GetRuntimeTypeInfo@GameService@game@hh@@UEAAPEAXXZ,1
 1406b7890,??_DGameService@game@hh@@QEAAXXZ,1
 1406b7950,?ProcessMessage@GameObject@game@hh@@UEAA_NAEAVMessage@fnd@3@@Z,1
@@ -5672,6 +5673,7 @@
 1406bc240,?InitShutdownPendingObjects@GameManager@game@hh@@QEAAXXZ,1
 1406bc3e0,?FinishShutdownPendingObjects@GameManager@game@hh@@QEAAXXZ,1
 1406bc590,?GetService@GameManager@game@hh@@QEAAPEAVGameService@23@PEBVGameServiceClass@23@@Z,1
+1406bc6c0,?RegisterService@GameManager@game@hh@@QEAAXPEAVGameService@23@@Z,1
 1406bcae0,?AddListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z,1
 1406bcb30,?RemoveListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z,1
 1406bcf70,?RegisterGameStepListener@GameManager@game@hh@@QEAAXAEAVGameStepListener@23@@Z,1
@@ -5683,7 +5685,10 @@
 1406be290,?Create@GOCInput@game@hh@@CAPEAV123@XZ,0
 1406be310,??_DGOCInput@game@hh@@QEAAXXZ,1
 1406bec40,?GetClass@InputManager@game@hh@@SAPEBVGameServiceClass@23@XZ,1
-1406bec50,??0InputManager@game@hh@@QEAA@XZ,0
+1406bec50,??0InputManager@game@hh@@QEAA@XZ,1
+1406bec50,??0InputManager@game@hh@@AEAA@XZ,1
+1406bef20,?RegisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z,1
+1406beff0,?UnregisterInputComponent@InputManager@game@hh@@QEAAXAEAVInputComponent@23@@Z,1
 1406bf800,?Create@InputManager@game@hh@@CAPEAV123@XZ,0
 1406c0330,??_DInputManager@game@hh@@QEAAXXZ,1
 1406c0920,??0GameApplication@game@hh@@QEAA@PEAVFrameworkEnvironment@fw@2@@Z,1
@@ -5923,7 +5928,9 @@
 14076e9b0,?GetDeviceId@InputDevice@hid@hh@@UEBAIXZ,1
 14076e9c0,?UnkFunc2@InputDevice@hid@hh@@UEAAMXZ,1
 14076e9c0,?GetInputValue@InputDevice@hid@hh@@UEBAMXZ,1
+14076e9c0,?GetInputValue@InputDevice@hid@hh@@UEBAMI@Z,1
 14076e9d0,?UnkFunc3@InputDevice@hid@hh@@UEAA?AVVector4@math@csl@@XZ,1
+14076e9d0,?GetTarget@InputDevice@hid@hh@@UEBA?AVVector4@math@csl@@XZ,1
 14076e9e0,?GetRuntimeTypeInfo@InputDevice@hid@hh@@UEAAPEAXXZ,1
 14076e9e0,?GetRuntimeTypeInfo@InputDevice@hid@hh@@UEBAPEAXXZ,1
 14076ecb0,?UnkFunc6@InputDevice@hid@hh@@UEAA_NXZ,1
@@ -5931,6 +5938,7 @@
 14076ed10,?GetDeviceId@Mouse@hid@hh@@UEBAIXZ,1
 14076ed20,?UnkFunc2@Mouse@hid@hh@@UEAAMXZ,1
 14076ed20,?GetInputValue@Mouse@hid@hh@@UEBAMXZ,1
+14076ed20,?GetInputValue@Mouse@hid@hh@@UEBAMI@Z,1
 14076edd0,?UnkFunc5@Mouse@hid@hh@@UEAAXXZ,1
 14076edd0,?Update@Mouse@hid@hh@@UEAAXXZ,1
 14076ee40,?UnkFunc7@Mouse@hid@hh@@UEAA_NXZ,1
@@ -6251,6 +6259,7 @@
 140c25064,?UnkFunc4@ResModelBase@gfx@hh@@UEAA_KXZ,1
 140c25064,?UnkFunc5@ResModelBase@gfx@hh@@UEAA_KXZ,1
 140c25064,?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ,1
+140c25064,?DrawSphere_@DrawContext@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z,1
 140d4c400,?rflClassMembers@SwayParamIndivisual@rfl@app@@0QBVRflClassMember@fnd@hh@@B,1
 140d4c400,?rflClassMembers@SwayParamIndivisual@rfl@heur@@0QBVRflClassMember@fnd@hh@@B,1
 140d4c830,?rflClassMembers@SwayParamNode@rfl@app@@0QBVRflClassMember@fnd@hh@@B,1
@@ -12762,6 +12771,7 @@
 145ec9ec0,?BeginDraw@DrawContextNeedle@gfnd@hh@@UEAAXAEBUBeginDrawInfo@DrawContext@23@@Z,1
 145ecb6a0,?BeginDraw2d@DrawContextNeedle@gfnd@hh@@UEAAXAEBUBeginDrawInfo@DrawContext@23@@Z,1
 145ecc8f0,?DrawSphere@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z,1
+145ecc8f0,?DrawSphere_@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z,1
 145ecdcd0,?DrawCapsule@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MMAEBU?$Color@E@ut@6@@Z,1
 145ecef00,?DrawAABB@DrawContextNeedle@gfnd@hh@@UEAAXAEBVVector3@math@csl@@0AEBU?$Color@E@ut@6@@Z,1
 145ed0500,?DrawOBB@DrawContextNeedle@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@AEBVVector3@56@AEBU?$Color@E@ut@6@@Z,1
@@ -12871,6 +12881,7 @@
 14638dc90,?DoNothing1@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXXZ,1
 14638f8b0,?SetViewport@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBUViewportSetting@34@I@Z,1
 146390c00,?SetMarker@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBD@Z,1
+146390c00,??_DDisplaySwapDeviceDX11@ImplDX11@needle@hh@@QEAAXXZ,1
 146391d70,?UnkFunc98@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ,1
 146393430,?SetLockConstantBuffer@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW4ShaderStage@34@IPEAVConstantBuffer@34@@Z,1
 146395c80,?GenerateMips@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEAVTexture@34@@Z,1

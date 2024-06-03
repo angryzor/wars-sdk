@@ -13,5 +13,11 @@ namespace hh::hid {
     public:
         KeyboardWin32(csl::fnd::IAllocator* pAllocator);
         static KeyboardWin32* CreateDevice(unsigned int deviceIndex, csl::fnd::IAllocator* pAllocator);
+
+        virtual void* GetRuntimeTypeInfo() const override;
+        virtual float GetInputValue(unsigned int inputId) const override;
+        virtual const char* UnkFunc8() override;
+        virtual void UpdateKeyboardState(bool (&state)[256]) const override;
+        virtual unsigned int UnkFunc10() override;
     };
 }

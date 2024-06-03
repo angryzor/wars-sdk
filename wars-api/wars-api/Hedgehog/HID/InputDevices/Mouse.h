@@ -22,15 +22,13 @@ namespace hh::hid {
             unsigned short prevCursorPosY;
         };
 
-    private:
         MouseState state;
         bool hasUpdated;
 
-    public:
         Mouse();
         virtual void* GetRuntimeTypeInfo() const override;
         virtual unsigned int GetDeviceId() const override;
-        virtual float GetInputValue() const override;
+        virtual float GetInputValue(unsigned int inputId) const override;
         virtual void Update() override;
         virtual bool HasUpdated() override;
         virtual void SetCursorPos() = 0;

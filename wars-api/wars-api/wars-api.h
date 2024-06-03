@@ -158,6 +158,7 @@
 #include "Hedgehog/Needle/ModelInstance.h"
 #include "Hedgehog/Needle/PBRModelInstance.h"
 #include "Hedgehog/Needle/RenderingCommandList.h"
+#include "Hedgehog/Needle/DisplaySwapDevice.h"
 
 #include "Hedgehog/Needle/ViewportSetting.h"
 #include "Hedgehog/Needle/UnorderedAccessViewsSetting.h"
@@ -198,6 +199,7 @@
 #include "Hedgehog/Needle/ImplDX11/SFlushParameterContext.h"
 #include "Hedgehog/Needle/ImplDX11/SParameterQueue.h"
 #include "Hedgehog/Needle/ImplDX11/SParameterBuffer.h"
+#include "Hedgehog/Needle/ImplDX11/DisplaySwapDeviceDX11.h"
 #include "Hedgehog/Needle/ImplDX11/RenderingDeviceDispatchDX11.h"
 #include "Hedgehog/Needle/ImplDX11/DeviceObjectDX11.h"
 #include "Hedgehog/Needle/ImplDX11/RenderingDeviceContextDX11.h"
