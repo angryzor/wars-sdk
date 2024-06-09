@@ -50,7 +50,7 @@ namespace hh::game {
             if (parent) {
                 parentID = parent->id;
             } else {
-                parentID = { 0 };
+                parentID = {};
                 transform = localTransform;
             }
 
