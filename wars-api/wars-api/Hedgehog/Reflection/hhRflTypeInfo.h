@@ -21,25 +21,11 @@ namespace hh::fnd
 			return m_pScopedName;
 		}
 
-		void ConstructObject(void* pInst, csl::fnd::IAllocator* pAllocator) const
-		{
-			if (!m_fpConstruct)
-				return;
+		void ConstructObject(void* pInst, csl::fnd::IAllocator* pAllocator) const;
 
-			m_fpConstruct(pInst, pAllocator);
-		}
+		void FinishLoadedObject(void* pInstance) const;
 
-		void FinishLoadedObject(void* pInstance) const
-		{
-			if (m_fpFinisher)
-				m_fpFinisher(pInstance);
-		}
-
-		void CleanupLoadedObject(void* pInstance) const
-		{
-			if (m_fpCleaner)
-				m_fpCleaner(pInstance);
-		}
+		void CleanupLoadedObject(void* pInstance) const;
 
 		size_t GetSize() const
 		{

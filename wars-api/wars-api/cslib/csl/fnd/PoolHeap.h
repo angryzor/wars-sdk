@@ -1,20 +1,20 @@
 #pragma once
 
 namespace csl::fnd {
-    class FreeListHeapBase : public HeapBase {
+    class PoolHeapBase : public HeapBase {
         size_t bufferStart;
         size_t bufferEnd;
         uint64_t unk103;
-        uint64_t unk104;
-        uint64_t unk105;
+        size_t blockSize;
+        uint32_t unk105;
         unsigned int liveAllocations;
-        uint64_t unk106;
-        unsigned int totalAllocations;
+        uint32_t unk106;
+        unsigned int callAllocateTime;
+        unsigned int unk108;
         uint64_t unk109;
-        bool initialized;
 
     public:
-        FreeListHeapBase(const char* name);
+        PoolHeapBase(const char* name);
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;
@@ -28,16 +28,17 @@ namespace csl::fnd {
         virtual unsigned int GetCurrentAllocateCount() const override;
         virtual unsigned int GetCallAllocateTime() const override;
         virtual bool GetMemorySnapshot(MemorySnapshot& memorySnapshot) const override;
+        virtual uint64_t UnkFunc1();
 
         void Initialize(void* unkParam1, void* unkParam2, size_t unkParam3);
     };
 
     template<typename TLock>
-    class alignas(8) FreeListHeapTemplate : public FreeListHeapBase {
+    class alignas(8) PoolHeapTemplate : public PoolHeapBase {
         TLock m_Lock;
     
     public:
-        FreeListHeapTemplate(const char* name) : FreeListHeapBase{ name } {}
+        PoolHeapTemplate(const char* name) : PoolHeapBase{ name } {}
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;

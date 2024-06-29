@@ -22,15 +22,14 @@ namespace hh::fw::heap {
 
     class LocalHeap {
     public:
+        csl::ut::InplaceMoveArray<csl::ut::Pair<unsigned int, csl::fnd::HeapBase*>, 8> heaps1;
+        csl::ut::InplaceMoveArray<csl::ut::Pair<unsigned int, csl::fnd::HeapBase*>, 8> heaps2;
+        csl::ut::InplaceMoveArray<csl::fnd::IAllocator*, 8> debugAllocators;
         csl::fnd::FreeListHeapTemplate<csl::fnd::Mutex> baseHeap;
-        csl::ut::InplaceMoveArray<csl::ut::Pair<unsigned int, csl::fnd::HeapBase*>, 8> heaps;
         fnd::MemoryRouter* memoryRouter;
-        const SystemMemoryParam* systemMemoryParam;
-        const MemoryParam* memoryParam;
-        size_t unkParam;
         static HeapDefinition heapDefs[3];
 
-        LocalHeap(void* unkParam1, size_t unkParam2);
+        LocalHeap();
         void setup(const SystemMemoryParam* systemMemoryParam, const MemoryParam* memoryParam, size_t unkParam);
         fnd::MemoryRouter* GetMemoryRouter();
         static LocalHeap* instance;

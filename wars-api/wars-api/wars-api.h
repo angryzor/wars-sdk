@@ -5,8 +5,9 @@
 #endif
 
 #ifndef EXPORTING_TYPES
-#include "cslib/csl/math/math.h"
+#include <cassert>
 #include <functional>
+#include "cslib/csl/math/math.h"
 #endif
 
 #include "cslib/csl/fnd/IAllocator.h"
@@ -14,6 +15,7 @@
 #include "cslib/csl/ut/Array.h"
 #include "cslib/csl/ut/FixedArray.h"
 #include "cslib/csl/ut/HashMap.h"
+#include "cslib/csl/ut/List.h"
 #include "cslib/csl/ut/LinkList.h"
 #include "cslib/csl/ut/MoveArray.h"
 #include "cslib/csl/ut/MoveArray32.h"
@@ -33,8 +35,12 @@
 #include "cslib/csl/fnd/Singleton.h"
 #include "cslib/csl/fnd/Mutex.h"
 #include "cslib/csl/fnd/HeapBase.h"
-#include "cslib/csl/fnd/TlsfHeap.h"
 #include "cslib/csl/fnd/FreeListHeap.h"
+#include "cslib/csl/fnd/OptimizedFreeListHeap.h"
+#include "cslib/csl/fnd/StackHeap.h"
+#include "cslib/csl/fnd/LinkHeap.h"
+#include "cslib/csl/fnd/PoolHeap.h"
+#include "cslib/csl/fnd/ExternalHeap.h"
 #include "cslib/csl/fnd/Delegate.h"
 
 #include "Hedgehog/Rsdx/hhMTSimpleJobJoint.h"
@@ -117,6 +123,7 @@
 #include "Hedgehog/Reflection/hhRflClassNameRegistry.h"
 #include "Hedgehog/Reflection/hhBuiltinTypeRegistry.h"
 #include "Hedgehog/Reflection/hhDataValue.h"
+#include "Hedgehog/Reflection/DeepCopier.h"
 #include "Hedgehog/Reflection/ResReflection.h"
 
 #include "Heuristics/Reflection.h"

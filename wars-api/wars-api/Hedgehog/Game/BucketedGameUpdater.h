@@ -6,7 +6,7 @@ namespace hh::game {
         POST_SIM,
     };
 
-    class BucketedGameUpdater : public GameUpdater, public GameObjectListener {
+    class BucketedGameUpdater : public GameUpdater {
     public:
         struct SetupInfo : public GameUpdater::SetupInfo {
             struct BucketSpecification {
@@ -41,9 +41,6 @@ namespace hh::game {
 
         CREATE_FUNC(BucketedGameUpdater, const SetupInfo& setupInfo);
 
-        virtual void* GetRuntimeTypeInfo() override;
         virtual void* DoStep(const GameStepInfo& stepInfo) override;
-		virtual void ObjectAddedToLayerCallback(GameObject* gameObject, int layer) override;
-		virtual void ObjectRemovedFromLayerCallback(GameObject* gameObject, int layer) override;
     };
 }

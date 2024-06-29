@@ -1,20 +1,11 @@
 #pragma once
 
 namespace csl::fnd {
-    class FreeListHeapBase : public HeapBase {
-        size_t bufferStart;
-        size_t bufferEnd;
-        uint64_t unk103;
-        uint64_t unk104;
-        uint64_t unk105;
-        unsigned int liveAllocations;
-        uint64_t unk106;
-        unsigned int totalAllocations;
-        uint64_t unk109;
-        bool initialized;
+    class LinkHeapBase : public HeapBase {
+        HeapBase* heaps[12];
 
     public:
-        FreeListHeapBase(const char* name);
+        LinkHeapBase(const char* name);
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;
@@ -27,17 +18,24 @@ namespace csl::fnd {
         virtual size_t GetBufferEnd() const override;
         virtual unsigned int GetCurrentAllocateCount() const override;
         virtual unsigned int GetCallAllocateTime() const override;
+        virtual bool CanHaveChild() override { return false; }
+        virtual void ForEachAllocatedBlock(MemoryBlockFunction& func) override;
+        virtual void PrintDebugInformation() override;
         virtual bool GetMemorySnapshot(MemorySnapshot& memorySnapshot) const override;
+        virtual void SetDebugFillOnAlloc(bool enabled) override;
+        virtual void SetDebugFillOnFree(bool enabled) override;
+        virtual void SetDebugUnk(bool enabled) override;
+        virtual uint64_t UnkFunc1();
 
         void Initialize(void* unkParam1, void* unkParam2, size_t unkParam3);
     };
 
     template<typename TLock>
-    class alignas(8) FreeListHeapTemplate : public FreeListHeapBase {
+    class alignas(8) LinkHeapTemplate : public LinkHeapBase {
         TLock m_Lock;
     
     public:
-        FreeListHeapTemplate(const char* name) : FreeListHeapBase{ name } {}
+        LinkHeapTemplate(const char* name) : LinkHeapBase{ name } {}
 
         virtual void* GetRuntimeTypeInfo() const override;
         virtual void* Alloc(size_t in_size, size_t in_alignment) override;

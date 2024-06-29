@@ -2,29 +2,30 @@
 
 namespace hh::fnd
 {
-	class TlsfHeapAllocatorBase : public csl::fnd::IAllocator
+	class PooledAllocatorBase : public csl::fnd::IAllocator
 	{
 	private:
 		csl::fnd::IAllocator* pAllocator;
-		csl::fnd::TlsfHeapBase* pHeap;
 		void* pBuffer;
+		csl::fnd::LinkHeapBase* pHeap;
+        csl::fnd::FreeListHeapTemplate<csl::fnd::DummyLock> freeListHeap;
+		csl::fnd::PoolHeapTemplate<csl::fnd::DummyLock>* poolHeaps;
+		uint32_t numPoolHeaps;
+		csl::fnd::HeapBase** unkHeap;
 
 	public:
-		TlsfHeapAllocatorBase(csl::fnd::TlsfHeapBase* heap);
+		PooledAllocatorBase(csl::fnd::LinkHeapBase* heap);
 	};
 
-	class ThreadSafeTlsfHeapAllocator : public TlsfHeapAllocatorBase
+	class ThreadSafePooledAllocator : public PooledAllocatorBase
 	{
+		void SetupInternal(csl::fnd::IAllocator* memoryRouterAllocator, size_t memorySize, void* unkParam1, unsigned int numPoolHeaps, bool unkParam3, unsigned int unkParam4);
 	public:
-		struct SetupInfo {
-			size_t memorySize;
-			bool unk;
-		};
+        csl::fnd::LinkHeapTemplate<csl::fnd::Mutex> heap;
 
-        csl::fnd::TlsfHeapTemplate<csl::fnd::Mutex> heap;
-
-		ThreadSafeTlsfHeapAllocator(const char* name) : TlsfHeapAllocatorBase{ &heap }, heap{ name } { }
-		void Setup(csl::fnd::IAllocator* memoryRouterAllocator, const SetupInfo& setupInfo);
+		ThreadSafePooledAllocator(const char* name) : PooledAllocatorBase{ &heap }, heap{ name } { }
+		void Setup(csl::fnd::IAllocator* memoryRouterAllocator, size_t memorySize, void* unkParam1, unsigned int numPoolHeaps, bool unkParam3);
+		void SetName(const char* name);
 		virtual void* Alloc(size_t in_size, size_t in_alignment) override;
 		virtual void Free(void* in_pMemory) override;
 	};

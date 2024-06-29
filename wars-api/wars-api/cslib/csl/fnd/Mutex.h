@@ -47,4 +47,23 @@ namespace csl::fnd
 			m_pMutex->Unlock();
 		}
 	};
+
+	class DummyLock {
+	public:
+		DummyLock()
+		{
+		}
+
+		~DummyLock()
+		{
+		}
+		
+		void Lock()
+		{
+		}
+
+		void Unlock()
+		{
+		}
+	};
 }

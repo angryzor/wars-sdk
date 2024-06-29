@@ -11,7 +11,7 @@ namespace app::gfx {
             InterpolatorBase(csl::fnd::IAllocator* allocator);
             virtual void Update(float deltaTime) = 0;
             virtual void SetTweenPosition(uint64_t ownerId, float position) = 0;
-            virtual void UnkFunc1(unsigned int value) = 0;
+            virtual void UpdateInterpolationGroup(unsigned int value) = 0;
             virtual void AddJob(uint64_t ownerId, const void* value, unsigned int interpolationGroupMemberBits, unsigned int priority, float interpolationTime, uint32_t unk6Param) = 0;
             virtual void ReverseJob(uint64_t ownerId, float interpolationTime) = 0;
             virtual bool NeedsUpdate() = 0;
@@ -45,7 +45,7 @@ namespace app::gfx {
 
         template<typename T, size_t bucketCount>
         class Interpolator : public InterpolatorT<T> {
-            virtual void UnkFunc1(unsigned int value) override;
+            virtual void UpdateInterpolationGroup(unsigned int value) override;
         };
 
         struct NeedleFXParameterInterpolators {

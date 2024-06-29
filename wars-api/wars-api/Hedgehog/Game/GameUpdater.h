@@ -24,14 +24,12 @@ namespace hh::game {
 
         struct Unk1 {
             struct Unk3 {
-                csl::fnd::IAllocator* allocator;
-                void* buffer;
-                uint32_t unk1;
-                uint32_t unk2;
+                csl::ut::MoveArray<void*> unk1;
+                csl::ut::MoveArray<void*> unk2;
+                csl::ut::MoveArray<void*> unk3;
             };
 
-            Unk3 unk1; // buffer is 0xC000 size
-            Unk3 unk2; // buffer is 0x10000 size
+            Unk3 unk2[32];
             void* unk7[2]; // function pointers assigned in constructor
         public:
             Unk1(csl::fnd::IAllocator* allocator);
@@ -43,21 +41,17 @@ namespace hh::game {
         uint32_t layersActiveDuringIngamePause;
         uint32_t layersActiveDuringDebugPause;
         uint32_t layersActiveDuringObjectPause;
+        float unk1;
         float timeScale; // 1.0f = normal
         float layerTimeScale[32];
-        float unk6;
         GameManager* gameManager;
         fnd::Reference<anim::AnimationInterface> animationInterface;
         GameJobQueue* jobQueue;
         Unk1 unk7;
-        fnd::SUpdateInfo updateInfos[32];
-        csl::ut::MoveArray<void*> unk9;
-        uint32_t unk10;
     
     public:
-        GameUpdater(csl::fnd::IAllocator* allocator, const SetupInfo& setupInfo);
+        GameUpdater(const SetupInfo& setupInfo);
 
-        virtual void* GetRuntimeTypeInfo();
         virtual void* DoStep(const GameStepInfo& stepInfo);
 
         void Update(const fnd::SUpdateInfo& updateInfo, GameApplication* application);

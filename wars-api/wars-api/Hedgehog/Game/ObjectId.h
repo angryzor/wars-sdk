@@ -11,5 +11,9 @@ namespace hh::game {
         inline bool operator!=(const ObjectId& other) const {
             return !operator==(other);
         }
+
+        inline bool IsNonNull() const {
+            return id != 0;
+        }
     };
 }

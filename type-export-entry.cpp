@@ -154,3 +154,4 @@ template class app::gfx::FxParamManager::Interpolator<hh::FxRenderOption, 0>;
 template class app::gfx::FxParamManager::Interpolator<hh::FxSGGIParameter, 0>;
 template class app::gfx::FxParamManager::Interpolator<hh::FxTAAParameter, 0>;
 template class app::gfx::FxParamManager::Interpolator<hh::FxEffectParameter, 0>;
+template class csl::fnd::PoolHeapTemplate<csl::fnd::DummyLock>;

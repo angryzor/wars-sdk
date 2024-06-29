@@ -2,15 +2,41 @@
 
 namespace hh::game {
     struct ComponentData {
-        uint64_t unk1;
+        uint64_t unk1{};
         const char* type;
         uint64_t size;
         void* data;
 
+    private:
         template<typename T>
         ComponentData(const char* type, T* data) : type{ type }, size{ sizeof(T) }, data{ data } {}
-        // ComponentData(csl::fnd::IAllocator* allocator, const GOComponentRegistry::GOComponentRegistryItem* gocRegItem, void* data) : type{ gocRegItem->name }, size{ gocRegItem->rflClass->GetSizeInBytes() }, data{ data } {
-        // }
+
+    public:
+        template<typename T>
+        static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type) {
+            void* buffer = allocator->Alloc(sizeof(T) + sizeof(ComponentData), 16);
+            T* data = new (reinterpret_cast<void*>(reinterpret_cast<size_t>(buffer) + sizeof(ComponentData))) T{};
+            return new (buffer) ComponentData{ type, data };
+        }
+
+        template<typename T>
+        static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type, const T& value) {
+            void* buffer = allocator->Alloc(sizeof(T) + sizeof(ComponentData), 16);
+            T* data = new (reinterpret_cast<void*>(reinterpret_cast<size_t>(buffer) + sizeof(ComponentData))) T{ value };
+            return new (buffer) ComponentData{ type, data };
+        }
+
+        template<typename T>
+        static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type, T&& value) {
+            void* buffer = allocator->Alloc(sizeof(T) + sizeof(ComponentData), 16);
+            T* data = new (reinterpret_cast<void*>(reinterpret_cast<size_t>(buffer) + sizeof(ComponentData))) T{ std::move(value) };
+            return new (buffer) ComponentData{ type, data };
+        }
+
+        template<typename T>
+        inline T* GetData() const {
+            return static_cast<T*>(data);
+        }
     };
 
     struct ObjectTransformData {
@@ -44,9 +70,12 @@ namespace hh::game {
         ObjectData(csl::fnd::IAllocator* allocator, const GameObjectClass* gameObjectClass, ObjectId id, const char* name, ObjectData* parent, const ObjectTransformData& localTransform)
             : name{ name }
             , gameObjectClass{ gameObjectClass->name }
+            , flags {}
             , localTransform { localTransform }
             , componentData{ allocator }
             , id{ id } {
+            flags.set(Flag::COMPONENT_DATA_NEEDS_TERMINATION);
+            
             if (parent) {
                 parentID = parent->id;
             } else {
@@ -54,8 +83,46 @@ namespace hh::game {
                 transform = localTransform;
             }
 
-            spawnerData = gameObjectClass->spawnerDataRflClass == nullptr ? nullptr : hh::fnd::RflTypeInfoRegistry::GetInstance()->ConstructObject(allocator, gameObjectClass->spawnerDataRflClass->GetName());
+            auto* spawnerRfl = gameObjectClass->spawnerDataRflClass;
+            if (spawnerRfl == nullptr) {
+                spawnerData = nullptr;
+            } else {
+                auto* tinfoReg = hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry();
+                auto* rflObj = tinfoReg->ConstructObject(allocator, spawnerRfl->GetName());
+
+                spawnerData = hh::fnd::DeepCopier::Copy(rflObj, *spawnerRfl, allocator);
+
+                tinfoReg->CleanupLoadedObject(rflObj, spawnerRfl->GetName());
+                allocator->Free(rflObj);
+
+                flags.set(Flag::SPAWNER_DATA_NEEDS_TERMINATION);
+            }
         }
+
+        ObjectData(csl::fnd::IAllocator* allocator, ObjectId id, const char* name, const ObjectData& other)
+            : name{ name }
+            , gameObjectClass{ other.gameObjectClass }
+            , flags { other.flags }
+            , localTransform { other.localTransform }
+            , transform{ other.transform }
+            , componentData{ allocator }
+            , id{ id }
+            , parentID{ other.parentID } {
+            flags.set(Flag::COMPONENT_DATA_NEEDS_TERMINATION);
+            
+            auto* spawnerRfl = GameObjectSystem::GetInstance()->gameObjectRegistry->GetGameObjectClassByName(gameObjectClass)->spawnerDataRflClass;
+            if (spawnerRfl == nullptr) {
+                spawnerData = nullptr;
+            } else {
+                assert(other.spawnerData != nullptr);
+
+                auto* tinfoReg = hh::fnd::BuiltinTypeRegistry::GetTypeInfoRegistry();
+                spawnerData = hh::fnd::DeepCopier::Copy(other.spawnerData, *spawnerRfl, allocator);
+                flags.set(Flag::SPAWNER_DATA_NEEDS_TERMINATION);
+            }
+        }
+
+        ObjectData(csl::fnd::IAllocator* allocator, ObjectId id, const ObjectData& other) : ObjectData{ allocator, id, other.name, other } {}
 
         ComponentData* GetComponentDataByType(const char* type);
 

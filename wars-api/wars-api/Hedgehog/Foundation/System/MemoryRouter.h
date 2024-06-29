@@ -3,8 +3,8 @@
 namespace hh::fnd {
     class MemoryRouterAllocator : public csl::fnd::IAllocator {
     public:
-        csl::fnd::TlsfHeapTemplate<csl::fnd::Mutex>* heap;
-        uint64_t unk1;
+        // csl::fnd::TlsfHeapTemplate<csl::fnd::Mutex>* heap;
+        // uint64_t unk1;
     };
 
     class MemoryRouter;

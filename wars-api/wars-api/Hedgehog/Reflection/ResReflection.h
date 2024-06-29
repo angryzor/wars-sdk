@@ -5,7 +5,9 @@ namespace hh::fnd {
     public:
         void* reflectionData;
 
-        void* GetData();
+        inline void* GetData() {
+            return reflectionData;
+        }
 
         virtual void Load(void* data, size_t size) override;
         virtual void Unload() override;
@@ -18,7 +20,7 @@ namespace hh::fnd {
     class ResReflectionT : public ResReflection {
     public:
         T* GetData() {
-            return static_cast<T*>(GetData());
+            return static_cast<T*>(ResReflection::GetData());
         }
 
         inline static const ResourceTypeInfo* GetTypeInfo() {

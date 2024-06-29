@@ -25,11 +25,6 @@ PUBLIC ?UnkFunc24@RenderingDeviceDX11@ImplDX11@needle@hh@@UEAAXXZ
     mov rax, 01400b4070h
     jmp rax
 
-PUBLIC ?OnAddedToGame@GameService@game@hh@@UEAAXXZ
-?OnAddedToGame@GameService@game@hh@@UEAAXXZ:
-    mov rax, 01400ff540h
-    jmp rax
-
 PUBLIC ?OnAddedToGame@InputManager@game@hh@@UEAAXXZ
 ?OnAddedToGame@InputManager@game@hh@@UEAAXXZ:
     mov rax, 01400ff540h
@@ -108,6 +103,36 @@ PUBLIC ?UnkFunc9@Application@fw@hh@@UEAA_KXZ
 PUBLIC ?UnkFunc23@RenderingEngineNeedle@gfx@hh@@UEAAIXZ
 ?UnkFunc23@RenderingEngineNeedle@gfx@hh@@UEAAIXZ:
     mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?UnkFunc3@ExternalHeapBase@fnd@csl@@UEAAIXZ
+?UnkFunc3@ExternalHeapBase@fnd@csl@@UEAAIXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetBufferTop@LinkHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@LinkHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@LinkHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@LinkHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@LinkHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@LinkHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@LinkHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@LinkHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@FreeListHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@FreeListHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140104fe0h
     jmp rax
 
 PUBLIC ?AddCallback@GameObject@game@hh@@UEAAXPEAVGameManager@23@@Z
@@ -870,14 +895,49 @@ PUBLIC ?UnkFunc13@HeapBase@fnd@csl@@UEAA_JXZ
     mov rax, 0140146030h
     jmp rax
 
+PUBLIC ?SetDebugFillOnAlloc@HeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugFillOnAlloc@HeapBase@fnd@csl@@UEAAX_N@Z:
+    mov rax, 0140146030h
+    jmp rax
+
 PUBLIC ?UnkFunc14@HeapBase@fnd@csl@@UEAA_JXZ
 ?UnkFunc14@HeapBase@fnd@csl@@UEAA_JXZ:
+    mov rax, 0140146040h
+    jmp rax
+
+PUBLIC ?SetDebugFillOnFree@HeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugFillOnFree@HeapBase@fnd@csl@@UEAAX_N@Z:
     mov rax, 0140146040h
     jmp rax
 
 PUBLIC ?UnkFunc15@HeapBase@fnd@csl@@UEAA_JXZ
 ?UnkFunc15@HeapBase@fnd@csl@@UEAA_JXZ:
     mov rax, 0140146050h
+    jmp rax
+
+PUBLIC ?SetDebugUnk@HeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugUnk@HeapBase@fnd@csl@@UEAAX_N@Z:
+    mov rax, 0140146050h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@OptimizedFreeListHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@OptimizedFreeListHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 0140146060h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@LinkHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@LinkHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 0140146070h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 0140146070h
+    jmp rax
+
+PUBLIC ?Free@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z
+?Free@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 0140146510h
     jmp rax
 
 PUBLIC ?Create@FadeInOutManager@services@heur@@CAPEAV123@XZ
@@ -2008,6 +2068,11 @@ PUBLIC ??0StageInfo@level@app@@AEAA@XZ
 PUBLIC ??_DStageInfo@level@app@@QEAAXXZ
 ??_DStageInfo@level@app@@QEAAXXZ:
     mov rax, 01401a5e10h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@GameService@game@hh@@UEAAXXZ
+?OnAddedToGame@GameService@game@hh@@UEAAXXZ:
+    mov rax, 01401a5f70h
     jmp rax
 
 PUBLIC ?Create@ExpManager@level@app@@CAPEAV123@XZ
@@ -17550,11 +17615,6 @@ PUBLIC ??_DPhysicsWorldHavok@physics@hh@@QEAAXXZ
     mov rax, 014064ae80h
     jmp rax
 
-PUBLIC ?OnAddedToGame@PhysicsWorld@physics@hh@@UEAAXXZ
-?OnAddedToGame@PhysicsWorld@physics@hh@@UEAAXXZ:
-    mov rax, 014064b2a0h
-    jmp rax
-
 PUBLIC ?GetRuntimeTypeInfo@PhysicsWorld@physics@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@PhysicsWorld@physics@hh@@UEAAPEAXXZ:
     mov rax, 014064b2a0h
@@ -17585,13 +17645,13 @@ PUBLIC ?RayCastAllHits@PhysicsWorld@physics@hh@@QEAA_NAEBVVector3@math@csl@@0IAE
     mov rax, 014064d980h
     jmp rax
 
-PUBLIC ?OnRemovedFromGame@PhysicsWorld@physics@hh@@UEAAXXZ
-?OnRemovedFromGame@PhysicsWorld@physics@hh@@UEAAXXZ:
+PUBLIC ?OnAddedToGame@PhysicsWorld@physics@hh@@UEAAXXZ
+?OnAddedToGame@PhysicsWorld@physics@hh@@UEAAXXZ:
     mov rax, 014064dd10h
     jmp rax
 
-PUBLIC ?UnkFunc1@PhysicsWorld@physics@hh@@UEAA_KXZ
-?UnkFunc1@PhysicsWorld@physics@hh@@UEAA_KXZ:
+PUBLIC ?OnRemovedFromGame@PhysicsWorld@physics@hh@@UEAAXXZ
+?OnRemovedFromGame@PhysicsWorld@physics@hh@@UEAAXXZ:
     mov rax, 014064dd20h
     jmp rax
 
@@ -17698,6 +17758,36 @@ PUBLIC ??0PathComponent@path@hh@@QEAA@XZ
 PUBLIC ?Create@PathComponent@path@hh@@CAPEAV123@XZ
 ?Create@PathComponent@path@hh@@CAPEAV123@XZ:
     mov rax, 014065efb0h
+    jmp rax
+
+PUBLIC ?GetBufferTop@FreeListHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@FreeListHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140660810h
+    jmp rax
+
+PUBLIC ?GetBufferTop@StackHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@StackHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140660810h
+    jmp rax
+
+PUBLIC ?GetBufferTop@PoolHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@PoolHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140660810h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@PoolHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@PoolHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140660820h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@PoolHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@PoolHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 0140660830h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 0140660830h
     jmp rax
 
 PUBLIC ??0GOCVisualModel@gfx@hh@@QEAA@XZ
@@ -18820,11 +18910,6 @@ PUBLIC ?UnkFunc4@RenderingWorld@gfx@hh@@UEAA_KXZ
     mov rax, 0140689860h
     jmp rax
 
-PUBLIC ?GetRuntimeTypeInfo@GameService@game@hh@@UEAAPEAXXZ
-?GetRuntimeTypeInfo@GameService@game@hh@@UEAAPEAXXZ:
-    mov rax, 01406b7884h
-    jmp rax
-
 PUBLIC ??_DGameService@game@hh@@QEAAXXZ
 ??_DGameService@game@hh@@QEAAXXZ:
     mov rax, 01406b7890h
@@ -18875,6 +18960,11 @@ PUBLIC ?GetChildren@GameObject@game@hh@@QEAAAEBV?$MoveArray@V?$Handle@VGameObjec
     mov rax, 01406b8c30h
     jmp rax
 
+PUBLIC ?GetChildren@GameObject@game@hh@@QEAAAEBV?$MoveArray@V?$Handle@VGameObject@game@hh@@V?$HandleManager@VGameObject@game@hh@@@fnd@3@@fnd@hh@@@ut@csl@@XZ
+?GetChildren@GameObject@game@hh@@QEAAAEBV?$MoveArray@V?$Handle@VGameObject@game@hh@@V?$HandleManager@VGameObject@game@hh@@@fnd@3@@fnd@hh@@@ut@csl@@XZ:
+    mov rax, 01406b8c30h
+    jmp rax
+
 PUBLIC ?GetComponent@GameObject@game@hh@@AEAAPEAVGOComponent@23@PEBVGOComponentClass@23@@Z
 ?GetComponent@GameObject@game@hh@@AEAAPEAVGOComponent@23@PEBVGOComponentClass@23@@Z:
     mov rax, 01406b8f60h
@@ -18888,11 +18978,6 @@ PUBLIC ?GetComponents@GameObject@game@hh@@AEAA_NPEBVGOComponentClass@23@AEAV?$Mo
 PUBLIC ?NotifyDestroy@GameObject@game@hh@@QEAAXXZ
 ?NotifyDestroy@GameObject@game@hh@@QEAAXXZ:
     mov rax, 01406b90c0h
-    jmp rax
-
-PUBLIC ??_DMessenger@fnd@hh@@QEAAXXZ
-??_DMessenger@fnd@hh@@QEAAXXZ:
-    mov rax, 01406b93b0h
     jmp rax
 
 PUBLIC ??_DGameObject@game@hh@@QEAAXXZ
@@ -19060,6 +19145,11 @@ PUBLIC ?RegisterService@GameManager@game@hh@@QEAAXPEAVGameService@23@@Z
     mov rax, 01406bc6c0h
     jmp rax
 
+PUBLIC ?PerformMessages@GameManager@game@hh@@QEAAXXZ
+?PerformMessages@GameManager@game@hh@@QEAAXXZ:
+    mov rax, 01406bc8e0h
+    jmp rax
+
 PUBLIC ?AddListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z
 ?AddListener@GameManager@game@hh@@QEAAXPEAVGameManagerListener@23@@Z:
     mov rax, 01406bcae0h
@@ -19150,6 +19240,11 @@ PUBLIC ??0GameApplication@game@hh@@QEAA@PEAVFrameworkEnvironment@fw@2@@Z
     mov rax, 01406c0920h
     jmp rax
 
+PUBLIC ?GetInstance@GameApplication@game@hh@@SAPEAV123@XZ
+?GetInstance@GameApplication@game@hh@@SAPEAV123@XZ:
+    mov rax, 01406c0a10h
+    jmp rax
+
 PUBLIC ?UnkFunc9@GameApplication@game@hh@@UEAA_KXZ
 ?UnkFunc9@GameApplication@game@hh@@UEAA_KXZ:
     mov rax, 01406c0bd0h
@@ -19162,6 +19257,11 @@ PUBLIC ??_DGameApplication@game@hh@@QEAAXXZ
 
 PUBLIC ?GetRuntimeTypeInfo@BucketedGameUpdater@game@hh@@UEAAPEAXXZ
 ?GetRuntimeTypeInfo@BucketedGameUpdater@game@hh@@UEAAPEAXXZ:
+    mov rax, 01406c1270h
+    jmp rax
+
+PUBLIC ?DoStep@BucketedGameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z
+?DoStep@BucketedGameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z:
     mov rax, 01406c1270h
     jmp rax
 
@@ -19258,6 +19358,11 @@ PUBLIC ??_DDebugCameraManager@game@hh@@QEAAXXZ
 PUBLIC ?ObjectRemovedFromLayerCallback@GameObjectListener@game@hh@@UEAAXPEAVGameObject@23@H@Z
 ?ObjectRemovedFromLayerCallback@GameObjectListener@game@hh@@UEAAXPEAVGameObject@23@H@Z:
     mov rax, 01406c6c00h
+    jmp rax
+
+PUBLIC ?GetComponentDataByType@ObjectData@game@hh@@QEAAPEAUComponentData@23@PEBD@Z
+?GetComponentDataByType@ObjectData@game@hh@@QEAAPEAUComponentData@23@PEBD@Z:
+    mov rax, 01406c6c50h
     jmp rax
 
 PUBLIC ?GetTypeInfo@ResObjectWorld@game@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
@@ -19465,6 +19570,26 @@ PUBLIC ?RemoveObjectData@ObjectWorldChunkLayer@game@hh@@QEAAXPEAUObjectData@23@@
     mov rax, 01406cefb0h
     jmp rax
 
+PUBLIC ?TerminateObjectData@game@hh@@YAXPEAVIAllocator@fnd@csl@@PEAUObjectData@12@@Z
+?TerminateObjectData@game@hh@@YAXPEAVIAllocator@fnd@csl@@PEAUObjectData@12@@Z:
+    mov rax, 01406cf360h
+    jmp rax
+
+PUBLIC ??0GameUpdater@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@AEBUSetupInfo@012@@Z
+??0GameUpdater@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@AEBUSetupInfo@012@@Z:
+    mov rax, 01406d0120h
+    jmp rax
+
+PUBLIC ??0GameUpdater@game@hh@@QEAA@AEBUSetupInfo@012@@Z
+??0GameUpdater@game@hh@@QEAA@AEBUSetupInfo@012@@Z:
+    mov rax, 01406d0120h
+    jmp rax
+
+PUBLIC ?Update@GameUpdater@game@hh@@QEAAXAEBUSUpdateInfo@fnd@3@PEAVGameApplication@23@@Z
+?Update@GameUpdater@game@hh@@QEAAXAEBUSUpdateInfo@fnd@3@PEAVGameApplication@23@@Z:
+    mov rax, 01406d02e0h
+    jmp rax
+
 PUBLIC ??_DGameUpdater@game@hh@@QEAAXXZ
 ??_DGameUpdater@game@hh@@QEAAXXZ:
     mov rax, 01406d0700h
@@ -19615,6 +19740,16 @@ PUBLIC ?FirePostShutdownObject@GameManagerCallbackUtil@game@hh@@CAXPEAVGameManag
     mov rax, 01406d69f0h
     jmp rax
 
+PUBLIC ?FirePreGameUpdate@GameManagerCallbackUtil@game@hh@@CAXPEAVGameManager@23@AEBUSUpdateInfo@fnd@3@@Z
+?FirePreGameUpdate@GameManagerCallbackUtil@game@hh@@CAXPEAVGameManager@23@AEBUSUpdateInfo@fnd@3@@Z:
+    mov rax, 01406d6df0h
+    jmp rax
+
+PUBLIC ?FirePostGameUpdate@GameManagerCallbackUtil@game@hh@@CAXPEAVGameManager@23@AEBUSUpdateInfo@fnd@3@@Z
+?FirePostGameUpdate@GameManagerCallbackUtil@game@hh@@CAXPEAVGameManager@23@AEBUSUpdateInfo@fnd@3@@Z:
+    mov rax, 01406d6e50h
+    jmp rax
+
 PUBLIC ?ExecuteAllPendingLayerOperations@GameManagerOperationQueue@game@hh@@QEAAXXZ
 ?ExecuteAllPendingLayerOperations@GameManagerOperationQueue@game@hh@@QEAAXXZ:
     mov rax, 01406d78b0h
@@ -19630,6 +19765,46 @@ PUBLIC ?RemoveObject@GameObjectLayer@game@hh@@QEAAXPEAVGameObject@23@@Z
     mov rax, 01406d7f20h
     jmp rax
 
+PUBLIC ??0Unk1@GameUpdater@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0Unk1@GameUpdater@game@hh@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01406d81a0h
+    jmp rax
+
+PUBLIC ?localInitUtilRsdx@heap@fw@hh@@YAPEAVMemoryRouter@fnd@3@PEBUSystemMemoryParam@123@PEBUMemoryParam@123@_K@Z
+?localInitUtilRsdx@heap@fw@hh@@YAPEAVMemoryRouter@fnd@3@PEBUSystemMemoryParam@123@PEBUMemoryParam@123@_K@Z:
+    mov rax, 01406dd260h
+    jmp rax
+
+PUBLIC ??0LocalHeap@heap@fw@hh@@QEAA@XZ
+??0LocalHeap@heap@fw@hh@@QEAA@XZ:
+    mov rax, 01406dd2f0h
+    jmp rax
+
+PUBLIC ?setup@LocalHeap@heap@fw@hh@@QEAAXPEBUSystemMemoryParam@234@PEBUMemoryParam@234@_K@Z
+?setup@LocalHeap@heap@fw@hh@@QEAAXPEBUSystemMemoryParam@234@PEBUMemoryParam@234@_K@Z:
+    mov rax, 01406dd4e0h
+    jmp rax
+
+PUBLIC ?Free@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAXPEAX@Z
+?Free@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAXPEAX@Z:
+    mov rax, 01406de200h
+    jmp rax
+
+PUBLIC ?Free@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z
+?Free@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 01406de200h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@ExternalHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@ExternalHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 01406de2e0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@ExternalHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@ExternalHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 01406de420h
+    jmp rax
+
 PUBLIC ?UnkFunc18@HeapBase@fnd@csl@@UEAA_NXZ
 ?UnkFunc18@HeapBase@fnd@csl@@UEAA_NXZ:
     mov rax, 01406de430h
@@ -19637,6 +19812,26 @@ PUBLIC ?UnkFunc18@HeapBase@fnd@csl@@UEAA_NXZ
 
 PUBLIC ?UnkFunc22@FileLoader@fnd@hh@@UEAA_K_K@Z
 ?UnkFunc22@FileLoader@fnd@hh@@UEAA_K_K@Z:
+    mov rax, 01406de430h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@FreeListHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@FreeListHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 01406de430h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEBAPEAXXZ
+?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEBAPEAXXZ:
+    mov rax, 01406de430h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 01406de430h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEBAPEAXXZ:
     mov rax, 01406de430h
     jmp rax
 
@@ -19853,6 +20048,16 @@ PUBLIC ?SetInstance@MemoryRouter@fnd@hh@@SAXPEAV123@@Z
 PUBLIC ?UnkFunc14@FileLoader@fnd@hh@@UEAA_K_K0@Z
 ?UnkFunc14@FileLoader@fnd@hh@@UEAA_K_K0@Z:
     mov rax, 014071d030h
+    jmp rax
+
+PUBLIC ?Alloc@IAllocator@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@IAllocator@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014071d090h
+    jmp rax
+
+PUBLIC ?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z
+?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 014071d0d0h
     jmp rax
 
 PUBLIC ?InitializeTempAllocator@fnd@hh@@YAXPEAVMemoryRouter@12@_K@Z
@@ -20120,9 +20325,84 @@ PUBLIC ?GetFamilyID@FileLoader@fnd@hh@@UEAAPEAXXZ
     mov rax, 014073c7c0h
     jmp rax
 
+PUBLIC ?GetBufferEnd@FreeListHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@FreeListHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014073c860h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@StackHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@StackHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014073c860h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@PoolHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@PoolHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014073c860h
+    jmp rax
+
+PUBLIC ?GetBufferTop@ExternalHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@ExternalHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014073c860h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@FreeListHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@FreeListHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 014073c870h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@StackHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@StackHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 014073c870h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@StackHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@StackHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 014073c880h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@ExternalHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@ExternalHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 014073c880h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@StackHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@StackHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 014073c890h
+    jmp rax
+
 PUBLIC ??0Renderable@gfnd@hh@@QEAA@XZ
 ??0Renderable@gfnd@hh@@QEAA@XZ:
     mov rax, 014073c8a0h
+    jmp rax
+
+PUBLIC ?SetName@ThreadSafePooledAllocator@fnd@hh@@QEAAXPEBD@Z
+?SetName@ThreadSafePooledAllocator@fnd@hh@@QEAAXPEBD@Z:
+    mov rax, 014073cae0h
+    jmp rax
+
+PUBLIC ?Setup@ThreadSafePooledAllocator@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KPEAXI_N@Z
+?Setup@ThreadSafePooledAllocator@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_KPEAXI_N@Z:
+    mov rax, 014073cb80h
+    jmp rax
+
+PUBLIC ?SetupInternal@ThreadSafePooledAllocator@fnd@hh@@AEAAXPEAVIAllocator@2csl@@_KPEAXI_NI@Z
+?SetupInternal@ThreadSafePooledAllocator@fnd@hh@@AEAAXPEAVIAllocator@2csl@@_KPEAXI_NI@Z:
+    mov rax, 014073cc10h
+    jmp rax
+
+PUBLIC ?Alloc@ThreadSafePooledAllocator@fnd@hh@@UEAAPEAX_K0@Z
+?Alloc@ThreadSafePooledAllocator@fnd@hh@@UEAAPEAX_K0@Z:
+    mov rax, 014073ce00h
+    jmp rax
+
+PUBLIC ?Free@ThreadSafePooledAllocator@fnd@hh@@UEAAXPEAX@Z
+?Free@ThreadSafePooledAllocator@fnd@hh@@UEAAXPEAX@Z:
+    mov rax, 014073ce20h
+    jmp rax
+
+PUBLIC ??0PooledAllocatorBase@fnd@hh@@QEAA@PEAVLinkHeapBase@1csl@@@Z
+??0PooledAllocatorBase@fnd@hh@@QEAA@PEAVLinkHeapBase@1csl@@@Z:
+    mov rax, 014073ce40h
     jmp rax
 
 PUBLIC ??0HFrame@fnd@hh@@QEAA@XZ
@@ -20200,6 +20480,11 @@ PUBLIC ?AddObject@MessageManager@fnd@hh@@QEAAXPEAVMessenger@23@@Z
     mov rax, 01407439f0h
     jmp rax
 
+PUBLIC ?Dispatch@MessageManager@fnd@hh@@QEAAXXZ
+?Dispatch@MessageManager@fnd@hh@@QEAAXXZ:
+    mov rax, 0140743ad0h
+    jmp rax
+
 PUBLIC ??0ResourceTypeRegistry@fnd@hh@@QEAA@XZ
 ??0ResourceTypeRegistry@fnd@hh@@QEAA@XZ:
     mov rax, 0140744310h
@@ -20255,6 +20540,26 @@ PUBLIC ?AddObject@HandleManagerBase@fnd@hh@@QEAAXPEAVRefByHandleObject@23@@Z
     mov rax, 0140750ef0h
     jmp rax
 
+PUBLIC ?Copy@DeepCopier@fnd@hh@@SAPEAXPEBXAEBVRflClass@23@PEAVIAllocator@2csl@@@Z
+?Copy@DeepCopier@fnd@hh@@SAPEAXPEBXAEBVRflClass@23@PEAVIAllocator@2csl@@@Z:
+    mov rax, 0140752330h
+    jmp rax
+
+PUBLIC ?Free@DeepCopier@fnd@hh@@SAXPEAX@Z
+?Free@DeepCopier@fnd@hh@@SAXPEAX@Z:
+    mov rax, 0140752620h
+    jmp rax
+
+PUBLIC ?CalcExtraSize@fnd@hh@@YAXPEBXAEBVRflClass@12@PEAH@Z
+?CalcExtraSize@fnd@hh@@YAXPEBXAEBVRflClass@12@PEAH@Z:
+    mov rax, 0140752680h
+    jmp rax
+
+PUBLIC ?SaveExtras@fnd@hh@@YAXPEBXAEBVRflClass@12@PEAVIAllocator@1csl@@PEAXAEAUObjectWriter@12@@Z
+?SaveExtras@fnd@hh@@YAXPEBXAEBVRflClass@12@PEAVIAllocator@1csl@@PEAXAEAUObjectWriter@12@@Z:
+    mov rax, 0140752a00h
+    jmp rax
+
 PUBLIC ?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ
 ?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ:
     mov rax, 014075e150h
@@ -20278,6 +20583,21 @@ PUBLIC ?IsValid@BinaryFile@ut@hh@@QEBA_NXZ
 PUBLIC ?GetDataAddress@BinaryFile@ut@hh@@QEAAPEAXH@Z
 ?GetDataAddress@BinaryFile@ut@hh@@QEAAPEAXH@Z:
     mov rax, 0140765f70h
+    jmp rax
+
+PUBLIC ?ConstructObject@RflTypeInfo@fnd@hh@@QEBAXPEAXPEAVIAllocator@2csl@@@Z
+?ConstructObject@RflTypeInfo@fnd@hh@@QEBAXPEAXPEAVIAllocator@2csl@@@Z:
+    mov rax, 01407677f0h
+    jmp rax
+
+PUBLIC ?FinishLoadedObject@RflTypeInfo@fnd@hh@@QEBAXPEAX@Z
+?FinishLoadedObject@RflTypeInfo@fnd@hh@@QEBAXPEAX@Z:
+    mov rax, 0140767810h
+    jmp rax
+
+PUBLIC ?CleanupLoadedObject@RflTypeInfo@fnd@hh@@QEBAXPEAX@Z
+?CleanupLoadedObject@RflTypeInfo@fnd@hh@@QEBAXPEAX@Z:
+    mov rax, 0140767830h
     jmp rax
 
 PUBLIC ?Reserve@MessageQueue@fnd@hh@@QEAAXPEAVIAllocator@2csl@@_K@Z
@@ -20438,6 +20758,16 @@ PUBLIC ?GetFamilyID@DynamicResourceContainer@fnd@hh@@UEAAPEAXXZ
 PUBLIC ?UnkFunc17@Mouse@hid@hh@@UEAA_NXZ
 ?UnkFunc17@Mouse@hid@hh@@UEAA_NXZ:
     mov rax, 014076fe10h
+    jmp rax
+
+PUBLIC ?GetClassNameRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflClassNameRegistry@23@XZ
+?GetClassNameRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflClassNameRegistry@23@XZ:
+    mov rax, 0140771eb0h
+    jmp rax
+
+PUBLIC ?GetTypeInfoRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflTypeInfoRegistry@23@XZ
+?GetTypeInfoRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflTypeInfoRegistry@23@XZ:
+    mov rax, 0140771ec0h
     jmp rax
 
 PUBLIC ?BindInput@ActionMapping@hid@hh@@QEAAXI@Z
@@ -20633,6 +20963,16 @@ PUBLIC ??_DNeedleShaderListInfo@Impl@RenderingEngineNeedle@gfx@hh@@QEAAXXZ
 PUBLIC ?UnkFunc22@RenderingEngineNeedle@gfx@hh@@UEAAXXZ
 ?UnkFunc22@RenderingEngineNeedle@gfx@hh@@UEAAXXZ:
     mov rax, 0140800b40h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@PoolHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@PoolHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140806000h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@ExternalHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@ExternalHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140808d80h
     jmp rax
 
 PUBLIC ?UnkFunc25@RenderingDeviceDX11@ImplDX11@needle@hh@@UEAAXXZ
@@ -21335,9 +21675,44 @@ PUBLIC ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z
     mov rax, 014086ba40h
     jmp rax
 
-PUBLIC ??_DHeapBase@fnd@csl@@QEAAXXZ
-??_DHeapBase@fnd@csl@@QEAAXXZ:
+PUBLIC ?List_Init@ut@csl@@YAXPEAUList@12@G@Z
+?List_Init@ut@csl@@YAXPEAUList@12@G@Z:
+    mov rax, 014086cd70h
+    jmp rax
+
+PUBLIC ?List_Append@ut@csl@@YAXPEAUList@12@PEAX@Z
+?List_Append@ut@csl@@YAXPEAUList@12@PEAX@Z:
+    mov rax, 014086cd90h
+    jmp rax
+
+PUBLIC ?List_Remove@ut@csl@@YAXPEAUList@12@PEAX@Z
+?List_Remove@ut@csl@@YAXPEAUList@12@PEAX@Z:
+    mov rax, 014086cef0h
+    jmp rax
+
+PUBLIC ?List_GetNext@ut@csl@@YAPEAXPEBUList@12@PEBX@Z
+?List_GetNext@ut@csl@@YAPEAXPEBUList@12@PEBX@Z:
+    mov rax, 014086cf50h
+    jmp rax
+
+PUBLIC ??0HeapBase@fnd@csl@@QEAA@PEBD@Z
+??0HeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086cfd0h
+    jmp rax
+
+PUBLIC ?SetName@HeapBase@fnd@csl@@QEAAXPEBD@Z
+?SetName@HeapBase@fnd@csl@@QEAAXPEBD@Z:
+    mov rax, 014086d060h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@HeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@HeapBase@fnd@csl@@UEBAPEAXXZ:
     mov rax, 014086d2c0h
+    jmp rax
+
+PUBLIC ??0FreeListHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0FreeListHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086d2d0h
     jmp rax
 
 PUBLIC ?UnkFunc20@HeapBase@fnd@csl@@UEAA_JXZ
@@ -21347,6 +21722,16 @@ PUBLIC ?UnkFunc20@HeapBase@fnd@csl@@UEAA_JXZ
 
 PUBLIC ?UnkFunc24@FileLoader@fnd@hh@@UEAA_K_K@Z
 ?UnkFunc24@FileLoader@fnd@hh@@UEAA_K_K@Z:
+    mov rax, 014086d490h
+    jmp rax
+
+PUBLIC ?Alloc@FreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@FreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086d490h
+    jmp rax
+
+PUBLIC ?Alloc@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
     mov rax, 014086d490h
     jmp rax
 
@@ -21360,6 +21745,16 @@ PUBLIC ?UnkFunc25@FileLoader@fnd@hh@@UEAA_KPEBD@Z
     mov rax, 014086d4f0h
     jmp rax
 
+PUBLIC ?AllocBottom@FreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@FreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086d4f0h
+    jmp rax
+
+PUBLIC ?AllocBottom@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086d4f0h
+    jmp rax
+
 PUBLIC ?UnkFunc22@HeapBase@fnd@csl@@UEAAXXZ
 ?UnkFunc22@HeapBase@fnd@csl@@UEAAXXZ:
     mov rax, 014086d550h
@@ -21370,24 +21765,214 @@ PUBLIC ?UnkFunc26@FileLoader@fnd@hh@@UEAA_K_K@Z
     mov rax, 014086d550h
     jmp rax
 
+PUBLIC ?Free@FreeListHeapBase@fnd@csl@@UEAAXPEAX@Z
+?Free@FreeListHeapBase@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 014086d550h
+    jmp rax
+
+PUBLIC ?Free@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z
+?Free@?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 014086d550h
+    jmp rax
+
 PUBLIC ?UnkFunc24@HeapBase@fnd@csl@@UEAA_NXZ
 ?UnkFunc24@HeapBase@fnd@csl@@UEAA_NXZ:
     mov rax, 014086d720h
     jmp rax
 
+PUBLIC ?GetBlockSize@FreeListHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@FreeListHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 014086d720h
+    jmp rax
+
+PUBLIC ?GetMemorySnapshot@FreeListHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z
+?GetMemorySnapshot@FreeListHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z:
+    mov rax, 014086d780h
+    jmp rax
+
+PUBLIC ??0OptimizedFreeListHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0OptimizedFreeListHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086de70h
+    jmp rax
+
+PUBLIC ?Alloc@OptimizedFreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@OptimizedFreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086e0a0h
+    jmp rax
+
+PUBLIC ?AllocBottom@OptimizedFreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@OptimizedFreeListHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086e1d0h
+    jmp rax
+
+PUBLIC ?Free@OptimizedFreeListHeapBase@fnd@csl@@UEAAXPEAX@Z
+?Free@OptimizedFreeListHeapBase@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 014086e300h
+    jmp rax
+
+PUBLIC ?IsIn@HeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@HeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 014086e450h
+    jmp rax
+
+PUBLIC ?GetBlockSize@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 014086e4b0h
+    jmp rax
+
+PUBLIC ?GetBufferTop@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014086e5c0h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@OptimizedFreeListHeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 014086e5e0h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@OptimizedFreeListHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@OptimizedFreeListHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 014086e790h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@LargeBlock@OptimizedFreeListHeapBase@fnd@csl@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@LargeBlock@OptimizedFreeListHeapBase@fnd@csl@@UEBAPEAXXZ:
+    mov rax, 014086f100h
+    jmp rax
+
+PUBLIC ??0StackHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0StackHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086f110h
+    jmp rax
+
+PUBLIC ?Alloc@StackHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@StackHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086f230h
+    jmp rax
+
+PUBLIC ?AllocBottom@StackHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@StackHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086f290h
+    jmp rax
+
+PUBLIC ?UnkFunc1@StackHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc1@StackHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 014086f300h
+    jmp rax
+
+PUBLIC ?GetBlockSize@StackHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@StackHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 014086f3b0h
+    jmp rax
+
+PUBLIC ??0LinkHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0LinkHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086f5e0h
+    jmp rax
+
+PUBLIC ?Alloc@LinkHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@LinkHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086f720h
+    jmp rax
+
+PUBLIC ?AllocBottom@LinkHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@LinkHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 014086f780h
+    jmp rax
+
+PUBLIC ?Free@LinkHeapBase@fnd@csl@@UEAAXPEAX@Z
+?Free@LinkHeapBase@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 014086f7e0h
+    jmp rax
+
+PUBLIC ?GetBlockSize@LinkHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@LinkHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 014086f8c0h
+    jmp rax
+
+PUBLIC ?GetMemorySnapshot@LinkHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z
+?GetMemorySnapshot@LinkHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z:
+    mov rax, 014086f9d0h
+    jmp rax
+
+PUBLIC ??0PoolHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0PoolHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 014086ffa0h
+    jmp rax
+
+PUBLIC ?Alloc@PoolHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@PoolHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140870100h
+    jmp rax
+
+PUBLIC ?Alloc@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140870100h
+    jmp rax
+
+PUBLIC ?AllocBottom@PoolHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@PoolHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140870160h
+    jmp rax
+
+PUBLIC ?AllocBottom@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140870160h
+    jmp rax
+
+PUBLIC ?Free@PoolHeapBase@fnd@csl@@UEAAXPEAX@Z
+?Free@PoolHeapBase@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 0140870170h
+    jmp rax
+
+PUBLIC ?Free@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z
+?Free@?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 0140870170h
+    jmp rax
+
+PUBLIC ?GetBlockSize@PoolHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@PoolHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 01408701d0h
+    jmp rax
+
+PUBLIC ?GetMemorySnapshot@PoolHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z
+?GetMemorySnapshot@PoolHeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z:
+    mov rax, 0140870220h
+    jmp rax
+
+PUBLIC ??0MemorySnapshot@fnd@csl@@QEAA@PEAVIAllocator@12@@Z
+??0MemorySnapshot@fnd@csl@@QEAA@PEAVIAllocator@12@@Z:
+    mov rax, 0140870430h
+    jmp rax
+
+PUBLIC ??0ExternalHeapBase@fnd@csl@@QEAA@PEBD@Z
+??0ExternalHeapBase@fnd@csl@@QEAA@PEBD@Z:
+    mov rax, 0140871330h
+    jmp rax
+
+PUBLIC ?Alloc@ExternalHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@ExternalHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 01408714f0h
+    jmp rax
+
+PUBLIC ?AllocBottom@ExternalHeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@ExternalHeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140871570h
+    jmp rax
+
+PUBLIC ?Free@ExternalHeapBase@fnd@csl@@UEAAXPEAX@Z
+?Free@ExternalHeapBase@fnd@csl@@UEAAXPEAX@Z:
+    mov rax, 01408715f0h
+    jmp rax
+
+PUBLIC ?GetBlockSize@ExternalHeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@ExternalHeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 0140871620h
+    jmp rax
+
 PUBLIC ?Initialize@LinkListImpl@detail@ut@csl@@IEAAXXZ
 ?Initialize@LinkListImpl@detail@ut@csl@@IEAAXXZ:
     mov rax, 0140875050h
-    jmp rax
-
-PUBLIC ?Alloc@IAllocator@fnd@csl@@UEAAPEAX_K0@Z
-?Alloc@IAllocator@fnd@csl@@UEAAPEAX_K0@Z:
-    mov rax, 0140c25064h
-    jmp rax
-
-PUBLIC ?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z
-?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z:
-    mov rax, 0140c25064h
     jmp rax
 
 PUBLIC ?AllocBottom@HeapBase@fnd@csl@@UEAAPEAX_K0@Z
@@ -21765,11 +22350,6 @@ PUBLIC ?UnkFunc12@PhysicsWorld@physics@hh@@UEAA_KXZ
     mov rax, 0140c25064h
     jmp rax
 
-PUBLIC ?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ
-?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ:
-    mov rax, 0140c25064h
-    jmp rax
-
 PUBLIC ?UnkFunc2@PhysicsWorld@physics@hh@@UEAA_KXZ
 ?UnkFunc2@PhysicsWorld@physics@hh@@UEAA_KXZ:
     mov rax, 0140c25064h
@@ -21962,6 +22542,76 @@ PUBLIC ?GetCategory@GOComponent@game@hh@@UEBAPEBDXZ
 
 PUBLIC ?DrawSphere_@DrawContext@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z
 ?DrawSphere_@DrawContext@gfnd@hh@@UEAAXAEBVMatrix34@math@csl@@MAEBU?$Color@E@ut@6@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UnkFunc1@PhysicsWorld@physics@hh@@UEAA_KXZ
+?UnkFunc1@PhysicsWorld@physics@hh@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?Alloc@HeapBase@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@HeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetBlockSize@HeapBase@fnd@csl@@UEBA_KPEAX@Z
+?GetBlockSize@HeapBase@fnd@csl@@UEBA_KPEAX@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@HeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@HeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetMemorySnapshot@HeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z
+?GetMemorySnapshot@HeapBase@fnd@csl@@UEBA_NAEAUMemorySnapshot@23@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UnkFunc5@ExternalHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc5@ExternalHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UnkFunc6@ExternalHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc6@ExternalHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UnkFunc7@ExternalHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc7@ExternalHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UnkFunc8@ExternalHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc8@ExternalHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetBufferTop@HeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferTop@HeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetBufferEnd@HeapBase@fnd@csl@@UEBA_KXZ
+?GetBufferEnd@HeapBase@fnd@csl@@UEBA_KXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@HeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@HeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@HeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@HeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?DoStep@GameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z
+?DoStep@GameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z:
     mov rax, 0140c25064h
     jmp rax
 
@@ -30370,6 +31020,11 @@ PUBLIC ?UnkFunc15@PhysicsWorld@physics@hh@@UEAA_KXZ
     mov rax, 0141dd3ee8h
     jmp rax
 
+PUBLIC ?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ
+?UnkFunc13@PhysicsWorld@physics@hh@@UEAA_KXZ:
+    mov rax, 0141dd3ee8h
+    jmp rax
+
 PUBLIC ?GetClipPlanes@LocalFxCamera@Impl@RenderManager@gfx@hh@@UEBAXPEAM0@Z
 ?GetClipPlanes@LocalFxCamera@Impl@RenderManager@gfx@hh@@UEBAXPEAM0@Z:
     mov rax, 0141dd8040h
@@ -30398,11 +31053,6 @@ PUBLIC ?UnkFunc21@RenderingEngineNeedle@gfx@hh@@UEAAXXZ
 PUBLIC ?fUnk5@GOCInput@game@hh@@UEAA_NXZ
 ?fUnk5@GOCInput@game@hh@@UEAA_NXZ:
     mov rax, 0141de1d70h
-    jmp rax
-
-PUBLIC ?DoStep@BucketedGameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z
-?DoStep@BucketedGameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z:
-    mov rax, 0141de2570h
     jmp rax
 
 PUBLIC ?ObjectAddedToLayerCallback@GameObjectListener@game@hh@@UEAAXPEAVGameObject@23@H@Z
@@ -30523,11 +31173,6 @@ PUBLIC ?UnkFunc17@HeapBase@fnd@csl@@UEAAXXZ
 PUBLIC ?FNL_UnkFunc6@FrameworkNotificationListener@fw@hh@@UEAAXXZ
 ?FNL_UnkFunc6@FrameworkNotificationListener@fw@hh@@UEAAXXZ:
     mov rax, 0141e322a8h
-    jmp rax
-
-PUBLIC ?DoStep@GameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z
-?DoStep@GameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z:
-    mov rax, 0141e34fc0h
     jmp rax
 
 PUBLIC ?typeInfo@SwayParamIndivisual@rfl@app@@2VRflTypeInfo@fnd@hh@@B
@@ -44500,6 +45145,11 @@ PUBLIC ?gameServiceClass@VibrationManager@game@hh@@0VGameServiceClass@23@B
     mov rax, 0142070858h
     jmp rax
 
+PUBLIC ?instance@LocalHeap@heap@fw@hh@@2PEAV1234@EA
+?instance@LocalHeap@heap@fw@hh@@2PEAV1234@EA:
+    mov rax, 01420728f0h
+    jmp rax
+
 PUBLIC ?instance@Application@fw@hh@@2PEAV123@EA
 ?instance@Application@fw@hh@@2PEAV123@EA:
     mov rax, 0142072910h
@@ -52825,11 +53475,6 @@ PUBLIC ??_DMessage@fnd@hh@@QEAAXXZ
     mov rax, 01428698d0h
     jmp rax
 
-PUBLIC ??_DGameManagerListener@game@hh@@QEAAXXZ
-??_DGameManagerListener@game@hh@@QEAAXXZ:
-    mov rax, 014287b2b0h
-    jmp rax
-
 PUBLIC ?GameServiceAddedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z
 ?GameServiceAddedCallback@CameraService@camera@app@@UEAAXPEAVGameService@game@hh@@@Z:
     mov rax, 014287d730h
@@ -52860,6 +53505,26 @@ PUBLIC ??_DResTexture@gfnd@hh@@QEAAXXZ
     mov rax, 01429c2770h
     jmp rax
 
+PUBLIC ??_DThreadSafePooledAllocator@fnd@hh@@QEAAXXZ
+??_DThreadSafePooledAllocator@fnd@hh@@QEAAXXZ:
+    mov rax, 01429c9700h
+    jmp rax
+
+PUBLIC ?AllocBottom@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 01429cbb60h
+    jmp rax
+
+PUBLIC ?Alloc@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 01429cdd30h
+    jmp rax
+
+PUBLIC ??_D?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ
+??_D?$LinkHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ:
+    mov rax, 01429cf380h
+    jmp rax
+
 PUBLIC ??_DIAllocator@fnd@csl@@QEAAXXZ
 ??_DIAllocator@fnd@csl@@QEAAXXZ:
     mov rax, 01429d2e60h
@@ -52878,11 +53543,6 @@ PUBLIC ?FNL_UnkFunc7@FrameworkNotificationListener@fw@hh@@UEAAXXZ
 PUBLIC ??_DGOCColliderListener@physics@hh@@QEAAXXZ
 ??_DGOCColliderListener@physics@hh@@QEAAXXZ:
     mov rax, 01429f5560h
-    jmp rax
-
-PUBLIC ??_DHFrameListener@fnd@hh@@QEAAXXZ
-??_DHFrameListener@fnd@hh@@QEAAXXZ:
-    mov rax, 0142a042b0h
     jmp rax
 
 PUBLIC ??_DInputDevice@hid@hh@@QEAAXXZ
@@ -53280,11 +53940,6 @@ PUBLIC ?GameServiceRemovedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@
     mov rax, 01443e0de0h
     jmp rax
 
-PUBLIC ??_DReloaderListener@fnd@hh@@QEAAXXZ
-??_DReloaderListener@fnd@hh@@QEAAXXZ:
-    mov rax, 01443e3b50h
-    jmp rax
-
 PUBLIC ?UpdateCallback@TerrainManager@trr@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
 ?UpdateCallback@TerrainManager@trr@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
     mov rax, 01443ecb00h
@@ -53350,11 +54005,6 @@ PUBLIC ??_DGOCCamera@camera@app_cmn@@QEAAXXZ
     mov rax, 01446d6210h
     jmp rax
 
-PUBLIC ??_DFreeCameraListener@game@hh@@QEAAXXZ
-??_DFreeCameraListener@game@hh@@QEAAXXZ:
-    mov rax, 014472e4b0h
-    jmp rax
-
 PUBLIC ??_DInputListener@game@hh@@QEAAXXZ
 ??_DInputListener@game@hh@@QEAAXXZ:
     mov rax, 0144862700h
@@ -53385,11 +54035,6 @@ PUBLIC ??_DApplicationListener@fw@hh@@QEAAXXZ
     mov rax, 0144dc5b50h
     jmp rax
 
-PUBLIC ??_DKeyEventHandler@fw@hh@@QEAAXXZ
-??_DKeyEventHandler@fw@hh@@QEAAXXZ:
-    mov rax, 0144dc85c0h
-    jmp rax
-
 PUBLIC ?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
 ?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z:
     mov rax, 0144dd7de0h
@@ -53398,11 +54043,6 @@ PUBLIC ?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
 PUBLIC ??_DPhysicsWorldListener@physics@hh@@QEAAXXZ
 ??_DPhysicsWorldListener@physics@hh@@QEAAXXZ:
     mov rax, 0144ddcb60h
-    jmp rax
-
-PUBLIC ??_DMouseEventHandler@fw@hh@@QEAAXXZ
-??_DMouseEventHandler@fw@hh@@QEAAXXZ:
-    mov rax, 0144e05830h
     jmp rax
 
 PUBLIC ?GetShape@GOCBoxCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
@@ -53438,6 +54078,11 @@ PUBLIC ??0GOCRigidBodyHavok@physics@hh@@QEAA@XZ
 PUBLIC ??0GOCCollisionCacheHavok@physics@hh@@QEAA@XZ
 ??0GOCCollisionCacheHavok@physics@hh@@QEAA@XZ:
     mov rax, 0144eedff0h
+    jmp rax
+
+PUBLIC ??_D?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@QEAAXXZ
+??_D?$PoolHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@QEAAXXZ:
+    mov rax, 0144f26940h
     jmp rax
 
 PUBLIC ?OnGOCVisualEvent@GOCVisualModel@gfx@hh@@UEAAXW4GOCVisualEvent@GOCVisual@23@IPEAX@Z
@@ -53845,9 +54490,34 @@ PUBLIC ??_DFreeCameraController@game@hh@@QEAAXXZ
     mov rax, 01455b9d20h
     jmp rax
 
+PUBLIC ??_D?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ
+??_D?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@QEAAXXZ:
+    mov rax, 01455d1960h
+    jmp rax
+
 PUBLIC ??_DMemoryRouterAllocator@fnd@hh@@QEAAXXZ
 ??_DMemoryRouterAllocator@fnd@hh@@QEAAXXZ:
     mov rax, 01455d6780h
+    jmp rax
+
+PUBLIC ?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z
+?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z:
+    mov rax, 01455d9500h
+    jmp rax
+
+PUBLIC ?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?Alloc@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 01455d9500h
+    jmp rax
+
+PUBLIC ?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z
+?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@EEAAPEAX_K0@Z:
+    mov rax, 01455dd910h
+    jmp rax
+
+PUBLIC ?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z
+?AllocBottom@?$FreeListHeapTemplate@VMutex@fnd@csl@@@fnd@csl@@UEAAPEAX_K0@Z:
+    mov rax, 01455dd910h
     jmp rax
 
 PUBLIC ?UnkFunc3@FrameworkWin32@fw@hh@@UEAA_KXZ
@@ -54067,6 +54737,11 @@ PUBLIC ??_DRenderable@gfnd@hh@@QEAAXXZ
 
 PUBLIC ?UnkFunc23@FileLoader@fnd@hh@@UEAA_KPEBD@Z
 ?UnkFunc23@FileLoader@fnd@hh@@UEAA_KPEBD@Z:
+    mov rax, 0145b54b20h
+    jmp rax
+
+PUBLIC ??_D?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@QEAAXXZ
+??_D?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@QEAAXXZ:
     mov rax, 0145b54b20h
     jmp rax
 
@@ -54860,8 +55535,8 @@ PUBLIC ?SetDebugObjectName@VertexLayoutImpl@ImplDX11@needle@hh@@UEAAXPEBD@Z
     mov rax, 014641bf00h
     jmp rax
 
-PUBLIC ?Alloc@HeapBase@fnd@csl@@UEAAPEAX_K0@Z
-?Alloc@HeapBase@fnd@csl@@UEAAPEAX_K0@Z:
+PUBLIC ??_DHeapBase@fnd@csl@@QEAAXXZ
+??_DHeapBase@fnd@csl@@QEAAXXZ:
     mov rax, 01465b3e30h
     jmp rax
 
@@ -54875,13 +55550,158 @@ PUBLIC ?UnkFunc27@FileLoader@fnd@hh@@UEAA_K_K@Z
     mov rax, 01465b4ed0h
     jmp rax
 
+PUBLIC ?IsIn@FreeListHeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@FreeListHeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 01465b4ed0h
+    jmp rax
+
 PUBLIC ?UnkFunc25@HeapBase@fnd@csl@@UEAAXXZ
 ?UnkFunc25@HeapBase@fnd@csl@@UEAAXXZ:
+    mov rax, 01465b6130h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@FreeListHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@FreeListHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
     mov rax, 01465b6130h
     jmp rax
 
 PUBLIC ?UnkFunc19@HeapBase@fnd@csl@@UEAAHXZ
 ?UnkFunc19@HeapBase@fnd@csl@@UEAAHXZ:
     mov rax, 0146623ac0h
+    jmp rax
+
+PUBLIC ??_DFreeListHeapBase@fnd@csl@@QEAAXXZ
+??_DFreeListHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 0146623ac0h
+    jmp rax
+
+PUBLIC ?GetCurrentAllocateCount@OptimizedFreeListHeapBase@fnd@csl@@UEBAIXZ
+?GetCurrentAllocateCount@OptimizedFreeListHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 01466252b0h
+    jmp rax
+
+PUBLIC ?GetCallAllocateTime@OptimizedFreeListHeapBase@fnd@csl@@UEBAIXZ
+?GetCallAllocateTime@OptimizedFreeListHeapBase@fnd@csl@@UEBAIXZ:
+    mov rax, 0146627110h
+    jmp rax
+
+PUBLIC ??_DLargeBlock@OptimizedFreeListHeapBase@fnd@csl@@QEAAXXZ
+??_DLargeBlock@OptimizedFreeListHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 0146634bd0h
+    jmp rax
+
+PUBLIC ??_DOptimizedFreeListHeapBase@fnd@csl@@QEAAXXZ
+??_DOptimizedFreeListHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 0146636870h
+    jmp rax
+
+PUBLIC ?IsIn@StackHeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@StackHeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 0146637de0h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@StackHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@StackHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 0146638f30h
+    jmp rax
+
+PUBLIC ?UnkFunc2@StackHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc2@StackHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 014663beb0h
+    jmp rax
+
+PUBLIC ?UnkFunc3@StackHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc3@StackHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 014663d680h
+    jmp rax
+
+PUBLIC ??_DStackHeapBase@fnd@csl@@QEAAXXZ
+??_DStackHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 014663f2a0h
+    jmp rax
+
+PUBLIC ?IsIn@LinkHeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@LinkHeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 0146640a20h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@LinkHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@LinkHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 0146642670h
+    jmp rax
+
+PUBLIC ?ForEachAllocatedBlock@LinkHeapBase@fnd@csl@@UEAAXAEAVMemoryBlockFunction@23@@Z
+?ForEachAllocatedBlock@LinkHeapBase@fnd@csl@@UEAAXAEAVMemoryBlockFunction@23@@Z:
+    mov rax, 0146648300h
+    jmp rax
+
+PUBLIC ?PrintDebugInformation@LinkHeapBase@fnd@csl@@UEAAXXZ
+?PrintDebugInformation@LinkHeapBase@fnd@csl@@UEAAXXZ:
+    mov rax, 014664a8b0h
+    jmp rax
+
+PUBLIC ?SetDebugFillOnAlloc@LinkHeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugFillOnAlloc@LinkHeapBase@fnd@csl@@UEAAX_N@Z:
+    mov rax, 014664baa0h
+    jmp rax
+
+PUBLIC ?SetDebugFillOnFree@LinkHeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugFillOnFree@LinkHeapBase@fnd@csl@@UEAAX_N@Z:
+    mov rax, 014664d230h
+    jmp rax
+
+PUBLIC ?SetDebugUnk@LinkHeapBase@fnd@csl@@UEAAX_N@Z
+?SetDebugUnk@LinkHeapBase@fnd@csl@@UEAAX_N@Z:
+    mov rax, 014664eb90h
+    jmp rax
+
+PUBLIC ?UnkFunc1@LinkHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc1@LinkHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 014664fcd0h
+    jmp rax
+
+PUBLIC ??_DLinkHeapBase@fnd@csl@@QEAAXXZ
+??_DLinkHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 0146651850h
+    jmp rax
+
+PUBLIC ?IsIn@PoolHeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@PoolHeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 0146652fd0h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@PoolHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@PoolHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 01466548c0h
+    jmp rax
+
+PUBLIC ?UnkFunc1@PoolHeapBase@fnd@csl@@UEAA_KXZ
+?UnkFunc1@PoolHeapBase@fnd@csl@@UEAA_KXZ:
+    mov rax, 0146657000h
+    jmp rax
+
+PUBLIC ??_DPoolHeapBase@fnd@csl@@QEAAXXZ
+??_DPoolHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 014665d330h
+    jmp rax
+
+PUBLIC ??_DMemorySnapshot@fnd@csl@@QEAAXXZ
+??_DMemorySnapshot@fnd@csl@@QEAAXXZ:
+    mov rax, 014665f490h
+    jmp rax
+
+PUBLIC ?IsIn@ExternalHeapBase@fnd@csl@@UEBA_NPEAX@Z
+?IsIn@ExternalHeapBase@fnd@csl@@UEBA_NPEAX@Z:
+    mov rax, 0146660b20h
+    jmp rax
+
+PUBLIC ?CollectHeapInformation@ExternalHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z
+?CollectHeapInformation@ExternalHeapBase@fnd@csl@@UEBAXAEAUHeapInformation@23@@Z:
+    mov rax, 0146663440h
+    jmp rax
+
+PUBLIC ??_DExternalHeapBase@fnd@csl@@QEAAXXZ
+??_DExternalHeapBase@fnd@csl@@QEAAXXZ:
+    mov rax, 0146668c10h
     jmp rax
 end
