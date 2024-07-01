@@ -230,6 +230,9 @@ inline size_t hh::fnd::RflClassMember::GetAlignment() const
 	case TYPE_ARRAY:
 		return alignof(csl::ut::MoveArray<void*>);
 	
+	case TYPE_OLD_ARRAY:
+		return alignof(csl::ut::MoveArray32<void*>);
+
 	case TYPE_SIMPLE_ARRAY:
 		return alignof(size_t);
 

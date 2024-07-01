@@ -83,6 +83,8 @@
 #include "Hedgehog/Foundation/Type/Geometry.h"
 #include "Hedgehog/Foundation/Type/WireGeometry.h"
 
+#include "Hedgehog/TArray.h"
+
 #include "Hedgehog/Filesystem/FileInfo.h"
 #include "Hedgehog/Filesystem/FileBind.h"
 
