@@ -51,7 +51,7 @@ namespace hh::gfnd {
         void SetOrthogonalProjectionMatrix(float top, float bottom, float left, float right, float nearClip, float farClip);
         void GetPerspectiveProjectionParameters(float* fov, float* aspectRatio, float* nearClip, float* farClip);
         inline csl::math::Matrix44 GetInverseViewMatrix() {
-            return { viewMatrix.inverse() };
+            return viewMatrix.inverse();
         }
     };
 }

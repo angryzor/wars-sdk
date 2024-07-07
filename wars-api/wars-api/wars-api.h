@@ -4,11 +4,18 @@
 #undef AddJob
 #endif
 
+#include <cstdint>
+#include <d3d11.h>
+
 #ifndef EXPORTING_TYPES
+#include <new>
 #include <cassert>
-#include <functional>
-#include "cslib/csl/math/math.h"
+#include <cstring>
+#include <type_traits>
+#include <synchapi.h>
 #endif
+
+#include "cslib/csl/math/math.h"
 
 #include "cslib/csl/fnd/IAllocator.h"
 
