@@ -830,6 +830,11 @@ PUBLIC ?Load@ManagedResource@fnd@hh@@UEAAXPEAX_KPEAVStaticResourceContainer@23@@
     mov rax, 0140142160h
     jmp rax
 
+PUBLIC ?LoadFromStaticResourceContainer@ManagedResource@fnd@hh@@UEAAXPEAX_KPEAVStaticResourceContainer@23@@Z
+?LoadFromStaticResourceContainer@ManagedResource@fnd@hh@@UEAAXPEAX_KPEAVStaticResourceContainer@23@@Z:
+    mov rax, 0140142160h
+    jmp rax
+
 PUBLIC ??0ResTexture@gfnd@hh@@QEAA@XZ
 ??0ResTexture@gfnd@hh@@QEAA@XZ:
     mov rax, 01401421f0h
@@ -1500,6 +1505,16 @@ PUBLIC ??_DFxParamManager@gfx@app@@QEAAXXZ
     mov rax, 01401956a0h
     jmp rax
 
+PUBLIC ?AddNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@hh@@IM@Z
+?AddNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KPEAUNeedleFxParameter@hh@@IM@Z:
+    mov rax, 01401957c0h
+    jmp rax
+
+PUBLIC ?RemoveNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z
+?RemoveNeedleFxParameterInterpolationJob@FxParamManager@gfx@app@@QEAAX_KM@Z:
+    mov rax, 0140195ce0h
+    jmp rax
+
 PUBLIC ?FFL_UnkFunc3@FxParamManager@gfx@app@@UEAAXXZ
 ?FFL_UnkFunc3@FxParamManager@gfx@app@@UEAAXXZ:
     mov rax, 0140195f90h
@@ -1958,6 +1973,11 @@ PUBLIC ?AddJob@?$InterpolatorT@UFxTAAParameter@hh@@@FxParamManager@gfx@app@@UEAA
 PUBLIC ?AddJob@?$InterpolatorT@UFxEffectParameter@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z
 ?AddJob@?$InterpolatorT@UFxEffectParameter@hh@@@FxParamManager@gfx@app@@UEAAX_KPEBXIIMI@Z:
     mov rax, 014019d6e0h
+    jmp rax
+
+PUBLIC ??0SceneParameters@gfx@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z
+??0SceneParameters@gfx@app@@QEAA@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014019eac0h
     jmp rax
 
 PUBLIC ?Create@GeometryInstanceManager@services@heur@@CAPEAV123@XZ
@@ -16015,6 +16035,11 @@ PUBLIC ?Create@GOCSoundEx@snd@app@@CAPEAV123@XZ
     mov rax, 01405185b0h
     jmp rax
 
+PUBLIC ?GetRuntimeTypeInfo@FxColManager@gfx@app@@UEAAPEAXXZ
+?GetRuntimeTypeInfo@FxColManager@gfx@app@@UEAAPEAXXZ:
+    mov rax, 014051cd00h
+    jmp rax
+
 PUBLIC ?Create@FxColManager@services@heur@@CAPEAV123@XZ
 ?Create@FxColManager@services@heur@@CAPEAV123@XZ:
     mov rax, 014051cd40h
@@ -16025,6 +16050,11 @@ PUBLIC ?Create@FxColManager@app@@CAPEAV12@XZ
     mov rax, 014051cd40h
     jmp rax
 
+PUBLIC ?ProcessMessage@FxColManager@gfx@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
+?ProcessMessage@FxColManager@gfx@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
+    mov rax, 014051d1b0h
+    jmp rax
+
 PUBLIC ??0FxColManager@services@heur@@QEAA@XZ
 ??0FxColManager@services@heur@@QEAA@XZ:
     mov rax, 014051d240h
@@ -16033,6 +16063,76 @@ PUBLIC ??0FxColManager@services@heur@@QEAA@XZ
 PUBLIC ??0FxColManager@app@@QEAA@XZ
 ??0FxColManager@app@@QEAA@XZ:
     mov rax, 014051d240h
+    jmp rax
+
+PUBLIC ??0FxColManager@gfx@app@@AEAA@XZ
+??0FxColManager@gfx@app@@AEAA@XZ:
+    mov rax, 014051d240h
+    jmp rax
+
+PUBLIC ??_DFxColManager@gfx@app@@QEAAXXZ
+??_DFxColManager@gfx@app@@QEAAXXZ:
+    mov rax, 014051d420h
+    jmp rax
+
+PUBLIC ?SPL_UnkFunc1@FxColManager@gfx@app@@UEAAXXZ
+?SPL_UnkFunc1@FxColManager@gfx@app@@UEAAXXZ:
+    mov rax, 014051d590h
+    jmp rax
+
+PUBLIC ?PostStepCallback@FxColManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
+?PostStepCallback@FxColManager@gfx@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z:
+    mov rax, 014051d5a0h
+    jmp rax
+
+PUBLIC ?Update@FxColManager@gfx@app@@UEAAXAEBUSUpdateInfo@fnd@hh@@@Z
+?Update@FxColManager@gfx@app@@UEAAXAEBUSUpdateInfo@fnd@hh@@@Z:
+    mov rax, 014051d5c0h
+    jmp rax
+
+PUBLIC ?OnAddedToGame@FxColManager@gfx@app@@UEAAXXZ
+?OnAddedToGame@FxColManager@gfx@app@@UEAAXXZ:
+    mov rax, 014051d740h
+    jmp rax
+
+PUBLIC ?GameServiceAddedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceAddedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 014051da70h
+    jmp rax
+
+PUBLIC ?GameServiceRemovedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z
+?GameServiceRemovedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z:
+    mov rax, 014051db90h
+    jmp rax
+
+PUBLIC ?StartLevel@FxColManager@gfx@app@@QEAAXPEBD@Z
+?StartLevel@FxColManager@gfx@app@@QEAAXPEBD@Z:
+    mov rax, 014051dc80h
+    jmp rax
+
+PUBLIC ?EndLevel@FxColManager@gfx@app@@QEAAXXZ
+?EndLevel@FxColManager@gfx@app@@QEAAXXZ:
+    mov rax, 014051e080h
+    jmp rax
+
+PUBLIC ?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ
+?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051e7b0h
+    jmp rax
+
+PUBLIC ?InitializeLightParameters@FxColManager@gfx@app@@IEAAXXZ
+?InitializeLightParameters@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051ee20h
+    jmp rax
+
+PUBLIC ?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd@hh@@U456@@Z
+?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd@hh@@U456@@Z:
+    mov rax, 014051f3f0h
+    jmp rax
+
+PUBLIC ?InitializeIBL@FxColManager@gfx@app@@IEAAXXZ
+?InitializeIBL@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051f590h
     jmp rax
 
 PUBLIC ?Create@ShareManager@app@@CAPEAV12@XZ
@@ -18640,6 +18740,36 @@ PUBLIC ?Load@ResModelInstanceInfo@gfx@hh@@UEAAXPEAX_K@Z
     mov rax, 01406765a0h
     jmp rax
 
+PUBLIC ?GetTypeInfo@ResProbe@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResProbe@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140676760h
+    jmp rax
+
+PUBLIC ?GetTypeInfo@ResDecal@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResDecal@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 0140676a20h
+    jmp rax
+
+PUBLIC ??0ResDecal@gfx@hh@@AEAA@XZ
+??0ResDecal@gfx@hh@@AEAA@XZ:
+    mov rax, 0140676a30h
+    jmp rax
+
+PUBLIC ?Load@ResDecal@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResDecal@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 0140676bd0h
+    jmp rax
+
+PUBLIC ?Resolve@ResDecal@gfx@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z
+?Resolve@ResDecal@gfx@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z:
+    mov rax, 0140676c20h
+    jmp rax
+
+PUBLIC ?Create@ResDecal@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z
+?Create@ResDecal@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z:
+    mov rax, 0140676ff0h
+    jmp rax
+
 PUBLIC ?GetTypeInfo@ResTerrainModel@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
 ?GetTypeInfo@ResTerrainModel@gfx@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
     mov rax, 0140677910h
@@ -20090,6 +20220,11 @@ PUBLIC ?GetResourceByName@Packfile@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBURe
     mov rax, 014071ec20h
     jmp rax
 
+PUBLIC ?GetResourceByIndexAndTypeInfo@Packfile@fnd@hh@@QEAAPEAVManagedResource@23@IPEBUResourceTypeInfo@23@@Z
+?GetResourceByIndexAndTypeInfo@Packfile@fnd@hh@@QEAAPEAVManagedResource@23@IPEBUResourceTypeInfo@23@@Z:
+    mov rax, 014071ed00h
+    jmp rax
+
 PUBLIC ?GetNumResources@StaticResourceContainer@fnd@hh@@UEBAHXZ
 ?GetNumResources@StaticResourceContainer@fnd@hh@@UEBAHXZ:
     mov rax, 014071f7e0h
@@ -20560,6 +20695,71 @@ PUBLIC ?SaveExtras@fnd@hh@@YAXPEBXAEBVRflClass@12@PEAVIAllocator@1csl@@PEAXAEAUO
     mov rax, 0140752a00h
     jmp rax
 
+PUBLIC ?Create@BvWorld@ut@hh@@SAPEAV123@XZ
+?Create@BvWorld@ut@hh@@SAPEAV123@XZ:
+    mov rax, 0140757220h
+    jmp rax
+
+PUBLIC ?Create@BvWorld@ut@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z
+?Create@BvWorld@ut@hh@@SAPEAV123@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140757220h
+    jmp rax
+
+PUBLIC ?AddObject@BvWorld@ut@hh@@QEAAXPEAUBvWorldHandle@23@@Z
+?AddObject@BvWorld@ut@hh@@QEAAXPEAUBvWorldHandle@23@@Z:
+    mov rax, 0140757290h
+    jmp rax
+
+PUBLIC ?GetObjects@BvWorld@ut@hh@@QEBAAEAV?$MoveArray@PEAUBvWorldHandle@ut@hh@@@2csl@@XZ
+?GetObjects@BvWorld@ut@hh@@QEBAAEAV?$MoveArray@PEAUBvWorldHandle@ut@hh@@@2csl@@XZ:
+    mov rax, 0140757340h
+    jmp rax
+
+PUBLIC ??0KdTreeBuilder@ut@hh@@QEAA@XZ
+??0KdTreeBuilder@ut@hh@@QEAA@XZ:
+    mov rax, 0140757560h
+    jmp rax
+
+PUBLIC ?SetMaxLeafNodeObjects@KdTreeBuilder@ut@hh@@QEAAXH@Z
+?SetMaxLeafNodeObjects@KdTreeBuilder@ut@hh@@QEAAXH@Z:
+    mov rax, 0140757580h
+    jmp rax
+
+PUBLIC ?Build@KdTreeBuilder@ut@hh@@QEAAPEAVKdTree@23@AEBVBvWorld@23@PEAVIAllocator@fnd@csl@@@Z
+?Build@KdTreeBuilder@ut@hh@@QEAAPEAVKdTree@23@AEBVBvWorld@23@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 0140757590h
+    jmp rax
+
+PUBLIC ?GetBestSplitter@KdTreeBuilder@ut@hh@@AEAA_NAEBVAabb@geom@csl@@PEAUInternalObject@123@1PEAUInternalPlane@123@@Z
+?GetBestSplitter@KdTreeBuilder@ut@hh@@AEAA_NAEBVAabb@geom@csl@@PEAUInternalObject@123@1PEAUInternalPlane@123@@Z:
+    mov rax, 01407578d0h
+    jmp rax
+
+PUBLIC ?BuildR@KdTreeBuilder@ut@hh@@AEAAPEAVKdTreeNode@23@PEAUInternalObject@123@0HPEAVIAllocator@fnd@csl@@AEAUBuildStatistics@123@@Z
+?BuildR@KdTreeBuilder@ut@hh@@AEAAPEAVKdTreeNode@23@PEAUInternalObject@123@0HPEAVIAllocator@fnd@csl@@AEAUBuildStatistics@123@@Z:
+    mov rax, 0140757dc0h
+    jmp rax
+
+PUBLIC ?CalcMemorySize@KdTreeUtil@ut@hh@@SA_KAEBVKdTree@23@@Z
+?CalcMemorySize@KdTreeUtil@ut@hh@@SA_KAEBVKdTree@23@@Z:
+    mov rax, 0140758160h
+    jmp rax
+
+PUBLIC ?BuildResource@KdTreeUtil@ut@hh@@SAXAEBVKdTree@23@PEAX@Z
+?BuildResource@KdTreeUtil@ut@hh@@SAXAEBVKdTree@23@PEAX@Z:
+    mov rax, 0140758190h
+    jmp rax
+
+PUBLIC ?build@KdTreeUtil@ut@hh@@CAXPEBVKdTreeNode@23@HPEAVResKdTreeNodeData@23@PEAH@Z
+?build@KdTreeUtil@ut@hh@@CAXPEBVKdTreeNode@23@HPEAVResKdTreeNodeData@23@PEAH@Z:
+    mov rax, 0140758e60h
+    jmp rax
+
+PUBLIC ?orderLeafNodesAndObjects@KdTreeUtil@ut@hh@@CAXPEBVKdTreeNode@23@PEAPEAVResKdTreeLeafNodeData@23@PEAIPEAH@Z
+?orderLeafNodesAndObjects@KdTreeUtil@ut@hh@@CAXPEBVKdTreeNode@23@PEAPEAVResKdTreeLeafNodeData@23@PEAIPEAH@Z:
+    mov rax, 0140758f00h
+    jmp rax
+
 PUBLIC ?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ
 ?TL_UnkFunc2@TextListener@font@hh@@UEAAHXZ:
     mov rax, 014075e150h
@@ -20788,6 +20988,16 @@ PUBLIC ?BindInput@AxisMapping@hid@hh@@QEAAXIM@Z
 PUBLIC ??0AxisMapping@hid@hh@@QEAA@PEBD@Z
 ??0AxisMapping@hid@hh@@QEAA@PEBD@Z:
     mov rax, 014077f110h
+    jmp rax
+
+PUBLIC ??0KdTreeNode@ut@hh@@QEAA@XZ
+??0KdTreeNode@ut@hh@@QEAA@XZ:
+    mov rax, 0140787ed0h
+    jmp rax
+
+PUBLIC ??0KdTree@ut@hh@@QEAA@XZ
+??0KdTree@ut@hh@@QEAA@XZ:
+    mov rax, 0140787fc0h
     jmp rax
 
 PUBLIC ?Create@TextureData@ScalableFontTextureCache@font@hh@@CAPEAV1234@XZ
@@ -23048,6 +23258,16 @@ PUBLIC ?typeInfo@ResModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
 PUBLIC ?typeInfo@ResModelInstanceInfo@gfx@hh@@0UResourceTypeInfo@fnd@3@B
 ?typeInfo@ResModelInstanceInfo@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
     mov rax, 0140d75360h
+    jmp rax
+
+PUBLIC ?typeInfo@ResProbe@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResProbe@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 0140d753d0h
+    jmp rax
+
+PUBLIC ?typeInfo@ResDecal@gfx@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResDecal@gfx@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 0140d75438h
     jmp rax
 
 PUBLIC ?typeInfo@ResTerrainModel@gfx@hh@@0UResourceTypeInfo@fnd@3@B
@@ -52770,6 +52990,11 @@ PUBLIC ?gameServiceClass@FxColManager@app@@0VGameServiceClass@game@hh@@B
     mov rax, 014240d618h
     jmp rax
 
+PUBLIC ?gameServiceClass@FxColManager@gfx@app@@0VGameServiceClass@game@hh@@B
+?gameServiceClass@FxColManager@gfx@app@@0VGameServiceClass@game@hh@@B:
+    mov rax, 014240d618h
+    jmp rax
+
 PUBLIC ?gameServiceClass@ShareManager@app@@0VGameServiceClass@game@hh@@B
 ?gameServiceClass@ShareManager@app@@0VGameServiceClass@game@hh@@B:
     mov rax, 014240d630h
@@ -53490,11 +53715,6 @@ PUBLIC ??_DCameraExtension@camera@app_cmn@@QEAAXXZ
     mov rax, 01429224c0h
     jmp rax
 
-PUBLIC ??_DGameStepListener@game@hh@@QEAAXXZ
-??_DGameStepListener@game@hh@@QEAAXXZ:
-    mov rax, 0142964860h
-    jmp rax
-
 PUBLIC ??_DManagedResource@fnd@hh@@QEAAXXZ
 ??_DManagedResource@fnd@hh@@QEAAXXZ:
     mov rax, 01429c0dc0h
@@ -53880,6 +54100,11 @@ PUBLIC ?SetTweenPosition@?$InterpolatorT@UFxRenderOption@hh@@@FxParamManager@gfx
     mov rax, 0142c32150h
     jmp rax
 
+PUBLIC ??_DSceneParameters@gfx@app@@QEAAXXZ
+??_DSceneParameters@gfx@app@@QEAAXXZ:
+    mov rax, 0142c35f60h
+    jmp rax
+
 PUBLIC ??_DRefByHandleObject@fnd@hh@@QEAAXXZ
 ??_DRefByHandleObject@fnd@hh@@QEAAXXZ:
     mov rax, 0142c3d670h
@@ -53938,6 +54163,11 @@ PUBLIC ?GameServiceAddedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@ga
 PUBLIC ?GameServiceRemovedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z
 ?GameServiceRemovedCallback@TerrainManager@trr@app@@UEAAXPEAVGameService@game@hh@@@Z:
     mov rax, 01443e0de0h
+    jmp rax
+
+PUBLIC ?OnRemovedFromGame@FxColManager@gfx@app@@UEAAXXZ
+?OnRemovedFromGame@FxColManager@gfx@app@@UEAAXXZ:
+    mov rax, 01443e7940h
     jmp rax
 
 PUBLIC ?UpdateCallback@TerrainManager@trr@app@@UEAAXPEAVGameManager@game@hh@@AEBUGameStepInfo@56@@Z
@@ -54223,6 +54453,36 @@ PUBLIC ?Unload@ResModelInstanceInfo@gfx@hh@@UEAAXXZ
 PUBLIC ??_DResModelInstanceInfo@gfx@hh@@QEAAXXZ
 ??_DResModelInstanceInfo@gfx@hh@@QEAAXXZ:
     mov rax, 014503d240h
+    jmp rax
+
+PUBLIC ?Load@ResProbe@gfx@hh@@UEAAXPEAX_K@Z
+?Load@ResProbe@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 014503ebe0h
+    jmp rax
+
+PUBLIC ?Reload@ResProbe@gfx@hh@@UEAAXPEAX_K@Z
+?Reload@ResProbe@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 014503fa10h
+    jmp rax
+
+PUBLIC ?Create@ResProbe@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z
+?Create@ResProbe@gfx@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z:
+    mov rax, 01450412e0h
+    jmp rax
+
+PUBLIC ??_DResProbe@gfx@hh@@QEAAXXZ
+??_DResProbe@gfx@hh@@QEAAXXZ:
+    mov rax, 0145042ee0h
+    jmp rax
+
+PUBLIC ?Reload@ResDecal@gfx@hh@@UEAAXPEAX_K@Z
+?Reload@ResDecal@gfx@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01450475a0h
+    jmp rax
+
+PUBLIC ??_DResDecal@gfx@hh@@QEAAXXZ
+??_DResDecal@gfx@hh@@QEAAXXZ:
+    mov rax, 014504a520h
     jmp rax
 
 PUBLIC ?Unload@ResTerrainModel@gfx@hh@@UEAAXXZ

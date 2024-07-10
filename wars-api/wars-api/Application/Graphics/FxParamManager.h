@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef AddJob
+#undef AddJob
+#endif
+
 namespace app::gfx {
     class FxParamManager
         : public hh::game::GameService
@@ -76,10 +80,9 @@ namespace app::gfx {
 
         hh::NeedleFxParameter parameters;
         NeedleFXParameterInterpolators paramInterpolators;
-        uint32_t unk1;
-        uint64_t unk2;
-        uint64_t unk3;
-        uint32_t unk4;
+        uint32_t dirtyBitsMaybe; // see 0x140195CE0
+        SceneParameters* sceneParameters[2];
+        int currentSceneParameters;
         void* effectManager;
         uint8_t unk5;
 

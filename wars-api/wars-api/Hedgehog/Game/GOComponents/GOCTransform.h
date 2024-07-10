@@ -23,7 +23,7 @@ namespace hh::game {
         struct alignas(8) Config {
         };
 
-        DEFAULT_CREATE_FUNC(GOCTransform);
+        GOCTransform();
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void OnGOCEvent(GOCEvent event, hh::game::GameObject& ownerGameObject, void* data) override;
 

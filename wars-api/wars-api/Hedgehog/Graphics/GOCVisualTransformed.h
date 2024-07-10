@@ -25,7 +25,7 @@ namespace hh::gfx {
         csl::geom::Aabb aabb;
         csl::geom::Aabb transformedAabb;
 
-        DEFAULT_CREATE_FUNC(GOCVisualTransformed);
+        GOCVisualTransformed();
 		virtual void* GetRuntimeTypeInfo() const override;
 		virtual void Update(fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) override;
 		virtual void OnGOCEvent(GOCEvent event, game::GameObject& ownerGameObject, void* data) override;

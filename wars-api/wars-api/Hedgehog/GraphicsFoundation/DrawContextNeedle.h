@@ -22,10 +22,10 @@ namespace hh::gfnd {
         virtual void UnkFunc8() override;
         virtual void DrawPrimitive(PrimitiveType primitiveType, const DrawVertex* vertices, const unsigned short* indices, unsigned int count) override;
         virtual void DrawSphere_(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color) override;
-        virtual void DrawCapsule(const csl::math::Matrix34& transform, float height, float radius, const csl::ut::Color8& color) override;
+        virtual void DrawCapsule(const csl::math::Matrix34& transform, float radius, float halfHeight, const csl::ut::Color8& color) override;
         virtual void DrawAABB(const csl::math::Vector3& minPos, const csl::math::Vector3& maxPos, const csl::ut::Color8& color) override;
-        virtual void DrawOBB(const csl::math::Matrix34& transform, const csl::math::Vector3& scale, const csl::ut::Color8& color) override;
-        virtual void DrawCylinder(const csl::math::Matrix34& transform, float height, float radius, const csl::ut::Color8& color) override;
+        virtual void DrawOBB(const csl::math::Matrix34& transform, const csl::math::Vector3& halfExtents, const csl::ut::Color8& color) override;
+        virtual void DrawCylinder(const csl::math::Matrix34& transform, float radius, float halfHeight, const csl::ut::Color8& color) override;
         virtual void DrawCircle(const csl::math::Matrix34& transform, float radius, const csl::ut::Color8& color) override;
         virtual void DrawPlane(const csl::math::Matrix34& transform, float width, float height, const csl::ut::Color8& color) override;
         virtual void SetWireframeMode() override;

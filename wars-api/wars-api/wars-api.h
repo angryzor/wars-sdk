@@ -82,6 +82,8 @@
 #include "Hedgehog/Utility/FSM/Hsm.h"
 #include "Hedgehog/Utility/BinaryFile.h"
 #include "Hedgehog/Utility/AabbTree.h"
+#include "Hedgehog/Utility/BvWorld.h"
+#include "Hedgehog/Utility/KdTree.h"
 
 #include "Hedgehog/Foundation/Type/hhBaseTypes.h"
 #include "Hedgehog/Foundation/Type/WorldPosition.h"
@@ -89,6 +91,7 @@
 #include "Hedgehog/Foundation/Type/Triangle.h"
 #include "Hedgehog/Foundation/Type/Geometry.h"
 #include "Hedgehog/Foundation/Type/WireGeometry.h"
+#include "Hedgehog/Foundation/Type/ResLightParameter.h"
 
 #include "Hedgehog/TArray.h"
 
@@ -338,6 +341,8 @@
 #include "Hedgehog/Graphics/ResMirageTerrainInstanceInfo.h"
 #include "Hedgehog/Graphics/ResMirageLight.h"
 #include "Hedgehog/Graphics/ResMirageLightField.h"
+#include "Hedgehog/Graphics/ResDecal.h"
+#include "Hedgehog/Graphics/ResProbe.h"
 
 #include "Hedgehog/Effect/ResEffect.h"
 
@@ -378,7 +383,10 @@
 // #include "Application/Player/PlayerParameterService.h"
 #include "Application/Player/GOCPlayerParameter.h"
 // #include "Application/Player/GOCPlayerKinematicParams.h"
+#include "Application/Graphics/ResFxColFile2.h"
+#include "Application/Graphics/SceneParameters.h"
 #include "Application/Graphics/FxParamManager.h"
+#include "Application/Graphics/FxColManager.h"
 
 // #include "Application/Level/PlayerInformation.h"
 #include "Application/Level/StageData.h"

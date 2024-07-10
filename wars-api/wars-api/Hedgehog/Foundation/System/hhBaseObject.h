@@ -2,11 +2,11 @@
 
 #define DEFAULT_CREATE_FUNC(ClassName) public:\
 		ClassName();\
-		static ClassName* Create();
+		static ClassName* Create(csl::fnd::IAllocator* allocator);
 
 #define CREATE_FUNC(ClassName, ...) public:\
 		ClassName(__VA_ARGS__);\
-		static ClassName* Create(__VA_ARGS__);
+		static ClassName* Create(csl::fnd::IAllocator* allocator, __VA_ARGS__);
 
 namespace hh::fnd
 {

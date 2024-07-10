@@ -54,7 +54,7 @@ namespace hh::fnd {
 
         // This is only guessed from a similar function in rio, but there this and the following function are swapped.
         // I haven't actually seen this be overridden anywhere.
-        virtual void Load(void* data, size_t size, StaticResourceContainer* container) { this->Load(data, size); }
+        virtual void LoadFromStaticResourceContainer(void* data, size_t size, StaticResourceContainer* container);
         virtual void Load(void* data, size_t size) = 0;
         virtual void Unload() = 0;
         virtual void Resolve(ResourceResolver& resolver) {}
