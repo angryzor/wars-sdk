@@ -2026,6 +2026,7 @@
 140151110,??0GOCHealth@game@app@@QEAA@XZ,0
 1401517d0,?Create@GOCIKConstraint@game@app@@CAPEAV123@XZ,0
 140151a80,?Create@GOCMotorReciprocate@game@app@@CAPEAV123@XZ,0
+140156720,?Matrix34Rotation@math@csl@@YA?AVMatrix34@12@AEBVQuaternion@12@@Z,1
 14015b290,?Create@GOCTarget@game@app@@CAPEAV123@XZ,0
 14015b8b0,??0GOCTarget@game@app@@QEAA@XZ,0
 14015c8d0,?Create@GOCVirtronVoxelEffect@game@app@@CAPEAV123@XZ,0
@@ -5063,6 +5064,7 @@
 14051cd00,?GetRuntimeTypeInfo@FxColManager@gfx@app@@UEAAPEAXXZ,1
 14051cd40,?Create@FxColManager@services@heur@@CAPEAV123@XZ,0
 14051cd40,?Create@FxColManager@app@@CAPEAV12@XZ,0
+14051cf10,?InterpolateCollisionShape@FxColManager@gfx@app@@KAMPEAUFxColCollisionShape@23@AEBVVector3@math@csl@@@Z,1
 14051d1b0,?ProcessMessage@FxColManager@gfx@app@@UEAA_NAEAVMessage@fnd@hh@@@Z,1
 14051d240,??0FxColManager@services@heur@@QEAA@XZ,1
 14051d240,??0FxColManager@app@@QEAA@XZ,1
@@ -5076,10 +5078,17 @@
 14051db90,?GameServiceRemovedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z,1
 14051dc80,?StartLevel@FxColManager@gfx@app@@QEAAXPEBD@Z,1
 14051e080,?EndLevel@FxColManager@gfx@app@@QEAAXXZ,1
+14051e420,?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z,1
+14051e5e0,?CollectCollisionShapesToActivateAndDeactivate@FxColManager@gfx@app@@IEAAXAEBV?$MoveArray@I@ut@csl@@@Z,1
 14051e7b0,?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ,1
+14051e8a0,?HandleSceneParamCollisionShapes@FxColManager@gfx@app@@IEAAXXZ,1
 14051ee20,?InitializeLightParameters@FxColManager@gfx@app@@IEAAXXZ,1
+14051eee0,?HandleLightParamCollisionShapesLight@FxColManager@gfx@app@@IEAAXXZ,1
 14051f3f0,?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd@hh@@U456@@Z,1
 14051f590,?InitializeIBL@FxColManager@gfx@app@@IEAAXXZ,1
+14051f780,?HandleLightParamCollisionShapesIBL@FxColManager@gfx@app@@IEAAXXZ,1
+14051ff10,?InterpolateAnisotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMMM@Z,1
+140520090,?InterpolateIsotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMM@Z,1
 1405203f0,?Create@ShareManager@app@@CAPEAV12@XZ,0
 1405203f0,?Create@ShareManager@services@heur@@CAPEAV123@XZ,0
 140520750,?GetRuntimeTypeInfo@TerrainManager@trr@app@@UEAAPEAXXZ,1
@@ -5905,6 +5914,8 @@
 14071d0d0,?Free@IAllocator@fnd@csl@@UEAAXPEAX@Z,1
 14071d100,?InitializeTempAllocator@fnd@hh@@YAXPEAVMemoryRouter@12@_K@Z,1
 14071d2f0,??0ResourceManager@fnd@hh@@QEAA@XZ,1
+14071d710,?AddListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z,1
+14071d760,?RemoveListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z,1
 14071d830,?GetResource@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@@Z,1
 14071e300,?GetTypeInfo@Packfile@fnd@hh@@SAPEBUResourceTypeInfo@23@XZ,1
 14071e4c0,?Load@Packfile@fnd@hh@@UEAAXPEAX_K@Z,1
@@ -6062,6 +6073,7 @@
 14076ef40,?UnkFunc11@Mouse@hid@hh@@UEAA_KXZ,1
 14076f700,?GetNumResources@DynamicResourceContainer@fnd@hh@@UEBAHXZ,1
 14076f710,?UnkFunc1@DynamicResourceContainer@fnd@hh@@UEAAXXZ,1
+14076f710,?LoadResource@DynamicResourceContainer@fnd@hh@@UEAAXPEAVIAllocator@2csl@@PEBD@Z,1
 14076fe10,?GetFamilyID@DynamicResourceContainer@fnd@hh@@UEAAPEAXXZ,1
 14076fe10,?UnkFunc17@Mouse@hid@hh@@UEAA_NXZ,1
 140771eb0,?GetClassNameRegistry@BuiltinTypeRegistry@fnd@hh@@SAPEAVRflClassNameRegistry@23@XZ,1
@@ -6244,12 +6256,14 @@
 140866860,j_?assign@VariableString@ut@csl@@IEAAXPEAVIAllocator@fnd@3@PEBDH@Z,1
 140866880,?assign@VariableString@ut@csl@@IEAAXPEAVIAllocator@fnd@3@PEBDH@Z,1
 140866920,?Compare@VariableString@ut@csl@@QEBA_NPEBD@Z,1
+140867b20,?Vector3Distance@math@csl@@YAMVVector3@12@0@Z,1
 140868f40,?SetTransVector@Matrix34@math@csl@@QEAAXAEBVVector3@23@@Z,1
 140868f90,?GetTransVector@Matrix34@math@csl@@QEBA?AVVector3@23@XZ,1
 140869230,?Matrix34Multiply@math@csl@@YA?AVMatrix34@12@AEBV312@0@Z,1
 140869830,?CreateViewMatrix@Matrix44@math@csl@@SA?AV123@VVector3@23@00@Z,1
 14086b940,?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z,1
 14086ba40,?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z,1
+14086c0e0,?DistanceSq@Cylinder@geom@csl@@QEBAMAEBVVector3@math@3@PEAM@Z,1
 14086cd70,?List_Init@ut@csl@@YAXPEAUList@12@G@Z,1
 14086cd90,?List_Append@ut@csl@@YAXPEAUList@12@PEAX@Z,1
 14086cef0,?List_Remove@ut@csl@@YAXPEAUList@12@PEAX@Z,1
@@ -6309,7 +6323,11 @@
 140871570,?AllocBottom@ExternalHeapBase@fnd@csl@@UEAAPEAX_K0@Z,1
 1408715f0,?Free@ExternalHeapBase@fnd@csl@@UEAAXPEAX@Z,1
 140871620,?GetBlockSize@ExternalHeapBase@fnd@csl@@UEBA_KPEAX@Z,1
+140872a20,?Set@Cylinder@geom@csl@@QEAAXMMAEBVVector3@math@3@AEBVQuaternion@53@@Z,1
 140875050,?Initialize@LinkListImpl@detail@ut@csl@@IEAAXXZ,1
+140875850,?Set@Obb@geom@csl@@QEAAXAEBVVector3@math@3@0AEBVQuaternion@53@@Z,1
+140877e00,?ProjectOnNormal@Plane@math@csl@@QEBA?AVVector3@23@AEBV423@PEAM@Z,1
+140878050,?FromPointNormal@Plane@math@csl@@SA?AV123@VVector3@23@0@Z,1
 140c25064,?AllocBottom@HeapBase@fnd@csl@@UEAAPEAX_K0@Z,1
 140c25064,?Free@HeapBase@fnd@csl@@UEAAXPEAX@Z,1
 140c25064,?UnkFunc1@HeapBase@fnd@csl@@UEAA_JXZ,1
@@ -6603,6 +6621,7 @@
 140d898a0,??_7Renderable@gfnd@hh@@6B@,1
 140d898c8,??_7?$FreeListHeapTemplate@VDummyLock@fnd@csl@@@fnd@csl@@6B@,1
 140d89ca8,??_7ResourceTypeRegistry@fnd@hh@@6B@,1
+140d8b640,??_7DynamicResourceContainer@fnd@hh@@6B@,1
 140d8ca50,??_7DrawContextNeedle@gfnd@hh@@6B@,1
 141ba58e0,??_7HeapBase@fnd@csl@@6B@,1
 141ba5988,??_7FreeListHeapBase@fnd@csl@@6B@,1

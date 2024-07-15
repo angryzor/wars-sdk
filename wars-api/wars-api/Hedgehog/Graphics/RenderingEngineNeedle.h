@@ -4,10 +4,10 @@ namespace hh::gfx {
     class RenderingEngineNeedle : public RenderingEngine {
         class Impl : public fnd::ReferencedObject {
         public:
-            class ResourceListener : public fnd::ReferencedObject, fnd::ResourceManager::ResourceListener {
-                RenderingEngineNeedle* renderingEngine;
-                csl::ut::MoveArray<void*> unk1;
-            };
+            // class ResourceListener : public fnd::ReferencedObject, fnd::ResourceManager::Listener {
+            //     RenderingEngineNeedle* renderingEngine;
+            //     csl::ut::MoveArray<void*> unk1;
+            // };
 
             class NeedleShaderListInfo : public fnd::ReferencedObject {
                 csl::ut::PointerMap<void*, void*> unk1;
@@ -18,7 +18,7 @@ namespace hh::gfx {
             RenderingEngineNeedle* renderingEngine;
             needle::SupportFX* supportFX;
             needle::RenderingDevice* renderingDevice;
-            fnd::Reference<ResourceListener> resourceListener;
+            // fnd::Reference<ResourceListener> resourceListener;
             fnd::Reference<NeedleShaderListInfo> shaderListInfo;
             fnd::Reference<needle::PrimitiveRenderer> primitiveRenderer;
             fnd::Reference<NeedleRenderer> renderers[10]; // one created for each in unk1 in graphicscontext

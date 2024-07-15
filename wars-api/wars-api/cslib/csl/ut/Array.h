@@ -204,7 +204,7 @@ namespace csl::ut
 			this->m_length--;
 		}
 
-		bool empty()
+		bool empty() const
 		{
 			return this->m_length == 0;
 		}

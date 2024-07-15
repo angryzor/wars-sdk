@@ -3,11 +3,6 @@
 namespace hh::fnd {
     class ResourceLoader : public ReferencedObject, public FileInfoListener {
     public:
-        struct Unk1 {
-            uint32_t unk1{ 1 };
-            const char* unk2{ "" };
-        };
-
         class Unk2 : public BaseObject {
             class Unk1 : public ReferencedObject {
                 csl::ut::MoveArray<ManagedResource*> onceAddedResources; // I don't quite get it yet -- see AddResource

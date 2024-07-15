@@ -163,10 +163,12 @@ namespace csl::ut
 	protected:
 		size_t GetBegin() const
 		{
-			for (size_t i = 0; i < GetHashCapacity(); i++)
-			{
-				if (m_pElements[i].m_Hash != INVALID_KEY)
-					return i;
+			if (m_Length > 0) {
+				for (size_t i = 0; i < GetHashCapacity(); i++)
+				{
+					if (m_pElements[i].m_Hash != INVALID_KEY)
+						return i;
+				}
 			}
 			
 			return GetHashCapacity();

@@ -11,7 +11,7 @@ namespace hh::fnd {
     public:
         ResourceTypeRegistry();
         static ResourceTypeRegistry* Create();
-        csl::ut::MoveArray<const ResourceTypeInfo*> GetTypeInfos();
+        void GetTypeInfos(csl::ut::MoveArray<const ResourceTypeInfo*>& typeInfos);
         const char* GetNameByTypeInfo(const ResourceTypeInfo* typeInfo);
         const ResourceTypeInfo* GetTypeInfoByName(const char* name);
         const char* GetExtensionByTypeInfo(const ResourceTypeInfo* typeInfo);

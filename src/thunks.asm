@@ -1250,6 +1250,11 @@ PUBLIC ?Create@GOCMotorReciprocate@game@app@@CAPEAV123@XZ
     mov rax, 0140151a80h
     jmp rax
 
+PUBLIC ?Matrix34Rotation@math@csl@@YA?AVMatrix34@12@AEBVQuaternion@12@@Z
+?Matrix34Rotation@math@csl@@YA?AVMatrix34@12@AEBVQuaternion@12@@Z:
+    mov rax, 0140156720h
+    jmp rax
+
 PUBLIC ?Create@GOCTarget@game@app@@CAPEAV123@XZ
 ?Create@GOCTarget@game@app@@CAPEAV123@XZ:
     mov rax, 014015b290h
@@ -16050,6 +16055,11 @@ PUBLIC ?Create@FxColManager@app@@CAPEAV12@XZ
     mov rax, 014051cd40h
     jmp rax
 
+PUBLIC ?InterpolateCollisionShape@FxColManager@gfx@app@@KAMPEAUFxColCollisionShape@23@AEBVVector3@math@csl@@@Z
+?InterpolateCollisionShape@FxColManager@gfx@app@@KAMPEAUFxColCollisionShape@23@AEBVVector3@math@csl@@@Z:
+    mov rax, 014051cf10h
+    jmp rax
+
 PUBLIC ?ProcessMessage@FxColManager@gfx@app@@UEAA_NAEAVMessage@fnd@hh@@@Z
 ?ProcessMessage@FxColManager@gfx@app@@UEAA_NAEAVMessage@fnd@hh@@@Z:
     mov rax, 014051d1b0h
@@ -16115,14 +16125,34 @@ PUBLIC ?EndLevel@FxColManager@gfx@app@@QEAAXXZ
     mov rax, 014051e080h
     jmp rax
 
+PUBLIC ?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z
+?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z:
+    mov rax, 014051e420h
+    jmp rax
+
+PUBLIC ?CollectCollisionShapesToActivateAndDeactivate@FxColManager@gfx@app@@IEAAXAEBV?$MoveArray@I@ut@csl@@@Z
+?CollectCollisionShapesToActivateAndDeactivate@FxColManager@gfx@app@@IEAAXAEBV?$MoveArray@I@ut@csl@@@Z:
+    mov rax, 014051e5e0h
+    jmp rax
+
 PUBLIC ?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ
 ?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ:
     mov rax, 014051e7b0h
     jmp rax
 
+PUBLIC ?HandleSceneParamCollisionShapes@FxColManager@gfx@app@@IEAAXXZ
+?HandleSceneParamCollisionShapes@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051e8a0h
+    jmp rax
+
 PUBLIC ?InitializeLightParameters@FxColManager@gfx@app@@IEAAXXZ
 ?InitializeLightParameters@FxColManager@gfx@app@@IEAAXXZ:
     mov rax, 014051ee20h
+    jmp rax
+
+PUBLIC ?HandleLightParamCollisionShapesLight@FxColManager@gfx@app@@IEAAXXZ
+?HandleLightParamCollisionShapesLight@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051eee0h
     jmp rax
 
 PUBLIC ?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd@hh@@U456@@Z
@@ -16133,6 +16163,21 @@ PUBLIC ?LoadLightParameter@FxColManager@gfx@app@@IEAAXIPEAUResLightParameter@fnd
 PUBLIC ?InitializeIBL@FxColManager@gfx@app@@IEAAXXZ
 ?InitializeIBL@FxColManager@gfx@app@@IEAAXXZ:
     mov rax, 014051f590h
+    jmp rax
+
+PUBLIC ?HandleLightParamCollisionShapesIBL@FxColManager@gfx@app@@IEAAXXZ
+?HandleLightParamCollisionShapesIBL@FxColManager@gfx@app@@IEAAXXZ:
+    mov rax, 014051f780h
+    jmp rax
+
+PUBLIC ?InterpolateAnisotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMMM@Z
+?InterpolateAnisotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMMM@Z:
+    mov rax, 014051ff10h
+    jmp rax
+
+PUBLIC ?InterpolateIsotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMM@Z
+?InterpolateIsotropicObb@FxColManager@gfx@app@@KAMAEBVVector3@math@csl@@0VQuaternion@56@MMMM@Z:
+    mov rax, 0140520090h
     jmp rax
 
 PUBLIC ?Create@ShareManager@app@@CAPEAV12@XZ
@@ -20200,6 +20245,16 @@ PUBLIC ??0ResourceManager@fnd@hh@@QEAA@XZ
     mov rax, 014071d2f0h
     jmp rax
 
+PUBLIC ?AddListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z
+?AddListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z:
+    mov rax, 014071d710h
+    jmp rax
+
+PUBLIC ?RemoveListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z
+?RemoveListener@ResourceManager@fnd@hh@@QEAAXPEAVListener@123@@Z:
+    mov rax, 014071d760h
+    jmp rax
+
 PUBLIC ?GetResource@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@@Z
 ?GetResource@ResourceManager@fnd@hh@@QEAAPEAVManagedResource@23@PEBDPEBUResourceTypeInfo@23@@Z:
     mov rax, 014071d830h
@@ -20947,6 +21002,11 @@ PUBLIC ?GetNumResources@DynamicResourceContainer@fnd@hh@@UEBAHXZ
 
 PUBLIC ?UnkFunc1@DynamicResourceContainer@fnd@hh@@UEAAXXZ
 ?UnkFunc1@DynamicResourceContainer@fnd@hh@@UEAAXXZ:
+    mov rax, 014076f710h
+    jmp rax
+
+PUBLIC ?LoadResource@DynamicResourceContainer@fnd@hh@@UEAAXPEAVIAllocator@2csl@@PEBD@Z
+?LoadResource@DynamicResourceContainer@fnd@hh@@UEAAXPEAVIAllocator@2csl@@PEBD@Z:
     mov rax, 014076f710h
     jmp rax
 
@@ -21855,6 +21915,11 @@ PUBLIC ?Compare@VariableString@ut@csl@@QEBA_NPEBD@Z
     mov rax, 0140866920h
     jmp rax
 
+PUBLIC ?Vector3Distance@math@csl@@YAMVVector3@12@0@Z
+?Vector3Distance@math@csl@@YAMVVector3@12@0@Z:
+    mov rax, 0140867b20h
+    jmp rax
+
 PUBLIC ?SetTransVector@Matrix34@math@csl@@QEAAXAEBVVector3@23@@Z
 ?SetTransVector@Matrix34@math@csl@@QEAAXAEBVVector3@23@@Z:
     mov rax, 0140868f40h
@@ -21883,6 +21948,11 @@ PUBLIC ?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z
 PUBLIC ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z
 ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z:
     mov rax, 014086ba40h
+    jmp rax
+
+PUBLIC ?DistanceSq@Cylinder@geom@csl@@QEBAMAEBVVector3@math@3@PEAM@Z
+?DistanceSq@Cylinder@geom@csl@@QEBAMAEBVVector3@math@3@PEAM@Z:
+    mov rax, 014086c0e0h
     jmp rax
 
 PUBLIC ?List_Init@ut@csl@@YAXPEAUList@12@G@Z
@@ -22180,9 +22250,29 @@ PUBLIC ?GetBlockSize@ExternalHeapBase@fnd@csl@@UEBA_KPEAX@Z
     mov rax, 0140871620h
     jmp rax
 
+PUBLIC ?Set@Cylinder@geom@csl@@QEAAXMMAEBVVector3@math@3@AEBVQuaternion@53@@Z
+?Set@Cylinder@geom@csl@@QEAAXMMAEBVVector3@math@3@AEBVQuaternion@53@@Z:
+    mov rax, 0140872a20h
+    jmp rax
+
 PUBLIC ?Initialize@LinkListImpl@detail@ut@csl@@IEAAXXZ
 ?Initialize@LinkListImpl@detail@ut@csl@@IEAAXXZ:
     mov rax, 0140875050h
+    jmp rax
+
+PUBLIC ?Set@Obb@geom@csl@@QEAAXAEBVVector3@math@3@0AEBVQuaternion@53@@Z
+?Set@Obb@geom@csl@@QEAAXAEBVVector3@math@3@0AEBVQuaternion@53@@Z:
+    mov rax, 0140875850h
+    jmp rax
+
+PUBLIC ?ProjectOnNormal@Plane@math@csl@@QEBA?AVVector3@23@AEBV423@PEAM@Z
+?ProjectOnNormal@Plane@math@csl@@QEBA?AVVector3@23@AEBV423@PEAM@Z:
+    mov rax, 0140877e00h
+    jmp rax
+
+PUBLIC ?FromPointNormal@Plane@math@csl@@SA?AV123@VVector3@23@0@Z
+?FromPointNormal@Plane@math@csl@@SA?AV123@VVector3@23@0@Z:
+    mov rax, 0140878050h
     jmp rax
 
 PUBLIC ?AllocBottom@HeapBase@fnd@csl@@UEAAPEAX_K0@Z
