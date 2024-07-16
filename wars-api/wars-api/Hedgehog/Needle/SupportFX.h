@@ -37,7 +37,9 @@ namespace hh::needle {
         };
     
         uint32_t unk1Count;
-        void* unk1[128];
+        void* unk1[4];
+        DisplaySwapDevice* swapDevice;
+        void* unk1x[123];
         void* unk1a[128];
         uint32_t unk2Count;
         void* unk2[128];

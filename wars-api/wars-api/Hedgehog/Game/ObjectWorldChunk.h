@@ -100,6 +100,11 @@ namespace hh::game {
             }
         }
         
+        inline void Restart(int index, bool force) {
+            if (index >= 0 && index < objects.size())
+                objectStatuses[index].Restart();
+        }
+
         void Restart(bool force);
 
         inline void ShutdownPendingObjects() {
