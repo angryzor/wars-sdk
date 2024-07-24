@@ -25,10 +25,13 @@ namespace SurfRide
         void LoadTextureListChunk(void* data, BinaryData& binaryData);
         void LoadProjectChunk(void* data, BinaryData& binaryData, bool cloneBinaryData);
     public:
+        Camera camera;
         SRS_PROJECT* projectData;
+        uint32_t unk1;
         TextureList** textureLists;
         uint32_t textureListCount;
-        csl::ut::MoveArray<SurfRide::Scene*> scenes;
+        Scene** scenes;
+        uint32_t sceneCount;
         BinaryData* binaryData;
         void* binaryDataData;
 
@@ -38,6 +41,12 @@ namespace SurfRide
         Scene* GetScene(const char* name);
         void ApplyMemoryImageToTextureList(void* image, BinaryData* binaryData);
         void ApplyMemoryImageToProject(void* image, BinaryData* binaryData, bool unkParam);
+
+#ifndef EXPORTING_TYPES
+        inline CountedCollection<Scene*> GetScenes() const {
+            return { scenes, sceneCount };
+        }
+#endif
     };
 
 	struct ProjectIterator {

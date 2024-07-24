@@ -8,20 +8,36 @@ namespace SurfRide
 		int id{};
 		csl::math::Vector3 position{};
 		csl::math::Vector3 target{};
-		int flags{};
+		bool isOrthogonal{};
 		int fov;
 		float nearPlane{};
 		float farPlane{};
-		uint64_t unk;
+		float unk1{};
+		uint64_t unk2{};
 	};
+
+    struct SrCamera {
+		SRS_CAMERA cameraData;
+
+		SrCamera(const SRS_CAMERA& cameraData);
+    };
+
+    struct SrScreenResolution {
+        unsigned int width;
+        unsigned int height;
+    };
 
 	class Camera
 	{
 	public:
-		SRS_CAMERA camera;
-		csl::math::Matrix44 viewMatrix;
-		csl::math::Matrix44 projectionMatrix;
+		SrCamera camera;
+		csl::math::Matrix34 viewMatrix;
 
-		Camera(const SRS_CAMERA& camera, float resolutionX, float resolutionY);
+		Camera(const SrCamera& camera);
+		void SetCamera(const SrCamera& camera);
+
+		inline SRS_CAMERA& GetCameraData() { return camera.cameraData; }
 	};
+
+	SrScreenResolution GetScreenResolution();
 }

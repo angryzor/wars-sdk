@@ -43,42 +43,74 @@ namespace SurfRide {
 			// ANY = 0x3F3F,
 		};
 		
-		csl::ut::Bitset<Flag> transformMatrix;
-		csl::ut::Bitset<Flag> transformMaterialColor;
-		csl::ut::Bitset<Flag> transformIlluminationColor;
-		csl::ut::Bitset<Flag> transformDisplayFlag;
-		csl::ut::Bitset<Flag> transformAny;
-		csl::ut::Bitset<Flag> cellVertices;
-		csl::ut::Bitset<Flag> cellVertexColor;
-		csl::ut::Bitset<Flag> cellMaterialColor;
-		csl::ut::Bitset<Flag> cellIlluminationColor;
-		csl::ut::Bitset<Flag> cellCropUV;
-		csl::ut::Bitset<Flag> cellUnk;
-		csl::ut::Bitset<Flag> cellAny;
+		// csl::ut::Bitset<Flag> transformMatrix;
+		// csl::ut::Bitset<Flag> transformMaterialColor;
+		// csl::ut::Bitset<Flag> transformIlluminationColor;
+		// csl::ut::Bitset<Flag> transformDisplayFlag;
+		// csl::ut::Bitset<Flag> transformAny;
+		// csl::ut::Bitset<Flag> cellVertices;
+		// csl::ut::Bitset<Flag> cellVertexColor;
+		// csl::ut::Bitset<Flag> cellMaterialColor;
+		// csl::ut::Bitset<Flag> cellIlluminationColor;
+		// csl::ut::Bitset<Flag> cellCropUV;
+		// csl::ut::Bitset<Flag> cellUnk;
+		// csl::ut::Bitset<Flag> cellAny;
 		csl::ut::Bitset<Flag> flags;
+
+		void ClearCellAll();
+		void ClearTransformIlluminationColor();
+		void ClearTransformMaterialColor();
+		void ClearTransformMatrix();
+		void ClearTransformMultiResolutionPosition();
+		void ClearTransformMultiResolutionSize();
+		bool IsCellAny();
+		bool IsCellCropUV();
+		bool IsCellIlluminationColor();
+		bool IsCellMaterialColor();
+		bool IsCellVertexColor();
+		bool IsCellVertices();
+		bool IsTransformIlluminationColor();
+		bool IsTransformMaterialColor();
+		bool IsTransformMatrix();
+		bool IsTransformMultiResolutionPosition();
+		bool IsTransformMultiResolutionSize();
+		void SetAll();
+		void SetCellCropUV();
+		void SetCellIlluminationColor();
+		void SetCellMaterialColor();
+		void SetCellVertexColor();
+		void SetCellVertices();
+		void SetTransformDisplayFlag();
+		void SetTransformIlluminationColor();
+		void SetTransformMaterialColor();
+		void SetTransformMatrix();
+		void SetTransformMultiResolutionPosition();
+		void SetTransformMultiResolutionSize();
+
+		inline void SetCellAll() { SetAll(); }
+		inline void SetTransformAll() { SetAll(); }
     };
 
 	class Layer;
 	class Cast;
-	class Transform {
+	class Transform : public Base {
 	public:
-		Vector3 position;
-		Rotation3 rotation;
-		Vector3 scale;
+		SRS_TRS3D* transformData;
 		Color materialColor;
 		Color fullMaterialColor;
 		Color illuminationColor;
-		Color fullIlluminationColor;
 		bool display;
-		uint8_t unk9;
 		DirtyFlag dirtyFlag;
-		Layer* layer;
 		Cast* cast;
-		uint64_t unk17;
-		Matrix34 transformationMatrix;
 		
-		Transform(Layer* layer);
+		Transform();
 		void Initialize2D(SRS_TRS2D* cell, Cast* cast);
 		void Initialize3D(SRS_TRS3D* cell, Cast* cast);
+	};
+
+	class Transform3D : public Transform {
+	public:
+		Matrix34 transformationMatrix;
+		Transform3D();
 	};
 }

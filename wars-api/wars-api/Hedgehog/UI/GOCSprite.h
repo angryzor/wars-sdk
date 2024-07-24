@@ -24,20 +24,18 @@ namespace hh::ui {
 
     public:
         void* hhUiCAppMemoryAlloc;
-        csl::fnd::Delegate<void (GOCSprite*)> OnProjectUnloaded;
+        csl::ut::MoveArray<SurfRide::Project*> projects;
         csl::fnd::Delegate<void (GOCSprite*)> OnProjectLoaded;
-        csl::fnd::Delegate<void (GOCSprite*)> OnLayerControllerCreated;
+        csl::ut::MoveArray<LayerController*> layerControllers;
         // UIManager* uiManager;
         fnd::Reference<Renderable> renderable;
-        fnd::Reference<SurfRide::Project> project;
+        csl::ut::Bitset<Flag> flags;
         hh::ui::ResSurfRideProject* projectResource;
         csl::ut::VariableString projectName;
         bool initialized;
         fnd::Reference<SurfRideProjectContext> projectContext;
-        csl::ut::MoveArray<LayerController*> layerControllers;
         csl::ut::MoveArray<void*> field_138;
         csl::ut::MoveArray<void*> field_158;
-        csl::ut::Bitset<Flag> field_180;
         uint16_t nextId;
         ViewportDimensions viewportDimensions;
         uint64_t field_190;

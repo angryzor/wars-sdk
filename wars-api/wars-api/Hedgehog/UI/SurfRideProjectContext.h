@@ -6,7 +6,7 @@ namespace hh::ui {
         csl::ut::VariableString sceneName;
         csl::ut::MoveArray<SurfRide::ReferencedObject*> unk2;
     public:
-        SurfRideProjectContext(csl::fnd::IAllocator* pAllocator);
+        SurfRideProjectContext();
         void Destroy(SurfRide::Project* project, csl::fnd::IAllocator* allocator);
     };
 }

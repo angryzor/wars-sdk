@@ -14,7 +14,7 @@ namespace SurfRide {
         short cropIndex;
     };
 
-    enum class ECropSurface {
+    enum class ECropSurface : uint16_t {
         SURFACE0,
         SURFACE1,
     };

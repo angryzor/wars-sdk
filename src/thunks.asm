@@ -15,6 +15,11 @@ PUBLIC ?UnkFunc94@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
     mov rax, 0140016270h
     jmp rax
 
+PUBLIC ?UnkFunc6@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc6@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 0140016270h
+    jmp rax
+
 PUBLIC ?GetInputElementCount@VertexLayoutImpl@ImplDX11@needle@hh@@UEBA_KXZ
 ?GetInputElementCount@VertexLayoutImpl@ImplDX11@needle@hh@@UEBA_KXZ:
     mov rax, 01400833d0h
@@ -22,6 +27,16 @@ PUBLIC ?GetInputElementCount@VertexLayoutImpl@ImplDX11@needle@hh@@UEBA_KXZ
 
 PUBLIC ?UnkFunc24@RenderingDeviceDX11@ImplDX11@needle@hh@@UEAAXXZ
 ?UnkFunc24@RenderingDeviceDX11@ImplDX11@needle@hh@@UEAAXXZ:
+    mov rax, 01400b4070h
+    jmp rax
+
+PUBLIC ?GetTransform@Cast3D@SurfRide@@UEAAPEAVTransform@2@XZ
+?GetTransform@Cast3D@SurfRide@@UEAAPEAVTransform@2@XZ:
+    mov rax, 01400b4070h
+    jmp rax
+
+PUBLIC ?GetTransform2@Cast3D@SurfRide@@UEAAPEAVTransform@2@XZ
+?GetTransform2@Cast3D@SurfRide@@UEAAPEAVTransform@2@XZ:
     mov rax, 01400b4070h
     jmp rax
 
@@ -130,6 +145,16 @@ PUBLIC ?GetCallAllocateTime@LinkHeapBase@fnd@csl@@UEBAIXZ
     mov rax, 0140104a30h
     jmp rax
 
+PUBLIC ?GetCellCount@Cast3D@SurfRide@@UEBAIXZ
+?GetCellCount@Cast3D@SurfRide@@UEBAIXZ:
+    mov rax, 0140104a30h
+    jmp rax
+
+PUBLIC ?GetCell@Cast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ
+?GetCell@Cast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ:
+    mov rax, 0140104a30h
+    jmp rax
+
 PUBLIC ?GetCurrentAllocateCount@FreeListHeapBase@fnd@csl@@UEBAIXZ
 ?GetCurrentAllocateCount@FreeListHeapBase@fnd@csl@@UEBAIXZ:
     mov rax, 0140104fe0h
@@ -153,6 +178,11 @@ PUBLIC ?Create@SoundSettingsController@services@heur@@CAPEAV123@XZ
 PUBLIC ?Create@SoundSettingsController@snd@app@@CAPEAV123@XZ
 ?Create@SoundSettingsController@snd@app@@CAPEAV123@XZ:
     mov rax, 0140107ca0h
+    jmp rax
+
+PUBLIC ?GetCellCount@ImageCast3D@SurfRide@@UEBAIXZ
+?GetCellCount@ImageCast3D@SurfRide@@UEBAIXZ:
+    mov rax, 014011a360h
     jmp rax
 
 PUBLIC ?Create@StatsManagerWin32@stats@app@@CAPEAV123@XZ
@@ -1167,6 +1197,11 @@ PUBLIC ?GetRuntimeTypeInfo@GOCCollider@physics@hh@@UEBAPEAXXZ
 
 PUBLIC ?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ
 ?GetRuntimeTypeInfo@GOCPlayerParameter@player@app@@UEBAPEAXXZ:
+    mov rax, 014014ece0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@GOCSprite@ui@hh@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@GOCSprite@ui@hh@@UEBAPEAXXZ:
     mov rax, 014014ece0h
     jmp rax
 
@@ -17300,14 +17335,54 @@ PUBLIC ?Create@GOCCharacterInput@hid@app_cmn@@CAPEAV123@XZ
     mov rax, 01405d33a0h
     jmp rax
 
+PUBLIC ?GetClass@GOCSprite@ui@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCSprite@ui@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 01405ddf40h
+    jmp rax
+
+PUBLIC ?Setup@GOCSprite@ui@hh@@QEAAXAEBUSetupInfo@123@@Z
+?Setup@GOCSprite@ui@hh@@QEAAXAEBUSetupInfo@123@@Z:
+    mov rax, 01405de020h
+    jmp rax
+
+PUBLIC ?GetProject@GOCSprite@ui@hh@@QEAAPEAVProject@SurfRide@@XZ
+?GetProject@GOCSprite@ui@hh@@QEAAPEAVProject@SurfRide@@XZ:
+    mov rax, 01405de140h
+    jmp rax
+
 PUBLIC ??0GOCSprite@ui@hh@@QEAA@XZ
 ??0GOCSprite@ui@hh@@QEAA@XZ:
     mov rax, 01405de790h
     jmp rax
 
+PUBLIC ?OnGOCEvent@GOCSprite@ui@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z
+?OnGOCEvent@GOCSprite@ui@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z:
+    mov rax, 01405dec70h
+    jmp rax
+
+PUBLIC ?Update@GOCSprite@ui@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@@Z
+?Update@GOCSprite@ui@hh@@UEAAXW4UpdatingPhase@fnd@3@AEBUSUpdateInfo@53@@Z:
+    mov rax, 01405ded10h
+    jmp rax
+
 PUBLIC ?Create@GOCSprite@ui@hh@@CAPEAV123@XZ
 ?Create@GOCSprite@ui@hh@@CAPEAV123@XZ:
     mov rax, 01405df880h
+    jmp rax
+
+PUBLIC ?Create@GOCSprite@ui@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCSprite@ui@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01405df880h
+    jmp rax
+
+PUBLIC ?GetCategory@GOCSprite@ui@hh@@UEBAPEBDXZ
+?GetCategory@GOCSprite@ui@hh@@UEBAPEBDXZ:
+    mov rax, 01405df960h
+    jmp rax
+
+PUBLIC ?Render@Renderable@GOCSprite@ui@hh@@UEAAXPEBVRenderableParameter@gfnd@4@@Z
+?Render@Renderable@GOCSprite@ui@hh@@UEAAXPEBVRenderableParameter@gfnd@4@@Z:
+    mov rax, 01405df970h
     jmp rax
 
 PUBLIC ??0GOCUIComposition@ui@hh@@QEAA@XZ
@@ -17520,6 +17595,36 @@ PUBLIC ?Create@UIManager@ui@hh@@CAPEAV123@XZ
     mov rax, 01405ee880h
     jmp rax
 
+PUBLIC ?GetTypeInfo@ResSurfRideProject@ui@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ
+?GetTypeInfo@ResSurfRideProject@ui@hh@@SAPEBUResourceTypeInfo@fnd@3@XZ:
+    mov rax, 01405f0670h
+    jmp rax
+
+PUBLIC ??0ResSurfRideProject@ui@hh@@AEAA@XZ
+??0ResSurfRideProject@ui@hh@@AEAA@XZ:
+    mov rax, 01405f0680h
+    jmp rax
+
+PUBLIC ?Load@ResSurfRideProject@ui@hh@@UEAAXPEAX_K@Z
+?Load@ResSurfRideProject@ui@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01405f07b0h
+    jmp rax
+
+PUBLIC ?Resolve@ResSurfRideProject@ui@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z
+?Resolve@ResSurfRideProject@ui@hh@@UEAAXAEAVResourceResolver@fnd@3@@Z:
+    mov rax, 01405f0920h
+    jmp rax
+
+PUBLIC ?Reload@ResSurfRideProject@ui@hh@@UEAAXPEAX_K@Z
+?Reload@ResSurfRideProject@ui@hh@@UEAAXPEAX_K@Z:
+    mov rax, 01405f0ad0h
+    jmp rax
+
+PUBLIC ?Create@ResSurfRideProject@ui@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z
+?Create@ResSurfRideProject@ui@hh@@CAPEAV123@PEAVIAllocator@fnd@csl@@0_K@Z:
+    mov rax, 01405f0ae0h
+    jmp rax
+
 PUBLIC ?GetClass@UIBlurManager@ui@hh@@SAPEBVGameServiceClass@game@3@XZ
 ?GetClass@UIBlurManager@ui@hh@@SAPEBVGameServiceClass@game@3@XZ:
     mov rax, 01405f2aa0h
@@ -17563,6 +17668,21 @@ PUBLIC ??0GOCUIEffect@ui@hh@@QEAA@XZ
 PUBLIC ?Create@GOCUIEffect@ui@hh@@CAPEAV123@XZ
 ?Create@GOCUIEffect@ui@hh@@CAPEAV123@XZ:
     mov rax, 01405f58e0h
+    jmp rax
+
+PUBLIC ??0SurfRideTextureDataMIRAGE@surfride@ui@hh@@QEAA@IPEAVIAllocator@fnd@csl@@@Z
+??0SurfRideTextureDataMIRAGE@surfride@ui@hh@@QEAA@IPEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01405f7080h
+    jmp rax
+
+PUBLIC ?CreateInstance@SurfRideTextureDataMIRAGE@surfride@ui@hh@@QEAAPEAV1234@PEAVIAllocator@fnd@csl@@@Z
+?CreateInstance@SurfRideTextureDataMIRAGE@surfride@ui@hh@@QEAAPEAV1234@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 01405f72f0h
+    jmp rax
+
+PUBLIC ??0SurfRideProjectContext@ui@hh@@QEAA@XZ
+??0SurfRideProjectContext@ui@hh@@QEAA@XZ:
+    mov rax, 01405f9fb0h
     jmp rax
 
 PUBLIC ??0SurfRideViewerControl@ui@hh@@QEAA@XZ
@@ -21610,8 +21730,18 @@ PUBLIC ?Resolve@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRe
     mov rax, 014082e850h
     jmp rax
 
+PUBLIC ??0DisplaySwapDeviceDX11@ImplDX11@needle@hh@@QEAA@PEAUID3D11Device@@@Z
+??0DisplaySwapDeviceDX11@ImplDX11@needle@hh@@QEAA@PEAUID3D11Device@@@Z:
+    mov rax, 014082ee90h
+    jmp rax
+
 PUBLIC ?DoNothing5@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAIXZ
 ?DoNothing5@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAIXZ:
+    mov rax, 014082f750h
+    jmp rax
+
+PUBLIC ?UnkFunc17@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc17@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 014082f750h
     jmp rax
 
@@ -21620,8 +21750,18 @@ PUBLIC ?ResetUnlockConstantBuffer@RenderingDeviceContextDX11@ImplDX11@needle@hh@
     mov rax, 014082fc20h
     jmp rax
 
+PUBLIC ?UnkFunc14@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc14@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 014082fc20h
+    jmp rax
+
 PUBLIC ?UnkFunc97@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc97@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 014082fd50h
+    jmp rax
+
+PUBLIC ?ResizeBuffers@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NPEAI0@Z
+?ResizeBuffers@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NPEAI0@Z:
     mov rax, 014082fd50h
     jmp rax
 
@@ -21630,14 +21770,609 @@ PUBLIC ?UnkFunc95@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
     mov rax, 014082ffe0h
     jmp rax
 
+PUBLIC ?UnkFunc7@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc7@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 014082ffe0h
+    jmp rax
+
 PUBLIC ?UnkFunc93@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc93@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01408301f0h
+    jmp rax
+
+PUBLIC ?UnkFunc5@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc5@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 01408301f0h
     jmp rax
 
 PUBLIC ?UnkFunc107@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc107@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 01408302a0h
+    jmp rax
+
+PUBLIC ?UnkFunc19@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc19@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01408302a0h
+    jmp rax
+
+PUBLIC ?CreateEffectCast@Cast3D@SurfRide@@UEAAXPEAX@Z
+?CreateEffectCast@Cast3D@SurfRide@@UEAAXPEAX@Z:
+    mov rax, 0140852060h
+    jmp rax
+
+PUBLIC ??0Cast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0Cast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 0140852140h
+    jmp rax
+
+PUBLIC ?CalcMotion@Cast3D@SurfRide@@UEAAXMM_N0PEBUSRS_MOTION@2@@Z
+?CalcMotion@Cast3D@SurfRide@@UEAAXMM_N0PEBUSRS_MOTION@2@@Z:
+    mov rax, 0140852300h
+    jmp rax
+
+PUBLIC ?MakeCellData@Cast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z
+?MakeCellData@Cast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z:
+    mov rax, 0140852ef0h
+    jmp rax
+
+PUBLIC ?UpdateParentsTransformRecursively@Cast3D@SurfRide@@UEAAXXZ
+?UpdateParentsTransformRecursively@Cast3D@SurfRide@@UEAAXXZ:
+    mov rax, 01408530f0h
+    jmp rax
+
+PUBLIC ?UpdateThis@Cast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z
+?UpdateThis@Cast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z:
+    mov rax, 0140853110h
+    jmp rax
+
+PUBLIC ?InitializeTransformFromLayerBuffer@Cast3D@SurfRide@@UEAAXPEAVTransform@2@@Z
+?InitializeTransformFromLayerBuffer@Cast3D@SurfRide@@UEAAXPEAVTransform@2@@Z:
+    mov rax, 01408532d0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Cast3D@SurfRide@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Cast3D@SurfRide@@UEBAPEAXXZ:
+    mov rax, 01408538a0h
+    jmp rax
+
+PUBLIC ?GetLocalSize@ImageCast3D@SurfRide@@UEBA?AVVector2@math@csl@@XZ
+?GetLocalSize@ImageCast3D@SurfRide@@UEBA?AVVector2@math@csl@@XZ:
+    mov rax, 0140853930h
+    jmp rax
+
+PUBLIC ?SetLocalSize@ImageCast3D@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z
+?SetLocalSize@ImageCast3D@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z:
+    mov rax, 0140853950h
+    jmp rax
+
+PUBLIC ?SetCropIndex@ImageCast3D@SurfRide@@UEAAXW4ECropSurface@2@H@Z
+?SetCropIndex@ImageCast3D@SurfRide@@UEAAXW4ECropSurface@2@H@Z:
+    mov rax, 01408539c0h
+    jmp rax
+
+PUBLIC ?UpdateThis@ImageCast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z
+?UpdateThis@ImageCast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z:
+    mov rax, 0140853a70h
+    jmp rax
+
+PUBLIC ??0ImageCast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0ImageCast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 0140853b50h
+    jmp rax
+
+PUBLIC ?MakeCellData@ImageCast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z
+?MakeCellData@ImageCast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z:
+    mov rax, 0140853c60h
+    jmp rax
+
+PUBLIC ?Draw@Cast3D@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z
+?Draw@Cast3D@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z:
+    mov rax, 0140854280h
+    jmp rax
+
+PUBLIC ?InitializeText@ImageCast3D@SurfRide@@UEAAXPEAUSRS_TEXTDATA@2@@Z
+?InitializeText@ImageCast3D@SurfRide@@UEAAXPEAUSRS_TEXTDATA@2@@Z:
+    mov rax, 0140854550h
+    jmp rax
+
+PUBLIC ?CopyCellToLayerBuffer@ImageCast3D@SurfRide@@UEAAXPEAX0I@Z
+?CopyCellToLayerBuffer@ImageCast3D@SurfRide@@UEAAXPEAX0I@Z:
+    mov rax, 0140854610h
+    jmp rax
+
+PUBLIC ?GetCell@ImageCast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ
+?GetCell@ImageCast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ:
+    mov rax, 01408547d0h
+    jmp rax
+
+PUBLIC ?SetCropIndex@ImageCast@SurfRide@@UEAAXW4ECropSurface@2@H@Z
+?SetCropIndex@ImageCast@SurfRide@@UEAAXW4ECropSurface@2@H@Z:
+    mov rax, 01408547f0h
+    jmp rax
+
+PUBLIC ?GetLocalMaterialColor@Cast@SurfRide@@UEBA?AUColor@2@XZ
+?GetLocalMaterialColor@Cast@SurfRide@@UEBA?AUColor@2@XZ:
+    mov rax, 0140854800h
+    jmp rax
+
+PUBLIC ?GetGlobalMaterialColor@Cast@SurfRide@@UEBA?AUColor@2@XZ
+?GetGlobalMaterialColor@Cast@SurfRide@@UEBA?AUColor@2@XZ:
+    mov rax, 0140854830h
+    jmp rax
+
+PUBLIC ?SetLocalMaterialColor@Cast@SurfRide@@UEAAXAEBUColor@2@@Z
+?SetLocalMaterialColor@Cast@SurfRide@@UEAAXAEBUColor@2@@Z:
+    mov rax, 0140854860h
+    jmp rax
+
+PUBLIC ?GetLocalIlluminationColor@Cast@SurfRide@@UEBA?AUColor@2@XZ
+?GetLocalIlluminationColor@Cast@SurfRide@@UEBA?AUColor@2@XZ:
+    mov rax, 01408548b0h
+    jmp rax
+
+PUBLIC ?GetGlobalIlluminationColor@Cast@SurfRide@@UEBA?AUColor@2@XZ
+?GetGlobalIlluminationColor@Cast@SurfRide@@UEBA?AUColor@2@XZ:
+    mov rax, 01408548e0h
+    jmp rax
+
+PUBLIC ?SetLocalIlluminationColor@Cast@SurfRide@@UEAAXAEBUColor@2@@Z
+?SetLocalIlluminationColor@Cast@SurfRide@@UEAAXAEBUColor@2@@Z:
+    mov rax, 0140854910h
+    jmp rax
+
+PUBLIC ?GetLocalDisplayFlag@Cast@SurfRide@@UEBA_NXZ
+?GetLocalDisplayFlag@Cast@SurfRide@@UEBA_NXZ:
+    mov rax, 0140854970h
+    jmp rax
+
+PUBLIC ?GetGlobalDisplayFlag@Cast@SurfRide@@UEBA_NXZ
+?GetGlobalDisplayFlag@Cast@SurfRide@@UEBA_NXZ:
+    mov rax, 0140854990h
+    jmp rax
+
+PUBLIC ?SetLocalDisplayFlag@Cast@SurfRide@@UEAAX_N@Z
+?SetLocalDisplayFlag@Cast@SurfRide@@UEAAX_N@Z:
+    mov rax, 01408549b0h
+    jmp rax
+
+PUBLIC ?CreateEffectCast@Cast@SurfRide@@UEAAXPEAX@Z
+?CreateEffectCast@Cast@SurfRide@@UEAAXPEAX@Z:
+    mov rax, 01408549d0h
+    jmp rax
+
+PUBLIC ??0Cast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS_BASE@1@PEAV01@PEAVLayer@1@@Z
+??0Cast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS_BASE@1@PEAV01@PEAVLayer@1@@Z:
+    mov rax, 0140855080h
+    jmp rax
+
+PUBLIC ?GetScene@Cast@SurfRide@@QEAAPEAVScene@2@XZ
+?GetScene@Cast@SurfRide@@QEAAPEAVScene@2@XZ:
+    mov rax, 01408558e0h
+    jmp rax
+
+PUBLIC ?GetTextureListData@Cast@SurfRide@@QEBAPEAUSRS_TEXTURELIST@2@H@Z
+?GetTextureListData@Cast@SurfRide@@QEBAPEAUSRS_TEXTURELIST@2@H@Z:
+    mov rax, 0140855960h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@Cast@SurfRide@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@Cast@SurfRide@@UEBAPEAXXZ:
+    mov rax, 0140856190h
+    jmp rax
+
+PUBLIC ??0ReferenceCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0ReferenceCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 01408561a0h
+    jmp rax
+
+PUBLIC ?InitializeTransformFromLayerBuffer@ReferenceCast@SurfRide@@UEAAXPEAVTransform@2@@Z
+?InitializeTransformFromLayerBuffer@ReferenceCast@SurfRide@@UEAAXPEAVTransform@2@@Z:
+    mov rax, 01408564c0h
+    jmp rax
+
+PUBLIC ?GetRuntimeTypeInfo@ReferenceCast@SurfRide@@UEBAPEAXXZ
+?GetRuntimeTypeInfo@ReferenceCast@SurfRide@@UEBAPEAXXZ:
+    mov rax, 01408565d0h
+    jmp rax
+
+PUBLIC ?UpdateAnimation@Layer@SurfRide@@AEAAXM@Z
+?UpdateAnimation@Layer@SurfRide@@AEAAXM@Z:
+    mov rax, 01408565e0h
+    jmp rax
+
+PUBLIC ?StartAnimation@Layer@SurfRide@@QEAA_NH@Z
+?StartAnimation@Layer@SurfRide@@QEAA_NH@Z:
+    mov rax, 0140856b50h
+    jmp rax
+
+PUBLIC ?SetAnimationFrame@Layer@SurfRide@@QEAAXM@Z
+?SetAnimationFrame@Layer@SurfRide@@QEAAXM@Z:
+    mov rax, 0140856e10h
+    jmp rax
+
+PUBLIC ??0Layer@SurfRide@@QEAA@AEBUSRS_LAYER@1@PEAVScene@1@@Z
+??0Layer@SurfRide@@QEAA@AEBUSRS_LAYER@1@PEAVScene@1@@Z:
+    mov rax, 0140857080h
+    jmp rax
+
+PUBLIC ?StartCurrentAnimation@Layer@SurfRide@@AEAAXXZ
+?StartCurrentAnimation@Layer@SurfRide@@AEAAXXZ:
+    mov rax, 01408578a0h
+    jmp rax
+
+PUBLIC ?CopyCastsRecursively@Layer@SurfRide@@AEAAPEAVCast@2@PEAUSRS_CASTNODE@2@PEAUSRS_TRS3D@2@HPEAV32@PEAI@Z
+?CopyCastsRecursively@Layer@SurfRide@@AEAAPEAVCast@2@PEAUSRS_CASTNODE@2@PEAUSRS_TRS3D@2@HPEAV32@PEAI@Z:
+    mov rax, 0140857cd0h
+    jmp rax
+
+PUBLIC ?Is3D@Layer@SurfRide@@QEAA_NXZ
+?Is3D@Layer@SurfRide@@QEAA_NXZ:
+    mov rax, 0140858730h
+    jmp rax
+
+PUBLIC ??0Scene@SurfRide@@QEAA@AEBUSRS_SCENE@1@PEAVProject@1@@Z
+??0Scene@SurfRide@@QEAA@AEBUSRS_SCENE@1@PEAVProject@1@@Z:
+    mov rax, 01408599b0h
+    jmp rax
+
+PUBLIC ?LoadLayers@Scene@SurfRide@@AEAAXXZ
+?LoadLayers@Scene@SurfRide@@AEAAXXZ:
+    mov rax, 0140859bf0h
+    jmp rax
+
+PUBLIC ?LoadCamera@Scene@SurfRide@@AEAAXXZ
+?LoadCamera@Scene@SurfRide@@AEAAXXZ:
+    mov rax, 0140859d60h
+    jmp rax
+
+PUBLIC ??0Project@SurfRide@@QEAA@XZ
+??0Project@SurfRide@@QEAA@XZ:
+    mov rax, 014085ad00h
+    jmp rax
+
+PUBLIC ?ApplyMemoryImageToProject@Project@SurfRide@@QEAAXPEAXPEAVBinaryData@2@_N@Z
+?ApplyMemoryImageToProject@Project@SurfRide@@QEAAXPEAXPEAVBinaryData@2@_N@Z:
+    mov rax, 014085af00h
+    jmp rax
+
+PUBLIC ?ApplyMemoryImageToTextureList@Project@SurfRide@@QEAAXPEAXPEAVBinaryData@2@@Z
+?ApplyMemoryImageToTextureList@Project@SurfRide@@QEAAXPEAXPEAVBinaryData@2@@Z:
+    mov rax, 014085b180h
+    jmp rax
+
+PUBLIC ?GetLocalSize@SliceCast3D@SurfRide@@UEBA?AVVector2@math@csl@@XZ
+?GetLocalSize@SliceCast3D@SurfRide@@UEBA?AVVector2@math@csl@@XZ:
+    mov rax, 014085b5a0h
+    jmp rax
+
+PUBLIC ?SetLocalSize@SliceCast3D@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z
+?SetLocalSize@SliceCast3D@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z:
+    mov rax, 014085b5c0h
+    jmp rax
+
+PUBLIC ?SetSliceWidth@SliceCast3D@SurfRide@@UEAAXIM@Z
+?SetSliceWidth@SliceCast3D@SurfRide@@UEAAXIM@Z:
+    mov rax, 014085b5f0h
+    jmp rax
+
+PUBLIC ?SetSliceHeight@SliceCast3D@SurfRide@@UEAAXIM@Z
+?SetSliceHeight@SliceCast3D@SurfRide@@UEAAXIM@Z:
+    mov rax, 014085b620h
+    jmp rax
+
+PUBLIC ??0SliceCast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0SliceCast3D@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 014085b690h
+    jmp rax
+
+PUBLIC ?MakeCellData@SliceCast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z
+?MakeCellData@SliceCast3D@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z:
+    mov rax, 014085b780h
+    jmp rax
+
+PUBLIC ?Draw@SliceCast3D@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z
+?Draw@SliceCast3D@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z:
+    mov rax, 014085b870h
+    jmp rax
+
+PUBLIC ?CopyCellToLayerBuffer@SliceCast3D@SurfRide@@UEAAXPEAX0I@Z
+?CopyCellToLayerBuffer@SliceCast3D@SurfRide@@UEAAXPEAX0I@Z:
+    mov rax, 014085ba40h
+    jmp rax
+
+PUBLIC ?GetCell@SliceCast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ
+?GetCell@SliceCast3D@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ:
+    mov rax, 014085bc90h
+    jmp rax
+
+PUBLIC ??0TextureList@SurfRide@@QEAA@PEAUSRS_TEXTURELIST@1@@Z
+??0TextureList@SurfRide@@QEAA@PEAUSRS_TEXTURELIST@1@@Z:
+    mov rax, 014085c630h
+    jmp rax
+
+PUBLIC ?SetTextureData@TextureList@SurfRide@@QEAAXPEAVTextureData@2@@Z
+?SetTextureData@TextureList@SurfRide@@QEAAXPEAVTextureData@2@@Z:
+    mov rax, 014085c690h
+    jmp rax
+
+PUBLIC ??0ImageCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0ImageCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 014085c890h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeWidth@ImageCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeWidth@ImageCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085cc00h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeWidth@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeWidth@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085cc00h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeHeight@ImageCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeHeight@ImageCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085cc40h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeHeight@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeHeight@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085cc40h
+    jmp rax
+
+PUBLIC ?GetAllocator@SurfRide@@YAPEAVIAllocator@fnd@csl@@XZ
+?GetAllocator@SurfRide@@YAPEAVIAllocator@fnd@csl@@XZ:
+    mov rax, 014085ccd0h
+    jmp rax
+
+PUBLIC ?SrAllocate@SurfRide@@YAPEAX_K@Z
+?SrAllocate@SurfRide@@YAPEAX_K@Z:
+    mov rax, 014085cd00h
+    jmp rax
+
+PUBLIC ?Free@ReferencedObject@SurfRide@@QEAAXXZ
+?Free@ReferencedObject@SurfRide@@QEAAXXZ:
+    mov rax, 014085cd40h
+    jmp rax
+
+PUBLIC ??0SrCamera@SurfRide@@QEAA@AEBUSRS_CAMERA@1@@Z
+??0SrCamera@SurfRide@@QEAA@AEBUSRS_CAMERA@1@@Z:
+    mov rax, 014085cdb0h
+    jmp rax
+
+PUBLIC ??0Camera@SurfRide@@QEAA@AEBUSrCamera@1@@Z
+??0Camera@SurfRide@@QEAA@AEBUSrCamera@1@@Z:
+    mov rax, 014085ce00h
+    jmp rax
+
+PUBLIC ?SetCamera@Camera@SurfRide@@QEAAXAEBUSrCamera@2@@Z
+?SetCamera@Camera@SurfRide@@QEAAXAEBUSrCamera@2@@Z:
+    mov rax, 014085ce20h
+    jmp rax
+
+PUBLIC ?ApplyMemoryImageToProject@SurfRide@@YAPEAVProject@1@PEAX_N@Z
+?ApplyMemoryImageToProject@SurfRide@@YAPEAVProject@1@PEAX_N@Z:
+    mov rax, 014085d340h
+    jmp rax
+
+PUBLIC ?GetScreenResolution@SurfRide@@YA?AUSrScreenResolution@1@XZ
+?GetScreenResolution@SurfRide@@YA?AUSrScreenResolution@1@XZ:
+    mov rax, 014085d3d0h
+    jmp rax
+
+PUBLIC ??0SliceCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z
+??0SliceCast@SurfRide@@QEAA@PEAUSRS_CASTNODE@1@PEAUSRS_TRS3D@1@PEAVCast@1@PEAVLayer@1@@Z:
+    mov rax, 014085d9c0h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeWidth@SliceCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeWidth@SliceCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085de20h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeWidth@SliceCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeWidth@SliceCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085de20h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeHeight@SliceCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeHeight@SliceCast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085de60h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeHeight@SliceCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeHeight@SliceCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 014085de60h
+    jmp rax
+
+PUBLIC ?GetCellCount@SliceCast3D@SurfRide@@UEBAIXZ
+?GetCellCount@SliceCast3D@SurfRide@@UEBAIXZ:
+    mov rax, 014085e210h
+    jmp rax
+
+PUBLIC ?IsTransformMatrix@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsTransformMatrix@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e490h
+    jmp rax
+
+PUBLIC ?IsTransformMaterialColor@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsTransformMaterialColor@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e4a0h
+    jmp rax
+
+PUBLIC ?IsTransformIlluminationColor@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsTransformIlluminationColor@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e4b0h
+    jmp rax
+
+PUBLIC ?IsCellVertices@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellVertices@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e4d0h
+    jmp rax
+
+PUBLIC ?IsCellVertexColor@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellVertexColor@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e4e0h
+    jmp rax
+
+PUBLIC ?IsCellMaterialColor@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellMaterialColor@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e4f0h
+    jmp rax
+
+PUBLIC ?IsCellIlluminationColor@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellIlluminationColor@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e500h
+    jmp rax
+
+PUBLIC ?IsCellCropUV@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellCropUV@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e510h
+    jmp rax
+
+PUBLIC ?IsCellAny@DirtyFlag@SurfRide@@QEAA_NXZ
+?IsCellAny@DirtyFlag@SurfRide@@QEAA_NXZ:
+    mov rax, 014085e530h
+    jmp rax
+
+PUBLIC ?SetAll@DirtyFlag@SurfRide@@QEAAXXZ
+?SetAll@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e540h
+    jmp rax
+
+PUBLIC ?SetTransformMatrix@DirtyFlag@SurfRide@@QEAAXXZ
+?SetTransformMatrix@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e550h
+    jmp rax
+
+PUBLIC ?SetTransformMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ
+?SetTransformMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e560h
+    jmp rax
+
+PUBLIC ?SetTransformIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ
+?SetTransformIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e570h
+    jmp rax
+
+PUBLIC ?SetTransformDisplayFlag@DirtyFlag@SurfRide@@QEAAXXZ
+?SetTransformDisplayFlag@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e580h
+    jmp rax
+
+PUBLIC ?SetCellVertices@DirtyFlag@SurfRide@@QEAAXXZ
+?SetCellVertices@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e590h
+    jmp rax
+
+PUBLIC ?SetCellVertexColor@DirtyFlag@SurfRide@@QEAAXXZ
+?SetCellVertexColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e5a0h
+    jmp rax
+
+PUBLIC ?SetCellMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ
+?SetCellMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e5b0h
+    jmp rax
+
+PUBLIC ?SetCellIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ
+?SetCellIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e5c0h
+    jmp rax
+
+PUBLIC ?SetCellCropUV@DirtyFlag@SurfRide@@QEAAXXZ
+?SetCellCropUV@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e5d0h
+    jmp rax
+
+PUBLIC ?ClearTransformMatrix@DirtyFlag@SurfRide@@QEAAXXZ
+?ClearTransformMatrix@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e600h
+    jmp rax
+
+PUBLIC ?ClearTransformMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ
+?ClearTransformMaterialColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e610h
+    jmp rax
+
+PUBLIC ?ClearTransformIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ
+?ClearTransformIlluminationColor@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e620h
+    jmp rax
+
+PUBLIC ?ClearCellAll@DirtyFlag@SurfRide@@QEAAXXZ
+?ClearCellAll@DirtyFlag@SurfRide@@QEAAXXZ:
+    mov rax, 014085e6a0h
+    jmp rax
+
+PUBLIC ??0Transform@SurfRide@@QEAA@XZ
+??0Transform@SurfRide@@QEAA@XZ:
+    mov rax, 014085e710h
+    jmp rax
+
+PUBLIC ??0Transform3D@SurfRide@@QEAA@XZ
+??0Transform3D@SurfRide@@QEAA@XZ:
+    mov rax, 014085ea10h
+    jmp rax
+
+PUBLIC ??DColor@SurfRide@@QEAA?AU01@AEBU01@@Z
+??DColor@SurfRide@@QEAA?AU01@AEBU01@@Z:
+    mov rax, 0140863e20h
+    jmp rax
+
+PUBLIC ?SetVertexColor@SRS_CELL3D@SurfRide@@QEAAXIAEBUColor@2@@Z
+?SetVertexColor@SRS_CELL3D@SurfRide@@QEAAXIAEBUColor@2@@Z:
+    mov rax, 01408642b0h
+    jmp rax
+
+PUBLIC ?SetIlluminationColor@SRS_CELL3D@SurfRide@@QEAAXAEBUColor@2@@Z
+?SetIlluminationColor@SRS_CELL3D@SurfRide@@QEAAXAEBUColor@2@@Z:
+    mov rax, 01408642f0h
+    jmp rax
+
+PUBLIC ?SR_MakeCellUv2@SurfRide@@YAXPEBUSRS_CROPREF@1@IIAEBUSrTexCoord@1@1IW4ECropSurface@1@PEAUSRS_CELL3D@1@@Z
+?SR_MakeCellUv2@SurfRide@@YAXPEBUSRS_CROPREF@1@IIAEBUSrTexCoord@1@1IW4ECropSurface@1@PEAUSRS_CELL3D@1@@Z:
+    mov rax, 0140865110h
+    jmp rax
+
+PUBLIC ?SR_MakeCellUv@SurfRide@@YAXPEBUSRS_CROPREF@1@IIIPEBUSRS_TEXTURELIST@1@W4ECropSurface@1@PEAUSRS_CELL3D@1@@Z
+?SR_MakeCellUv@SurfRide@@YAXPEBUSRS_CROPREF@1@IIIPEBUSRS_TEXTURELIST@1@W4ECropSurface@1@PEAUSRS_CELL3D@1@@Z:
+    mov rax, 01408651a0h
+    jmp rax
+
+PUBLIC ?SR_MakeCellUv_Sub@SurfRide@@YAXMMMMIW4ECropSurface@1@PEAUSRS_CELL3D@1@@Z
+?SR_MakeCellUv_Sub@SurfRide@@YAXMMMMIW4ECropSurface@1@PEAUSRS_CELL3D@1@@Z:
+    mov rax, 0140865260h
+    jmp rax
+
+PUBLIC ??0BinaryData@SurfRide@@QEAA@PEAX@Z
+??0BinaryData@SurfRide@@QEAA@PEAX@Z:
+    mov rax, 01408654a0h
+    jmp rax
+
+PUBLIC ?GetBinaryFileHeader@BinaryData@SurfRide@@QEAAPEAUSRS_BINARY_FILE_HEADER_CHUNK@2@XZ
+?GetBinaryFileHeader@BinaryData@SurfRide@@QEAAPEAUSRS_BINARY_FILE_HEADER_CHUNK@2@XZ:
+    mov rax, 01408654f0h
+    jmp rax
+
+PUBLIC ?ApplyMemoryImageToProject@BinaryData@SurfRide@@QEAAPEAVProject@2@_N@Z
+?ApplyMemoryImageToProject@BinaryData@SurfRide@@QEAAPEAVProject@2@_N@Z:
+    mov rax, 0140865510h
+    jmp rax
+
+PUBLIC ?ResetAddress@BinaryData@SurfRide@@QEAAXPEAX0I@Z
+?ResetAddress@BinaryData@SurfRide@@QEAAXPEAX0I@Z:
+    mov rax, 01408656f0h
+    jmp rax
+
+PUBLIC ??0Text@SurfRide@@QEAA@PEAUSRS_TEXTDATA@1@PEAVImageCast@1@@Z
+??0Text@SurfRide@@QEAA@PEAUSRS_TEXTDATA@1@PEAVImageCast@1@@Z:
+    mov rax, 0140865870h
+    jmp rax
+
+PUBLIC ?Count@Text@SurfRide@@QEAAXXZ
+?Count@Text@SurfRide@@QEAAXXZ:
+    mov rax, 01408659d0h
     jmp rax
 
 PUBLIC ??0VariableString@ut@csl@@QEAA@PEBDPEAVIAllocator@fnd@2@@Z
@@ -21935,18 +22670,18 @@ PUBLIC ?Matrix34Multiply@math@csl@@YA?AVMatrix34@12@AEBV312@0@Z
     mov rax, 0140869230h
     jmp rax
 
-PUBLIC ?CreateViewMatrix@Matrix44@math@csl@@SA?AV123@VVector3@23@00@Z
-?CreateViewMatrix@Matrix44@math@csl@@SA?AV123@VVector3@23@00@Z:
+PUBLIC ?CreateViewMatrix@math@csl@@YA?AVMatrix34@12@VVector3@12@00@Z
+?CreateViewMatrix@math@csl@@YA?AVMatrix34@12@VVector3@12@00@Z:
     mov rax, 0140869830h
     jmp rax
 
-PUBLIC ?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z
-?CreateOrthogonalProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMMMM@Z:
+PUBLIC ?CreateOrthogonalProjectionMatrix@math@csl@@YA?AVMatrix44@12@MMMMMM@Z
+?CreateOrthogonalProjectionMatrix@math@csl@@YA?AVMatrix44@12@MMMMMM@Z:
     mov rax, 014086b940h
     jmp rax
 
-PUBLIC ?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z
-?CreatePerspectiveProjectionMatrix@Matrix44@math@csl@@SA?AV123@MMMM@Z:
+PUBLIC ?CreatePerspectiveProjectionMatrix@math@csl@@YA?AVMatrix44@12@MMMM@Z
+?CreatePerspectiveProjectionMatrix@math@csl@@YA?AVMatrix44@12@MMMM@Z:
     mov rax, 014086ba40h
     jmp rax
 
@@ -22915,6 +23650,166 @@ PUBLIC ?DoStep@GameUpdater@game@hh@@UEAAPEAXAEBUGameStepInfo@23@@Z
     mov rax, 0140c25064h
     jmp rax
 
+PUBLIC ?CalcMotion@Cast@SurfRide@@UEAAXMM_N0PEBUSRS_MOTION@2@@Z
+?CalcMotion@Cast@SurfRide@@UEAAXMM_N0PEBUSRS_MOTION@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?MakeCellData@Cast@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z
+?MakeCellData@Cast@SurfRide@@UEAAX_NPEAVTransform@2@PEAX@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?Update@Cast@SurfRide@@UEAAXMPEBVTransform@2@PEBV12@PEAV32@PEAX@Z
+?Update@Cast@SurfRide@@UEAAXMPEBVTransform@2@PEBV12@PEAV32@PEAX@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UpdateParentsAndThisTransformRecursively@Cast@SurfRide@@UEAAXXZ
+?UpdateParentsAndThisTransformRecursively@Cast@SurfRide@@UEAAXXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UpdateParentsTransformRecursively@Cast@SurfRide@@UEAAXXZ
+?UpdateParentsTransformRecursively@Cast@SurfRide@@UEAAXXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?UpdateThis@Cast@SurfRide@@UEAAXMPEBVTransform@2@PEBV12@PEAV32@PEAX@Z
+?UpdateThis@Cast@SurfRide@@UEAAXMPEBVTransform@2@PEBV12@PEAV32@PEAX@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?Draw@Cast@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z
+?Draw@Cast@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetTransform@Cast@SurfRide@@UEAAPEAVTransform@2@XZ
+?GetTransform@Cast@SurfRide@@UEAAPEAVTransform@2@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetTransform2@Cast@SurfRide@@UEAAPEAVTransform@2@XZ
+?GetTransform2@Cast@SurfRide@@UEAAPEAVTransform@2@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeWidth@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeWidth@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeHeight@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeHeight@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeCropIndex0@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeCropIndex0@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeCropIndex1@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeCropIndex1@Cast@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetCellCount@Cast@SurfRide@@UEBAIXZ
+?GetCellCount@Cast@SurfRide@@UEBAIXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?InitializeTransformFromLayerBuffer@Cast@SurfRide@@UEAAXPEAVTransform@2@@Z
+?InitializeTransformFromLayerBuffer@Cast@SurfRide@@UEAAXPEAVTransform@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CopyTransformToLayerBuffer@Cast@SurfRide@@UEAAXPEAVTransform@2@0_N@Z
+?CopyTransformToLayerBuffer@Cast@SurfRide@@UEAAXPEAVTransform@2@0_N@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?InitializeCellFromLayerBuffer@Cast@SurfRide@@UEAAXPEAXI@Z
+?InitializeCellFromLayerBuffer@Cast@SurfRide@@UEAAXPEAXI@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?CopyCellToLayerBuffer@Cast@SurfRide@@UEAAXPEAX0I@Z
+?CopyCellToLayerBuffer@Cast@SurfRide@@UEAAXPEAX0I@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetCell@Cast@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ
+?GetCell@Cast@SurfRide@@UEBAPEAUSRS_CELL3D@2@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ??_DImageCast@SurfRide@@QEAAXXZ
+??_DImageCast@SurfRide@@QEAAXXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetWorldSize@ImageCast@SurfRide@@UEAA?AVVector2@math@csl@@XZ
+?GetWorldSize@ImageCast@SurfRide@@UEAA?AVVector2@math@csl@@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetLocalSize@ImageCast@SurfRide@@UEBA?AVVector2@math@csl@@XZ
+?GetLocalSize@ImageCast@SurfRide@@UEBA?AVVector2@math@csl@@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetLocalSize@ImageCast@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z
+?SetLocalSize@ImageCast@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetPatternIndex@ImageCast@SurfRide@@UEAAXH@Z
+?SetPatternIndex@ImageCast@SurfRide@@UEAAXH@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?InitializeText@ImageCast@SurfRide@@UEAAXPEAUSRS_TEXTDATA@2@@Z
+?InitializeText@ImageCast@SurfRide@@UEAAXPEAUSRS_TEXTDATA@2@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ??_DSliceCast@SurfRide@@QEAAXXZ
+??_DSliceCast@SurfRide@@QEAAXXZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetWorldSize@SliceCast@SurfRide@@UEAA?AVVector2@math@csl@@XZ
+?GetWorldSize@SliceCast@SurfRide@@UEAA?AVVector2@math@csl@@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?GetLocalSize@SliceCast@SurfRide@@UEBA?AVVector2@math@csl@@XZ
+?GetLocalSize@SliceCast@SurfRide@@UEBA?AVVector2@math@csl@@XZ:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetLocalSize@SliceCast@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z
+?SetLocalSize@SliceCast@SurfRide@@UEAAXAEBVVector2@math@csl@@@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetSliceWidth@SliceCast@SurfRide@@UEAAXIM@Z
+?SetSliceWidth@SliceCast@SurfRide@@UEAAXIM@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetSliceHeight@SliceCast@SurfRide@@UEAAXIM@Z
+?SetSliceHeight@SliceCast@SurfRide@@UEAAXIM@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
+PUBLIC ?SetPatternIndex@SliceCast@SurfRide@@UEAAXH@Z
+?SetPatternIndex@SliceCast@SurfRide@@UEAAXH@Z:
+    mov rax, 0140c25064h
+    jmp rax
+
 PUBLIC ?rflClassMembers@SwayParamIndivisual@rfl@app@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@SwayParamIndivisual@rfl@app@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 0140d4c400h
@@ -23003,6 +23898,11 @@ PUBLIC ?rflClassMembers@DecoTechParams@rfl@app@@0QBVRflClassMember@fnd@hh@@B
 PUBLIC ?rflClassMembers@DecoTechParams@rfl@heur@@0QBVRflClassMember@fnd@hh@@B
 ?rflClassMembers@DecoTechParams@rfl@heur@@0QBVRflClassMember@fnd@hh@@B:
     mov rax, 0140d515e8h
+    jmp rax
+
+PUBLIC ?typeInfo@ResSurfRideProject@ui@hh@@0UResourceTypeInfo@fnd@3@B
+?typeInfo@ResSurfRideProject@ui@hh@@0UResourceTypeInfo@fnd@3@B:
+    mov rax, 0140d52a40h
     jmp rax
 
 PUBLIC ?typeInfo@ResAtomCueSheet@snd@hh@@0UResourceTypeInfo@fnd@3@B
@@ -44955,6 +45855,11 @@ PUBLIC ?gameServiceClass@ShapeHistoryManager@dbg@app_cmn@@0VGameServiceClass@gam
     mov rax, 014206db10h
     jmp rax
 
+PUBLIC ?componentClass@GOCSprite@ui@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCSprite@ui@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 014206dd80h
+    jmp rax
+
 PUBLIC ?gameServiceClass@ModeSwitchManager@hh@@0VGameServiceClass@game@2@B
 ?gameServiceClass@ModeSwitchManager@hh@@0VGameServiceClass@game@2@B:
     mov rax, 014206de28h
@@ -54325,9 +55230,29 @@ PUBLIC ??_DGOCCamera@camera@app_cmn@@QEAAXXZ
     mov rax, 01446d6210h
     jmp rax
 
+PUBLIC ??_DGOCSprite@ui@hh@@QEAAXXZ
+??_DGOCSprite@ui@hh@@QEAAXXZ:
+    mov rax, 014475ffe0h
+    jmp rax
+
+PUBLIC ??_DRenderable@GOCSprite@ui@hh@@QEAAXXZ
+??_DRenderable@GOCSprite@ui@hh@@QEAAXXZ:
+    mov rax, 0144761020h
+    jmp rax
+
 PUBLIC ??_DInputListener@game@hh@@QEAAXXZ
 ??_DInputListener@game@hh@@QEAAXXZ:
     mov rax, 0144862700h
+    jmp rax
+
+PUBLIC ?Unload@ResSurfRideProject@ui@hh@@UEAAXXZ
+?Unload@ResSurfRideProject@ui@hh@@UEAAXXZ:
+    mov rax, 0144934ed0h
+    jmp rax
+
+PUBLIC ??_DResSurfRideProject@ui@hh@@QEAAXXZ
+??_DResSurfRideProject@ui@hh@@QEAAXXZ:
+    mov rax, 0144936730h
     jmp rax
 
 PUBLIC ??_DBaseObject@fnd@hh@@QEAAXXZ
@@ -55810,8 +56735,23 @@ PUBLIC ?UnkFunc98@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
     mov rax, 0146391d70h
     jmp rax
 
+PUBLIC ?UnkFunc10@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc10@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 0146391d70h
+    jmp rax
+
 PUBLIC ?SetLockConstantBuffer@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW4ShaderStage@34@IPEAVConstantBuffer@34@@Z
 ?SetLockConstantBuffer@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW4ShaderStage@34@IPEAVConstantBuffer@34@@Z:
+    mov rax, 0146393430h
+    jmp rax
+
+PUBLIC ?UnkFunc13@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc13@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 0146393430h
+    jmp rax
+
+PUBLIC ?GetFullScreenState@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NXZ
+?GetFullScreenState@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NXZ:
     mov rax, 0146393430h
     jmp rax
 
@@ -55820,8 +56760,18 @@ PUBLIC ?GenerateMips@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEAVTex
     mov rax, 0146395c80h
     jmp rax
 
+PUBLIC ?UnkFunc1@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc1@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 0146395c80h
+    jmp rax
+
 PUBLIC ?Unmap@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRefcountResource@34@PEBUSRawImageInfo@34@@Z
 ?Unmap@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRefcountResource@34@PEBUSRawImageInfo@34@@Z:
+    mov rax, 0146396a80h
+    jmp rax
+
+PUBLIC ?UnkFunc3@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc3@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 0146396a80h
     jmp rax
 
@@ -55830,8 +56780,18 @@ PUBLIC ?UnkFunc96@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
     mov rax, 01463efc70h
     jmp rax
 
+PUBLIC ?UnkFunc8@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc8@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01463efc70h
+    jmp rax
+
 PUBLIC ?ResetUnlockShaderResourceView@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW4ShaderStage@34@I@Z
 ?ResetUnlockShaderResourceView@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW4ShaderStage@34@I@Z:
+    mov rax, 01463f1a80h
+    jmp rax
+
+PUBLIC ?UnkFunc15@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc15@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 01463f1a80h
     jmp rax
 
@@ -55840,8 +56800,18 @@ PUBLIC ?ResetUnlockSampler@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXW
     mov rax, 01463f3ef0h
     jmp rax
 
+PUBLIC ?UnkFunc16@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc16@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01463f3ef0h
+    jmp rax
+
 PUBLIC ?UpdateResourceA@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRefcountResource@34@IAEBUBox@34@USRawImageInfo@34@@Z
 ?UpdateResourceA@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRefcountResource@34@IAEBUBox@34@USRawImageInfo@34@@Z:
+    mov rax, 01463f7f60h
+    jmp rax
+
+PUBLIC ?UnkFunc4@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc4@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 01463f7f60h
     jmp rax
 
@@ -55850,8 +56820,18 @@ PUBLIC ?Map@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAAXPEBVNeedleRefcou
     mov rax, 01463f9320h
     jmp rax
 
+PUBLIC ?UnkFunc2@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc2@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01463f9320h
+    jmp rax
+
 PUBLIC ?DoNothing6@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_NXZ
 ?DoNothing6@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_NXZ:
+    mov rax, 01463fa880h
+    jmp rax
+
+PUBLIC ?Present@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NI@Z
+?Present@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_NI@Z:
     mov rax, 01463fa880h
     jmp rax
 
@@ -55860,13 +56840,28 @@ PUBLIC ?UnkFunc106@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
     mov rax, 01463fc7a0h
     jmp rax
 
+PUBLIC ?UnkFunc18@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc18@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01463fc7a0h
+    jmp rax
+
 PUBLIC ?UnkFunc100@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc100@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 01463fdc10h
     jmp rax
 
+PUBLIC ?UnkFunc12@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc12@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 01463fdc10h
+    jmp rax
+
 PUBLIC ?UnkFunc99@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ
 ?UnkFunc99@RenderingDeviceContextDX11@ImplDX11@needle@hh@@UEAA_KXZ:
+    mov rax, 0146403380h
+    jmp rax
+
+PUBLIC ?UnkFunc11@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ
+?UnkFunc11@DisplaySwapDeviceDX11@ImplDX11@needle@hh@@UEAA_KXZ:
     mov rax, 0146403380h
     jmp rax
 
@@ -55883,6 +56878,101 @@ PUBLIC ??_DVertexLayoutImplKey@ImplDX11@needle@hh@@QEAAXXZ
 PUBLIC ?SetDebugObjectName@VertexLayoutImpl@ImplDX11@needle@hh@@UEAAXPEBD@Z
 ?SetDebugObjectName@VertexLayoutImpl@ImplDX11@needle@hh@@UEAAXPEBD@Z:
     mov rax, 014641bf00h
+    jmp rax
+
+PUBLIC ?Update@Cast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z
+?Update@Cast3D@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z:
+    mov rax, 0146487680h
+    jmp rax
+
+PUBLIC ?UpdateParentsAndThisTransformRecursively@Cast3D@SurfRide@@UEAAXXZ
+?UpdateParentsAndThisTransformRecursively@Cast3D@SurfRide@@UEAAXXZ:
+    mov rax, 01464892f0h
+    jmp rax
+
+PUBLIC ?CopyTransformToLayerBuffer@Cast3D@SurfRide@@UEAAXPEAVTransform@2@0_N@Z
+?CopyTransformToLayerBuffer@Cast3D@SurfRide@@UEAAXPEAVTransform@2@0_N@Z:
+    mov rax, 014648a9f0h
+    jmp rax
+
+PUBLIC ??_DCast3D@SurfRide@@QEAAXXZ
+??_DCast3D@SurfRide@@QEAAXXZ:
+    mov rax, 014648d6d0h
+    jmp rax
+
+PUBLIC ?GetWorldSize@ImageCast3D@SurfRide@@UEAA?AVVector2@math@csl@@XZ
+?GetWorldSize@ImageCast3D@SurfRide@@UEAA?AVVector2@math@csl@@XZ:
+    mov rax, 014648e5a0h
+    jmp rax
+
+PUBLIC ?SetPatternIndex@ImageCast3D@SurfRide@@UEAAXH@Z
+?SetPatternIndex@ImageCast3D@SurfRide@@UEAAXH@Z:
+    mov rax, 014648f790h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeCropIndex0@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeCropIndex0@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0146491500h
+    jmp rax
+
+PUBLIC ?CalcTrackTypeCropIndex1@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z
+?CalcTrackTypeCropIndex1@ImageCast3D@SurfRide@@UEAAXMPEBUSRS_TRACK@2@@Z:
+    mov rax, 0146492520h
+    jmp rax
+
+PUBLIC ?InitializeCellFromLayerBuffer@ImageCast3D@SurfRide@@UEAAXPEAXI@Z
+?InitializeCellFromLayerBuffer@ImageCast3D@SurfRide@@UEAAXPEAXI@Z:
+    mov rax, 0146494780h
+    jmp rax
+
+PUBLIC ??_DImageCast3D@SurfRide@@QEAAXXZ
+??_DImageCast3D@SurfRide@@QEAAXXZ:
+    mov rax, 0146495e90h
+    jmp rax
+
+PUBLIC ??_DCast@SurfRide@@QEAAXXZ
+??_DCast@SurfRide@@QEAAXXZ:
+    mov rax, 01464a1570h
+    jmp rax
+
+PUBLIC ?UpdateThis@ReferenceCast@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z
+?UpdateThis@ReferenceCast@SurfRide@@UEAAXMPEBVTransform@2@PEBVCast@2@PEAV32@PEAX@Z:
+    mov rax, 01464a3a20h
+    jmp rax
+
+PUBLIC ?Draw@ReferenceCast@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z
+?Draw@ReferenceCast@SurfRide@@UEAAXPEAVDrawInterface@2@PEAVTransform@2@PEAX@Z:
+    mov rax, 01464a4c50h
+    jmp rax
+
+PUBLIC ??_DReferenceCast@SurfRide@@QEAAXXZ
+??_DReferenceCast@SurfRide@@QEAAXXZ:
+    mov rax, 01464a5af0h
+    jmp rax
+
+PUBLIC ??_DLayer@SurfRide@@QEAAXXZ
+??_DLayer@SurfRide@@QEAAXXZ:
+    mov rax, 01464b30a0h
+    jmp rax
+
+PUBLIC ?GetWorldSize@SliceCast3D@SurfRide@@UEAA?AVVector2@math@csl@@XZ
+?GetWorldSize@SliceCast3D@SurfRide@@UEAA?AVVector2@math@csl@@XZ:
+    mov rax, 01464d4d30h
+    jmp rax
+
+PUBLIC ?SetPatternIndex@SliceCast3D@SurfRide@@UEAAXH@Z
+?SetPatternIndex@SliceCast3D@SurfRide@@UEAAXH@Z:
+    mov rax, 01464d65f0h
+    jmp rax
+
+PUBLIC ?InitializeCellFromLayerBuffer@SliceCast3D@SurfRide@@UEAAXPEAXI@Z
+?InitializeCellFromLayerBuffer@SliceCast3D@SurfRide@@UEAAXPEAXI@Z:
+    mov rax, 01464da520h
+    jmp rax
+
+PUBLIC ??_DSliceCast3D@SurfRide@@QEAAXXZ
+??_DSliceCast3D@SurfRide@@QEAAXXZ:
+    mov rax, 01464db9b0h
     jmp rax
 
 PUBLIC ??_DHeapBase@fnd@csl@@QEAAXXZ
