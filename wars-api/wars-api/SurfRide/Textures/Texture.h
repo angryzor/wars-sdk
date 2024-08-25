@@ -2,7 +2,6 @@
 
 namespace SurfRide {
     struct SRS_TEXTURE {
-        const char* name;
         const char* filename;
         unsigned int id;
         unsigned short width;
