@@ -19,25 +19,25 @@ namespace hh::needle::ImplDX11 {
         virtual void* UnkFunc9() override;
         virtual void OtherCreateDeviceContext() override; // CreateDeviceDispatch?
         virtual Texture* CreateTexture(const TextureCreationInfo& creationInfo) override;
-        virtual void CreateTextureView(const TextureViewCreationInfo& creationInfo, NeedleRefcountResource* resource) override;
-        virtual void UnkFunc12() override;
-        virtual void UnkFunc13() override;
-        virtual void UnkFunc14() override;
-        virtual void UnkFunc15() override;
-        virtual void UnkFunc16() override;
-        virtual void UnkFunc17() override;
-        virtual void UnkFunc18() override;
-        virtual void CreateVertexLayout(const SInputElement* inputElement, uint32_t unkParam, VertexLayout** vertexLayout) override;
+        virtual Texture* CreateTextureView(const TextureViewCreationInfo& creationInfo, NeedleRefcountResource* resource) override;
+        virtual RenderTarget* CreateRenderTarget(const TextureCreationInfo& creationInfo) override;
+        virtual RenderTarget* CreateRenderTargetView(const TextureViewCreationInfo& creationInfo, NeedleRefcountResource* resource) override;
+        virtual DepthStencil* CreateDepthStencil(const TextureCreationInfo& creationInfo) override;
+        virtual DepthStencil* CreateDepthStencilView(const TextureViewCreationInfo& creationInfo, NeedleRefcountResource* resource) override;
+        virtual DepthStencil* CreateUnorderedAccessView(const TextureViewCreationInfo& creationInfo, NeedleRefcountResource* resource) override;
+        virtual Buffer* CreateVertexBuffer(const BufferCreationInfo& creationInfo) override;
+        virtual Buffer* CreateIndexBuffer(const BufferCreationInfo& creationInfo) override;
+        virtual bool CreateVertexLayout(const SInputElement* inputElement, uint32_t unkParam, VertexLayout** vertexLayout) override;
         virtual void UnkFunc20() override {}
         virtual void UnkFunc21() override;
         virtual VertexShader* CreateVertexShader(const void* data, size_t size) override;
         virtual PixelShader* CreatePixelShader(const void* data, size_t size) override;
-        virtual void UnkFunc24() override;
+        virtual ComputeShader* CreateComputeShader(const void* data, size_t size) override;
         virtual void UnkFunc25() override;
         virtual void UnkFunc26() override;
         virtual void UnkFunc27() override;
         virtual void UnkFunc28() override;
-        virtual void UnkFunc29() override;
+        virtual bool CreateShaderMaterialContainer(const ShaderMaterialContainerCreationInfo& creationInfo, ShaderMaterialContainer** shaderMaterialContainer) override;
         virtual void UnkFunc30() override;
         virtual void UnkFunc31() override;
         virtual void UnkFunc32() override;

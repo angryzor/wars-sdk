@@ -4,8 +4,8 @@ namespace hh::gfnd {
     struct ViewportDimensions {
         float x;
         float y;
-        float width;
-        float height;
+        float resX;
+        float resY;
     };
 
     struct alignas(16) ViewportData {

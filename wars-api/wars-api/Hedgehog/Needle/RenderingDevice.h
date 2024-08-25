@@ -16,6 +16,7 @@ namespace hh::needle {
     struct TextureViewCreationInfo {
     };
 
+    class ShaderMaterialContainer;
     class RenderingDevice : public TNeedleRefcountResource<NEEDLE_RESOURCE_RENDERING_DEVICE, NeedleRefcountResource> {
     public:
         virtual RenderingDeviceContext* CreateDeviceContext(unsigned int maybeId) = 0;
