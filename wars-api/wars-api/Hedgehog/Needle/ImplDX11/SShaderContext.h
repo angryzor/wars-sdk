@@ -98,6 +98,6 @@ namespace hh::needle::ImplDX11 {
         uint64_t unk2a[4];
         uint64_t unk2c;
         uint64_t unk2b[7];
-        uint8_t currentEffect;
+        uint32_t currentEffect;
     };
 }

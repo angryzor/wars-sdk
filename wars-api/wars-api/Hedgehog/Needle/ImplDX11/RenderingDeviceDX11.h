@@ -11,6 +11,7 @@ namespace hh::needle::ImplDX11 {
 
         void* unk;
         DeviceObjectDX11* deviceObject;
+        void* unk2; // see 0x155DFD450
 
         virtual void* QueryResource(size_t id) override;
         virtual const void* QueryResource(size_t id) const override;
