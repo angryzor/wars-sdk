@@ -37,7 +37,7 @@ namespace SurfRide {
         }
 
         inline void SetType(Type type) {
-            flags = (flags & ~0xF) | static_cast<unsigned int>(flags & 0xF);
+            flags = (flags & ~0xF) | (static_cast<unsigned int>(type) & 0xF);
         }
 	};
 

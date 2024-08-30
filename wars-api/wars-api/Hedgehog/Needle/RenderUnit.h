@@ -38,7 +38,7 @@ namespace hh::needle {
         uint32_t cameraId;
         WorldRenderingPipelineExecContext* renderingPipelineExecContext;
         uint8_t unk17;
-        uint32_t unk18;
+        int unk18;
         uint32_t flags;
 
         RenderUnit(const char* name, SupportFXAll* supportFX, bool unk12Param);
