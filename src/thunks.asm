@@ -16160,6 +16160,11 @@ PUBLIC ?EndLevel@FxColManager@gfx@app@@QEAAXXZ
     mov rax, 014051e080h
     jmp rax
 
+PUBLIC ?CreateKdTree@FxColManager@gfx@app@@QEAAPEAVKdTree@ut@hh@@PEAVResFxColFile2@23@@Z
+?CreateKdTree@FxColManager@gfx@app@@QEAAPEAVKdTree@ut@hh@@PEAVResFxColFile2@23@@Z:
+    mov rax, 014051e240h
+    jmp rax
+
 PUBLIC ?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z
 ?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z:
     mov rax, 014051e420h

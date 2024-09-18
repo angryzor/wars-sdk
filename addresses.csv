@@ -5085,6 +5085,7 @@
 14051db90,?GameServiceRemovedCallback@FxColManager@gfx@app@@UEAAXPEAVGameService@game@hh@@@Z,1
 14051dc80,?StartLevel@FxColManager@gfx@app@@QEAAXPEBD@Z,1
 14051e080,?EndLevel@FxColManager@gfx@app@@QEAAXXZ,1
+14051e240,?CreateKdTree@FxColManager@gfx@app@@QEAAPEAVKdTree@ut@hh@@PEAVResFxColFile2@23@@Z,1
 14051e420,?QueryCollisionShapes@FxColManager@gfx@app@@IEAAXVAabb@geom@csl@@_NAEAV?$MoveArray@I@ut@6@@Z,1
 14051e5e0,?CollectCollisionShapesToActivateAndDeactivate@FxColManager@gfx@app@@IEAAXAEBV?$MoveArray@I@ut@csl@@@Z,1
 14051e7b0,?SetDefaultSceneParam@FxColManager@gfx@app@@IEAAXXZ,1
