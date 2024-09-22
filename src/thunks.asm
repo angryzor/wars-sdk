@@ -17810,6 +17810,11 @@ PUBLIC ??0GOCCollider@physics@hh@@QEAA@XZ
     mov rax, 0140646ae0h
     jmp rax
 
+PUBLIC ?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z
+?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z:
+    mov rax, 0140646d80h
+    jmp rax
+
 PUBLIC ?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z
 ?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z:
     mov rax, 0140647080h

@@ -79,7 +79,8 @@ namespace hh::physics {
         };
 
         enum class Flag : uint8_t {
-            FRAME_DIRTY = 1,
+            ENABLED,
+            FRAME_DIRTY,
         };
 
         uint64_t unk101;

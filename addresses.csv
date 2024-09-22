@@ -5421,6 +5421,7 @@
 140633bd0,??0ModelSceneObject@scene@hh@@QEAA@XZ,0
 140634d80,??0EffectSceneObject@scene@hh@@QEAA@XZ,0
 140646ae0,??0GOCCollider@physics@hh@@QEAA@XZ,0
+140646d80,?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z,1
 140647080,?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z,1
 1406475d0,??_DGOCCollider@physics@hh@@QEAAXXZ,1
 140647620,?GetCategory@GOCCollider@physics@hh@@UEAAPEBDXZ,1
