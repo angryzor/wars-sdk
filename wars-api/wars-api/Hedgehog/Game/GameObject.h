@@ -41,6 +41,9 @@ namespace hh::game
 
 	class GameObjectClass {
 	public:
+		typedef GameObject* CreateFunction(csl::fnd::IAllocator* allocator);
+
+	private:
 		const char* name{};
 		const char* scopedName{};
 		uint64_t unk12{};
@@ -52,15 +55,17 @@ namespace hh::game
 		uint32_t attributeCount{};
 		const GameObjectClassAttribute* attributes{};
 		const hh::fnd::RflClass* spawnerDataRflClass{};
-	private:
 		GameObject* Create(csl::fnd::IAllocator* pAllocator) const;
 	public:
 		GameObjectClass(const char* name, const char* scopedName, size_t objectSize, GameObject* (*instantiator)(csl::fnd::IAllocator* allocator), uint32_t attributeCount, const GameObjectClassAttribute* attributes, const hh::fnd::RflClass* spawnerDataRflClass)
 			: name{ name }, scopedName{ scopedName }, objectSize{ objectSize }, instantiator{ instantiator }, attributeCount{ attributeCount }, attributes{ attributes }, spawnerDataRflClass{ spawnerDataRflClass } {}
 		template<typename T>
 		T* Create(csl::fnd::IAllocator* pAllocator) const { return static_cast<T*>(Create(pAllocator)); }
+		inline const char* GetName() const { return name; }
+		inline const char* GetScopedName() const { return scopedName; }
+		inline size_t GetObjectSize() const { return objectSize; }
 		const void* GetAttributeValue(const char* name) const;
-		// const fnd::RflClassMember::Value* GetAttributeValue(const char* name) const;
+		inline const fnd::RflClass* GetSpawnerDataClass() const { return spawnerDataRflClass; }
     };
 
 	class WorldObjectStatus;

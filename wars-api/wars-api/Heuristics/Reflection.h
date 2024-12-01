@@ -27,8 +27,8 @@ namespace heur::rfl {
         int8_t srcPosY;
         int8_t dstPosX;
         int8_t dstPosY;
-        csl::ut::Color<uint8_t> srcColor;
-        csl::ut::Color<uint8_t> dstColor;
+        csl::ut::Color8 srcColor;
+        csl::ut::Color8 dstColor;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -41,7 +41,7 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct DecoRimParam {
-        csl::ut::Color<uint8_t> color;
+        csl::ut::Color8 color;
         int32_t thickness;
         int32_t offsetX;
         int32_t offsetY;
@@ -78,7 +78,7 @@ namespace heur::rfl {
         };
 
         csl::ut::VariableString memo;
-        csl::ut::Color<uint8_t> fontColor;
+        csl::ut::Color8 fontColor;
         DecoGradationParam fontGradParam;
         DecoLayerBlendOp layerBlendOp;
         int32_t numPasses;
@@ -108,10 +108,10 @@ namespace heur::rfl {
 
 namespace heur::rfl {
     struct DecoConfigParam {
-        csl::ut::Color<uint8_t> clientColor;
+        csl::ut::Color8 clientColor;
         uint8_t windowAlpha;
-        csl::ut::Color<uint8_t> startGradationGuideColor;
-        csl::ut::Color<uint8_t> endGradationGuideColor;
+        csl::ut::Color8 startGradationGuideColor;
+        csl::ut::Color8 endGradationGuideColor;
 
         static const hh::fnd::RflTypeInfo typeInfo;
         static const hh::fnd::RflClass rflClass;
@@ -410,13 +410,13 @@ namespace hh {
     struct FxOcclusionCapsuleParameter {
         bool enable;
         bool enableOcclusion;
-        csl::ut::Color<uint8_t> occlusionColor;
+        csl::ut::Color8 occlusionColor;
         float occlusionPower;
         bool enableSpecularOcclusion;
         float specularOcclusionPower;
         float specularOcclusionConeAngle;
         bool enableShadow;
-        csl::ut::Color<uint8_t> shadowColor;
+        csl::ut::Color8 shadowColor;
         float shadowPower;
         float shadowConeAngle;
         float cullingDistance;

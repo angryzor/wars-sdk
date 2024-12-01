@@ -22,7 +22,7 @@ namespace hh::game {
 
         template<typename T>
         static ComponentData* Create(csl::fnd::IAllocator* allocator, const char* type) {
-            return Create(allocator, type, &T::rflTypeInfo);
+            return Create(allocator, type, &T::typeInfo);
         }
 
         template<typename T>
@@ -61,7 +61,7 @@ namespace hh::game {
 
         ObjectData(csl::fnd::IAllocator* allocator, const GameObjectClass* gameObjectClass, ObjectId id, const char* name, ObjectData* parent, const ObjectTransformData& localTransform)
             : name{ name }
-            , gameObjectClass{ gameObjectClass->name }
+            , gameObjectClass{ gameObjectClass->GetName() }
             , flags {}
             , localTransform { localTransform }
             , componentData{ allocator }
@@ -75,7 +75,7 @@ namespace hh::game {
                 transform = localTransform;
             }
 
-            auto* spawnerRfl = gameObjectClass->spawnerDataRflClass;
+            auto* spawnerRfl = gameObjectClass->GetSpawnerDataClass();
             if (spawnerRfl == nullptr) {
                 spawnerData = nullptr;
             } else {
@@ -102,7 +102,7 @@ namespace hh::game {
             , parentID{ other.parentID } {
             flags.set(Flag::COMPONENT_DATA_NEEDS_TERMINATION);
             
-            auto* spawnerRfl = GameObjectSystem::GetInstance()->gameObjectRegistry->GetGameObjectClassByName(gameObjectClass)->spawnerDataRflClass;
+            auto* spawnerRfl = GameObjectSystem::GetInstance()->gameObjectRegistry->GetGameObjectClassByName(gameObjectClass)->GetSpawnerDataClass();
             if (spawnerRfl == nullptr) {
                 spawnerData = nullptr;
             } else {

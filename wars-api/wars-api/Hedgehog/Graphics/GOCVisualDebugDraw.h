@@ -7,7 +7,7 @@ namespace hh::gfx {
             void* unk1;
             uint16_t unk2;
             fnd::Geometry* geometry;
-            csl::ut::Color<uint8_t> color;
+            csl::ut::Color8 color;
         };
 
         void* unk201;

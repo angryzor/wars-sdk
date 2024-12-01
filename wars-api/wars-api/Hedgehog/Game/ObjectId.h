@@ -1,8 +1,11 @@
 #pragma once
+#include <ucsl/object-id.h>
 
 namespace hh::game {
-    struct ObjectId {
-        uint32_t id{};
+    struct ObjectId : public ucsl::objectids::ObjectIdV1 {
+        ObjectId() = default;
+        ObjectId(unsigned int id) : ucsl::objectids::ObjectIdV1{ id } {}
+        ObjectId(const ObjectId& other) = default;
 
         inline bool operator==(const ObjectId& other) const {
             return id == other.id;

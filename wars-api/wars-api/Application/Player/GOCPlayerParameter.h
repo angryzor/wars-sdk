@@ -20,14 +20,15 @@ namespace app::player {
         heur::rfl::PlayerSonicParameters* playerSonicParameters;
         heur::rfl::PlayerBuddyParameters* playerBuddyParameters;
         heur::rfl::PlayerSonicClassicParameters* playerSonicClassicParameters;
-        heur::rfl::PlayerSuperSonicParameters* playerSuperSonicParameters;
         heur::rfl::GadgetParameters* gadgetParameters;
+        heur::rfl::PlayerSuperSonicParameters* playerSuperSonicParameters;
         heur::rfl::CommonModePackage* commonModePackage[4];
         heur::rfl::SonicModePackage* sonicModePackage[4];
         heur::rfl::BuddyModePackage* buddyModePackage[4];
         heur::rfl::SonicClassicModePackage* sonicClassicModePackage[4];
         Mode mode;
         uint16_t loadedPackages;
+        bool unk1;
 
     private:
         // void* GetPlayerParameter(const hh::fnd::RflClass& rflClass);

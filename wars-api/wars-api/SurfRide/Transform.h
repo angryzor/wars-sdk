@@ -1,29 +1,6 @@
 #pragma once
 
 namespace SurfRide {
-	struct SRS_TRS_BASE
-	{
-		Color materialColor{};
-		Color illuminationColor{};
-		bool display{};
-	};
-
-	struct SRS_TRS2D : public SRS_TRS_BASE
-	{
-		Vector2 position{};
-		int rotation{};
-		Vector2 scale{ 1.0f, 1.0f };
-		uint32_t unkX;
-		uint32_t unkY;
-	};
-
-	struct SRS_TRS3D : public SRS_TRS_BASE
-	{
-		Vector3 position{};
-		Rotation3 rotation{};
-		Vector3 scale{ 1.0f, 1.0f, 1.0f };
-	};
-
     struct DirtyFlag {
 		enum Flag : uint32_t {
 			TRANSFORM_MATRIX = 0,
@@ -43,18 +20,6 @@ namespace SurfRide {
 			// ANY = 0x3F3F,
 		};
 		
-		// csl::ut::Bitset<Flag> transformMatrix;
-		// csl::ut::Bitset<Flag> transformMaterialColor;
-		// csl::ut::Bitset<Flag> transformIlluminationColor;
-		// csl::ut::Bitset<Flag> transformDisplayFlag;
-		// csl::ut::Bitset<Flag> transformAny;
-		// csl::ut::Bitset<Flag> cellVertices;
-		// csl::ut::Bitset<Flag> cellVertexColor;
-		// csl::ut::Bitset<Flag> cellMaterialColor;
-		// csl::ut::Bitset<Flag> cellIlluminationColor;
-		// csl::ut::Bitset<Flag> cellCropUV;
-		// csl::ut::Bitset<Flag> cellUnk;
-		// csl::ut::Bitset<Flag> cellAny;
 		csl::ut::Bitset<Flag> flags;
 
 		void ClearCellAll();

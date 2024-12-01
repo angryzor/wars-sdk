@@ -13,6 +13,8 @@ namespace hh::game {
 		// fnd::ThreadSafeTlsfHeapAllocator objectAllocator;
 		char pad[0x1C0];
 		GameObjectRegistry* gameObjectRegistry;
+		inline static GOComponentRegistry goComponentRegistryEmulatorInstance{};
+		inline static GOComponentRegistry* goComponentRegistry{ &goComponentRegistryEmulatorInstance };
 
 		GameObjectSystem(csl::fnd::IAllocator* pAllocator);
 

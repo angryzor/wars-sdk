@@ -1,18 +1,6 @@
 #pragma once
 
 namespace SurfRide {
-    struct SRS_BLUR : public SRS_EFFECT {
-        uint32_t field00;
-        uint32_t field04;
-        uint32_t cropCount;
-        uint32_t steps;
-        uint32_t unk1;
-        uint32_t flags;
-    };
-
-    struct SRS_BLUR3D : public SRS_BLUR {
-    };
-
     struct BLUR3D_DATA {
         SRS_CELL3D cells[9];
         uint8_t unk1;
@@ -30,7 +18,7 @@ namespace SurfRide {
         uint32_t cellCount;
         uint32_t steps;
         uint32_t qword34;
-        SRE_BLEND_MODE blendMode;
+        EBlendMode blendMode;
         uint32_t dword3C; // flags & 0x1000
         uint8_t byte40;
 

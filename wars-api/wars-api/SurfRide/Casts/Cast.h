@@ -15,32 +15,6 @@ namespace SurfRide {
         virtual int64_t Unk8();
     };
 
-	struct SRS_CASTNODE
-	{
-        enum class Type {
-            NORMAL,
-            IMAGE,
-            SLICE,
-            REFERENCE,
-        };
-
-		const char* name{};
-		int id{};
-		unsigned int flags{}; // 0xF mask -> Type
-		void* data{};
-		short childIndex{};
-		short siblingIndex{};
-		SRS_USERDATA* userData{};
-
-        inline Type GetType() const {
-            return static_cast<Type>(flags & 0xF);
-        }
-
-        inline void SetType(Type type) {
-            flags = (flags & ~0xF) | (static_cast<unsigned int>(type) & 0xF);
-        }
-	};
-
     class DrawInterface;
     class Scene;
     class Cast : public ReferencedObject {
@@ -159,7 +133,6 @@ namespace SurfRide {
         }
     };
 
-    struct SRS_LAYER;
 	struct CastCollection {
 		SRS_LAYER* layer;
 		SRS_CASTNODE* current;

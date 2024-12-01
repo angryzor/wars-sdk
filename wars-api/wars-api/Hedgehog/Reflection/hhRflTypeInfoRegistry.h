@@ -2,13 +2,43 @@
 
 namespace hh::fnd
 {
-	class RflTypeInfoRegistry : public RflRegistryTemplate<RflTypeInfo>, public csl::fnd::Singleton<RflTypeInfoRegistry>
+	class RflTypeInfoRegistry : public ReferencedObject, public csl::fnd::Singleton<RflTypeInfoRegistry>
 	{
 		static RflTypeInfo* staticRflTypeInfos[2081];
 	public:
+		csl::ut::StringMap<const RflTypeInfo*> items{ GetAllocator() };
+
+		RflTypeInfoRegistry() : ReferencedObject{ }
+		{
+		}
+
+		const RflTypeInfo* GetTypeInfo(const char* pName) const
+		{
+			return items.GetValueOrFallback(pName, nullptr);
+		}
+		
+		void Register(const RflTypeInfo* pInfo)
+		{
+			items.Insert(pInfo->GetName(), pInfo);
+		}
+
+		void RegisterList(const RflTypeInfo** pInfoList)
+		{
+			size_t i = 0;
+			while (pInfoList[i])
+			{
+				Register(pInfoList[i]);
+				i++;
+			}
+		}
+
+		const csl::ut::StringMap<const RflTypeInfo*>& GetItems() const {
+			return items;
+		}
+
 		void* ConstructObject(csl::fnd::IAllocator* pAllocator, const char* pName) const
 		{
-			auto pTypeInfo = GetByName(pName);
+			auto pTypeInfo = GetTypeInfo(pName);
 			if (!pTypeInfo || !pAllocator)
 				return nullptr;
 
@@ -19,7 +49,7 @@ namespace hh::fnd
 
 		void ConstructObject(csl::fnd::IAllocator* pAllocator, void* placement, const char* pName) const
 		{
-			auto* pTypeInfo = GetByName(pName);
+			auto* pTypeInfo = GetTypeInfo(pName);
 			if (!pTypeInfo)
 				return;
 
@@ -28,7 +58,7 @@ namespace hh::fnd
 
 		void FinishLoadedObject(void* pInstance, const char* pName) const
 		{
-			auto* pTypeInfo = GetByName(pName);
+			auto* pTypeInfo = GetTypeInfo(pName);
 			if (!pTypeInfo)
 				return;
 
@@ -37,7 +67,7 @@ namespace hh::fnd
 
 		void CleanupLoadedObject(void* pInstance, const char* pName) const
 		{
-			auto* pTypeInfo = GetByName(pName);
+			auto* pTypeInfo = GetTypeInfo(pName);
 			if (!pTypeInfo)
 				return;
 
