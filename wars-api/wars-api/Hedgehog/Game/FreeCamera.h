@@ -17,7 +17,7 @@ namespace hh::game {
             bool captureInput;
         };
 
-    private:
+    public:
         fnd::Reference<GameManager> gameManager;
         fnd::Reference<CameraManager> cameraManager;
         fnd::Reference<InputManager> inputManager;
@@ -30,7 +30,6 @@ namespace hh::game {
         uint8_t unk2;
         csl::ut::MoveArray<void*> unk8;
 
-    public:
         FreeCamera(const CreateInfo& createInfo);
         // void Initialize(csl::fnd::IAllocator* allocator);
         bool HasCamera();
@@ -46,16 +45,28 @@ namespace hh::game {
         }
     };
 
-    // class FreeCameraUnk2 {
-    //     csl::math::Vector4 unk1;
-    //     csl::math::Vector4 unk2;
-    //     csl::math::Vector3 unk3;
-    //     csl::math::Vector4 unk5;
-    //     uint32_t unk6;
-    //     csl::math::Vector4 unk7;
+    class FreeCameraUnk2 {
+    public:
+        struct CameraSettings {
+            csl::math::Vector3 origin;
+            csl::math::Vector3 position;
+            float yaw;
+            float pitch;
+            float zoom;
+            csl::math::Vector3 up;
+            float roll;
+        };
+        struct ViewportSettings {
+            float nearClip;
+            float farClip;
+            float fov;
+        };
 
-    //     FreeCameraUnk2(csl::fnd::IAllocator* allocator);
-    // };
+        CameraSettings camera;
+        ViewportSettings viewport;
+
+        FreeCameraUnk2(csl::fnd::IAllocator* allocator);
+    };
 
     // class FreeCameraControllerBase : public fnd::ReferencedObject {
     //     FreeCamera* camera;
@@ -64,21 +75,22 @@ namespace hh::game {
     // };
 
     class FreeCameraController : public fnd::ReferencedObject, public FreeCameraListener {
+    public:
         void* unk1;
         gfnd::ViewportData viewportData;
-        // FreeCameraUnk2 unk3;
+        gfnd::ViewportData viewportData2;
+        FreeCameraUnk2 unk3;
         float unk4;
         float unk5;
         float unk6;
         float unk7;
         float unk8;
-        float unk9;
-        csl::ut::MoveArray<void*> unk10;
-        uint32_t unk11;
+        float currentSpeed;
+        csl::ut::MoveArray<float> speedOptions;
+        unsigned int currentSpeedOptionIdx;
         bool unk12;
         float unk13;
         uint16_t unk14;
-    public:
         FreeCameraController();
     };
     
