@@ -34,23 +34,23 @@ namespace hh::fnd {
     };
     class HFrame : public ReferencedObject {
     public:
-        enum class Flag : uint32_t {
-            DIRTY = 1,
-            CHILD_DIRTY = 2,
-            UPDATE = 4,
-            CHILD_UPDATE = 8,
-            TRANSFORM_POSITION = 16,
-            TRANSFORM_ROTATION = 32,
-            GOC_DIRTY = 64, // unsure
-            NEEDS_UPDATE = 128,
-            CHILD_NEEDS_UPDATE = 256, // unsure. see AddChild, need to know what unk5 is first
+        enum class Flag : unsigned int {
+            DIRTY = 0,
+            CHILD_DIRTY = 1,
+            UPDATE = 2,
+            CHILD_UPDATE = 3,
+            TRANSFORM_POSITION = 4,
+            TRANSFORM_ROTATION = 5,
+            GOC_DIRTY = 6, // unsure
+            NEEDS_UPDATE = 7,
+            CHILD_NEEDS_UPDATE = 8, // unsure. see AddChild, need to know what unk5 is first
         };
 
         csl::ut::LinkListNode linkListNode;
         HFrame* parent;
         HFrame* hierarchyRoot;
         hh::game::GOCTransform* gocTransform;
-        Flag flags;
+        csl::ut::Bitset<Flag> flags;
         csl::ut::LinkList<HFrame> children;//{ offsetof(HFrame, linkListNode) };
         csl::ut::InplaceMoveArray<HFrameListener*, 10> listeners;
         csl::math::Transform fullTransform;
