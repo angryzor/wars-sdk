@@ -1,15 +1,5 @@
 #pragma once
 
-#ifdef AddJob
-#undef AddJob
-#endif
-#ifdef max
-#undef max
-#endif
-#ifdef VOID
-#undef VOID
-#endif
-
 #include <cstdint>
 #include <d3d11.h>
 
@@ -19,6 +9,22 @@
 #include <cstring>
 #include <type_traits>
 #include <synchapi.h>
+#endif
+
+#ifdef UpdateResource
+#undef UpdateResource
+#endif
+#ifdef SendMessage
+#undef SendMessage
+#endif
+#ifdef AddJob
+#undef AddJob
+#endif
+#ifdef max
+#undef max
+#endif
+#ifdef VOID
+#undef VOID
 #endif
 
 #include "cslib/csl/math/math.h"
@@ -373,6 +379,12 @@ namespace warssdk::ucsl {
 // #include "Hedgehog/Physics/PhysicsViewerBase.h"
 // #include "Hedgehog/Physics/PhysicsMousePickingViewer.h"
 // #include "Hedgehog/Physics/PhysicsPickedObjectViewer.h"
+
+#include "Hedgehog/Path/ResPathObject.h"
+#include "Hedgehog/Path/PathComponent.h"
+#include "Hedgehog/Path/PathCollisionHandler.h"
+#include "Hedgehog/Path/PathManager.h"
+#include "Hedgehog/Path/PathEvaluator.h"
 
 #include "Hedgehog/Debug/Messages.h"
 

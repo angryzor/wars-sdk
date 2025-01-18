@@ -74,6 +74,10 @@ namespace hh::ui {
         LayerController* GetLayerControllerWithNextId(SurfRide::Layer* layer);
         SurfRide::Project* GetProject();
 
+        void SetFlag(Flag flag, bool enabled);
+        void EnableFlag(Flag flag);
+        void DisableFlag(Flag flag);
+
         GOCOMPONENT_CLASS_DECLARATION(GOCSprite)
     };
 }

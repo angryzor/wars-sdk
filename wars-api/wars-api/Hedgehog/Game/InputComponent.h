@@ -35,8 +35,8 @@ namespace hh::game {
         csl::ut::Bitset<Flags> flags;
     private:
         InputManager* inputManager_; // This is set in RegisterInputComponent and used in GOCInput's OnGOCEvent and in SetUnk5Flag1, but I don't know why this is a separate pointer.
-        InputManager* inputManager;
         InternalPlayerInput* internalPlayerInput;
+        hid::InputMapSettings* inputMapSettings;
         csl::ut::VariableString componentName;
         csl::ut::InplaceMoveArray<InputListener*, 2> inputListeners;
     public:
@@ -55,8 +55,8 @@ namespace hh::game {
             bool exclusive; // flag 1
         };
 
-        InputComponent(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager& inputManager);
-        static InputComponent* Create(csl::fnd::IAllocator* pAllocator, const Config& config, InputManager& inputManager);
+        InputComponent(const Config& config, hid::InputMapSettings* inputManager);
+        static InputComponent* Create(csl::fnd::IAllocator* allocator, const Config& config, InputManager* inputMapSettings);
 
         inline char GetInternalPlayerInputId() {
             return internalPlayerInputIndex;

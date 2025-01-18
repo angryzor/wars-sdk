@@ -32,8 +32,8 @@ namespace hh::game
         sizeof(GOCActivatorSpawner),
     };
     inline const hh::fnd::RflClassMember GOCActivatorSpawner::rflClassMembers[2]{
-        { "m_range", nullptr, nullptr, hh::fnd::RflClassMember::Type::FLOAT, hh::fnd::RflClassMember::Type::VOID, 0, 0, offsetof(GOCActivatorSpawner, m_range), nullptr },
-        { "m_distance", nullptr, nullptr, hh::fnd::RflClassMember::Type::FLOAT, hh::fnd::RflClassMember::Type::VOID, 0, 0, offsetof(GOCActivatorSpawner, m_distance), nullptr },
+        { "m_range", nullptr, nullptr, hh::fnd::RflClassMember::Type::FLOAT, hh::fnd::RflClassMember::Type::VOID, 0, 0, static_cast<unsigned int>(offsetof(GOCActivatorSpawner, m_range)), nullptr },
+        { "m_distance", nullptr, nullptr, hh::fnd::RflClassMember::Type::FLOAT, hh::fnd::RflClassMember::Type::VOID, 0, 0, static_cast<unsigned int>(offsetof(GOCActivatorSpawner, m_distance)), nullptr },
     };
     inline const hh::fnd::RflClass GOCActivatorSpawner::rflClass{ "GOCActivatorSpawner", nullptr, sizeof(GOCActivatorSpawner), nullptr, 0, GOCActivatorSpawner::rflClassMembers, 2, nullptr };
 

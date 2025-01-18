@@ -1,10 +1,6 @@
 #define EXPORTING_TYPES
 #define RESOLVE_STATIC_VARIABLE(x) x
 
-namespace std {
-	typedef size_t align_val_t;
-}
-
 #include "wars-api/wars-api/wars-api.h"
 
 template class app::gfx::FxParamManager::Interpolator<hh::FxBloomParameter, 1>;
