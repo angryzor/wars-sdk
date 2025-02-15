@@ -10,8 +10,10 @@ namespace hh::ui {
             ENABLED,  
         };
 
-        struct Unk1 {
-
+        struct LoadedProject {
+            csl::ut::VariableString name;
+            bool unk1;
+            hh::fnd::Reference<hh::ui::SurfRideProjectContext> projectContext;
         };
 
     private:
@@ -25,7 +27,7 @@ namespace hh::ui {
     public:
         void* hhUiCAppMemoryAlloc;
         csl::ut::MoveArray<SurfRide::Project*> projects;
-        csl::fnd::Delegate<void (GOCSprite*)> OnProjectLoaded;
+        csl::ut::MoveArray<LoadedProject> projectContexts;
         csl::ut::MoveArray<LayerController*> layerControllers;
         // UIManager* uiManager;
         fnd::Reference<Renderable> renderable;

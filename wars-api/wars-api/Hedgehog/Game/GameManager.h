@@ -39,8 +39,8 @@ namespace hh::game
 	{
 	public:
 		virtual ~ObjectUpdateListener() = default;
-		virtual void PreObjectUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) {}
-		virtual void PostObjectUpdateCallback(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo) {}
+		virtual void PreObjectUpdateCallback(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) {}
+		virtual void PostObjectUpdateCallback(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo) {}
 	};
 
 	class alignas(8) ComponentListener
@@ -65,6 +65,12 @@ namespace hh::game
 		virtual void GML_UnkFunc8() {}
 	};
 
+	class EditorStepListener {
+	public:
+		virtual ~EditorStepListener() = default;
+		virtual void EditorStepCallback(GameManager* gameManager, const game::GameStepInfo& gameStepInfo) {}
+	};
+	
 	class GameManager;
 
 	struct GameManagerOperation {
@@ -97,6 +103,8 @@ namespace hh::game
 		static void FirePostShutdownObject(GameManager* gameManager);
 		static void FireGameObjectAdded(GameManager* gameManager, GameObject* gameObject);
 		static void FireGameObjectRemoved(GameManager* gameManager, GameObject* gameObject);
+		static void FireGameServiceAdded(GameManager* gameManager, GameService* gameService);
+		static void FireGameServiceRemoved(GameManager* gameManager, GameService* gameService);
 		static void FireComponentAdded(GameManager* gameManager, GOComponent* component);
 		static void FireComponentRemoved(GameManager* gameManager, GOComponent* component);
 		static void FireObjectLayerSet(GameManager* gameManager, GameObject* gameObject);
@@ -105,10 +113,11 @@ namespace hh::game
 		static void FireMessageProcessed(GameManager* gameManager, const fnd::Message& message);
         static void FirePreGameUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
         static void FirePostGameUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
-		static void FirePreObjectUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
-		static void FirePostObjectUpdate(GameManager* gameManager, const fnd::SUpdateInfo& updateInfo);
+		static void FirePreObjectUpdate(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo);
+		static void FirePostObjectUpdate(GameManager* gameManager, fnd::UpdatingPhase phase, const fnd::SUpdateInfo& updateInfo);
 		static void FirePreStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 		static void FirePostStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
+		static void FireEditorStep(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 		static void FireUpdate(GameManager* gameManager, const game::GameStepInfo& gameStepInfo);
 	};
 
@@ -137,7 +146,7 @@ namespace hh::game
 		csl::ut::MoveArray<GamePauseListener*> gamePauseListeners{ pAllocator };
 		csl::ut::MoveArray<GameStepListener*> gameStepListeners{ pAllocator };
 		csl::ut::MoveArray<GameUpdateListener*> gameUpdateListeners{ pAllocator };
-		csl::ut::MoveArray<void*> unk49{ pAllocator };
+		csl::ut::MoveArray<EditorStepListener*> editorStepListeners{ pAllocator };
 		uint32_t unk50; // See GameManagerCallbackUtil::FirePostShutdownObject
 		uint32_t unk50b;
 		uint32_t unk51;
@@ -241,14 +250,22 @@ namespace hh::game
 			gameObjectLayers[object->layer]->RemoveObject(object);
 			GameManagerCallbackUtil::FireGameObjectRemoved(this, object);
 		}
-		void RegisterGameStepListener(GameStepListener& listener);
-		void UnregisterGameStepListener(GameStepListener& listener);
-		void RegisterGamePauseListener(GamePauseListener& listener);
-		void UnregisterGamePauseListener(GamePauseListener& listener);
+		void AddGameStepListener(GameStepListener* listener);
+		void RemoveGameStepListener(GameStepListener* listener);
+		void AddGamePauseListener(GamePauseListener* listener);
+		void RemoveGamePauseListener(GamePauseListener* listener);
+		void AddGameUpdateListener(GameUpdateListener* listener);
+		void RemoveGameUpdateListener(GameUpdateListener* listener);
 		void AddListener(GameManagerListener* listener);
 		void RemoveListener(GameManagerListener* listener);
+		void AddComponentListener(ComponentListener* listener);
+		void RemoveComponentListener(ComponentListener* listener);
 		void AddGameObjectListener(GameObjectListener* listener);
 		void RemoveGameObjectListener(GameObjectListener* listener);
+		void AddObjectUpdateListener(ObjectUpdateListener* listener);
+		void RemoveObjectUpdateListener(ObjectUpdateListener* listener);
+		void AddEditorStepListener(EditorStepListener* listener);
+		void RemoveEditorStepListener(EditorStepListener* listener);
 		void ReloadInputSettings(bool unkParam1);
 		void InitShutdownPendingObjects();
 		void FinishShutdownPendingObjects();

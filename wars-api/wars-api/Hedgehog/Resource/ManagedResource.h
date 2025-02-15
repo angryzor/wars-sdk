@@ -7,6 +7,13 @@
 	public:\
 		static const hh::fnd::ResourceTypeInfo* GetTypeInfo();
 
+#define MANAGED_RESOURCE_CLASS_DECLARATION_INLINE_GETTYPEINFO(ClassName) private:\
+		static const hh::fnd::ResourceTypeInfo typeInfo;\
+		ClassName();\
+		static ClassName* Create(csl::fnd::IAllocator* allocator, csl::fnd::IAllocator* resourceAllocator, size_t size);\
+	public:\
+		inline static const hh::fnd::ResourceTypeInfo* GetTypeInfo() { return &RESOLVE_STATIC_VARIABLE(typeInfo); }
+
 namespace hh::fnd {
     class ManagedResource;
 

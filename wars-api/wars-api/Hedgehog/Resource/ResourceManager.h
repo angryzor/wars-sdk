@@ -31,6 +31,7 @@ namespace hh::fnd {
         void RemoveListener(Listener* listener);
 
         const csl::ut::MoveArray<ManagedResource*>& GetResourcesByTypeInfo(const ResourceTypeInfo* typeInfo);
+        DynamicResourceContainer* GetResourceContainer(const ResourceTypeInfo* typeInfo);
         csl::ut::MoveArray<DynamicResourceContainer*>& GetResourceContainers() {
             return resourceContainers;
         }

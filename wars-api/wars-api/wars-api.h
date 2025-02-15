@@ -459,6 +459,8 @@ namespace warssdk::ucsl {
 #include "Application/Graphics/FxParamManager.h"
 #include "Application/Graphics/FxColManager.h"
 
+#include "Application/ResSvCol2.h"
+
 // #include "Application/Level/PlayerInformation.h"
 #include "Application/Level/StageData.h"
 #include "Application/Level/StageInfo.h"

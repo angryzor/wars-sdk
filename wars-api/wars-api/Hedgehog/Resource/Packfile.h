@@ -22,6 +22,7 @@ namespace hh::fnd {
             return resourceContainers;
         }
 
+        StaticResourceContainer* GetResourceContainer(const ResourceTypeInfo* typeInfo) const;
         ManagedResource* GetResourceByName(const char* name, const ResourceTypeInfo* typeInfo);
         const char* GetResourceIDName(int resourceId, const ResourceTypeInfo* typeInfo);
         ManagedResource* GetResourceByIndexAndTypeInfo(unsigned int idx, const ResourceTypeInfo* typeInfo);

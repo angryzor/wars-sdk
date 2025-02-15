@@ -14,6 +14,6 @@ namespace csl::ut {
             return m_pBuffer;
         }
 
-        void copyFrom(const char* str, size_t len, size_t srcOffset, size_t dstOffset);
+        void copyFrom(const char* str, size_t len, size_t srcOffset = 0, size_t dstOffset = 0);
     };
 }

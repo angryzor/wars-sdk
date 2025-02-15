@@ -49,7 +49,7 @@ namespace SurfRide {
 
         Cast(SRS_CASTNODE* castData, SRS_TRS_BASE* transform, Cast* parentCast, Layer* layer);
         UserData GetUserData();
-        void SetFlag1000(bool enabled);
+        void SetHideFlag(bool enabled);
         void InitializeTransform2D(Transform* transform, SRS_TRS2D* cell);
         void InitializeTransform3D(Transform* transform, SRS_TRS3D* cell);
         Scene* GetScene();

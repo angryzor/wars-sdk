@@ -5,7 +5,7 @@ namespace SurfRide
 	class ReferenceCast : public Cast3D {
 	public:
 		SRS_REFERENCECAST* referenceCastData;
-		Layer* layer;
+		Layer* refLayer;
 		uint32_t animationId;
 		float animationFrame;
 		bool isFlag2Set;
