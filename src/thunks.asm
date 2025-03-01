@@ -19610,6 +19610,11 @@ PUBLIC ?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AE
     mov rax, 0140647080h
     jmp rax
 
+PUBLIC ?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z
+?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z:
+    mov rax, 0140647260h
+    jmp rax
+
 PUBLIC ??_DGOCCollider@physics@hh@@QEAAXXZ
 ??_DGOCCollider@physics@hh@@QEAAXXZ:
     mov rax, 01406475d0h
@@ -19730,6 +19735,11 @@ PUBLIC ??_DPhysicsWorld@physics@hh@@QEAAXXZ
     mov rax, 014064dec0h
     jmp rax
 
+PUBLIC ?GetClass@GOCMeshCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ
+?GetClass@GOCMeshCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ:
+    mov rax, 014064e740h
+    jmp rax
+
 PUBLIC ??0GOCMeshCollider@physics@hh@@QEAA@XZ
 ??0GOCMeshCollider@physics@hh@@QEAA@XZ:
     mov rax, 014064e8b0h
@@ -19738,6 +19748,16 @@ PUBLIC ??0GOCMeshCollider@physics@hh@@QEAA@XZ
 PUBLIC ?Create@GOCMeshCollider@physics@hh@@CAPEAV123@XZ
 ?Create@GOCMeshCollider@physics@hh@@CAPEAV123@XZ:
     mov rax, 014064e8b0h
+    jmp rax
+
+PUBLIC ?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z
+?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z:
+    mov rax, 014064e8b0h
+    jmp rax
+
+PUBLIC ??_DGOCMeshCollider@physics@hh@@QEAAXXZ
+??_DGOCMeshCollider@physics@hh@@QEAAXXZ:
+    mov rax, 014064e970h
     jmp rax
 
 PUBLIC ?GetClass@GOCBoxCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ
@@ -22840,6 +22860,11 @@ PUBLIC ?SetOrthogonalProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z
     mov rax, 0140740040h
     jmp rax
 
+PUBLIC ?CreateIcoSphere@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@MI@Z
+?CreateIcoSphere@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@MI@Z:
+    mov rax, 01407429b0h
+    jmp rax
+
 PUBLIC ?CreateBox@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@0AEBVQuaternion@56@@Z
 ?CreateBox@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@0AEBVQuaternion@56@@Z:
     mov rax, 0140742e20h
@@ -22878,6 +22903,31 @@ PUBLIC ?GetExtensionByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResource
 PUBLIC ?GetNameByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z
 ?GetNameByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z:
     mov rax, 01407445f0h
+    jmp rax
+
+PUBLIC ??0HsmBase@ut@hh@@QEAA@XZ
+??0HsmBase@ut@hh@@QEAA@XZ:
+    mov rax, 01407484d0h
+    jmp rax
+
+PUBLIC ?Setup@HsmBase@ut@hh@@QEAAXPEAVStateManager@23@PEAXH@Z
+?Setup@HsmBase@ut@hh@@QEAAXPEAVStateManager@23@PEAXH@Z:
+    mov rax, 0140748570h
+    jmp rax
+
+PUBLIC ?ChangeState@HsmBase@ut@hh@@QEAAXH@Z
+?ChangeState@HsmBase@ut@hh@@QEAAXH@Z:
+    mov rax, 0140748c20h
+    jmp rax
+
+PUBLIC ?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ
+?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ:
+    mov rax, 0140748c40h
+    jmp rax
+
+PUBLIC ?EnterState@HsmBase@ut@hh@@QEAAXHH@Z
+?EnterState@HsmBase@ut@hh@@QEAAXHH@Z:
+    mov rax, 0140748e00h
     jmp rax
 
 PUBLIC ??0InputMapSettings@hid@hh@@QEAA@XZ
@@ -40480,6 +40530,11 @@ PUBLIC ?gameServiceClass@SceneManager@scene@hh@@0VGameServiceClass@game@3@B
     mov rax, 014206e830h
     jmp rax
 
+PUBLIC ?componentClass@GOCMeshCollider@physics@hh@@0VGOComponentClass@game@3@B
+?componentClass@GOCMeshCollider@physics@hh@@0VGOComponentClass@game@3@B:
+    mov rax, 014206e930h
+    jmp rax
+
 PUBLIC ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B
 ?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B:
     mov rax, 014206eb00h
@@ -45718,6 +45773,11 @@ PUBLIC ?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
 PUBLIC ??_DPhysicsWorldListener@physics@hh@@QEAAXXZ
 ??_DPhysicsWorldListener@physics@hh@@QEAAXXZ:
     mov rax, 0144ddcb60h
+    jmp rax
+
+PUBLIC ?GetShape@GOCMeshCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z
+?GetShape@GOCMeshCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z:
+    mov rax, 0144e37390h
     jmp rax
 
 PUBLIC ?GetShape@GOCBoxCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z

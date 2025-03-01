@@ -3,6 +3,9 @@
 
 namespace hh::game {
     struct ObjectId : public ucsl::objectids::ObjectIdV1 {
+		inline ObjectId(const ucsl::objectids::ObjectIdV1& other) : ucsl::objectids::ObjectIdV1{ other } {}
+		inline ObjectId(ucsl::objectids::ObjectIdV1&& other) : ucsl::objectids::ObjectIdV1{ std::move(other) } {}
+
         ObjectId() = default;
         ObjectId(unsigned int id) : ucsl::objectids::ObjectIdV1{ id } {}
         ObjectId(const ObjectId& other) = default;

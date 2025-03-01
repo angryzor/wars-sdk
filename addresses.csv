@@ -4946,6 +4946,7 @@
 140646ae0,??0GOCCollider@physics@hh@@QEAA@XZ,0
 140646d80,?SetEnabled@GOCCollider@physics@hh@@QEAAX_N@Z,1
 140647080,?OnGOCEvent@GOCCollider@physics@hh@@UEAAXW4GOCEvent@GOComponent@game@3@AEAVGameObject@63@PEAX@Z,1
+140647260,?HFrameUpdatedCallback@HFrameListener@fnd@hh@@UEAAXPEBVHFrame@23@_N@Z,1
 1406475d0,??_DGOCCollider@physics@hh@@QEAAXXZ,1
 140647620,?GetCategory@GOCCollider@physics@hh@@UEAAPEBDXZ,1
 140647620,?GetCategory@GOCCollider@physics@hh@@UEBAPEBDXZ,1
@@ -4972,8 +4973,11 @@
 14064dd20,?OnRemovedFromGame@PhysicsWorld@physics@hh@@UEAAXXZ,1
 14064deac,?UnkFunc16@PhysicsWorld@physics@hh@@UEAA_KXZ,1
 14064dec0,??_DPhysicsWorld@physics@hh@@QEAAXXZ,1
-14064e8b0,??0GOCMeshCollider@physics@hh@@QEAA@XZ,0
-14064e8b0,?Create@GOCMeshCollider@physics@hh@@CAPEAV123@XZ,0
+14064e740,?GetClass@GOCMeshCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ,1
+14064e8b0,??0GOCMeshCollider@physics@hh@@QEAA@XZ,1
+14064e8b0,?Create@GOCMeshCollider@physics@hh@@CAPEAV123@XZ,1
+14064e8b0,?Create@GOCMeshCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z,1
+14064e970,??_DGOCMeshCollider@physics@hh@@QEAAXXZ,1
 14064e9f0,?GetClass@GOCBoxCollider@physics@hh@@SAPEBVGOComponentClass@game@3@XZ,1
 14064ead0,??0GOCBoxCollider@physics@hh@@QEAA@XZ,1
 14064ead0,?Create@GOCBoxCollider@physics@hh@@CAPEAVGOComponent@game@3@PEAVIAllocator@fnd@csl@@@Z,1
@@ -5607,6 +5611,7 @@
 14073fd50,?SetPerspectiveProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z,1
 14073ff10,?GetPerspectiveProjectionParameters@ViewportData@gfnd@hh@@QEAAXPEAM000@Z,1
 140740040,?SetOrthogonalProjectionMatrix@ViewportData@gfnd@hh@@QEAAXMMMMMM@Z,1
+1407429b0,?CreateIcoSphere@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@MI@Z,1
 140742e20,?CreateBox@Geometry@fnd@hh@@QEAAXAEBVVector3@math@csl@@0AEBVQuaternion@56@@Z,1
 1407439f0,?AddObject@MessageManager@fnd@hh@@QEAAXPEAVMessenger@23@@Z,1
 140743ad0,?Dispatch@MessageManager@fnd@hh@@QEAAXXZ,1
@@ -5615,6 +5620,11 @@
 140744460,?GetTypeInfoByExtension@ResourceTypeRegistry@fnd@hh@@QEAAPEBUResourceTypeInfo@23@PEBD@Z,1
 1407444f0,?GetExtensionByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z,1
 1407445f0,?GetNameByTypeInfo@ResourceTypeRegistry@fnd@hh@@QEAAPEBDPEBUResourceTypeInfo@23@@Z,1
+1407484d0,??0HsmBase@ut@hh@@QEAA@XZ,1
+140748570,?Setup@HsmBase@ut@hh@@QEAAXPEAVStateManager@23@PEAXH@Z,1
+140748c20,?ChangeState@HsmBase@ut@hh@@QEAAXH@Z,1
+140748c40,?GetBottomStateId@HsmBase@ut@hh@@QEBAHXZ,1
+140748e00,?EnterState@HsmBase@ut@hh@@QEAAXHH@Z,1
 1407491b0,??0InputMapSettings@hid@hh@@QEAA@XZ,1
 140749360,?BindActionMapping@InputMapSettings@hid@hh@@QEAAXPEBDI@Z,1
 140749410,?BindAxisMapping@InputMapSettings@hid@hh@@QEAAXPEBDIM@Z,1
@@ -6275,6 +6285,8 @@
 140d601d8,?typeInfo@ResAtomConfig@snd@hh@@0UResourceTypeInfo@fnd@3@B,1
 140d60210,??_7ResAtomConfig@snd@hh@@6B@,1
 140d66f08,??_7PhysicsWorld@physics@hh@@6B@,1
+140d66fe0,??_7GOCMeshCollider@physics@hh@@6B@,1
+140d67020,??_7GOCMeshCollider@physics@hh@@6BHFrameListener@fnd@2@@,1
 140d67d80,??_7PathManager@path@hh@@6B@,1
 140d67db0,??_7PathManager@path@hh@@6BMessenger@fnd@2@@,1
 140d68678,??_7PathComponent@path@hh@@6B@,1
@@ -9242,6 +9254,7 @@
 14206e7e8,?gameServiceClass@SoundManagerCri@snd@hh@@0VGameServiceClass@game@3@B,0
 14206e808,?gameServiceClass@SoundManager@snd@hh@@0VGameServiceClass@game@3@B,0
 14206e830,?gameServiceClass@SceneManager@scene@hh@@0VGameServiceClass@game@3@B,0
+14206e930,?componentClass@GOCMeshCollider@physics@hh@@0VGOComponentClass@game@3@B,1
 14206eb00,?gameServiceClass@PathManager@path@hh@@0VGameServiceClass@game@3@B,1
 14206eb48,?componentClass@PathComponent@path@hh@@0VGOComponentClass@game@3@B,1
 14206f0f0,?componentClass@GOCVisualTransformed@gfx@hh@@0VGOComponentClass@game@3@B,1
@@ -10290,6 +10303,7 @@
 144dc5b50,??_DApplicationListener@fw@hh@@QEAAXXZ,1
 144dd7de0,?GetShape@GOCSphereCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
 144ddcb60,??_DPhysicsWorldListener@physics@hh@@QEAAXXZ,1
+144e37390,?GetShape@GOCMeshCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
 144e3a430,?GetShape@GOCBoxCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
 144e3d470,?GetShape@GOCCylinderCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
 144e41710,?GetShape@GOCCapsuleCollider@physics@hh@@UEBAXAEAUColliShape@23@@Z,1
