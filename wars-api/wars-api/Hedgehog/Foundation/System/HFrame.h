@@ -34,7 +34,7 @@ namespace hh::fnd {
     };
     class HFrame : public ReferencedObject {
     public:
-        enum class Flag : unsigned int {
+        enum Flag : unsigned int {
             DIRTY = 0,
             CHILD_DIRTY = 1,
             UPDATE = 2,
@@ -50,7 +50,7 @@ namespace hh::fnd {
         HFrame* parent;
         HFrame* hierarchyRoot;
         hh::game::GOCTransform* gocTransform;
-        csl::ut::Bitset<Flag> flags;
+        Flag flags;
         csl::ut::LinkList<HFrame> children;//{ offsetof(HFrame, linkListNode) };
         csl::ut::InplaceMoveArray<HFrameListener*, 10> listeners;
         csl::math::Transform fullTransform;
