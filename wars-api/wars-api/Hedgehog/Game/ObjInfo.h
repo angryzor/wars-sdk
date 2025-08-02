@@ -7,7 +7,7 @@ namespace hh::game {
     class ObjInfoClass {
     public:
         const char *pName;
-        ObjInfo* (*Create)(csl::fnd::IAllocator* pAllocator);
+        ObjInfo* (*instantiator)(csl::fnd::IAllocator* pAllocator);
     };
 
     class ObjInfo : public fnd::ReferencedObject {

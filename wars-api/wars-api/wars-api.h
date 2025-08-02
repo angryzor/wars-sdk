@@ -390,6 +390,16 @@ namespace warssdk::ucsl {
 
 #include "Hedgehog/Debug/Messages.h"
 
+#include "Hedgehog/Scene/ResScene.h"
+#include "Hedgehog/Scene/SceneObject.h"
+#include "Hedgehog/Scene/SceneNode.h"
+#include "Hedgehog/Scene/ObjectInfo.h"
+#include "Hedgehog/Scene/SceneNodeBuilder.h"
+#include "Hedgehog/Scene/SceneAnimation.h"
+#include "Hedgehog/Scene/SceneBuilder.h"
+#include "Hedgehog/Scene/SceneControl.h"
+#include "Hedgehog/Scene/SceneManager.h"
+
 #include "SurfRide/Types.h"
 #include "SurfRide/Allocator.h"
 #include "SurfRide/Base.h"
