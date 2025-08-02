@@ -57920,11 +57920,6 @@ PUBLIC ??_DResAtomConfig@snd@hh@@QEAAXXZ
     mov rax, 0144a93070h
     jmp rax
 
-PUBLIC ?PreStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z
-?PreStepCallback@GameStepListener@game@hh@@UEAAXPEAVGameManager@23@AEBUGameStepInfo@23@@Z:
-    mov rax, 0144b347c0h
-    jmp rax
-
 PUBLIC ?PreStepCallback@SceneManager@scene@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z
 ?PreStepCallback@SceneManager@scene@hh@@UEAAXPEAVGameManager@game@3@AEBUGameStepInfo@53@@Z:
     mov rax, 0144b347c0h
