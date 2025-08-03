@@ -354,6 +354,13 @@ namespace csl::ut
 			m_Length--;
 
 			pElem->m_Value.~TValue();
+
+			size_t prev = iter.m_CurIdx;
+			for (size_t i = (iter.m_CurIdx + 1) & GetHashMask(); m_pElements[i].m_Hash != INVALID_KEY; i = (i + 1) & GetHashMask()) {
+				m_pElements[prev] = std::move(m_pElements[i]);
+				m_pElements[i].m_Hash = INVALID_KEY;
+				prev = i;
+			}
 		}
 	};
 }

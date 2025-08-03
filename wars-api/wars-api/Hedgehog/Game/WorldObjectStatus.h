@@ -32,7 +32,12 @@ namespace hh::game {
             flags.reset(Flag::SHUTDOWN);
         }
 
-        uint16_t GetObjectState(unsigned int stateId);
-        void SetObjectState(unsigned int stateId, uint16_t state);
+        inline uint16_t GetObjectState(unsigned int stateId) {
+            return (this->state & (0xFFFF << (16 * stateId))) >> (16 * stateId);
+        }
+
+        inline void SetObjectState(unsigned int stateId, uint16_t state) {
+            this->state = this->state & ~(0xFFFF << (16 * stateId)) | (0xFFFF << (16 * stateId)) & (state << (16 * stateId));
+        }
     };
 }

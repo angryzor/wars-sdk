@@ -34,16 +34,15 @@ namespace hh::fnd {
     };
     class HFrame : public ReferencedObject {
     public:
-        enum class Flag : unsigned int {
-            DIRTY = 0,
-            CHILD_DIRTY = 1,
-            UPDATE = 2,
-            CHILD_UPDATE = 3,
-            TRANSFORM_POSITION = 4,
-            TRANSFORM_ROTATION = 5,
-            GOC_DIRTY = 6, // unsure
-            NEEDS_UPDATE = 7,
-            CHILD_NEEDS_UPDATE = 8, // unsure. see AddChild, need to know what unk5 is first
+        enum Flag : unsigned char {
+            DIRTY = (1 << 0),
+            CHILD_DIRTY = (1 << 1),
+            UPDATE = (1 << 2),
+            CHILD_UPDATE = (1 << 3),
+            TRANSFORM_POSITION = (1 << 4),
+            TRANSFORM_ROTATION = (1 << 5),
+            GOC_DIRTY = (1 << 6), // unsure
+            NEEDS_UPDATE = (1 << 7),
         };
 
         csl::ut::LinkListNode linkListNode;

@@ -53,15 +53,15 @@ namespace hh::ui {
         fnd::Handle<SurfRideCastHandle> GetCastHandle(SurfRide::Cast* cast);
         fnd::Handle<SurfRideLayerHandle> GetLayerHandle(SurfRide::Layer* layer);
 
-        struct alignas(8) SetupInfo {
-            hh::ui::ResSurfRideProject* projectResource;
-            const char* name;
-            uint32_t renderPass;
-            uint8_t renderPriority;
-            uint32_t renderableUnk5;
-            uint32_t layerControllerCount;
-            uint32_t unk5;
-            ViewportDimensions viewportDimensions;
+        struct SetupInfo {
+            hh::ui::ResSurfRideProject* resource{};
+            const char* name{};
+            unsigned int renderableContainer{ 7 };
+            unsigned char renderPriority{ 10 };
+            unsigned int renderableUnk5{ 2 };
+            unsigned int layerControllerCount{};
+            unsigned int updatePriority{ 2 };
+            ViewportDimensions viewportDimensions{};
         };
 
         GOCSprite();
