@@ -49,7 +49,7 @@ namespace hh::fnd {
         HFrame* parent;
         HFrame* hierarchyRoot;
         hh::game::GOCTransform* gocTransform;
-        csl::ut::Bitset<Flag> flags;
+        Flag flags;
         csl::ut::LinkList<HFrame> children;//{ offsetof(HFrame, linkListNode) };
         csl::ut::InplaceMoveArray<HFrameListener*, 10> listeners;
         csl::math::Transform fullTransform;
